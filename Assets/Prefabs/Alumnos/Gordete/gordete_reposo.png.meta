@@ -1,0 +1,1807 @@
+fileFormatVersion: 2
+guid: c35bee9a3cb54c646b3e651878736d59
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7491537478614390143
+    second: gordete_reposo_0
+  - first:
+      213: 2106150539090926702
+    second: gordete_reposo_1
+  - first:
+      213: -397316780102723302
+    second: gordete_reposo_2
+  - first:
+      213: 7279648421232622571
+    second: gordete_reposo_3
+  - first:
+      213: -4240352277385363689
+    second: gordete_reposo_4
+  - first:
+      213: -6393580412828818082
+    second: gordete_reposo_5
+  - first:
+      213: 7257421813707120910
+    second: gordete_reposo_6
+  - first:
+      213: 4286279683906926616
+    second: gordete_reposo_7
+  - first:
+      213: 5402472086678982389
+    second: gordete_reposo_8
+  - first:
+      213: -4140551646371072006
+    second: gordete_reposo_9
+  - first:
+      213: -3891760003237272426
+    second: gordete_reposo_10
+  - first:
+      213: 4554112098150095595
+    second: gordete_reposo_11
+  - first:
+      213: 3272073230610546120
+    second: gordete_reposo_12
+  - first:
+      213: 7863917999552837117
+    second: gordete_reposo_13
+  - first:
+      213: -7025159559836698586
+    second: gordete_reposo_14
+  - first:
+      213: -8351619226124312822
+    second: gordete_reposo_15
+  - first:
+      213: -1067933832857719580
+    second: gordete_reposo_16
+  - first:
+      213: -8765468575090904759
+    second: gordete_reposo_17
+  - first:
+      213: 90649299690422988
+    second: gordete_reposo_18
+  - first:
+      213: -378121229605216203
+    second: gordete_reposo_19
+  - first:
+      213: -2928885741824458323
+    second: gordete_reposo_20
+  - first:
+      213: 1166827741496794225
+    second: gordete_reposo_21
+  - first:
+      213: -3585611550258224065
+    second: gordete_reposo_22
+  - first:
+      213: -6158068355300127130
+    second: gordete_reposo_23
+  - first:
+      213: -2750246058819477709
+    second: gordete_reposo_24
+  - first:
+      213: -5959467280746169649
+    second: gordete_reposo_25
+  - first:
+      213: 6125877560141225111
+    second: gordete_reposo_26
+  - first:
+      213: -8780508001876655060
+    second: gordete_reposo_27
+  - first:
+      213: 2968458007681839062
+    second: gordete_reposo_28
+  - first:
+      213: -7657539220694567634
+    second: gordete_reposo_29
+  - first:
+      213: 7229527422920286914
+    second: gordete_reposo_30
+  - first:
+      213: 7451232368102044495
+    second: gordete_reposo_31
+  - first:
+      213: -4967521373674654275
+    second: gordete_reposo_32
+  - first:
+      213: 2096250261115395386
+    second: gordete_reposo_33
+  - first:
+      213: -6706845104664534822
+    second: gordete_reposo_34
+  - first:
+      213: -1118448581073306559
+    second: gordete_reposo_35
+  - first:
+      213: -7428126093417597618
+    second: gordete_reposo_36
+  - first:
+      213: 1454630110843748407
+    second: gordete_reposo_37
+  - first:
+      213: -1000217669348688297
+    second: gordete_reposo_38
+  - first:
+      213: 5141906324289605572
+    second: gordete_reposo_39
+  - first:
+      213: 6600004522158741383
+    second: gordete_reposo_40
+  - first:
+      213: -9218825172400295167
+    second: gordete_reposo_41
+  - first:
+      213: 5733979038978068727
+    second: gordete_reposo_42
+  - first:
+      213: 5278942077776151657
+    second: gordete_reposo_43
+  - first:
+      213: -5518962418116461167
+    second: gordete_reposo_44
+  - first:
+      213: -5747888031157177871
+    second: gordete_reposo_45
+  - first:
+      213: -3651184536556860376
+    second: gordete_reposo_46
+  - first:
+      213: -1931403390398618499
+    second: gordete_reposo_47
+  - first:
+      213: 3960473991088037579
+    second: gordete_reposo_48
+  - first:
+      213: -8840731721868445200
+    second: gordete_reposo_49
+  - first:
+      213: -4575252048184338667
+    second: gordete_reposo_50
+  - first:
+      213: 7949473457245626272
+    second: gordete_reposo_51
+  - first:
+      213: 35449836298958466
+    second: gordete_reposo_52
+  - first:
+      213: 6919092620372696801
+    second: gordete_reposo_53
+  - first:
+      213: -381620585865123789
+    second: gordete_reposo_54
+  - first:
+      213: -5583187524009206126
+    second: gordete_reposo_55
+  - first:
+      213: 1554295171220371550
+    second: gordete_reposo_56
+  - first:
+      213: -2708617823980761890
+    second: gordete_reposo_57
+  - first:
+      213: -3395342232228035010
+    second: gordete_reposo_58
+  - first:
+      213: -7482416689736231758
+    second: gordete_reposo_59
+  - first:
+      213: 1346612923743016787
+    second: gordete_reposo_60
+  - first:
+      213: -7367815228068579575
+    second: gordete_reposo_61
+  - first:
+      213: 5860882531514860742
+    second: gordete_reposo_62
+  - first:
+      213: -3701927045046174660
+    second: gordete_reposo_63
+  - first:
+      213: 2978845132023183278
+    second: gordete_reposo_64
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gordete_reposo_0
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 13252
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75165a15a947f760800000000000000
+      internalID: 7491537478614390143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_1
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 13252
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c1306a1cc8a3d10800000000000000
+      internalID: 2106150539090926702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_2
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 13252
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19dcaa5e727c7af0800000000000000
+      internalID: -397316780102723302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_3
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 13252
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bebbd4d7ba1860560800000000000000
+      internalID: 7279648421232622571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_4
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 13252
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f3defe11e3725c0800000000000000
+      internalID: -4240352277385363689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_5
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 12172
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55617a3d707547a0800000000000000
+      internalID: -6393580412828818082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_6
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 12172
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e012f2720ba87b460800000000000000
+      internalID: 7257421813707120910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_7
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 12172
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818fe3fa9aceb7b30800000000000000
+      internalID: 4286279683906926616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_8
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 12172
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fec6734dbf69fa40800000000000000
+      internalID: 5402472086678982389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_9
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 12172
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7b4e7173ec986c0800000000000000
+      internalID: -4140551646371072006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_10
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 11092
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69428ff75e0bdf9c0800000000000000
+      internalID: -3891760003237272426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_11
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 11092
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea9b8513d4733f30800000000000000
+      internalID: 4554112098150095595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_12
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 11092
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd3b9d544db86d20800000000000000
+      internalID: 3272073230610546120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_13
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 11092
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5b52a71cf322d60800000000000000
+      internalID: 7863917999552837117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_14
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 11092
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6287e79e99e918e90800000000000000
+      internalID: -7025159559836698586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_15
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 10012
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0f99870096191c80800000000000000
+      internalID: -8351619226124312822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_16
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 10012
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ece4e056dfed21f0800000000000000
+      internalID: -1067933832857719580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_17
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 10012
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9417bdbb5ccca5680800000000000000
+      internalID: -8765468575090904759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_18
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 10012
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc28f2bce0d024100800000000000000
+      internalID: 90649299690422988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_19
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 10012
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530e85bbeb4a0caf0800000000000000
+      internalID: -378121229605216203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_20
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 8932
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da1c8da8fe18a57d0800000000000000
+      internalID: -2928885741824458323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_21
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 8932
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17cdcf516a7613010800000000000000
+      internalID: 1166827741496794225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_22
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 8932
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34225cda495d3ec0800000000000000
+      internalID: -3585611550258224065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_23
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 8932
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e03cb25752a8aa0800000000000000
+      internalID: -6158068355300127130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_24
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 8932
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f952be7c925d9d0800000000000000
+      internalID: -2750246058819477709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_25
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 7852
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcabf803518bb4da0800000000000000
+      internalID: -5959467280746169649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_26
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 7852
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c11c54f2d730550800000000000000
+      internalID: 6125877560141225111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_27
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 7852
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24caa05e7e552680800000000000000
+      internalID: -8780508001876655060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_28
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 7852
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df2a8694d4123920800000000000000
+      internalID: 2968458007681839062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_29
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 7852
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e25f0e076a4fab590800000000000000
+      internalID: -7657539220694567634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_30
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 6772
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c2eb1133e0745460800000000000000
+      internalID: 7229527422920286914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_31
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 6772
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f437d974c58186760800000000000000
+      internalID: 7451232368102044495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_32
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 6772
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db536f331a1df0bb0800000000000000
+      internalID: -4967521373674654275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_33
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 6772
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d5a1e8180671d10800000000000000
+      internalID: 2096250261115395386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_34
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 6772
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad027e469ef7ce2a0800000000000000
+      internalID: -6706845104664534822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_35
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 5692
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14cf599f0f87a70f0800000000000000
+      internalID: -1118448581073306559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_36
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 5692
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45b8078caef9e890800000000000000
+      internalID: -7428126093417597618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_37
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 5692
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 730cd6cf062ef2410800000000000000
+      internalID: 1454630110843748407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_38
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 5692
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ef66044538e12f0800000000000000
+      internalID: -1000217669348688297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_39
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 5692
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfcd971f88bb5740800000000000000
+      internalID: 5141906324289605572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_40
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 4612
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7875e33052de79b50800000000000000
+      internalID: 6600004522158741383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_41
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 4612
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103b6a06957201080800000000000000
+      internalID: -9218825172400295167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_42
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 4612
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0d2d75e8f239f40800000000000000
+      internalID: 5733979038978068727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_43
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 4612
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964c5b7c9d1924940800000000000000
+      internalID: 5278942077776151657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_44
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 4612
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19dff63ebe4b863b0800000000000000
+      internalID: -5518962418116461167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_45
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 3532
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1382e0a466b30b0800000000000000
+      internalID: -5747888031157177871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_46
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 3532
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c01214203645dc0800000000000000
+      internalID: -3651184536556860376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_47
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 3532
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d742e4579d64235e0800000000000000
+      internalID: -1931403390398618499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_48
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 3532
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bced9f48c1e66f630800000000000000
+      internalID: 3960473991088037579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_49
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 3532
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9f083d6596f4580800000000000000
+      internalID: -8840731721868445200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_50
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 2452
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517181eb0807180c0800000000000000
+      internalID: -4575252048184338667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_51
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 2452
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af9582cdf3325e60800000000000000
+      internalID: 7949473457245626272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_52
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 2452
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286f1f33071fd7000800000000000000
+      internalID: 35449836298958466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_53
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 2452
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee575d441e850060800000000000000
+      internalID: 6919092620372696801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_54
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 2452
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338688c591634baf0800000000000000
+      internalID: -381620585865123789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_55
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 1372
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ed90527888482b0800000000000000
+      internalID: -5583187524009206126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_56
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 1372
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58f1b42937f19510800000000000000
+      internalID: 1554295171220371550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_57
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 1372
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcc551a07e096ad0800000000000000
+      internalID: -2708617823980761890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_58
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 1372
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e368a25aa3251e0d0800000000000000
+      internalID: -3395342232228035010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_59
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 1372
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b451da0aad192890800000000000000
+      internalID: -7482416689736231758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_60
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 292
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35717a9c15120b210800000000000000
+      internalID: 1346612923743016787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_61
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 292
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9073240261340c990800000000000000
+      internalID: -7367815228068579575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_62
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 292
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c44c313c99065150800000000000000
+      internalID: 5860882531514860742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_63
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 292
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c7c9757fc10acc0800000000000000
+      internalID: -3701927045046174660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_reposo_64
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 292
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7b42f6ddbf65920800000000000000
+      internalID: 2978845132023183278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gordete_reposo_0: 7491537478614390143
+      gordete_reposo_1: 2106150539090926702
+      gordete_reposo_10: -3891760003237272426
+      gordete_reposo_11: 4554112098150095595
+      gordete_reposo_12: 3272073230610546120
+      gordete_reposo_13: 7863917999552837117
+      gordete_reposo_14: -7025159559836698586
+      gordete_reposo_15: -8351619226124312822
+      gordete_reposo_16: -1067933832857719580
+      gordete_reposo_17: -8765468575090904759
+      gordete_reposo_18: 90649299690422988
+      gordete_reposo_19: -378121229605216203
+      gordete_reposo_2: -397316780102723302
+      gordete_reposo_20: -2928885741824458323
+      gordete_reposo_21: 1166827741496794225
+      gordete_reposo_22: -3585611550258224065
+      gordete_reposo_23: -6158068355300127130
+      gordete_reposo_24: -2750246058819477709
+      gordete_reposo_25: -5959467280746169649
+      gordete_reposo_26: 6125877560141225111
+      gordete_reposo_27: -8780508001876655060
+      gordete_reposo_28: 2968458007681839062
+      gordete_reposo_29: -7657539220694567634
+      gordete_reposo_3: 7279648421232622571
+      gordete_reposo_30: 7229527422920286914
+      gordete_reposo_31: 7451232368102044495
+      gordete_reposo_32: -4967521373674654275
+      gordete_reposo_33: 2096250261115395386
+      gordete_reposo_34: -6706845104664534822
+      gordete_reposo_35: -1118448581073306559
+      gordete_reposo_36: -7428126093417597618
+      gordete_reposo_37: 1454630110843748407
+      gordete_reposo_38: -1000217669348688297
+      gordete_reposo_39: 5141906324289605572
+      gordete_reposo_4: -4240352277385363689
+      gordete_reposo_40: 6600004522158741383
+      gordete_reposo_41: -9218825172400295167
+      gordete_reposo_42: 5733979038978068727
+      gordete_reposo_43: 5278942077776151657
+      gordete_reposo_44: -5518962418116461167
+      gordete_reposo_45: -5747888031157177871
+      gordete_reposo_46: -3651184536556860376
+      gordete_reposo_47: -1931403390398618499
+      gordete_reposo_48: 3960473991088037579
+      gordete_reposo_49: -8840731721868445200
+      gordete_reposo_5: -6393580412828818082
+      gordete_reposo_50: -4575252048184338667
+      gordete_reposo_51: 7949473457245626272
+      gordete_reposo_52: 35449836298958466
+      gordete_reposo_53: 6919092620372696801
+      gordete_reposo_54: -381620585865123789
+      gordete_reposo_55: -5583187524009206126
+      gordete_reposo_56: 1554295171220371550
+      gordete_reposo_57: -2708617823980761890
+      gordete_reposo_58: -3395342232228035010
+      gordete_reposo_59: -7482416689736231758
+      gordete_reposo_6: 7257421813707120910
+      gordete_reposo_60: 1346612923743016787
+      gordete_reposo_61: -7367815228068579575
+      gordete_reposo_62: 5860882531514860742
+      gordete_reposo_63: -3701927045046174660
+      gordete_reposo_64: 2978845132023183278
+      gordete_reposo_7: 4286279683906926616
+      gordete_reposo_8: 5402472086678982389
+      gordete_reposo_9: -4140551646371072006
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

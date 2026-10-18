@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: ea68c2e634d6a404fac9ae87eb73d85a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1472084035649184301
+    second: repelente_enfadada_0
+  - first:
+      213: 9003069836216073312
+    second: repelente_enfadada_1
+  - first:
+      213: -459241006510050914
+    second: repelente_enfadada_2
+  - first:
+      213: 8698579791369119111
+    second: repelente_enfadada_3
+  - first:
+      213: -7136598140695807793
+    second: repelente_enfadada_4
+  - first:
+      213: -7304382476724426362
+    second: repelente_enfadada_5
+  - first:
+      213: 5799329364808227054
+    second: repelente_enfadada_6
+  - first:
+      213: -1137615107021731941
+    second: repelente_enfadada_7
+  - first:
+      213: 3719568538083951760
+    second: repelente_enfadada_8
+  - first:
+      213: 7294273987011886104
+    second: repelente_enfadada_9
+  - first:
+      213: 2585026024890935554
+    second: repelente_enfadada_10
+  - first:
+      213: 348267556167359458
+    second: repelente_enfadada_11
+  - first:
+      213: -5466532484244503680
+    second: repelente_enfadada_12
+  - first:
+      213: 8935354787400660925
+    second: repelente_enfadada_13
+  - first:
+      213: -5727407343889847427
+    second: repelente_enfadada_14
+  - first:
+      213: 7831765574112433488
+    second: repelente_enfadada_15
+  - first:
+      213: -1892601590644860084
+    second: repelente_enfadada_16
+  - first:
+      213: 5746941029014892311
+    second: repelente_enfadada_17
+  - first:
+      213: -8720670178765020821
+    second: repelente_enfadada_18
+  - first:
+      213: 1690423532268081486
+    second: repelente_enfadada_19
+  - first:
+      213: 7094770944734098229
+    second: repelente_enfadada_20
+  - first:
+      213: 7699823706961961135
+    second: repelente_enfadada_21
+  - first:
+      213: 2125628350032181892
+    second: repelente_enfadada_22
+  - first:
+      213: -7883495426174742933
+    second: repelente_enfadada_23
+  - first:
+      213: -3568026607055523285
+    second: repelente_enfadada_24
+  - first:
+      213: 1250725023615477873
+    second: repelente_enfadada_25
+  - first:
+      213: -5487229743480376973
+    second: repelente_enfadada_26
+  - first:
+      213: 7323260514332485799
+    second: repelente_enfadada_27
+  - first:
+      213: 521406543581504152
+    second: repelente_enfadada_28
+  - first:
+      213: -2753579055976648568
+    second: repelente_enfadada_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: repelente_enfadada_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 5693
+        width: 975
+        height: 787
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd5b977e5b129be0800000000000000
+      internalID: -1472084035649184301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_1
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 5693
+        width: 975
+        height: 787
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c71b3d05451fc70800000000000000
+      internalID: 9003069836216073312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_2
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 5693
+        width: 975
+        height: 787
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91fcacdcb270a9f0800000000000000
+      internalID: -459241006510050914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_3
+      rect:
+        serializedVersion: 2
+        x: 5819
+        y: 5693
+        width: 975
+        height: 787
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785a2f2bb3097b870800000000000000
+      internalID: 8698579791369119111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_4
+      rect:
+        serializedVersion: 2
+        x: 7739
+        y: 5693
+        width: 975
+        height: 787
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8fc176dc5b5fc90800000000000000
+      internalID: -7136598140695807793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_5
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 4613
+        width: 975
+        height: 788
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689a04376de91aa90800000000000000
+      internalID: -7304382476724426362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_6
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 4613
+        width: 975
+        height: 788
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8d2e4c45b5b7050800000000000000
+      internalID: 5799329364808227054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_7
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 4613
+        width: 975
+        height: 788
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b970ad666116630f0800000000000000
+      internalID: -1137615107021731941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_8
+      rect:
+        serializedVersion: 2
+        x: 5819
+        y: 4613
+        width: 975
+        height: 788
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0948636d0ef8e9330800000000000000
+      internalID: 3719568538083951760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_9
+      rect:
+        serializedVersion: 2
+        x: 7739
+        y: 4613
+        width: 975
+        height: 788
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81c37326b877a3560800000000000000
+      internalID: 7294273987011886104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_10
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 3533
+        width: 975
+        height: 788
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209a3cc397bdfd320800000000000000
+      internalID: 2585026024890935554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_11
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 3533
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb16244f7b45d400800000000000000
+      internalID: 348267556167359458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_12
+      rect:
+        serializedVersion: 2
+        x: 4010
+        y: 3533
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08309732ba9f224b0800000000000000
+      internalID: -5466532484244503680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_13
+      rect:
+        serializedVersion: 2
+        x: 5930
+        y: 3533
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db73a1d66d1c00c70800000000000000
+      internalID: 8935354787400660925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_14
+      rect:
+        serializedVersion: 2
+        x: 7850
+        y: 3533
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b6b77ad592480b0800000000000000
+      internalID: -5727407343889847427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_15
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 2453
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055da119b4500bc60800000000000000
+      internalID: 7831765574112433488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_16
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 2453
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b164871e02cb5e0800000000000000
+      internalID: -1892601590644860084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_17
+      rect:
+        serializedVersion: 2
+        x: 4010
+        y: 2453
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71fec83da6c31cf40800000000000000
+      internalID: 5746941029014892311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_18
+      rect:
+        serializedVersion: 2
+        x: 5930
+        y: 2453
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b616e5f2da4f9f680800000000000000
+      internalID: -8720670178765020821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_19
+      rect:
+        serializedVersion: 2
+        x: 7870
+        y: 2453
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e41dcc01f37957710800000000000000
+      internalID: 1690423532268081486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_20
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1373
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53373a3a590b57260800000000000000
+      internalID: 7094770944734098229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_21
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1373
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa06996bdd44bda60800000000000000
+      internalID: 7699823706961961135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_22
+      rect:
+        serializedVersion: 2
+        x: 4010
+        y: 1373
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48afa28e8bfbf7d10800000000000000
+      internalID: 2125628350032181892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_23
+      rect:
+        serializedVersion: 2
+        x: 5950
+        y: 1373
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e007eada2389290800000000000000
+      internalID: -7883495426174742933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_24
+      rect:
+        serializedVersion: 2
+        x: 7850
+        y: 1373
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22305184b2db7ec0800000000000000
+      internalID: -3568026607055523285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_25
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 293
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178ea4848c77b5110800000000000000
+      internalID: 1250725023615477873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_26
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 293
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371f4e2fe9179d3b0800000000000000
+      internalID: -5487229743480376973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_27
+      rect:
+        serializedVersion: 2
+        x: 4030
+        y: 293
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8ae6233a271a560800000000000000
+      internalID: 7323260514332485799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_28
+      rect:
+        serializedVersion: 2
+        x: 5930
+        y: 293
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8926db52d786c3700800000000000000
+      internalID: 521406543581504152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_enfadada_29
+      rect:
+        serializedVersion: 2
+        x: 7870
+        y: 293
+        width: 727
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8807e8b007259c9d0800000000000000
+      internalID: -2753579055976648568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      repelente_enfadada_0: -1472084035649184301
+      repelente_enfadada_1: 9003069836216073312
+      repelente_enfadada_10: 2585026024890935554
+      repelente_enfadada_11: 348267556167359458
+      repelente_enfadada_12: -5466532484244503680
+      repelente_enfadada_13: 8935354787400660925
+      repelente_enfadada_14: -5727407343889847427
+      repelente_enfadada_15: 7831765574112433488
+      repelente_enfadada_16: -1892601590644860084
+      repelente_enfadada_17: 5746941029014892311
+      repelente_enfadada_18: -8720670178765020821
+      repelente_enfadada_19: 1690423532268081486
+      repelente_enfadada_2: -459241006510050914
+      repelente_enfadada_20: 7094770944734098229
+      repelente_enfadada_21: 7699823706961961135
+      repelente_enfadada_22: 2125628350032181892
+      repelente_enfadada_23: -7883495426174742933
+      repelente_enfadada_24: -3568026607055523285
+      repelente_enfadada_25: 1250725023615477873
+      repelente_enfadada_26: -5487229743480376973
+      repelente_enfadada_27: 7323260514332485799
+      repelente_enfadada_28: 521406543581504152
+      repelente_enfadada_29: -2753579055976648568
+      repelente_enfadada_3: 8698579791369119111
+      repelente_enfadada_4: -7136598140695807793
+      repelente_enfadada_5: -7304382476724426362
+      repelente_enfadada_6: 5799329364808227054
+      repelente_enfadada_7: -1137615107021731941
+      repelente_enfadada_8: 3719568538083951760
+      repelente_enfadada_9: 7294273987011886104
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

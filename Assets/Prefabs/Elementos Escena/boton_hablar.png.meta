@@ -1,0 +1,578 @@
+fileFormatVersion: 2
+guid: 040290c89d754cc43ba2fc43ff88e6c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7710906006057725367
+    second: boton_hablar_0
+  - first:
+      213: -8416649701547664539
+    second: boton_hablar_1
+  - first:
+      213: -9190091495091803529
+    second: boton_hablar_2
+  - first:
+      213: -2208326847517152166
+    second: boton_hablar_3
+  - first:
+      213: 3586706314836937230
+    second: boton_hablar_4
+  - first:
+      213: 4493446620313742819
+    second: boton_hablar_5
+  - first:
+      213: 4986578064522120514
+    second: boton_hablar_6
+  - first:
+      213: 6879093654715129637
+    second: boton_hablar_7
+  - first:
+      213: -6878928052588351564
+    second: boton_hablar_8
+  - first:
+      213: -1355960150167921661
+    second: boton_hablar_9
+  - first:
+      213: -7446969995536888881
+    second: boton_hablar_10
+  - first:
+      213: 1940578748024984761
+    second: boton_hablar_11
+  - first:
+      213: -6360430137746913754
+    second: boton_hablar_12
+  - first:
+      213: -3349474561716150270
+    second: boton_hablar_13
+  - first:
+      213: 9056690502921163677
+    second: boton_hablar_14
+  - first:
+      213: 1688602200696060239
+    second: boton_hablar_15
+  - first:
+      213: -3118897837733298128
+    second: boton_hablar_16
+  - first:
+      213: -3451695285608556104
+    second: boton_hablar_17
+  - first:
+      213: -8783790788535684457
+    second: boton_hablar_18
+  - first:
+      213: 2888349587449084174
+    second: boton_hablar_19
+  - first:
+      213: -1483752267030289371
+    second: boton_hablar_20
+  - first:
+      213: 2915317581998337951
+    second: boton_hablar_21
+  - first:
+      213: 6410831154683801088
+    second: boton_hablar_22
+  - first:
+      213: 7645852151462460298
+    second: boton_hablar_23
+  - first:
+      213: 3296176369067513319
+    second: boton_hablar_24
+  - first:
+      213: 7245307120407004458
+    second: boton_hablar_25
+  - first:
+      213: -3234178791022207130
+    second: boton_hablar_26
+  - first:
+      213: -8362259494801322319
+    second: boton_hablar_27
+  - first:
+      213: 7629471274697316775
+    second: boton_hablar_28
+  - first:
+      213: -5717863045975664660
+    second: boton_hablar_29
+  - first:
+      213: 3285170403879799145
+    second: boton_hablar_30
+  - first:
+      213: 7231048433610897711
+    second: boton_hablar_31
+  - first:
+      213: -3097057795420546782
+    second: boton_hablar_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boton_hablar_0
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 2919
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd2f7b8824a20b60800000000000000
+      internalID: 7710906006057725367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_1
+      rect:
+        serializedVersion: 2
+        x: 2742
+        y: 2919
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b9a5490bd023b80800000000000000
+      internalID: -8416649701547664539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_2
+      rect:
+        serializedVersion: 2
+        x: 4662
+        y: 2919
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ae6b5f97c367080800000000000000
+      internalID: -9190091495091803529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_3
+      rect:
+        serializedVersion: 2
+        x: 6555
+        y: 2881
+        width: 127
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c28c1be627a51e0800000000000000
+      internalID: -2208326847517152166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_4
+      rect:
+        serializedVersion: 2
+        x: 8426
+        y: 2834
+        width: 211
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a8181e36a86c130800000000000000
+      internalID: 3586706314836937230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_5
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 1756
+        width: 215
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3edeaf4d4edeb5e30800000000000000
+      internalID: 4493446620313742819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_6
+      rect:
+        serializedVersion: 2
+        x: 2665
+        y: 1756
+        width: 211
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d88946452e33540800000000000000
+      internalID: 4986578064522120514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_7
+      rect:
+        serializedVersion: 2
+        x: 4587
+        y: 1756
+        width: 211
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f50f16b33777f50800000000000000
+      internalID: 6879093654715129637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_8
+      rect:
+        serializedVersion: 2
+        x: 6504
+        y: 1756
+        width: 215
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf600ed1632980a0800000000000000
+      internalID: -6878928052588351564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_9
+      rect:
+        serializedVersion: 2
+        x: 8426
+        y: 1756
+        width: 211
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30cd7a77d69ae2de0800000000000000
+      internalID: -1355960150167921661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_14
+      rect:
+        serializedVersion: 2
+        x: 8426
+        y: 626
+        width: 272
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afebe8254a5209b499a4a7620bb6afdb
+      internalID: -1405133077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_10
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 673
+        width: 215
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c8fe65fe030204ab8722405eb77010
+      internalID: -2144307053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_11
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 695
+        width: 221
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2cd4a1a9aeae6f4b96569afbf09efb3
+      internalID: -1858027213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_13
+      rect:
+        serializedVersion: 2
+        x: 6462
+        y: 596
+        width: 331
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae9825acb7b7684cb7d22cd938c33c9
+      internalID: -1264645389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_12
+      rect:
+        serializedVersion: 2
+        x: 4575
+        y: 602
+        width: 328
+        height: 349
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864794484de27304bae294642e7f4464
+      internalID: -190852103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d45e0057aa5a8da45b8bd6b5c210181d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":3.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      boton_hablar_0: 7710906006057725367
+      boton_hablar_1: -8416649701547664539
+      boton_hablar_10: -2144307053
+      boton_hablar_11: -1858027213
+      boton_hablar_12: -190852103
+      boton_hablar_13: -1264645389
+      boton_hablar_14: -1405133077
+      boton_hablar_16: -649933493
+      boton_hablar_17: -254688033
+      boton_hablar_2: -9190091495091803529
+      boton_hablar_20: -211619284
+      boton_hablar_21: 311619239
+      boton_hablar_22: -1989071306
+      boton_hablar_24: 1738228346
+      boton_hablar_25: 144872596
+      boton_hablar_26: -261645245
+      boton_hablar_27: 288699773
+      boton_hablar_28: -137760780
+      boton_hablar_29: -1149109827
+      boton_hablar_3: -2208326847517152166
+      boton_hablar_31: 1290005539
+      boton_hablar_32: 230092204
+      boton_hablar_33: -1212753115
+      boton_hablar_34: -873932287
+      boton_hablar_4: 3586706314836937230
+      boton_hablar_5: 4493446620313742819
+      boton_hablar_6: 4986578064522120514
+      boton_hablar_7: 6879093654715129637
+      boton_hablar_8: -6878928052588351564
+      boton_hablar_9: -1355960150167921661
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

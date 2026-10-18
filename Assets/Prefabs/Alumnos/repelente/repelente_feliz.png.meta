@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: fc0231e952d795b4ebf18c767197eeeb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4339518758766640043
+    second: repelente_feliz_0
+  - first:
+      213: -4184353884637967353
+    second: repelente_feliz_1
+  - first:
+      213: 5121354282905645605
+    second: repelente_feliz_2
+  - first:
+      213: -398225247211008339
+    second: repelente_feliz_3
+  - first:
+      213: 2532572136565447584
+    second: repelente_feliz_4
+  - first:
+      213: -6286907378749893558
+    second: repelente_feliz_5
+  - first:
+      213: -4023396120684471621
+    second: repelente_feliz_6
+  - first:
+      213: 6626103874062373183
+    second: repelente_feliz_7
+  - first:
+      213: -6521688820221296532
+    second: repelente_feliz_8
+  - first:
+      213: -925205717469741314
+    second: repelente_feliz_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: repelente_feliz_0
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1375
+        width: 727
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: babfd60c151193c30800000000000000
+      internalID: 4339518758766640043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_feliz_1
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 1375
+        width: 727
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70cc0a3cf403ee5c0800000000000000
+      internalID: -4184353884637967353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_feliz_2
+      rect:
+        serializedVersion: 2
+        x: 4006
+        y: 1375
+        width: 727
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52234811694b21740800000000000000
+      internalID: 5121354282905645605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_feliz_3
+      rect:
+        serializedVersion: 2
+        x: 5926
+        y: 1375
+        width: 727
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae456f5f38397af0800000000000000
+      internalID: -398225247211008339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_feliz_4
+      rect:
+        serializedVersion: 2
+        x: 7846
+        y: 1375
+        width: 727
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab1908a0f0852320800000000000000
+      internalID: 2532572136565447584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_feliz_5
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 295
+        width: 727
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4494d96c0b60c8a0800000000000000
+      internalID: -6286907378749893558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_feliz_6
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 295
+        width: 727
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbadaeb8b860a28c0800000000000000
+      internalID: -4023396120684471621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_feliz_7
+      rect:
+        serializedVersion: 2
+        x: 4006
+        y: 295
+        width: 727
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31d35aed56a4fb50800000000000000
+      internalID: 6626103874062373183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_feliz_8
+      rect:
+        serializedVersion: 2
+        x: 5926
+        y: 295
+        width: 727
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60c217429e4e75a0800000000000000
+      internalID: -6521688820221296532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: repelente_feliz_9
+      rect:
+        serializedVersion: 2
+        x: 7846
+        y: 295
+        width: 727
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe3e0a4d420923f0800000000000000
+      internalID: -925205717469741314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      repelente_feliz_0: 4339518758766640043
+      repelente_feliz_1: -4184353884637967353
+      repelente_feliz_2: 5121354282905645605
+      repelente_feliz_3: -398225247211008339
+      repelente_feliz_4: 2532572136565447584
+      repelente_feliz_5: -6286907378749893558
+      repelente_feliz_6: -4023396120684471621
+      repelente_feliz_7: 6626103874062373183
+      repelente_feliz_8: -6521688820221296532
+      repelente_feliz_9: -925205717469741314
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

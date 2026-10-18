@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: 1f81ff4dc7278674390faf119e6c1d8e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3651654424464621793
+    second: gordete_hablando_0
+  - first:
+      213: 1352917758209941037
+    second: gordete_hablando_1
+  - first:
+      213: -3614931028629141374
+    second: gordete_hablando_2
+  - first:
+      213: 3982154245182529361
+    second: gordete_hablando_3
+  - first:
+      213: 6371147575672255790
+    second: gordete_hablando_4
+  - first:
+      213: -5385242389740437824
+    second: gordete_hablando_5
+  - first:
+      213: 7591134255673926279
+    second: gordete_hablando_6
+  - first:
+      213: 824864160249371931
+    second: gordete_hablando_7
+  - first:
+      213: -5292526701372603145
+    second: gordete_hablando_8
+  - first:
+      213: -6888368584198427736
+    second: gordete_hablando_9
+  - first:
+      213: -7750964269111713499
+    second: gordete_hablando_10
+  - first:
+      213: 4885788166935321107
+    second: gordete_hablando_11
+  - first:
+      213: -5786049307951685892
+    second: gordete_hablando_12
+  - first:
+      213: -2131941675947573777
+    second: gordete_hablando_13
+  - first:
+      213: 3433031659522637198
+    second: gordete_hablando_14
+  - first:
+      213: 3935614003796330921
+    second: gordete_hablando_15
+  - first:
+      213: -2789128306090564693
+    second: gordete_hablando_16
+  - first:
+      213: -5697898725094553256
+    second: gordete_hablando_17
+  - first:
+      213: 2160139360982825959
+    second: gordete_hablando_18
+  - first:
+      213: 69827755706258119
+    second: gordete_hablando_19
+  - first:
+      213: 6754046866981417858
+    second: gordete_hablando_20
+  - first:
+      213: -9070269205588879761
+    second: gordete_hablando_21
+  - first:
+      213: -934485531500574311
+    second: gordete_hablando_22
+  - first:
+      213: 1502177097139664459
+    second: gordete_hablando_23
+  - first:
+      213: -3349156050184698070
+    second: gordete_hablando_24
+  - first:
+      213: 3903019661599239385
+    second: gordete_hablando_25
+  - first:
+      213: -5756987435266086243
+    second: gordete_hablando_26
+  - first:
+      213: 2939673121875356049
+    second: gordete_hablando_27
+  - first:
+      213: -6851264894965337385
+    second: gordete_hablando_28
+  - first:
+      213: 8330505119134445696
+    second: gordete_hablando_29
+  - first:
+      213: 227657029944703426
+    second: gordete_hablando_30
+  - first:
+      213: -835769905241753622
+    second: gordete_hablando_31
+  - first:
+      213: 5626040415263583798
+    second: gordete_hablando_32
+  - first:
+      213: -6634479943517358301
+    second: gordete_hablando_33
+  - first:
+      213: 8584537228336925635
+    second: gordete_hablando_34
+  - first:
+      213: -3684331214064167982
+    second: gordete_hablando_35
+  - first:
+      213: 3350223219780169410
+    second: gordete_hablando_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gordete_hablando_0
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 7852
+        width: 482
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f7d43f5a7b25dc0800000000000000
+      internalID: -3651654424464621793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_1
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 7852
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2edb64788786c210800000000000000
+      internalID: 1352917758209941037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_2
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 7852
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288c507d16f25ddc0800000000000000
+      internalID: -3614931028629141374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_3
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 7852
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f1be80034734730800000000000000
+      internalID: 3982154245182529361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_4
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 7852
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e25398bd6fcda6850800000000000000
+      internalID: 6371147575672255790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_5
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 6772
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce352a2496c345b0800000000000000
+      internalID: -5385242389740437824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_6
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 6772
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7826ebfc260295960800000000000000
+      internalID: 7591134255673926279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_7
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 6772
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d5d9b5591827b00800000000000000
+      internalID: 824864160249371931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_8
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 6772
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f48a60910b2d86b0800000000000000
+      internalID: -5292526701372603145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_9
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 6772
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab64e0d4499760a0800000000000000
+      internalID: -6888368584198427736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_10
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 5692
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521e9d8401b0f6490800000000000000
+      internalID: -7750964269111713499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_11
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 5692
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a9cf9a37ecdc340800000000000000
+      internalID: 4885788166935321107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_12
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 5692
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe15aa6fc2d3bfa0800000000000000
+      internalID: -5786049307951685892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_13
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 5692
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed3b4b5752d962e0800000000000000
+      internalID: -2131941675947573777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_14
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 5692
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d3488fa1494af20800000000000000
+      internalID: 3433031659522637198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_15
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 4612
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9455da51c1e9630800000000000000
+      internalID: 3935614003796330921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_16
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 4612
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba32c7245960b49d0800000000000000
+      internalID: -2789128306090564693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_17
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 4612
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859869c5c4ffce0b0800000000000000
+      internalID: -5697898725094553256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_18
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 4612
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb78bccd4b5afd10800000000000000
+      internalID: 2160139360982825959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_19
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 4612
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c2955e49f318f000800000000000000
+      internalID: 69827755706258119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_20
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 3532
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28374ce47d13bbd50800000000000000
+      internalID: 6754046866981417858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_21
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 3532
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66d5bfb63eef1280800000000000000
+      internalID: -9070269205588879761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_22
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 3532
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9998a273c5a0803f0800000000000000
+      internalID: -934485531500574311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_23
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 3532
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46bcb86c1ec8d410800000000000000
+      internalID: 1502177097139664459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_24
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 3532
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a27046321586581d0800000000000000
+      internalID: -3349156050184698070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_25
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 2452
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dcecf004bf4a2630800000000000000
+      internalID: 3903019661599239385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_26
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 2452
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ae390fd621b10b0800000000000000
+      internalID: -5756987435266086243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_27
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 2452
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199e4291121dbc820800000000000000
+      internalID: 2939673121875356049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_28
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 2452
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2bc79a0ea6be0a0800000000000000
+      internalID: -6851264894965337385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_29
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 2452
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 080f499d446eb9370800000000000000
+      internalID: 8330505119134445696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_30
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 1372
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c97970dcdcc82300800000000000000
+      internalID: 227657029944703426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_31
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 1372
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae77a1403bfb664f0800000000000000
+      internalID: -835769905241753622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_32
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 1372
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ee6cb13f5b31e40800000000000000
+      internalID: 5626040415263583798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_33
+      rect:
+        serializedVersion: 2
+        x: 6071
+        y: 1372
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 327b13174a79de3a0800000000000000
+      internalID: -6634479943517358301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_34
+      rect:
+        serializedVersion: 2
+        x: 7991
+        y: 1372
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb83285027622770800000000000000
+      internalID: 8584537228336925635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_35
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 292
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d352def740aedcc0800000000000000
+      internalID: -3684331214064167982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gordete_hablando_36
+      rect:
+        serializedVersion: 2
+        x: 2231
+        y: 292
+        width: 482
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce2345a4426e7e20800000000000000
+      internalID: 3350223219780169410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gordete_hablando_0: -3651654424464621793
+      gordete_hablando_1: 1352917758209941037
+      gordete_hablando_10: -7750964269111713499
+      gordete_hablando_11: 4885788166935321107
+      gordete_hablando_12: -5786049307951685892
+      gordete_hablando_13: -2131941675947573777
+      gordete_hablando_14: 3433031659522637198
+      gordete_hablando_15: 3935614003796330921
+      gordete_hablando_16: -2789128306090564693
+      gordete_hablando_17: -5697898725094553256
+      gordete_hablando_18: 2160139360982825959
+      gordete_hablando_19: 69827755706258119
+      gordete_hablando_2: -3614931028629141374
+      gordete_hablando_20: 6754046866981417858
+      gordete_hablando_21: -9070269205588879761
+      gordete_hablando_22: -934485531500574311
+      gordete_hablando_23: 1502177097139664459
+      gordete_hablando_24: -3349156050184698070
+      gordete_hablando_25: 3903019661599239385
+      gordete_hablando_26: -5756987435266086243
+      gordete_hablando_27: 2939673121875356049
+      gordete_hablando_28: -6851264894965337385
+      gordete_hablando_29: 8330505119134445696
+      gordete_hablando_3: 3982154245182529361
+      gordete_hablando_30: 227657029944703426
+      gordete_hablando_31: -835769905241753622
+      gordete_hablando_32: 5626040415263583798
+      gordete_hablando_33: -6634479943517358301
+      gordete_hablando_34: 8584537228336925635
+      gordete_hablando_35: -3684331214064167982
+      gordete_hablando_36: 3350223219780169410
+      gordete_hablando_4: 6371147575672255790
+      gordete_hablando_5: -5385242389740437824
+      gordete_hablando_6: 7591134255673926279
+      gordete_hablando_7: 824864160249371931
+      gordete_hablando_8: -5292526701372603145
+      gordete_hablando_9: -6888368584198427736
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
