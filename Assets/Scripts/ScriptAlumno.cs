@@ -8,12 +8,10 @@ public class ScriptAlumno : MonoBehaviour
     public float velocidadAparicion = 5f;
     public float posicionYInicial = -8f;
     public float posicionYFinal = -0.65f;
-    public KeyCode teclaAparicion = KeyCode.Space;
 
     [Header("Diálogos de este Alumno")]
     public string[] dialogoPrincipal;
     public string[] frasesGenericas;
-    [HideInInspector] public bool primerDialogoDicho = false;
 
     [Header("Interfaz y Diálogo")]
     public GameObject botonHablarPrefab;
@@ -22,11 +20,11 @@ public class ScriptAlumno : MonoBehaviour
     public TextMeshProUGUI textoUI;
     public float tiempoPorLetra = 0.05f;
 
-    [Header("Examen")] // NUEVO: Ajustes para la entrega del examen
+    [Header("Examen")]
     public GameObject prefabExamen;
     public float posicionXExamen = 16.15f;
-    public float posicionYInicialExamen = 8f; // Altura desde la que empieza a caer
-    public float posicionYFinalExamen = 1.25f; // Altura en la que se posa en la mesa
+    public float posicionYInicialExamen = 8f;
+    public float posicionYFinalExamen = 1.25f;
     public float velocidadCaidaExamen = 7f;
     [HideInInspector] public GameObject examenInstanciado;
 
@@ -40,14 +38,6 @@ public class ScriptAlumno : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(teclaAparicion))
-        {
-            StartCoroutine(Aparecer());
-        }
     }
 
     public IEnumerator Aparecer()
@@ -69,49 +59,50 @@ public class ScriptAlumno : MonoBehaviour
         }
 
         transform.position = posicionObjetivo;
-
-        if (botonHablarPrefab != null)
-        {
-            botonHablarInstanciado = Instantiate(botonHablarPrefab, posicionBoton, Quaternion.identity);
-        }
     }
 
-    // NUEVA FUNCIÓN: Entrega del examen
     public IEnumerator EntregarExamen()
     {
         if (prefabExamen != null)
         {
-            // 1. Definimos de dónde sale y a dónde va
             Vector3 posicionSalida = new Vector3(posicionXExamen, posicionYInicialExamen, 0f);
             Vector3 posicionMesa = new Vector3(posicionXExamen, posicionYFinalExamen, 0f);
 
-            // 2. Creamos el examen arriba del todo
             examenInstanciado = Instantiate(prefabExamen, posicionSalida, Quaternion.identity);
+            examenInstanciado.SetActive(true);
 
-            // 3. Le asignamos la capa 11 al SpriteRenderer del examen
-            SpriteRenderer spriteExamen = examenInstanciado.GetComponent<SpriteRenderer>();
+            SpriteRenderer spriteExamen = examenInstanciado.GetComponentInChildren<SpriteRenderer>();
             if (spriteExamen != null)
             {
                 spriteExamen.sortingOrder = 11;
             }
 
-            // 4. Lo bajamos poco a poco usando la distancia para evitar el bucle infinito
             while (Vector3.Distance(examenInstanciado.transform.position, posicionMesa) > 0.01f)
             {
                 examenInstanciado.transform.position = Vector3.MoveTowards(examenInstanciado.transform.position, posicionMesa, velocidadCaidaExamen * Time.deltaTime);
                 yield return null;
             }
 
-            // 5. Lo clavamos en su posición final por si hay un error microscópico
             examenInstanciado.transform.position = posicionMesa;
+
+            if (spriteExamen != null)
+            {
+                spriteExamen.sortingOrder = 1;
+            }
         }
         else
         {
             Debug.LogWarning("Ojo: No has asignado el Prefab del Examen en el Inspector del alumno.");
         }
+
+        // Aquí sí se crea el botón (después de aterrizar)
+        if (botonHablarPrefab != null)
+        {
+            botonHablarInstanciado = Instantiate(botonHablarPrefab, posicionBoton, Quaternion.identity);
+        }
     }
 
-    public IEnumerator Decir(string[] lineasDiálogo)
+    public IEnumerator Decir(string[] lineasDiálogo, bool regenerarBoton)
     {
         if (botonHablarInstanciado != null)
         {
@@ -129,30 +120,26 @@ public class ScriptAlumno : MonoBehaviour
         {
             animator.SetBool("Hablando", true);
             textoUI.text = "";
+
             avanzarTexto = false;
 
             foreach (char letra in linea.ToCharArray())
             {
                 textoUI.text += letra;
                 yield return new WaitForSeconds(tiempoPorLetra);
-
-                if (avanzarTexto || Input.GetKey(KeyCode.Return))
-                {
-                    textoUI.text = linea;
-                    break;
-                }
             }
 
             animator.SetBool("Hablando", false);
-            yield return new WaitUntil(() => !Input.GetKey(KeyCode.Return));
+
             avanzarTexto = false;
+            yield return new WaitUntil(() => !Input.GetKey(KeyCode.Space));
             yield return null;
 
-            yield return new WaitUntil(() => avanzarTexto || Input.GetKeyDown(KeyCode.Return));
+            yield return new WaitUntil(() => avanzarTexto || Input.GetKeyDown(KeyCode.Space));
         }
         textoUI.text = "";
 
-        if (botonHablarPrefab != null)
+        if (regenerarBoton && botonHablarPrefab != null)
         {
             botonHablarInstanciado = Instantiate(botonHablarPrefab, posicionBoton, Quaternion.identity);
         }
@@ -163,6 +150,6 @@ public class ScriptAlumno : MonoBehaviour
         int indiceAleatorio = Random.Range(0, opcionesAleatorias.Length);
         string lineaElegida = opcionesAleatorias[indiceAleatorio];
 
-        yield return StartCoroutine(Decir(new string[] { lineaElegida }));
+        yield return StartCoroutine(Decir(new string[] { lineaElegida }, true));
     }
 }
