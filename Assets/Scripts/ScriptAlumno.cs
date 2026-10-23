@@ -10,7 +10,7 @@ public class ScriptAlumno : MonoBehaviour
     public float posicionYFinal = -0.65f;
     public KeyCode teclaAparicion = KeyCode.Space;
 
-    [Header("Diálogos de este Alumno")] // Cada uno tiene los suyos en el Inspector
+    [Header("Diálogos de este Alumno")]
     public string[] dialogoPrincipal;
     public string[] frasesGenericas;
     [HideInInspector] public bool primerDialogoDicho = false;
@@ -21,6 +21,14 @@ public class ScriptAlumno : MonoBehaviour
 
     public TextMeshProUGUI textoUI;
     public float tiempoPorLetra = 0.05f;
+
+    [Header("Examen")] // NUEVO: Ajustes para la entrega del examen
+    public GameObject prefabExamen;
+    public float posicionXExamen = 16.15f;
+    public float posicionYInicialExamen = 8f; // Altura desde la que empieza a caer
+    public float posicionYFinalExamen = 1.25f; // Altura en la que se posa en la mesa
+    public float velocidadCaidaExamen = 7f;
+    [HideInInspector] public GameObject examenInstanciado;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -65,6 +73,41 @@ public class ScriptAlumno : MonoBehaviour
         if (botonHablarPrefab != null)
         {
             botonHablarInstanciado = Instantiate(botonHablarPrefab, posicionBoton, Quaternion.identity);
+        }
+    }
+
+    // NUEVA FUNCIÓN: Entrega del examen
+    public IEnumerator EntregarExamen()
+    {
+        if (prefabExamen != null)
+        {
+            // 1. Definimos de dónde sale y a dónde va
+            Vector3 posicionSalida = new Vector3(posicionXExamen, posicionYInicialExamen, 0f);
+            Vector3 posicionMesa = new Vector3(posicionXExamen, posicionYFinalExamen, 0f);
+
+            // 2. Creamos el examen arriba del todo
+            examenInstanciado = Instantiate(prefabExamen, posicionSalida, Quaternion.identity);
+
+            // 3. Le asignamos la capa 11 al SpriteRenderer del examen
+            SpriteRenderer spriteExamen = examenInstanciado.GetComponent<SpriteRenderer>();
+            if (spriteExamen != null)
+            {
+                spriteExamen.sortingOrder = 11;
+            }
+
+            // 4. Lo bajamos poco a poco usando la distancia para evitar el bucle infinito
+            while (Vector3.Distance(examenInstanciado.transform.position, posicionMesa) > 0.01f)
+            {
+                examenInstanciado.transform.position = Vector3.MoveTowards(examenInstanciado.transform.position, posicionMesa, velocidadCaidaExamen * Time.deltaTime);
+                yield return null;
+            }
+
+            // 5. Lo clavamos en su posición final por si hay un error microscópico
+            examenInstanciado.transform.position = posicionMesa;
+        }
+        else
+        {
+            Debug.LogWarning("Ojo: No has asignado el Prefab del Examen en el Inspector del alumno.");
         }
     }
 
