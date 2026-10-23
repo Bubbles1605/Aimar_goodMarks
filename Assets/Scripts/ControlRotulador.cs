@@ -8,14 +8,13 @@ public class ControladorRotulador : MonoBehaviour
     public float distanciaMinima = 0.02f;
     public Vector2 offsetPuntaBoli = Vector2.zero;
 
-    [Header("Sello")]
-    public GameObject marcaSelloPrefab;     // Prefab base de la nota en el examen
+    [Header("Sello y Examen")]
+    public GameObject marcaSelloPrefab;     // Prefab base de la nota que se imprime en el examen
     public Sprite[] spritesNotas;           // Las 11 imágenes de las notas (del 0 al 10)
-
-    [Header("Configuracion Cursor Sello")]
-    public GameObject cursorSelloVisual;    // Objeto flotante que sigue al ratón al coger un sello
-    public Sprite imagenCursorSello;        // Imagen aparte para el cursor del sello
     public Vector3 escalaNotaEstampada = new Vector3(1.5f, 1.5f, 1.5f); // Tamaño grande de la nota en el examen
+
+    [Tooltip("Posición exacta en la pantalla/mundo donde aparecerá la nota automáticamente")]
+    public Vector2 posicionNotaExamen;      // ¡Modifica esto cómodamente desde el Inspector de Unity!
 
     //BOLI RELATED
     private bool usandoBoli = false;
@@ -28,30 +27,24 @@ public class ControladorRotulador : MonoBehaviour
     private GameObject selloFisicoEnMesa;
     private Vector3 posicionOriginalSello;
     private int indiceSelloActual = -1;     // Guarda qué número de nota (0 al 10) se ha cogido
+    private bool examenYaEstampado = false;  // Controla si ya se ha colocado una nota en el examen
 
     //ACTO DE DIBUJAR
     private LineRenderer lineaActual;
     private Vector2 puntoAnterior;
     private bool estaDibujando = false;
 
-    void Start()
-    {
-        if (cursorSelloVisual != null)
-        {
-            cursorSelloVisual.SetActive(false);
-        }
-    }
-
     void Update()
     {
         Vector2 posRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        // El cursor visual del sello sigue al ratón
-        if (usandoSello && cursorSelloVisual != null)
+        // Si estamos usando un sello, el sello físico de la mesa sigue al ratón
+        if (usandoSello && selloFisicoEnMesa != null)
         {
-            cursorSelloVisual.transform.position = new Vector3(posRaton.x, posRaton.y, 0f);
+            selloFisicoEnMesa.transform.position = new Vector3(posRaton.x, posRaton.y, selloFisicoEnMesa.transform.position.z);
         }
 
+        // Si estamos usando el boli, el boli sigue al ratón con su offset
         if (usandoBoli && boliFisicoEnMesa != null)
         {
             boliFisicoEnMesa.transform.position = new Vector3(posRaton.x + offsetPuntaBoli.x, posRaton.y + offsetPuntaBoli.y, boliFisicoEnMesa.transform.position.z);
@@ -62,26 +55,16 @@ public class ControladorRotulador : MonoBehaviour
             GameObject selloClicado = ObtenerObjetoTocado(posRaton, "Sello");
             GameObject boliClicado = ObtenerObjetoTocado(posRaton, "Boli");
 
+            // 1. Coger un sello de la mesa
             if (selloClicado != null && !usandoSello && !usandoBoli)
             {
                 usandoSello = true;
                 selloFisicoEnMesa = selloClicado;
                 posicionOriginalSello = selloFisicoEnMesa.transform.position;
 
-                // Detectamos qué número de sello es (del 0 al 10)
                 indiceSelloActual = ObtenerIndiceSello(selloClicado);
-
-                // Activamos el cursor flotante exclusivo del sello con su imagen aparte
-                if (cursorSelloVisual != null)
-                {
-                    cursorSelloVisual.SetActive(true);
-                    SpriteRenderer srCursor = cursorSelloVisual.GetComponent<SpriteRenderer>();
-                    if (srCursor != null && imagenCursorSello != null)
-                    {
-                        srCursor.sprite = imagenCursorSello;
-                    }
-                }
             }
+            // 2. Coger el boli de la mesa
             else if (boliClicado != null && !usandoBoli && !usandoSello)
             {
                 usandoBoli = true;
@@ -92,29 +75,37 @@ public class ControladorRotulador : MonoBehaviour
                 boliFisicoEnMesa.transform.rotation = Quaternion.identity;
                 Cursor.visible = false;
             }
+            // 3. Hacer clic sobre el examen
             else if (EstaSobreExamen(posRaton))
             {
                 if (usandoSello)
                 {
-                    GameObject examenObjeto = ObtenerObjetoExamen(posRaton);
+                    // Comprobamos si ya se puso una nota antes en este examen
+                    if (examenYaEstampado)
+                    {
+                        Debug.Log("¡Este examen ya tiene una nota puesta!");
+                        SoltarSello();
+                        return; // Sale de la función sin hacer nada más
+                    }
 
                     if (marcaSelloPrefab != null)
                     {
-                        Transform padreExamen = (examenObjeto != null) ? examenObjeto.transform : null;
+                        // Usamos la posición fija configurada en el Inspector
+                        Vector3 posicionFinal = new Vector3(posicionNotaExamen.x, posicionNotaExamen.y, 0f);
 
-                        // Instanciamos la nota vinculada al examen
-                        GameObject nuevaNota = Instantiate(marcaSelloPrefab, posRaton, Quaternion.identity, padreExamen);
-
-                        // Aplicamos el tamaño grande
+                        GameObject nuevaNota = Instantiate(marcaSelloPrefab, posicionFinal, Quaternion.identity);
                         nuevaNota.transform.localScale = escalaNotaEstampada;
 
-                        // Asignamos la imagen correspondiente de la lista (0 al 10) y forzamos el color blanco
                         SpriteRenderer sr = nuevaNota.GetComponent<SpriteRenderer>();
                         if (sr != null && spritesNotas != null && indiceSelloActual >= 0 && indiceSelloActual < spritesNotas.Length)
                         {
                             sr.sprite = spritesNotas[indiceSelloActual];
                             sr.color = Color.white;
+                            sr.sortingOrder = 10;
                         }
+
+                        // Marcamos que ya se ha puesto una nota para bloquear futuros sellos
+                        examenYaEstampado = true;
                     }
 
                     SoltarSello();
@@ -150,6 +141,7 @@ public class ControladorRotulador : MonoBehaviour
             CortarTrazo();
         }
 
+        // Clic derecho para cancelar y devolver el sello o boli a la mesa
         if (Input.GetMouseButtonDown(1))
         {
             if (usandoSello) SoltarSello();
@@ -159,12 +151,13 @@ public class ControladorRotulador : MonoBehaviour
 
     void SoltarSello()
     {
-        usandoSello = false;
-        indiceSelloActual = -1;
-        if (cursorSelloVisual != null)
+        if (selloFisicoEnMesa != null)
         {
-            cursorSelloVisual.SetActive(false);
+            selloFisicoEnMesa.transform.position = posicionOriginalSello; // Devuelve el sello a la mesa
         }
+        usandoSello = false;
+        selloFisicoEnMesa = null;
+        indiceSelloActual = -1;
     }
 
     void SoltarBoli()
@@ -192,16 +185,6 @@ public class ControladorRotulador : MonoBehaviour
         return false;
     }
 
-    GameObject ObtenerObjetoExamen(Vector2 posicion)
-    {
-        Collider2D[] hits = Physics2D.OverlapPointAll(posicion);
-        foreach (Collider2D hit in hits)
-        {
-            if (hit.CompareTag("Examen")) return hit.gameObject;
-        }
-        return null;
-    }
-
     GameObject ObtenerObjetoTocado(Vector2 posicion, string tagBuscado)
     {
         Collider2D[] hits = Physics2D.OverlapPointAll(posicion);
@@ -212,7 +195,6 @@ public class ControladorRotulador : MonoBehaviour
         return null;
     }
 
-    // Lee de 10 a 0 para que el "10" tenga prioridad sobre el "0" y el "1"
     int ObtenerIndiceSello(GameObject sello)
     {
         string nombre = sello.name;
@@ -220,7 +202,7 @@ public class ControladorRotulador : MonoBehaviour
         {
             if (nombre.Contains(i.ToString()))
             {
-                return i; // Retorna directamente el número como índice (0 al 10)
+                return i;
             }
         }
         return 0;
