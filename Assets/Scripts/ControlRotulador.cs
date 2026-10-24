@@ -9,12 +9,12 @@ public class ControladorRotulador : MonoBehaviour
     public Vector2 offsetPuntaBoli = Vector2.zero;
 
     [Header("Sello y Examen")]
-    public GameObject marcaSelloPrefab;     // Prefab base de la nota que se imprime en el examen
-    public Sprite[] spritesNotas;           // Las 11 imágenes de las notas (del 0 al 10)
-    public Vector3 escalaNotaEstampada = new Vector3(1.5f, 1.5f, 1.5f); // Tamaño grande de la nota en el examen
+    public GameObject marcaSelloPrefab;
+    public Sprite[] spritesNotas;
+    public Vector3 escalaNotaEstampada = new Vector3(1.5f, 1.5f, 1.5f);
 
     [Tooltip("Posición exacta en la pantalla/mundo donde aparecerá la nota automáticamente")]
-    public Vector2 posicionNotaExamen;      // ¡Modifica esto cómodamente desde el Inspector de Unity!
+    public Vector2 posicionNotaExamen;
 
     //BOLI RELATED
     private bool usandoBoli = false;
@@ -26,8 +26,7 @@ public class ControladorRotulador : MonoBehaviour
     private bool usandoSello = false;
     private GameObject selloFisicoEnMesa;
     private Vector3 posicionOriginalSello;
-    private int indiceSelloActual = -1;     // Guarda qué número de nota (0 al 10) se ha cogido
-    private bool examenYaEstampado = false;  // Controla si ya se ha colocado una nota en el examen
+    private int indiceSelloActual = -1;
 
     //ACTO DE DIBUJAR
     private LineRenderer lineaActual;
@@ -38,33 +37,30 @@ public class ControladorRotulador : MonoBehaviour
     {
         Vector2 posRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        // Si estamos usando un sello, el sello físico de la mesa sigue al ratón
         if (usandoSello && selloFisicoEnMesa != null)
         {
             selloFisicoEnMesa.transform.position = new Vector3(posRaton.x, posRaton.y, selloFisicoEnMesa.transform.position.z);
         }
 
-        // Si estamos usando el boli, el boli sigue al ratón con su offset
         if (usandoBoli && boliFisicoEnMesa != null)
         {
             boliFisicoEnMesa.transform.position = new Vector3(posRaton.x + offsetPuntaBoli.x, posRaton.y + offsetPuntaBoli.y, boliFisicoEnMesa.transform.position.z);
         }
+
+        GameObject examenTocado = ObtenerObjetoTocado(posRaton, "Examen");
 
         if (Input.GetMouseButtonDown(0))
         {
             GameObject selloClicado = ObtenerObjetoTocado(posRaton, "Sello");
             GameObject boliClicado = ObtenerObjetoTocado(posRaton, "Boli");
 
-            // 1. Coger un sello de la mesa
             if (selloClicado != null && !usandoSello && !usandoBoli)
             {
                 usandoSello = true;
                 selloFisicoEnMesa = selloClicado;
                 posicionOriginalSello = selloFisicoEnMesa.transform.position;
-
                 indiceSelloActual = ObtenerIndiceSello(selloClicado);
             }
-            // 2. Coger el boli de la mesa
             else if (boliClicado != null && !usandoBoli && !usandoSello)
             {
                 usandoBoli = true;
@@ -75,60 +71,67 @@ public class ControladorRotulador : MonoBehaviour
                 boliFisicoEnMesa.transform.rotation = Quaternion.identity;
                 Cursor.visible = false;
             }
-            // 3. Hacer clic sobre el examen
-            else if (EstaSobreExamen(posRaton))
+            else if (examenTocado != null)
             {
+                ScriptDias director = FindFirstObjectByType<ScriptDias>();
+                ScriptAlumno alumnoActual = (director != null) ? director.alumnoActual : null;
+
                 if (usandoSello)
                 {
-                    // Comprobamos si ya se puso una nota antes en este examen
-                    if (examenYaEstampado)
+                    if (alumnoActual != null && alumnoActual.examenCalificado)
                     {
                         Debug.Log("¡Este examen ya tiene una nota puesta!");
                         SoltarSello();
-                        return; // Sale de la función sin hacer nada más
+                        return;
                     }
 
                     if (marcaSelloPrefab != null)
                     {
-                        // Usamos la posición fija configurada en el Inspector
                         Vector3 posicionFinal = new Vector3(posicionNotaExamen.x, posicionNotaExamen.y, 0f);
-
                         GameObject nuevaNota = Instantiate(marcaSelloPrefab, posicionFinal, Quaternion.identity);
+
                         nuevaNota.transform.localScale = escalaNotaEstampada;
+
+                        if (alumnoActual != null && alumnoActual.examenInstanciado != null)
+                        {
+                            nuevaNota.transform.SetParent(alumnoActual.examenInstanciado.transform, true);
+                        }
 
                         SpriteRenderer sr = nuevaNota.GetComponent<SpriteRenderer>();
                         if (sr != null && spritesNotas != null && indiceSelloActual >= 0 && indiceSelloActual < spritesNotas.Length)
                         {
                             sr.sprite = spritesNotas[indiceSelloActual];
                             sr.color = Color.white;
-                            sr.sortingOrder = 10;
+                            sr.sortingOrder = 12;
                         }
 
-                        // Marcamos que ya se ha puesto una nota para bloquear futuros sellos
-                        examenYaEstampado = true;
+                        if (alumnoActual != null)
+                        {
+                            alumnoActual.notaRecibida = indiceSelloActual;
+                            alumnoActual.examenCalificado = true;
+                        }
                     }
-
                     SoltarSello();
                 }
                 else if (usandoBoli)
                 {
-                    EmpezarPunto(posRaton);
+                    EmpezarPunto(posRaton, examenTocado.transform);
                     estaDibujando = true;
                 }
             }
         }
         else if (Input.GetMouseButton(0))
         {
-            if (EstaSobreExamen(posRaton) && usandoBoli)
+            if (examenTocado != null && usandoBoli)
             {
                 if (!estaDibujando)
                 {
-                    EmpezarPunto(posRaton);
+                    EmpezarPunto(posRaton, examenTocado.transform);
                     estaDibujando = true;
                 }
                 else
                 {
-                    ContinuarTrazo(posRaton);
+                    ContinuarTrazo(posRaton, examenTocado.transform);
                 }
             }
             else
@@ -141,7 +144,6 @@ public class ControladorRotulador : MonoBehaviour
             CortarTrazo();
         }
 
-        // Clic derecho para cancelar y devolver el sello o boli a la mesa
         if (Input.GetMouseButtonDown(1))
         {
             if (usandoSello) SoltarSello();
@@ -153,7 +155,7 @@ public class ControladorRotulador : MonoBehaviour
     {
         if (selloFisicoEnMesa != null)
         {
-            selloFisicoEnMesa.transform.position = posicionOriginalSello; // Devuelve el sello a la mesa
+            selloFisicoEnMesa.transform.position = posicionOriginalSello;
         }
         usandoSello = false;
         selloFisicoEnMesa = null;
@@ -169,20 +171,9 @@ public class ControladorRotulador : MonoBehaviour
         }
 
         Cursor.visible = true;
-
         usandoBoli = false;
         boliFisicoEnMesa = null;
         CortarTrazo();
-    }
-
-    bool EstaSobreExamen(Vector2 posicion)
-    {
-        Collider2D[] hits = Physics2D.OverlapPointAll(posicion);
-        foreach (Collider2D hit in hits)
-        {
-            if (hit.CompareTag("Examen")) return true;
-        }
-        return false;
     }
 
     GameObject ObtenerObjetoTocado(Vector2 posicion, string tagBuscado)
@@ -208,31 +199,62 @@ public class ControladorRotulador : MonoBehaviour
         return 0;
     }
 
-    void EmpezarPunto(Vector2 pos)
+    void EmpezarPunto(Vector2 pos, Transform padre)
     {
-        Instantiate(puntoPrefab, pos, Quaternion.identity);
+        GameObject nuevoPunto = Instantiate(puntoPrefab, pos, Quaternion.identity);
+        if (padre != null) nuevoPunto.transform.SetParent(padre, true);
+
+        // Ponemos el punto en capa 12 para que viaje por encima del folio
+        Renderer renderPunto = nuevoPunto.GetComponent<Renderer>();
+        if (renderPunto != null) renderPunto.sortingOrder = 12;
+
+        // Si el punto resulta ser también un LineRenderer, le aplicamos el arreglo
+        LineRenderer lrPunto = nuevoPunto.GetComponent<LineRenderer>();
+        if (lrPunto != null)
+        {
+            lrPunto.useWorldSpace = false;
+            Vector3 posLocal = nuevoPunto.transform.InverseTransformPoint(pos);
+            for (int i = 0; i < lrPunto.positionCount; i++)
+            {
+                lrPunto.SetPosition(i, posLocal);
+            }
+        }
+
         puntoAnterior = pos;
         lineaActual = null;
     }
 
-    void ContinuarTrazo(Vector2 pos)
+    void ContinuarTrazo(Vector2 pos, Transform padre)
     {
         if (Vector2.Distance(pos, puntoAnterior) > distanciaMinima)
         {
             if (lineaActual == null)
             {
-                GameObject nuevoTrazo = Instantiate(trazoPrefab, Vector3.zero, Quaternion.identity);
+                // Instanciamos exactamente en la posición del folio para anclarlo bien
+                GameObject nuevoTrazo = Instantiate(trazoPrefab, padre.position, Quaternion.identity);
+                if (padre != null) nuevoTrazo.transform.SetParent(padre, true);
+
                 lineaActual = nuevoTrazo.GetComponent<LineRenderer>();
+
+                // --- LA MAGIA ESTÁ AQUÍ ---
+                lineaActual.useWorldSpace = false; // Desconectamos del mundo global, sigue al padre
+                lineaActual.sortingOrder = 12; // Capa visual por encima del folio que vuela
                 lineaActual.startColor = Color.red;
                 lineaActual.endColor = Color.red;
                 lineaActual.positionCount = 2;
-                lineaActual.SetPosition(0, puntoAnterior);
-                lineaActual.SetPosition(1, pos);
+
+                // Traducimos la posición absoluta del ratón a posición local (relativa al folio)
+                Vector3 puntoAnteriorLocal = lineaActual.transform.InverseTransformPoint(puntoAnterior);
+                Vector3 posLocal = lineaActual.transform.InverseTransformPoint(pos);
+
+                lineaActual.SetPosition(0, puntoAnteriorLocal);
+                lineaActual.SetPosition(1, posLocal);
             }
             else
             {
                 lineaActual.positionCount++;
-                lineaActual.SetPosition(lineaActual.positionCount - 1, pos);
+                Vector3 posLocal = lineaActual.transform.InverseTransformPoint(pos);
+                lineaActual.SetPosition(lineaActual.positionCount - 1, posLocal);
             }
             puntoAnterior = pos;
         }

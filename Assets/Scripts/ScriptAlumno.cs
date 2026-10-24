@@ -28,11 +28,15 @@ public class ScriptAlumno : MonoBehaviour
     public float velocidadCaidaExamen = 7f;
     [HideInInspector] public GameObject examenInstanciado;
 
+    // LA VARIABLE MÁGICA
+    [HideInInspector] public bool examenCalificado = false;
+
     private SpriteRenderer spriteRenderer;
-    private Animator animator;
+    public Animator animator;
     private GameObject botonHablarInstanciado;
 
     [HideInInspector] public bool avanzarTexto = false;
+    [HideInInspector] public int notaRecibida = -1;
 
     void Awake()
     {
@@ -63,6 +67,8 @@ public class ScriptAlumno : MonoBehaviour
 
     public IEnumerator EntregarExamen()
     {
+        examenCalificado = false; // Lo reseteamos por seguridad al empezar
+
         if (prefabExamen != null)
         {
             Vector3 posicionSalida = new Vector3(posicionXExamen, posicionYInicialExamen, 0f);
@@ -95,10 +101,34 @@ public class ScriptAlumno : MonoBehaviour
             Debug.LogWarning("Ojo: No has asignado el Prefab del Examen en el Inspector del alumno.");
         }
 
-        // Aquí sí se crea el botón (después de aterrizar)
         if (botonHablarPrefab != null)
         {
             botonHablarInstanciado = Instantiate(botonHablarPrefab, posicionBoton, Quaternion.identity);
+        }
+
+        // --- MAGIA: La secuencia se pausa aquí hasta que el jugador ponga el sello ---
+        yield return new WaitUntil(() => examenCalificado);
+        yield return new WaitForSeconds(1f);
+
+        // --- RETIRAR EL EXAMEN ---
+        if (examenInstanciado != null)
+        {
+            Vector3 posicionDestino = new Vector3(posicionXExamen, posicionYInicialExamen, 0f);
+
+            // Subimos la capa para que pase por encima del alumno al irse volando
+            SpriteRenderer spriteExamen = examenInstanciado.GetComponentInChildren<SpriteRenderer>();
+            if (spriteExamen != null) spriteExamen.sortingOrder = 11;
+
+            // Bucle hacia arriba
+            while (Vector3.Distance(examenInstanciado.transform.position, posicionDestino) > 0.01f)
+            {
+                examenInstanciado.transform.position = Vector3.MoveTowards(examenInstanciado.transform.position, posicionDestino, velocidadCaidaExamen * Time.deltaTime);
+                yield return null;
+            }
+
+            // Lo destruimos para liberar memoria (destruirá también la nota pegada)
+            Destroy(examenInstanciado);
+            examenInstanciado = null;
         }
     }
 

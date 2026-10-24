@@ -3,27 +3,31 @@ using UnityEngine;
 
 public class ScriptDias : MonoBehaviour
 {
-    [Header("Gestión del Día")]
-    public ScriptAlumno alumnoInicial;
+    [Header("Alumnos del Día 1")]
+    public ScriptAlumno basicote;
+    // public ScriptAlumno brainrot; // Para cuando lo añadas
+    // public ScriptAlumno gordete;
 
     [Header("Alumno en Pantalla")]
     public ScriptAlumno alumnoActual;
-
     private bool dialogoEnCurso = false;
+
+    [Header("Textos Día 1 - Basicote")]
+    public string[] dialogoPresentacionBasicote = { "Hola profe, soy Basicote.", "A ver qué me has puesto." };
+    public string[] basicoteReaccionFeliz = { "¡Bua, un aprobadillo! ¡Qué grande eres!", "Me voy al parque." };
+    public string[] basicoteReaccionEnfadado = { "¿Un suspenso? ¿En serio?", "Vaya asco de corrección." };
+    public string[] basicoteReaccionTriste = { "Negrito feo" };
 
     void Start()
     {
-        if (alumnoInicial != null)
-        {
-            StartCoroutine(SecuenciaAlumno(alumnoInicial));
-        }
+        // Empezamos el juego lanzando directamente el guion del Día 1
+        StartCoroutine(SecuenciaDia1());
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // Avanzar texto rápido con clic en pantalla
             if (dialogoEnCurso && alumnoActual != null)
             {
                 alumnoActual.avanzarTexto = true;
@@ -37,8 +41,6 @@ public class ScriptDias : MonoBehaviour
             {
                 if (hit.CompareTag("BotonHablar"))
                 {
-                    // Como el botón solo aparece tras la secuencia principal, 
-                    // cualquier clic en él lanzará SIEMPRE las frases aleatorias.
                     if (alumnoActual != null && !dialogoEnCurso)
                     {
                         StartCoroutine(ManejarDialogo(alumnoActual.DecirAleatorio(alumnoActual.frasesGenericas)));
@@ -49,19 +51,51 @@ public class ScriptDias : MonoBehaviour
         }
     }
 
-    // EL NUEVO ORDEN CINEMÁTICO
-    public IEnumerator SecuenciaAlumno(ScriptAlumno alumno)
+    // --- EL GUION DEL DÍA 1 ---
+    public IEnumerator SecuenciaDia1()
     {
-        alumnoActual = alumno;
+        // ==========================================
+        // TURNO 1: BASICOTE
+        // ==========================================
+        alumnoActual = basicote;
 
-        // 1. Sube a la mesa
-        yield return StartCoroutine(alumno.Aparecer());
+        // 1. Sube y habla
+        yield return StartCoroutine(basicote.Aparecer());
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(dialogoPresentacionBasicote, false)));
 
-        // 2. Dice su diálogo (le pasamos 'false' para que NO instancie el botón al acabar)
-        yield return StartCoroutine(ManejarDialogo(alumno.Decir(alumno.dialogoPrincipal, false)));
+        // 2. Tira el examen a la mesa y el juego se pausa hasta que el jugador ponga nota
+        yield return StartCoroutine(basicote.EntregarExamen());
 
-        // 3. Entrega el examen (al terminar esta función, sí que aparece el botón)
-        yield return StartCoroutine(alumno.EntregarExamen());
+        // 3. ¡EL EXAMEN YA SE HA IDO! Evaluamos la nota con los Ifs
+        int nota = basicote.notaRecibida;
+
+        if (nota >= 5)
+        {
+            basicote.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(basicoteReaccionFeliz, true)));
+        }
+        else if (nota == 4)
+        {
+            basicote.animator.SetTrigger("Enfadado");
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(basicoteReaccionEnfadado, true)));
+        } else
+        {
+            basicote.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(basicoteReaccionTriste, true)));
+        }
+
+        // Opcional: Aquí podrías poner un código para que Basicote se vaya (baje por la pantalla)
+        // yield return StartCoroutine(basicote.Desaparecer());
+
+
+        // ==========================================
+        // TURNO 2: EL SIGUIENTE ALUMNO
+        // ==========================================
+        /*
+        alumnoActual = brainrot;
+        yield return StartCoroutine(brainrot.Aparecer());
+        ... y sus propios ifs aquí
+        */
     }
 
     private IEnumerator ManejarDialogo(IEnumerator corrutinaHablar)
