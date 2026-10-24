@@ -16,6 +16,17 @@ public class ControladorRotulador : MonoBehaviour
     [Tooltip("Posición exacta en la pantalla/mundo donde aparecerá la nota automáticamente")]
     public Vector2 posicionNotaExamen;
 
+    [Header("Zoom Examen")]
+    public GameObject panelFondoOscuro;
+    public GameObject botonCerrarZoom;
+    public float factorEscalaZoom = 1.8f;
+
+    private bool examenAmpliado = false;
+    private Vector3 posicionOriginalExamen;
+    private Vector3 escalaOriginalExamen;
+    private int sortingOrderOriginal;
+    private GameObject examenEnZoom;
+
     //BOLI RELATED
     private bool usandoBoli = false;
     private GameObject boliFisicoEnMesa;
@@ -54,14 +65,14 @@ public class ControladorRotulador : MonoBehaviour
             GameObject selloClicado = ObtenerObjetoTocado(posRaton, "Sello");
             GameObject boliClicado = ObtenerObjetoTocado(posRaton, "Boli");
 
-            if (selloClicado != null && !usandoSello && !usandoBoli)
+            if (selloClicado != null && !usandoSello && !usandoBoli && !examenAmpliado)
             {
                 usandoSello = true;
                 selloFisicoEnMesa = selloClicado;
                 posicionOriginalSello = selloFisicoEnMesa.transform.position;
                 indiceSelloActual = ObtenerIndiceSello(selloClicado);
             }
-            else if (boliClicado != null && !usandoBoli && !usandoSello)
+            else if (boliClicado != null && !usandoBoli && !usandoSello && !examenAmpliado)
             {
                 usandoBoli = true;
                 boliFisicoEnMesa = boliClicado;
@@ -118,6 +129,10 @@ public class ControladorRotulador : MonoBehaviour
                     EmpezarPunto(posRaton, examenTocado.transform);
                     estaDibujando = true;
                 }
+                else if (!usandoSello && !usandoBoli && !examenAmpliado)
+                {
+                    AmpliarExamen(examenTocado);
+                }
             }
         }
         else if (Input.GetMouseButton(0))
@@ -149,6 +164,45 @@ public class ControladorRotulador : MonoBehaviour
             if (usandoSello) SoltarSello();
             if (usandoBoli) SoltarBoli();
         }
+    }
+
+    void AmpliarExamen(GameObject examen)
+    {
+        examenAmpliado = true;
+        examenEnZoom = examen;
+
+        posicionOriginalExamen = examen.transform.position;
+        escalaOriginalExamen = examen.transform.localScale;
+
+        examen.transform.position = Vector3.zero;
+        examen.transform.localScale = escalaOriginalExamen * factorEscalaZoom;
+
+        SpriteRenderer sr = examen.GetComponentInChildren<SpriteRenderer>();
+        if (sr != null)
+        {
+            sortingOrderOriginal = sr.sortingOrder;
+            sr.sortingOrder = 30;
+        }
+
+        if (panelFondoOscuro != null) panelFondoOscuro.SetActive(true);
+        if (botonCerrarZoom != null) botonCerrarZoom.SetActive(true);
+    }
+
+    public void CerrarZoom()
+    {
+        if (!examenAmpliado || examenEnZoom == null) return;
+
+        examenEnZoom.transform.position = posicionOriginalExamen;
+        examenEnZoom.transform.localScale = escalaOriginalExamen;
+
+        SpriteRenderer sr = examenEnZoom.GetComponentInChildren<SpriteRenderer>();
+        if (sr != null) sr.sortingOrder = sortingOrderOriginal;
+
+        if (panelFondoOscuro != null) panelFondoOscuro.SetActive(false);
+        if (botonCerrarZoom != null) botonCerrarZoom.SetActive(false);
+
+        examenAmpliado = false;
+        examenEnZoom = null;
     }
 
     void SoltarSello()
