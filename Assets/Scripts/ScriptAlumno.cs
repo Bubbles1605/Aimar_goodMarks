@@ -65,6 +65,19 @@ public class ScriptAlumno : MonoBehaviour
         transform.position = posicionObjetivo;
     }
 
+    public IEnumerator Desaparecer()
+    {
+        Vector3 posicionObjetivo = new Vector3(-4f, posicionYInicial, 0f);
+
+        while (Vector3.Distance(transform.position, posicionObjetivo) > 0.01f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, posicionObjetivo, velocidadAparicion * Time.deltaTime);
+            yield return null;
+        }
+
+        transform.position = posicionObjetivo;
+    }
+
     public IEnumerator EntregarExamen()
     {
         examenCalificado = false; // Lo reseteamos por seguridad al empezar
