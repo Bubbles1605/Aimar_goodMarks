@@ -8,6 +8,7 @@ TagManager:
   - Sello
   - Boli
   - BotonHablar
+  - Pegatina
   layers:
   - Default
   - TransparentFX

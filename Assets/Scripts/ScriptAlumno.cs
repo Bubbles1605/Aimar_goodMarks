@@ -156,7 +156,12 @@ public class ScriptAlumno : MonoBehaviour
             foreach (char letra in linea.ToCharArray())
             {
                 textoUI.text += letra;
-                yield return new WaitForSeconds(tiempoPorLetra);
+
+                // Si mantienes pulsada la 'P', omite el tiempo de espera entre letras
+                if (!Input.GetKey(KeyCode.P))
+                {
+                    yield return new WaitForSeconds(tiempoPorLetra);
+                }
             }
 
             animator.SetBool("Hablando", false);
@@ -165,7 +170,8 @@ public class ScriptAlumno : MonoBehaviour
             yield return new WaitUntil(() => !Input.GetKey(KeyCode.Space));
             yield return null;
 
-            yield return new WaitUntil(() => avanzarTexto || Input.GetKeyDown(KeyCode.Space));
+            // La tecla 'P' también permite avanzar al instante a la siguiente línea de diálogo
+            yield return new WaitUntil(() => avanzarTexto || Input.GetKeyDown(KeyCode.Space) || Input.GetKey(KeyCode.P));
         }
         textoUI.text = "";
 

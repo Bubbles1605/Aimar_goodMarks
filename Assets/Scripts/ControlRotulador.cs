@@ -16,6 +16,9 @@ public class ControladorRotulador : MonoBehaviour
     [Tooltip("Posición exacta en la pantalla/mundo donde aparecerá la nota automáticamente")]
     public Vector2 posicionNotaExamen;
 
+    [Header("Pegatinas")]
+    public GameObject pegatinaPrefab;
+
     [Header("Zoom Examen")]
     public GameObject panelFondoOscuro;
     public GameObject botonCerrarZoom;
@@ -39,6 +42,10 @@ public class ControladorRotulador : MonoBehaviour
     private Vector3 posicionOriginalSello;
     private int indiceSelloActual = -1;
 
+    //PEGATINA RELATED
+    private bool usandoPegatina = false;
+    private GameObject pegatinaEnMano;
+
     //ACTO DE DIBUJAR
     private LineRenderer lineaActual;
     private Vector2 puntoAnterior;
@@ -58,21 +65,27 @@ public class ControladorRotulador : MonoBehaviour
             boliFisicoEnMesa.transform.position = new Vector3(posRaton.x + offsetPuntaBoli.x, posRaton.y + offsetPuntaBoli.y, boliFisicoEnMesa.transform.position.z);
         }
 
+        if (usandoPegatina && pegatinaEnMano != null)
+        {
+            pegatinaEnMano.transform.position = new Vector3(posRaton.x, posRaton.y, 0f);
+        }
+
         GameObject examenTocado = ObtenerObjetoTocado(posRaton, "Examen");
 
         if (Input.GetMouseButtonDown(0))
         {
             GameObject selloClicado = ObtenerObjetoTocado(posRaton, "Sello");
             GameObject boliClicado = ObtenerObjetoTocado(posRaton, "Boli");
+            GameObject pegatinaClicada = ObtenerObjetoTocado(posRaton, "Pegatina");
 
-            if (selloClicado != null && !usandoSello && !usandoBoli && !examenAmpliado)
+            if (selloClicado != null && !usandoSello && !usandoBoli && !usandoPegatina && !examenAmpliado)
             {
                 usandoSello = true;
                 selloFisicoEnMesa = selloClicado;
                 posicionOriginalSello = selloFisicoEnMesa.transform.position;
                 indiceSelloActual = ObtenerIndiceSello(selloClicado);
             }
-            else if (boliClicado != null && !usandoBoli && !usandoSello && !examenAmpliado)
+            else if (boliClicado != null && !usandoBoli && !usandoSello && !usandoPegatina && !examenAmpliado)
             {
                 usandoBoli = true;
                 boliFisicoEnMesa = boliClicado;
@@ -81,6 +94,16 @@ public class ControladorRotulador : MonoBehaviour
 
                 boliFisicoEnMesa.transform.rotation = Quaternion.identity;
                 Cursor.visible = false;
+            }
+            else if (pegatinaClicada != null && !usandoPegatina && !usandoBoli && !usandoSello && !examenAmpliado)
+            {
+                usandoPegatina = true;
+                if (pegatinaPrefab != null)
+                {
+                    pegatinaEnMano = Instantiate(pegatinaPrefab, posRaton, Quaternion.identity);
+                    SpriteRenderer sr = pegatinaEnMano.GetComponent<SpriteRenderer>();
+                    if (sr != null) sr.sortingOrder = 35;
+                }
             }
             else if (examenTocado != null)
             {
@@ -124,14 +147,42 @@ public class ControladorRotulador : MonoBehaviour
                     }
                     SoltarSello();
                 }
+                else if (usandoPegatina)
+                {
+                    if (pegatinaEnMano != null)
+                    {
+                        if (alumnoActual != null && alumnoActual.examenInstanciado != null)
+                        {
+                            pegatinaEnMano.transform.SetParent(alumnoActual.examenInstanciado.transform, true);
+                        }
+                        else
+                        {
+                            pegatinaEnMano.transform.SetParent(examenTocado.transform, true);
+                        }
+
+                        SpriteRenderer sr = pegatinaEnMano.GetComponent<SpriteRenderer>();
+                        // --- SOLUCIÓN AQUÍ ---
+                        // Ponemos la pegatina en capa 15 (el boli está en la 12)
+                        if (sr != null) sr.sortingOrder = 15;
+
+                        usandoPegatina = false;
+                        pegatinaEnMano = null;
+                    }
+                }
                 else if (usandoBoli)
                 {
                     EmpezarPunto(posRaton, examenTocado.transform);
                     estaDibujando = true;
                 }
-                else if (!usandoSello && !usandoBoli && !examenAmpliado)
+                else if (!usandoSello && !usandoBoli && !usandoPegatina && !examenAmpliado)
                 {
-                    AmpliarExamen(examenTocado);
+                    if (alumnoActual != null && alumnoActual.examenCalificado)
+                    {
+                    }
+                    else
+                    {
+                        AmpliarExamen(examenTocado);
+                    }
                 }
             }
         }
@@ -163,6 +214,7 @@ public class ControladorRotulador : MonoBehaviour
         {
             if (usandoSello) SoltarSello();
             if (usandoBoli) SoltarBoli();
+            if (usandoPegatina) SoltarPegatina();
         }
     }
 
@@ -190,13 +242,16 @@ public class ControladorRotulador : MonoBehaviour
 
     public void CerrarZoom()
     {
-        if (!examenAmpliado || examenEnZoom == null) return;
+        if (!examenAmpliado) return;
 
-        examenEnZoom.transform.position = posicionOriginalExamen;
-        examenEnZoom.transform.localScale = escalaOriginalExamen;
+        if (examenEnZoom != null)
+        {
+            examenEnZoom.transform.position = posicionOriginalExamen;
+            examenEnZoom.transform.localScale = escalaOriginalExamen;
 
-        SpriteRenderer sr = examenEnZoom.GetComponentInChildren<SpriteRenderer>();
-        if (sr != null) sr.sortingOrder = sortingOrderOriginal;
+            SpriteRenderer sr = examenEnZoom.GetComponentInChildren<SpriteRenderer>();
+            if (sr != null) sr.sortingOrder = sortingOrderOriginal;
+        }
 
         if (panelFondoOscuro != null) panelFondoOscuro.SetActive(false);
         if (botonCerrarZoom != null) botonCerrarZoom.SetActive(false);
@@ -214,6 +269,16 @@ public class ControladorRotulador : MonoBehaviour
         usandoSello = false;
         selloFisicoEnMesa = null;
         indiceSelloActual = -1;
+    }
+
+    void SoltarPegatina()
+    {
+        if (pegatinaEnMano != null)
+        {
+            Destroy(pegatinaEnMano);
+        }
+        usandoPegatina = false;
+        pegatinaEnMano = null;
     }
 
     void SoltarBoli()
