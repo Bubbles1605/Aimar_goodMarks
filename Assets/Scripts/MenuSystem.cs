@@ -10,6 +10,10 @@ public class MenuSystem : MonoBehaviour
     public float duracionAnimacionCreditos = 0.5f;
     public float duracionAnimacionSalir = 0.5f;
 
+    [Header("Configuración de Créditos")]
+    [Tooltip("Arrastra aquí el panel que tiene el texto de créditos y el botón X")]
+    public GameObject panelCreditos;
+
     public void jugar()
     {
         StartCoroutine(RutinaJugar());
@@ -17,16 +21,17 @@ public class MenuSystem : MonoBehaviour
 
     IEnumerator RutinaJugar()
     {
+        yield return null;
+
         if (animadorMenuPrincipal != null)
         {
             animadorMenuPrincipal.ResetTrigger("AnimacionCreditos");
             animadorMenuPrincipal.ResetTrigger("AnimacionSalir");
+            animadorMenuPrincipal.ResetTrigger("TriggerVolver");
             animadorMenuPrincipal.SetTrigger("AnimacionJugar");
         }
 
-        // Espera a que termine la animación antes de cambiar de escena
         yield return new WaitForSecondsRealtime(duracionAnimacionJugar);
-
         SceneManager.LoadScene("Clase");
     }
 
@@ -37,17 +42,23 @@ public class MenuSystem : MonoBehaviour
 
     IEnumerator RutinaCreditos()
     {
+        yield return null;
+
         if (animadorMenuPrincipal != null)
         {
             animadorMenuPrincipal.ResetTrigger("AnimacionJugar");
             animadorMenuPrincipal.ResetTrigger("AnimacionSalir");
+            animadorMenuPrincipal.ResetTrigger("TriggerVolver");
             animadorMenuPrincipal.SetTrigger("AnimacionCreditos");
         }
 
-        // Espera a que termine la animación antes de cambiar a créditos
         yield return new WaitForSecondsRealtime(duracionAnimacionCreditos);
 
-        SceneManager.LoadScene("Creditos");
+        // EN VEZ DE CAMBIAR DE ESCENA, ACTIVAMOS EL PANEL DE CRÉDITOS
+        if (panelCreditos != null)
+        {
+            panelCreditos.SetActive(true);
+        }
     }
 
     public void salir()
@@ -57,17 +68,36 @@ public class MenuSystem : MonoBehaviour
 
     IEnumerator RutinaSalir()
     {
+        yield return null;
+
         if (animadorMenuPrincipal != null)
         {
             animadorMenuPrincipal.ResetTrigger("AnimacionJugar");
             animadorMenuPrincipal.ResetTrigger("AnimacionCreditos");
+            animadorMenuPrincipal.ResetTrigger("TriggerVolver");
             animadorMenuPrincipal.SetTrigger("AnimacionSalir");
         }
 
-        // Espera a que termine la animación antes de cerrar el juego
         yield return new WaitForSecondsRealtime(duracionAnimacionSalir);
 
         Application.Quit();
-        Debug.Log("El juego se ha cerrado (Esto solo se ve en el editor).");
+        Debug.Log("El juego se ha cerrado.");
+    }
+
+    // --- NUEVA FUNCIÓN PARA EL BOTÓN 'X' ---
+    public void CerrarCreditos()
+    {
+        // 1. Apagamos el panel de créditos
+        if (panelCreditos != null)
+        {
+            panelCreditos.SetActive(false);
+        }
+
+        // 2. Mandamos la orden al Animator de volver al estado inicial
+        if (animadorMenuPrincipal != null)
+        {
+            animadorMenuPrincipal.ResetTrigger("AnimacionCreditos");
+            animadorMenuPrincipal.SetTrigger("TriggerVolver");
+        }
     }
 }
