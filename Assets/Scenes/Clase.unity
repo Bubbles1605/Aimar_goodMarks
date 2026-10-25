@@ -972,8 +972,8 @@ Transform:
   m_GameObject: {fileID: 529362480}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2124, y: -3.6193, z: 0}
-  m_LocalScale: {x: 9.410416, y: 2.7615652, z: 1}
+  m_LocalPosition: {x: -4.208, y: -3.6157, z: 0}
+  m_LocalScale: {x: 9.401947, y: 2.7688649, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1484,12 +1484,12 @@ MonoBehaviour:
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -0.65, y: 3, z: 0}
   textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.05
-  prefabExamen: {fileID: 0}
-  posicionXExamen: 16.15
+  tiempoPorLetra: 0.02
+  prefabExamen: {fileID: 743025707884542340, guid: 0e1fa77d3b2365a4383081d4c51aaaa1, type: 3}
+  posicionXExamen: 4.3
   posicionYInicialExamen: 8
-  posicionYFinalExamen: 1.25
-  velocidadCaidaExamen: 7
+  posicionYFinalExamen: -0.25
+  velocidadCaidaExamen: 40
   examenInstanciado: {fileID: 0}
   examenCalificado: 0
   animator: {fileID: 0}
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptAlumno
   velocidadAparicion: 5
   posicionYInicial: -8
-  posicionYFinal: 0.05
+  posicionYFinal: 0
   dialogoPrincipal:
   - Hola, soy Basicote
   - A tu mujer le maamo el totote
@@ -2146,6 +2146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScriptDias
   basicote: {fileID: 1048401725}
+  brainrot: {fileID: 982342299}
   alumnoActual: {fileID: 1048401725}
   dialogoPresentacionBasicote:
   - "\xBFEntonces t\xFA eres Mark, el nuevo profesor?"
@@ -2167,6 +2168,15 @@ MonoBehaviour:
   - "Vaya asco de correcci\xF3n."
   basicoteReaccionTriste:
   - Negrito feo
+  dialogoPresentacionBrainrot:
+  - Skibidi toilet profe.
+  - "\xBFEse examen es W o L?"
+  brainrotReaccionFeliz:
+  - "\xA1W rizz! Eres el GOAT."
+  brainrotReaccionEnfadado:
+  - L bozo. Cringe.
+  brainrotReaccionTriste:
+  - Bro really said suspenso.
 --- !u!1 &1356928937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,7 +3856,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20.48, y: 27.324455}
+    oldSize: {x: 20.48, y: 27.32}
     newSize: {x: 20.48, y: 27.324455}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
