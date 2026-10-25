@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class ScriptDias : MonoBehaviour
+public class ScriptDias : MonoBehaviour //hola
 {
     [Header("Alumnos del Día 1")]
     public ScriptAlumno basicote;
