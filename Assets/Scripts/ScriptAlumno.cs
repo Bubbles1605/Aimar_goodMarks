@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Collections.Generic; // NUEVO: Necesario para usar Listas
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI; // NUEVO: Necesario para detectar clics en los botones
 
 public class ScriptAlumno : MonoBehaviour
 {
@@ -19,6 +21,12 @@ public class ScriptAlumno : MonoBehaviour
 
     public TextMeshProUGUI textoUI;
     public float tiempoPorLetra = 0.05f;
+
+    [Header("Sistema de Preguntas (NUEVO)")]
+    public GameObject prefabBotonRespuesta; // El prefab del botón que hará de opción
+    public Transform contenedorRespuestas;  // Un panel en tu Canvas donde se apilarán los botones
+    [HideInInspector] public int respuestaElegida = -1; // Guardará qué botón se ha pulsado
+    private List<GameObject> botonesInstanciados = new List<GameObject>(); // Lista para borrarlos luego
 
     [Header("Examen")]
     public GameObject prefabExamen;
@@ -114,6 +122,14 @@ public class ScriptAlumno : MonoBehaviour
             Debug.LogWarning("Ojo: No has asignado el Prefab del Examen en el Inspector del alumno.");
         }
 
+        // 1. Destruimos el botón viejo si ya había uno en la mesa
+        if (botonHablarInstanciado != null)
+        {
+            Destroy(botonHablarInstanciado);
+            botonHablarInstanciado = null;
+        }
+
+        // 2. Ahora sí, instanciamos el nuevo limpiamente
         if (botonHablarPrefab != null)
         {
             botonHablarInstanciado = Instantiate(botonHablarPrefab, posicionBoton, Quaternion.identity);
@@ -128,18 +144,15 @@ public class ScriptAlumno : MonoBehaviour
         {
             Vector3 posicionDestino = new Vector3(posicionXExamen, posicionYInicialExamen, 0f);
 
-            // Subimos la capa para que pase por encima del alumno al irse volando
             SpriteRenderer spriteExamen = examenInstanciado.GetComponentInChildren<SpriteRenderer>();
             if (spriteExamen != null) spriteExamen.sortingOrder = 11;
 
-            // Bucle hacia arriba
             while (Vector3.Distance(examenInstanciado.transform.position, posicionDestino) > 0.01f)
             {
                 examenInstanciado.transform.position = Vector3.MoveTowards(examenInstanciado.transform.position, posicionDestino, velocidadCaidaExamen * Time.deltaTime);
                 yield return null;
             }
 
-            // Lo destruimos para liberar memoria (destruirá también la nota pegada)
             Destroy(examenInstanciado);
             examenInstanciado = null;
         }
@@ -170,7 +183,6 @@ public class ScriptAlumno : MonoBehaviour
             {
                 textoUI.text += letra;
 
-                // Si mantienes pulsada la 'P', omite el tiempo de espera entre letras
                 if (!Input.GetKey(KeyCode.P))
                 {
                     yield return new WaitForSeconds(tiempoPorLetra);
@@ -183,7 +195,6 @@ public class ScriptAlumno : MonoBehaviour
             yield return new WaitUntil(() => !Input.GetKey(KeyCode.Space));
             yield return null;
 
-            // La tecla 'P' también permite avanzar al instante a la siguiente línea de diálogo
             yield return new WaitUntil(() => avanzarTexto || Input.GetKeyDown(KeyCode.Space) || Input.GetKey(KeyCode.P));
         }
         textoUI.text = "";
@@ -200,5 +211,58 @@ public class ScriptAlumno : MonoBehaviour
         string lineaElegida = opcionesAleatorias[indiceAleatorio];
 
         yield return StartCoroutine(Decir(new string[] { lineaElegida }, true));
+    }
+
+    // --- NUEVO: FUNCIÓN PARA ELEGIR RESPUESTAS ---
+    public IEnumerator Preguntar(string[] opciones)
+    {
+        // 1. Ocultar el botón de hablar si estuviera activo
+        if (botonHablarInstanciado != null)
+        {
+            Destroy(botonHablarInstanciado);
+            botonHablarInstanciado = null;
+        }
+
+        // 2. Limpiar las opciones anteriores por seguridad
+        respuestaElegida = -1;
+        botonesInstanciados.Clear();
+
+        // 3. Crear un botón por cada opción que hayamos escrito
+        for (int i = 0; i < opciones.Length; i++)
+        {
+            int indiceActual = i; // Guardamos el número de este botón para que sepa quién es
+
+            // Creamos el botón dentro del contenedor
+            GameObject nuevoBoton = Instantiate(prefabBotonRespuesta, contenedorRespuestas);
+
+            // Le ponemos el texto de la respuesta
+            TextMeshProUGUI textoBoton = nuevoBoton.GetComponentInChildren<TextMeshProUGUI>();
+            if (textoBoton != null)
+            {
+                textoBoton.text = opciones[i];
+            }
+
+            // Le añadimos la orden de qué hacer al pulsarlo
+            Button botonUI = nuevoBoton.GetComponent<Button>();
+            if (botonUI != null)
+            {
+                botonUI.onClick.AddListener(() =>
+                {
+                    respuestaElegida = indiceActual; // Al pulsar, guarda qué botón fue
+                });
+            }
+
+            botonesInstanciados.Add(nuevoBoton); // Lo guardamos en la lista para borrarlo luego
+        }
+
+        // 4. Pausar el juego hasta que el jugador pulse una respuesta
+        yield return new WaitUntil(() => respuestaElegida != -1);
+
+        // 5. El jugador ya ha elegido, así que destruimos todos los botones
+        foreach (GameObject btn in botonesInstanciados)
+        {
+            Destroy(btn);
+        }
+        botonesInstanciados.Clear();
     }
 }

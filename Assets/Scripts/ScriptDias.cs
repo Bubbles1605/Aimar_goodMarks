@@ -67,7 +67,20 @@ public class ScriptDias : MonoBehaviour
 
         // 1. Sube y habla
         yield return StartCoroutine(basicote.Aparecer());
-        yield return StartCoroutine(ManejarDialogo(basicote.Decir(dialogoPresentacionBasicote, false)));
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(basicote.dialogoPrincipal, false)));
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Eres dewn?" }, false)));
+
+        string[] misOpciones = { "Seh", "No, tú si que eres dewn" };
+        yield return StartCoroutine(basicote.Preguntar(misOpciones));
+
+        if (basicote.respuestaElegida == 0)
+        {
+            yield return StartCoroutine(basicote.Decir(new string[] { "Pues la verdad que tienes cara de dewn" }, true));
+        }
+        else if (basicote.respuestaElegida == 1)
+        {
+            yield return StartCoroutine(basicote.Decir(new string[] { "Pues laverda que si macho" }, true));
+        }
 
         // 2. Tira el examen a la mesa y el juego se pausa hasta que el jugador ponga nota
         yield return StartCoroutine(basicote.EntregarExamen());
@@ -114,21 +127,21 @@ public class ScriptDias : MonoBehaviour
             yield return StartCoroutine(brainrot.EntregarExamen());
 
             // 3. Evaluamos la nota con los Ifs
-            int nota2 = brainrot.notaRecibida;
+            nota = brainrot.notaRecibida;
 
-            if (nota2 >= 5)
+            if (nota >= 5)
             {
                 brainrot.animator.SetTrigger("Feliz");
                 yield return StartCoroutine(ManejarDialogo(brainrot.Decir(brainrotReaccionFeliz, false)));
             }
-            else if (nota2 == 4)
+            else if (nota == 4)
             {
-                brainrot.animator.SetTrigger("Enfadado");
+               // brainrot.animator.SetTrigger("Enfadado");
                 yield return StartCoroutine(ManejarDialogo(brainrot.Decir(brainrotReaccionEnfadado, false)));
             }
             else
             {
-                brainrot.animator.SetTrigger("Triste");
+                // brainrot.animator.SetTrigger("Triste");
                 yield return StartCoroutine(ManejarDialogo(brainrot.Decir(brainrotReaccionTriste, false)));
             }
 
