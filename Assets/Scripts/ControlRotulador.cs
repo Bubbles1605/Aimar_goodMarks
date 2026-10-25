@@ -161,8 +161,6 @@ public class ControladorRotulador : MonoBehaviour
                         }
 
                         SpriteRenderer sr = pegatinaEnMano.GetComponent<SpriteRenderer>();
-                        // --- SOLUCIÓN AQUÍ ---
-                        // Ponemos la pegatina en capa 15 (el boli está en la 12)
                         if (sr != null) sr.sortingOrder = 15;
 
                         usandoPegatina = false;
@@ -171,8 +169,11 @@ public class ControladorRotulador : MonoBehaviour
                 }
                 else if (usandoBoli)
                 {
-                    EmpezarPunto(posRaton, examenTocado.transform);
-                    estaDibujando = true;
+                    if (!ComprobarDibujoProhibido(posRaton))
+                    {
+                        EmpezarPunto(posRaton, examenTocado.transform);
+                        estaDibujando = true;
+                    }
                 }
                 else if (!usandoSello && !usandoBoli && !usandoPegatina && !examenAmpliado)
                 {
@@ -190,14 +191,17 @@ public class ControladorRotulador : MonoBehaviour
         {
             if (examenTocado != null && usandoBoli)
             {
-                if (!estaDibujando)
+                if (!ComprobarDibujoProhibido(posRaton))
                 {
-                    EmpezarPunto(posRaton, examenTocado.transform);
-                    estaDibujando = true;
-                }
-                else
-                {
-                    ContinuarTrazo(posRaton, examenTocado.transform);
+                    if (!estaDibujando)
+                    {
+                        EmpezarPunto(posRaton, examenTocado.transform);
+                        estaDibujando = true;
+                    }
+                    else
+                    {
+                        ContinuarTrazo(posRaton, examenTocado.transform);
+                    }
                 }
             }
             else
@@ -216,6 +220,22 @@ public class ControladorRotulador : MonoBehaviour
             if (usandoBoli) SoltarBoli();
             if (usandoPegatina) SoltarPegatina();
         }
+    }
+
+    bool ComprobarDibujoProhibido(Vector2 pos)
+    {
+        GameObject dibujoTocado = ObtenerObjetoTocado(pos, "DibujoTungTung");
+        if (dibujoTocado != null)
+        {
+            ScriptDias director = FindFirstObjectByType<ScriptDias>();
+            if (director != null)
+            {
+                director.PenalizarDibujo();
+            }
+            CortarTrazo(); // Suelta el boli instantáneamente
+            return true;
+        }
+        return false;
     }
 
     void AmpliarExamen(GameObject examen)
@@ -260,128 +280,14 @@ public class ControladorRotulador : MonoBehaviour
         examenEnZoom = null;
     }
 
-    void SoltarSello()
-    {
-        if (selloFisicoEnMesa != null)
-        {
-            selloFisicoEnMesa.transform.position = posicionOriginalSello;
-        }
-        usandoSello = false;
-        selloFisicoEnMesa = null;
-        indiceSelloActual = -1;
-    }
+    void SoltarSello() { if (selloFisicoEnMesa != null) { selloFisicoEnMesa.transform.position = posicionOriginalSello; } usandoSello = false; selloFisicoEnMesa = null; indiceSelloActual = -1; }
+    void SoltarPegatina() { if (pegatinaEnMano != null) { Destroy(pegatinaEnMano); } usandoPegatina = false; pegatinaEnMano = null; }
+    void SoltarBoli() { if (boliFisicoEnMesa != null) { boliFisicoEnMesa.transform.position = posicionOriginalBoli; boliFisicoEnMesa.transform.rotation = rotacionOriginalBoli; } Cursor.visible = true; usandoBoli = false; boliFisicoEnMesa = null; CortarTrazo(); }
 
-    void SoltarPegatina()
-    {
-        if (pegatinaEnMano != null)
-        {
-            Destroy(pegatinaEnMano);
-        }
-        usandoPegatina = false;
-        pegatinaEnMano = null;
-    }
+    GameObject ObtenerObjetoTocado(Vector2 posicion, string tagBuscado) { Collider2D[] hits = Physics2D.OverlapPointAll(posicion); foreach (Collider2D hit in hits) { if (hit.CompareTag(tagBuscado)) return hit.gameObject; } return null; }
+    int ObtenerIndiceSello(GameObject sello) { string nombre = sello.name; for (int i = 10; i >= 0; i--) { if (nombre.Contains(i.ToString())) return i; } return 0; }
 
-    void SoltarBoli()
-    {
-        if (boliFisicoEnMesa != null)
-        {
-            boliFisicoEnMesa.transform.position = posicionOriginalBoli;
-            boliFisicoEnMesa.transform.rotation = rotacionOriginalBoli;
-        }
-
-        Cursor.visible = true;
-        usandoBoli = false;
-        boliFisicoEnMesa = null;
-        CortarTrazo();
-    }
-
-    GameObject ObtenerObjetoTocado(Vector2 posicion, string tagBuscado)
-    {
-        Collider2D[] hits = Physics2D.OverlapPointAll(posicion);
-        foreach (Collider2D hit in hits)
-        {
-            if (hit.CompareTag(tagBuscado)) return hit.gameObject;
-        }
-        return null;
-    }
-
-    int ObtenerIndiceSello(GameObject sello)
-    {
-        string nombre = sello.name;
-        for (int i = 10; i >= 0; i--)
-        {
-            if (nombre.Contains(i.ToString()))
-            {
-                return i;
-            }
-        }
-        return 0;
-    }
-
-    void EmpezarPunto(Vector2 pos, Transform padre)
-    {
-        GameObject nuevoPunto = Instantiate(puntoPrefab, pos, Quaternion.identity);
-        if (padre != null) nuevoPunto.transform.SetParent(padre, true);
-
-        // Ponemos el punto en capa 12 para que viaje por encima del folio
-        Renderer renderPunto = nuevoPunto.GetComponent<Renderer>();
-        if (renderPunto != null) renderPunto.sortingOrder = 12;
-
-        // Si el punto resulta ser también un LineRenderer, le aplicamos el arreglo
-        LineRenderer lrPunto = nuevoPunto.GetComponent<LineRenderer>();
-        if (lrPunto != null)
-        {
-            lrPunto.useWorldSpace = false;
-            Vector3 posLocal = nuevoPunto.transform.InverseTransformPoint(pos);
-            for (int i = 0; i < lrPunto.positionCount; i++)
-            {
-                lrPunto.SetPosition(i, posLocal);
-            }
-        }
-
-        puntoAnterior = pos;
-        lineaActual = null;
-    }
-
-    void ContinuarTrazo(Vector2 pos, Transform padre)
-    {
-        if (Vector2.Distance(pos, puntoAnterior) > distanciaMinima)
-        {
-            if (lineaActual == null)
-            {
-                // Instanciamos exactamente en la posición del folio para anclarlo bien
-                GameObject nuevoTrazo = Instantiate(trazoPrefab, padre.position, Quaternion.identity);
-                if (padre != null) nuevoTrazo.transform.SetParent(padre, true);
-
-                lineaActual = nuevoTrazo.GetComponent<LineRenderer>();
-
-                // --- LA MAGIA ESTÁ AQUÍ ---
-                lineaActual.useWorldSpace = false; // Desconectamos del mundo global, sigue al padre
-                lineaActual.sortingOrder = 12; // Capa visual por encima del folio que vuela
-                lineaActual.startColor = Color.red;
-                lineaActual.endColor = Color.red;
-                lineaActual.positionCount = 2;
-
-                // Traducimos la posición absoluta del ratón a posición local (relativa al folio)
-                Vector3 puntoAnteriorLocal = lineaActual.transform.InverseTransformPoint(puntoAnterior);
-                Vector3 posLocal = lineaActual.transform.InverseTransformPoint(pos);
-
-                lineaActual.SetPosition(0, puntoAnteriorLocal);
-                lineaActual.SetPosition(1, posLocal);
-            }
-            else
-            {
-                lineaActual.positionCount++;
-                Vector3 posLocal = lineaActual.transform.InverseTransformPoint(pos);
-                lineaActual.SetPosition(lineaActual.positionCount - 1, posLocal);
-            }
-            puntoAnterior = pos;
-        }
-    }
-
-    void CortarTrazo()
-    {
-        lineaActual = null;
-        estaDibujando = false;
-    }
+    void EmpezarPunto(Vector2 pos, Transform padre) { GameObject nuevoPunto = Instantiate(puntoPrefab, pos, Quaternion.identity); if (padre != null) nuevoPunto.transform.SetParent(padre, true); Renderer renderPunto = nuevoPunto.GetComponent<Renderer>(); if (renderPunto != null) renderPunto.sortingOrder = 12; LineRenderer lrPunto = nuevoPunto.GetComponent<LineRenderer>(); if (lrPunto != null) { lrPunto.useWorldSpace = false; Vector3 posLocal = nuevoPunto.transform.InverseTransformPoint(pos); for (int i = 0; i < lrPunto.positionCount; i++) lrPunto.SetPosition(i, posLocal); } puntoAnterior = pos; lineaActual = null; }
+    void ContinuarTrazo(Vector2 pos, Transform padre) { if (Vector2.Distance(pos, puntoAnterior) > distanciaMinima) { if (lineaActual == null) { GameObject nuevoTrazo = Instantiate(trazoPrefab, padre.position, Quaternion.identity); if (padre != null) nuevoTrazo.transform.SetParent(padre, true); lineaActual = nuevoTrazo.GetComponent<LineRenderer>(); lineaActual.useWorldSpace = false; lineaActual.sortingOrder = 12; lineaActual.startColor = Color.red; lineaActual.endColor = Color.red; lineaActual.positionCount = 2; Vector3 puntoAnteriorLocal = lineaActual.transform.InverseTransformPoint(puntoAnterior); Vector3 posLocal = lineaActual.transform.InverseTransformPoint(pos); lineaActual.SetPosition(0, puntoAnteriorLocal); lineaActual.SetPosition(1, posLocal); } else { lineaActual.positionCount++; Vector3 posLocal = lineaActual.transform.InverseTransformPoint(pos); lineaActual.SetPosition(lineaActual.positionCount - 1, posLocal); } puntoAnterior = pos; } }
+    void CortarTrazo() { lineaActual = null; estaDibujando = false; }
 }

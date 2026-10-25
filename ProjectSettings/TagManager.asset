@@ -9,6 +9,7 @@ TagManager:
   - Boli
   - BotonHablar
   - Pegatina
+  - DibujoTungTung
   layers:
   - Default
   - TransparentFX

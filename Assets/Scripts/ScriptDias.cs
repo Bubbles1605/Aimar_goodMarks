@@ -1,16 +1,17 @@
 using System.Collections;
 using UnityEngine;
 
-public class ScriptDias : MonoBehaviour //hola
+public class ScriptDias : MonoBehaviour
 {
     [Header("Alumnos del Día 1")]
     public ScriptAlumno basicote;
-    public ScriptAlumno brainrot; // Para cuando lo añadas
-    // public ScriptAlumno gordete;
+    public ScriptAlumno brainrot; 
+    public ScriptAlumno repelente;
 
     [Header("Alumno en Pantalla")]
     public ScriptAlumno alumnoActual;
     private bool dialogoEnCurso = false;
+    private bool yaPenalizadoHoy = false;
 
     [Header("Textos Día 1 - Basicote")]
     public string[] dialogoPresentacionBasicote = { "Hola profe, soy Basicote.", "A ver qué me has puesto." };
@@ -20,12 +21,19 @@ public class ScriptDias : MonoBehaviour //hola
 
     [Header("Textos Día 1 - Brainrot")]
     public string[] dialogoPresentacionBrainrot = { "Skibidi toilet profe.", "¿Ese examen es W o L?" };
-    public string[] brainrotReaccionFeliz = { "¡W rizz! Eres el GOAT." };
-    public string[] brainrotReaccionEnfadado = { "L bozo. Cringe." };
-    public string[] brainrotReaccionTriste = { "Bro really said suspenso." };
+    public string[] brainrotReaccionFeliz = { "¡GYAAAAAT! Eres el GOAT." };
+    public string[] brainrotReaccionEnfadado = { "Ya sabía yo que das mucho cringe." };
+    public string[] brainrotReaccionTriste = { "Bro really said suspenso. -1000 de aura." };
+
+    [Header("Textos Día 1 - Listilla")]
+    public string[] dialogoPresentacionListilla = { "Buenos días, profesor Mark.", "Espero mi merecido diez." };
+    public string[] repelenteReaccion10 = { "Como debe ser.", "Mi padre estará orgulloso." };
+    public string[] repelenteReaccionAprobado = { "¿Un triste aprobado?", "Esto es inaceptable." };
+    public string[] repelenteReaccionSuspenso = { "¿TÚ SABES QUIÉN ES MI PADRE?", "Estás muerto." };
 
     void Start()
     {
+        PlayerPrefs.DeleteKey("FaltasTungTung");
         // Empezamos el juego lanzando directamente el guion del Día 1
         StartCoroutine(SecuenciaDia1());
     }
@@ -67,19 +75,19 @@ public class ScriptDias : MonoBehaviour //hola
 
         // 1. Sube y habla
         yield return StartCoroutine(basicote.Aparecer());
-        yield return StartCoroutine(ManejarDialogo(basicote.Decir(basicote.dialogoPrincipal, false)));
-        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Eres dewn?" }, false)));
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(dialogoPresentacionBasicote, false)));
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Te enteras, o qué?" }, false)));
 
-        string[] misOpciones = { "Seh", "No, tú si que eres dewn" };
+        string[] misOpciones = { "Sí", "No" };
         yield return StartCoroutine(basicote.Preguntar(misOpciones));
 
         if (basicote.respuestaElegida == 0)
         {
-            yield return StartCoroutine(basicote.Decir(new string[] { "Pues la verdad que tienes cara de dewn" }, true));
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "PUES EMPIEZA, JODER." }, true)));
         }
         else if (basicote.respuestaElegida == 1)
         {
-            yield return StartCoroutine(basicote.Decir(new string[] { "Pues laverda que si macho" }, true));
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "ME LA SUDA." }, true)));
         }
 
         // 2. Tira el examen a la mesa y el juego se pausa hasta que el jugador ponga nota
@@ -88,7 +96,6 @@ public class ScriptDias : MonoBehaviour //hola
         // 3. ¡EL EXAMEN YA SE HA IDO! Evaluamos la nota con los Ifs
         int nota = basicote.notaRecibida;
 
-        // Cambiamos el regenerarBoton a false para que no salga antes de irse
         if (nota >= 5)
         {
             basicote.animator.SetTrigger("Feliz");
@@ -105,24 +112,20 @@ public class ScriptDias : MonoBehaviour //hola
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(basicoteReaccionTriste, false)));
         }
 
-        // Opcional: Aquí podrías poner un código para que Basicote se vaya (baje por la pantalla)
         yield return StartCoroutine(basicote.Desaparecer());
-
-        // Esperamos 1 segundo con la clase vacía antes de que suba el siguiente
         yield return new WaitForSeconds(1f);
 
-
         // ==========================================
-        // TURNO 2: EL SIGUIENTE ALUMNO
+        // TURNO 2: BRAINROT
         // ==========================================
         if (brainrot != null)
         {
             alumnoActual = brainrot;
+            yaPenalizadoHoy = false;
 
             // 1. Sube y habla
             yield return StartCoroutine(brainrot.Aparecer());
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(dialogoPresentacionBrainrot, false)));
-
             // 2. Tira el examen a la mesa
             yield return StartCoroutine(brainrot.EntregarExamen());
 
@@ -136,18 +139,59 @@ public class ScriptDias : MonoBehaviour //hola
             }
             else if (nota == 4)
             {
-               // brainrot.animator.SetTrigger("Enfadado");
+                brainrot.animator.SetTrigger("Enfadado");
                 yield return StartCoroutine(ManejarDialogo(brainrot.Decir(brainrotReaccionEnfadado, false)));
             }
             else
             {
-                // brainrot.animator.SetTrigger("Triste");
+                brainrot.animator.SetTrigger("Triste");
                 yield return StartCoroutine(ManejarDialogo(brainrot.Decir(brainrotReaccionTriste, false)));
             }
 
             // Brainrot se va
             yield return StartCoroutine(brainrot.Desaparecer());
         }
+
+        // ==========================================
+        // TURNO 3: LISTILLA
+        // ==========================================
+
+        if (repelente != null)
+        {
+            alumnoActual = repelente;
+
+            yield return StartCoroutine(repelente.Aparecer());
+            yield return StartCoroutine(ManejarDialogo(repelente.Decir(dialogoPresentacionListilla, false)));
+
+            // Si quieres ponerle una pregunta de prueba, puedes hacerlo aquí
+            // string[] listillaOpciones = { "Toma un 10 imaginario", "Eres pesada" };
+            // yield return StartCoroutine(listilla.Preguntar(listillaOpciones));
+
+            yield return StartCoroutine(repelente.EntregarExamen());
+
+            nota = repelente.notaRecibida;
+
+            // Su lógica de notas es distinta: solo el 10 la hace feliz
+            if (nota == 10)
+            {
+                repelente.animator.SetTrigger("Feliz");
+                yield return StartCoroutine(ManejarDialogo(repelente.Decir(repelenteReaccion10, false)));
+            }
+            else if (nota >= 5)
+            {
+                repelente.animator.SetTrigger("Enfadado");
+                yield return StartCoroutine(ManejarDialogo(repelente.Decir(repelenteReaccionAprobado, false)));
+            }
+            else
+            {
+                repelente.animator.SetTrigger("Enfadado"); // Puedes cambiarlo a "Furiosa" si tienes esa animación
+                yield return StartCoroutine(ManejarDialogo(repelente.Decir(repelenteReaccionSuspenso, false)));
+            }
+
+            yield return StartCoroutine(repelente.Desaparecer());
+        }
+
+
     }
 
     private IEnumerator ManejarDialogo(IEnumerator corrutinaHablar)
@@ -155,5 +199,42 @@ public class ScriptDias : MonoBehaviour //hola
         dialogoEnCurso = true;
         yield return StartCoroutine(corrutinaHablar);
         dialogoEnCurso = false;
+    }
+
+
+
+
+
+
+    // --- SISTEMA DE INFRACCIONES DE MARK---
+    public void PenalizarDibujo() //NIÑO BRAINROT
+    {
+        // Si ya está hablando o no hay alumno, ignoramos el toque para no solapar textos
+        if (dialogoEnCurso || alumnoActual == null) return;
+
+        int faltas = PlayerPrefs.GetInt("FaltasTungTung", 0);
+
+        // Solo sumamos a la memoria si es la primera vez que le pintas HOY
+        if (!yaPenalizadoHoy)
+        {
+            faltas++;
+            PlayerPrefs.SetInt("FaltasTungTung", faltas);
+            yaPenalizadoHoy = true;
+        }
+
+        //QUÉ TE DICE DEPENDIENDO DEL DÍA
+        if (faltas >= 3)
+        {
+            StartCoroutine(ManejarDialogo(alumnoActual.Decir(new string[] { "TÚ TE LO HAS BUSCADO.", "HAS INTENTADO DESTROZAR A TUNG-TUNG TRES VECES.", "AHORA SUFRIRÁS SU IRA." }, false)));
+            //AHORA SALTARIA LA ANIMACIÓN Y PIERDES QUE NO SE COMO SE HACE
+        }
+        else if (faltas == 2)
+        {
+            StartCoroutine(ManejarDialogo(alumnoActual.Decir(new string[] { "Te he dicho que no toques mis dibujos.", "La próxima vez no será un aviso."}, true)));
+        }
+        else if (faltas == 1)
+        {
+            StartCoroutine(ManejarDialogo(alumnoActual.Decir(new string[] { "¡¡¡OYE!!!", "¡¿QUÉ LE HACES A MI TUNG-TUNG?!" }, true)));
+        }
     }
 }

@@ -244,16 +244,16 @@ MonoBehaviour:
   frasesGenericas: []
   botonHablarPrefab: {fileID: 0}
   posicionBoton: {x: -1.96, y: 1.82, z: 0}
-  textoUI: {fileID: 0}
-  tiempoPorLetra: 0.05
+  textoUI: {fileID: 2044410985}
+  tiempoPorLetra: 0.02
   prefabBotonRespuesta: {fileID: 0}
   contenedorRespuestas: {fileID: 0}
   respuestaElegida: -1
-  prefabExamen: {fileID: 0}
-  posicionXExamen: 16.15
+  prefabExamen: {fileID: 7122108599482068728, guid: 0fe952f9c57004a4495697bb0aed5724, type: 3}
+  posicionXExamen: 4.3
   posicionYInicialExamen: 8
-  posicionYFinalExamen: 1.25
-  velocidadCaidaExamen: 7
+  posicionYFinalExamen: -0.25
+  velocidadCaidaExamen: 40
   examenInstanciado: {fileID: 0}
   examenCalificado: 0
   animator: {fileID: 0}
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -0.65, y: 3, z: 0}
   textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.05
+  tiempoPorLetra: 0.02
   prefabBotonRespuesta: {fileID: 0}
   contenedorRespuestas: {fileID: 0}
   respuestaElegida: -1
@@ -2359,6 +2359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptDias
   basicote: {fileID: 1048401725}
   brainrot: {fileID: 982342299}
+  repelente: {fileID: 59642356}
   alumnoActual: {fileID: 1048401725}
   dialogoPresentacionBasicote:
   - "\xBFEntonces t\xFA eres Mark, el nuevo profesor?"
@@ -2389,6 +2390,18 @@ MonoBehaviour:
   - L bozo. Cringe.
   brainrotReaccionTriste:
   - Bro really said suspenso.
+  dialogoPresentacionListilla:
+  - "Buenos d\xEDas, profesor Mark."
+  - Espero mi merecido 10.
+  repelenteReaccion10:
+  - Como debe ser.
+  - "Mi padre estar\xE1 orgulloso."
+  repelenteReaccionAprobado:
+  - "\xBFUn triste aprobado?"
+  - Esto es inaceptable.
+  repelenteReaccionSuspenso:
+  - "\xBFT\xDA SABES QUI\xC9N ES MI PADRE?"
+  - "Est\xE1s muerto."
 --- !u!1 &1356928937
 GameObject:
   m_ObjectHideFlags: 0
