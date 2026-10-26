@@ -39,6 +39,11 @@ public class ScriptAlumno : MonoBehaviour
     // LA VARIABLE MÁGICA
     [HideInInspector] public bool examenCalificado = false;
 
+    // --- NUEVO: APARTADO DE SONIDOS ---
+    [Header("Sonidos")]
+    public AudioClip sonidoMoverPapel;
+    private AudioSource audioSource;
+
     private SpriteRenderer spriteRenderer;
     public Animator animator;
     private GameObject botonHablarInstanciado;
@@ -50,6 +55,10 @@ public class ScriptAlumno : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        // Creamos un AudioSource automáticamente si el alumno no lo tiene
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public IEnumerator Aparecer()
@@ -142,6 +151,9 @@ public class ScriptAlumno : MonoBehaviour
         // --- RETIRAR EL EXAMEN ---
         if (examenInstanciado != null)
         {
+            // --- NUEVO SONIDO: RETIRAN EL EXAMEN ---
+            if (sonidoMoverPapel != null) audioSource.PlayOneShot(sonidoMoverPapel);
+
             Vector3 posicionDestino = new Vector3(posicionXExamen, posicionYInicialExamen, 0f);
 
             SpriteRenderer spriteExamen = examenInstanciado.GetComponentInChildren<SpriteRenderer>();

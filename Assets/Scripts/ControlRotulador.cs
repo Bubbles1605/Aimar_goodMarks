@@ -57,6 +57,20 @@ public class ControladorRotulador : MonoBehaviour
     private Vector2 puntoAnterior;
     private bool estaDibujando = false;
 
+    // --- NUEVO: APARTADO DE SONIDOS ---
+    [Header("Sonidos")]
+    public AudioClip sonidoCogerBoli;
+    public AudioClip sonidoPonerSello;
+    public AudioClip sonidoPonerPegatina;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        // Creamos un AudioSource automáticamente si el objeto no lo tiene
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
     void Update()
     {
         Vector2 posRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -134,10 +148,14 @@ public class ControladorRotulador : MonoBehaviour
             }
             else if (boliClicado != null && !usandoBoli && !usandoSello && !usandoPegatina && !examenAmpliado)
             {
+                
                 usandoBoli = true;
                 boliFisicoEnMesa = boliClicado;
                 posicionOriginalBoli = boliFisicoEnMesa.transform.position;
                 rotacionOriginalBoli = boliFisicoEnMesa.transform.rotation;
+
+                // --- NUEVO SONIDO: COGER BOLI ---
+                if (sonidoCogerBoli != null) audioSource.PlayOneShot(sonidoCogerBoli);
 
                 boliFisicoEnMesa.transform.rotation = Quaternion.identity;
                 Cursor.visible = false;
@@ -191,6 +209,9 @@ public class ControladorRotulador : MonoBehaviour
                             alumnoActual.notaRecibida = indiceSelloActual;
                             alumnoActual.examenCalificado = true;
                         }
+
+                        // --- NUEVO SONIDO: PONER SELLO ---
+                        if (sonidoPonerSello != null) audioSource.PlayOneShot(sonidoPonerSello);
                     }
                     SoltarSello();
                 }
@@ -209,6 +230,9 @@ public class ControladorRotulador : MonoBehaviour
 
                         SpriteRenderer sr = pegatinaEnMano.GetComponent<SpriteRenderer>();
                         if (sr != null) sr.sortingOrder = 15;
+
+                        // --- NUEVO SONIDO: PONER PEGATINA ---
+                        if (sonidoPonerPegatina != null) audioSource.PlayOneShot(sonidoPonerPegatina);
 
                         usandoPegatina = false;
                         pegatinaEnMano = null;
@@ -325,7 +349,7 @@ public class ControladorRotulador : MonoBehaviour
 
         examenAmpliado = false;
         examenEnZoom = null;
-        estaArrastrando = false; 
+        estaArrastrando = false;
     }
 
     void SoltarSello() { if (selloFisicoEnMesa != null) { selloFisicoEnMesa.transform.position = posicionOriginalSello; } usandoSello = false; selloFisicoEnMesa = null; indiceSelloActual = -1; }
