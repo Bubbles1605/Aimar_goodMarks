@@ -140,11 +140,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 239
-        y: 2458
+        y: 1378
         width: 572
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -162,11 +162,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2159
-        y: 2458
+        y: 1378
         width: 572
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -184,11 +184,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4079
-        y: 2458
+        y: 1378
         width: 572
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,11 +206,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5999
-        y: 2458
+        y: 1378
         width: 572
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -228,11 +228,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 7919
-        y: 2458
+        y: 1378
         width: 572
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -246,37 +246,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: negrete_triste_5
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 1378
-        width: 572
-        height: 475
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d0dcc9a5c5387880800000000000000
-      internalID: -8613075164272471853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: negrete_triste_6
       rect:
         serializedVersion: 2
-        x: 2159
-        y: 1378
+        x: 239
+        y: 298
         width: 572
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -293,12 +271,12 @@ TextureImporter:
       name: negrete_triste_7
       rect:
         serializedVersion: 2
-        x: 4079
-        y: 1378
+        x: 2159
+        y: 298
         width: 572
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -315,12 +293,12 @@ TextureImporter:
       name: negrete_triste_8
       rect:
         serializedVersion: 2
-        x: 5999
-        y: 1378
+        x: 4079
+        y: 298
         width: 572
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -337,12 +315,12 @@ TextureImporter:
       name: negrete_triste_9
       rect:
         serializedVersion: 2
-        x: 7919
-        y: 1378
+        x: 5999
+        y: 298
         width: 572
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -356,37 +334,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: negrete_triste_10
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 298
-        width: 572
-        height: 475
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4fc4fd9f827b56620800000000000000
-      internalID: 2766818932707773684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: negrete_triste_11
       rect:
         serializedVersion: 2
-        x: 2159
+        x: 7919
         y: 298
         width: 572
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -399,33 +355,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: negrete_triste_12
-      rect:
-        serializedVersion: 2
-        x: 4079
-        y: 298
-        width: 572
-        height: 475
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90485f79626ed83e0800000000000000
-      internalID: -2049729201951112183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d170218931ba51f48b107a46f6a2eb0b
     internalID: 0
     vertices: []
     indices: 
@@ -440,6 +374,7 @@ TextureImporter:
       negrete_triste_10: 2766818932707773684
       negrete_triste_11: -9036630073116689629
       negrete_triste_12: -2049729201951112183
+      negrete_triste_13: -1942295242
       negrete_triste_2: -2572678963678069102
       negrete_triste_3: 6350433969653945490
       negrete_triste_4: -3911063386518677358

@@ -54,7 +54,6 @@ public class MenuSystem : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(duracionAnimacionCreditos);
 
-        // EN VEZ DE CAMBIAR DE ESCENA, ACTIVAMOS EL PANEL DE CRÉDITOS
         if (panelCreditos != null)
         {
             panelCreditos.SetActive(true);
@@ -70,6 +69,11 @@ public class MenuSystem : MonoBehaviour
     {
         yield return null;
 
+        // --- REINICIAMOS LA ANIMACIÓN DE INICIO ---
+        // Ponemos el valor a 0 para que la próxima vez vuelva a mostrarse la intro
+        PlayerPrefs.SetInt("AnimacionInicioVista", 0);
+        PlayerPrefs.Save();
+
         if (animadorMenuPrincipal != null)
         {
             animadorMenuPrincipal.ResetTrigger("AnimacionJugar");
@@ -81,19 +85,16 @@ public class MenuSystem : MonoBehaviour
         yield return new WaitForSecondsRealtime(duracionAnimacionSalir);
 
         Application.Quit();
-        Debug.Log("El juego se ha cerrado.");
+        Debug.Log("El juego se ha cerrado y se ha reiniciado la intro para la próxima vez.");
     }
 
-    // --- NUEVA FUNCIÓN PARA EL BOTÓN 'X' ---
     public void CerrarCreditos()
     {
-        // 1. Apagamos el panel de créditos
         if (panelCreditos != null)
         {
             panelCreditos.SetActive(false);
         }
 
-        // 2. Mandamos la orden al Animator de volver al estado inicial
         if (animadorMenuPrincipal != null)
         {
             animadorMenuPrincipal.ResetTrigger("AnimacionCreditos");

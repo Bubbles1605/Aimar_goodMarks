@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 11fe9ce311a919944956b18021fa49de
+guid: c372f42a89bc0e9459457785be051ddc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3972538383831400276
-    second: negrete_hablando_sprite_0
+      213: 1873720502663974095
+    second: manzana_0
   - first:
-      213: -1183067951704500703
-    second: negrete_hablando_sprite_1
+      213: 877633358563931522
+    second: manzana_1
+  - first:
+      213: 1634569452143873962
+    second: manzana_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,10 +78,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: negrete_hablando_sprite_0
+      name: manzana_0
       rect:
         serializedVersion: 2
-        x: 239
-        y: 298
-        width: 572
-        height: 475
+        x: 1625
+        y: 801
+        width: 280
+        height: 278
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca000272365bed8c0800000000000000
-      internalID: -3972538383831400276
+      spriteID: fcc07a9aedac00a10800000000000000
+      internalID: 1873720502663974095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: negrete_hablando_sprite_1
+      name: manzana_1
       rect:
         serializedVersion: 2
-        x: 2159
-        y: 299
-        width: 572
-        height: 463
+        x: 3545
+        y: 801
+        width: 280
+        height: 278
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +143,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 126118157f5e49fe0800000000000000
-      internalID: -1183067951704500703
+      spriteID: 2857c34c3eafd2c00800000000000000
+      internalID: 877633358563931522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: manzana_2
+      rect:
+        serializedVersion: 2
+        x: 5465
+        y: 801
+        width: 280
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf8db3a1482fa610800000000000000
+      internalID: 1634569452143873962
       vertices: []
       indices: 
       edges: []
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      negrete_hablando_sprite_0: -3972538383831400276
-      negrete_hablando_sprite_1: -1183067951704500703
+      manzana_0: 1873720502663974095
+      manzana_1: 877633358563931522
+      manzana_2: 1634569452143873962
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
