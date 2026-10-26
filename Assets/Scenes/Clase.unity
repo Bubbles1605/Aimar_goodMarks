@@ -241,9 +241,12 @@ MonoBehaviour:
   posicionYInicial: -8
   posicionYFinal: 0
   dialogoPrincipal: []
-  frasesGenericas: []
-  botonHablarPrefab: {fileID: 0}
-  posicionBoton: {x: -1.96, y: 1.82, z: 0}
+  frasesGenericas:
+  - Seguro que saco un diez lalalalala
+  - "Soy s\xFAper lista, \xBFsab\xEDas que \"Juan\" es con j?"
+  - "Papi seguro que se pone s\xFAper contento cuando vea que saco otro diez."
+  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
+  posicionBoton: {x: -1.15, y: 2.1, z: 0}
   textoUI: {fileID: 2044410985}
   tiempoPorLetra: 0.02
   prefabBotonRespuesta: {fileID: 0}
@@ -3254,6 +3257,7 @@ MonoBehaviour:
   basicote: {fileID: 1048401725}
   brainrot: {fileID: 982342299}
   repelente: {fileID: 59642356}
+  stalker: {fileID: 1940301167}
   alumnoActual: {fileID: 1048401725}
   dialogoPresentacionBasicote:
   - "\xBFEntonces t\xFA eres Mark, el nuevo profesor?"
@@ -3286,7 +3290,7 @@ MonoBehaviour:
   - Bro really said suspenso.
   dialogoPresentacionListilla:
   - "Buenos d\xEDas, profesor Mark."
-  - Espero mi merecido 10.
+  - Espero mi merecido diez.
   repelenteReaccion10:
   - Como debe ser.
   - "Mi padre estar\xE1 orgulloso."
@@ -3296,6 +3300,22 @@ MonoBehaviour:
   repelenteReaccionSuspenso:
   - "\xBFT\xDA SABES QUI\xC9N ES MI PADRE?"
   - "Est\xE1s muerto."
+  dialogoPreManzanaStalker:
+  - Hola.
+  - Me llamo Luna.
+  - "T\xFA eres Mark."
+  - Toma para ti, es una manzana, es para ti y SOLO para ti.
+  dialogoPostManzanaStalker:
+  - Ah, ya, mis ejercicios. Toma.
+  stalker_5:
+  - "Mejorar\xE9 por ti."
+  - "Ya lo ver\xE1s."
+  stalker_sonrojada:
+  - Hala, muchas gracias profe.
+  stalkerSuspenso:
+  - Vaya
+  prefabManzana: {fileID: 8959275113004482167, guid: ece185789f08a7e4aa50441372578837, type: 3}
+  posicionManzanaMesa: {x: 5, y: 4.18}
 --- !u!1 &1356928937
 GameObject:
   m_ObjectHideFlags: 0
@@ -4637,21 +4657,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptAlumno
   velocidadAparicion: 5
   posicionYInicial: -8
-  posicionYFinal: -0.65
+  posicionYFinal: 0.4
   dialogoPrincipal: []
-  frasesGenericas: []
-  botonHablarPrefab: {fileID: 0}
+  frasesGenericas:
+  - "\xBFTe puedo tocar?"
+  - Hueles a pomada antihemorroidal.
+  - "\xBFCada cu\xE1nto te cortas las u\xF1as?"
+  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -1.96, y: 1.82, z: 0}
-  textoUI: {fileID: 0}
+  textoUI: {fileID: 2044410985}
   tiempoPorLetra: 0.05
   prefabBotonRespuesta: {fileID: 0}
   contenedorRespuestas: {fileID: 0}
   respuestaElegida: -1
-  prefabExamen: {fileID: 0}
-  posicionXExamen: 16.15
+  prefabExamen: {fileID: 1674635176}
+  posicionXExamen: 4.3
   posicionYInicialExamen: 8
-  posicionYFinalExamen: 1.25
-  velocidadCaidaExamen: 7
+  posicionYFinalExamen: -0.25
+  velocidadCaidaExamen: 40
   examenInstanciado: {fileID: 0}
   examenCalificado: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
@@ -6328,7 +6351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5948231536916829117, guid: 043bf2de582297a488b10714a6bbb921, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.66
+      value: 2.65
       objectReference: {fileID: 0}
     - target: {fileID: 5948231536916829117, guid: 043bf2de582297a488b10714a6bbb921, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6379,6 +6402,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1980496487}
     m_Modifications:
+    - target: {fileID: 107096720717735987, guid: 9813ef063888b454cb77928962b8e55f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1767287693081201614, guid: 9813ef063888b454cb77928962b8e55f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45.92826
