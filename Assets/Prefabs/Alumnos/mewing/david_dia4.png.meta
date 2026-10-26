@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 23473851aae545244adc484c6f3f2bde
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3101427143173653517
+    second: david_dia4_0
+  - first:
+      213: 4339435549150276563
+    second: david_dia4_1
+  - first:
+      213: -552176620004706954
+    second: david_dia4_2
+  - first:
+      213: -3899738534754817481
+    second: david_dia4_3
+  - first:
+      213: 2100559578121719569
+    second: david_dia4_4
+  - first:
+      213: -6471093402366616111
+    second: david_dia4_5
+  - first:
+      213: -7839272468731488472
+    second: david_dia4_6
+  - first:
+      213: 3194862703017400321
+    second: david_dia4_7
+  - first:
+      213: 1954834332207749226
+    second: david_dia4_8
+  - first:
+      213: 3843784795743178739
+    second: david_dia4_9
+  - first:
+      213: 58853736306679344
+    second: david_dia4_10
+  - first:
+      213: -984830079366203492
+    second: david_dia4_11
+  - first:
+      213: -4193110579632966281
+    second: david_dia4_12
+  - first:
+      213: -8123314815851912581
+    second: david_dia4_13
+  - first:
+      213: 2247203598811166686
+    second: david_dia4_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: david_dia4_0
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 2455
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04ce9dfd8b7a0b20800000000000000
+      internalID: 3101427143173653517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_1
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 2455
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbedc004a5c83c30800000000000000
+      internalID: 4339435549150276563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_2
+      rect:
+        serializedVersion: 2
+        x: 4202
+        y: 2455
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675f7572a464658f0800000000000000
+      internalID: -552176620004706954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_3
+      rect:
+        serializedVersion: 2
+        x: 6122
+        y: 2455
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a690fd67851e9c0800000000000000
+      internalID: -3899738534754817481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_4
+      rect:
+        serializedVersion: 2
+        x: 8042
+        y: 2455
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f4d7b9ecfa62d10800000000000000
+      internalID: 2100559578121719569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_5
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1375
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd509bf5de0236a0800000000000000
+      internalID: -6471093402366616111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_6
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 1375
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82792c3593f453390800000000000000
+      internalID: -7839272468731488472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_7
+      rect:
+        serializedVersion: 2
+        x: 4202
+        y: 1375
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1081f7783be665c20800000000000000
+      internalID: 3194862703017400321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_8
+      rect:
+        serializedVersion: 2
+        x: 6122
+        y: 1375
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a681bfdc777f02b10800000000000000
+      internalID: 1954834332207749226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_9
+      rect:
+        serializedVersion: 2
+        x: 8042
+        y: 1375
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ffc15f08edd75530800000000000000
+      internalID: 3843784795743178739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_10
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 295
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e934e492711d000800000000000000
+      internalID: 58853736306679344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_11
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 295
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97f14bb24e2552f0800000000000000
+      internalID: -984830079366203492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_12
+      rect:
+        serializedVersion: 2
+        x: 4202
+        y: 295
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7757b05d4241fc5c0800000000000000
+      internalID: -4193110579632966281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_13
+      rect:
+        serializedVersion: 2
+        x: 6122
+        y: 295
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72aa72d630344f80800000000000000
+      internalID: -8123314815851912581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_dia4_14
+      rect:
+        serializedVersion: 2
+        x: 8042
+        y: 295
+        width: 348
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed77e1554cbaf2f10800000000000000
+      internalID: 2247203598811166686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      david_dia4_0: 3101427143173653517
+      david_dia4_1: 4339435549150276563
+      david_dia4_10: 58853736306679344
+      david_dia4_11: -984830079366203492
+      david_dia4_12: -4193110579632966281
+      david_dia4_13: -8123314815851912581
+      david_dia4_14: 2247203598811166686
+      david_dia4_2: -552176620004706954
+      david_dia4_3: -3899738534754817481
+      david_dia4_4: 2100559578121719569
+      david_dia4_5: -6471093402366616111
+      david_dia4_6: -7839272468731488472
+      david_dia4_7: 3194862703017400321
+      david_dia4_8: 1954834332207749226
+      david_dia4_9: 3843784795743178739
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

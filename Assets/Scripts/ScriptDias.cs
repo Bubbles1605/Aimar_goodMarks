@@ -184,7 +184,7 @@ public class ScriptDias : MonoBehaviour
             }
             else
             {
-                repelente.animator.SetTrigger("Enfadado"); // Puedes cambiarlo a "Furiosa" si tienes esa animación
+                repelente.animator.SetTrigger("Enfadado"); 
                 yield return StartCoroutine(ManejarDialogo(repelente.Decir(repelenteReaccionSuspenso, false)));
             }
 
