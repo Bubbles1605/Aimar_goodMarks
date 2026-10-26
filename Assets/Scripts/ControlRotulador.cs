@@ -23,12 +23,18 @@ public class ControladorRotulador : MonoBehaviour
     public GameObject panelFondoOscuro;
     public GameObject botonCerrarZoom;
     public float factorEscalaZoom = 1.8f;
+    public float maxFactorEscalaZoom = 4.0f;
+    public float velocidadScrollZoom = 1.5f;
 
     private bool examenAmpliado = false;
     private Vector3 posicionOriginalExamen;
     private Vector3 escalaOriginalExamen;
     private int sortingOrderOriginal;
     private GameObject examenEnZoom;
+
+    // --- VARIABLES NUEVAS PARA ARRASTRAR EL ZOOM ---
+    private Vector3 posicionRatonAnterior_Arrastre;
+    private bool estaArrastrando = false;
 
     //BOLI RELATED
     private bool usandoBoli = false;
@@ -54,6 +60,47 @@ public class ControladorRotulador : MonoBehaviour
     void Update()
     {
         Vector2 posRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        // --- SISTEMA DE ARRASTRE DEL ZOOM ---
+        if (examenAmpliado && examenEnZoom != null)
+        {
+            // 1. Zoom con la rueda (lo que ya tenías)
+            float scroll = Input.GetAxis("Mouse ScrollWheel");
+            if (scroll != 0f)
+            {
+                Vector3 nuevaEscala = examenEnZoom.transform.localScale + (Vector3.one * scroll * velocidadScrollZoom);
+                float limiteMinimo = escalaOriginalExamen.x * factorEscalaZoom;
+                float limiteMaximo = escalaOriginalExamen.x * maxFactorEscalaZoom;
+                nuevaEscala.x = Mathf.Clamp(nuevaEscala.x, limiteMinimo, limiteMaximo);
+                nuevaEscala.y = Mathf.Clamp(nuevaEscala.y, limiteMinimo, limiteMaximo);
+                nuevaEscala.z = Mathf.Clamp(nuevaEscala.z, limiteMinimo, limiteMaximo);
+                examenEnZoom.transform.localScale = nuevaEscala;
+            }
+
+            // 2. Arrastrar el examen con el botón DERECHO (botón 1 del ratón)
+            if (Input.GetMouseButtonDown(1))
+            {
+                // Si tienes cosas en la mano, daremos prioridad a soltarlas (el código de soltar se ejecuta más abajo)
+                // Solo arrastramos si las manos están vacías
+                if (!usandoSello && !usandoBoli && !usandoPegatina)
+                {
+                    estaArrastrando = true;
+                    posicionRatonAnterior_Arrastre = posRaton;
+                }
+            }
+
+            if (Input.GetMouseButton(1) && estaArrastrando)
+            {
+                Vector3 diferenciaRaton = (Vector3)posRaton - posicionRatonAnterior_Arrastre;
+                examenEnZoom.transform.position += diferenciaRaton;
+                posicionRatonAnterior_Arrastre = posRaton;
+            }
+
+            if (Input.GetMouseButtonUp(1))
+            {
+                estaArrastrando = false;
+            }
+        }
 
         if (usandoSello && selloFisicoEnMesa != null)
         {
@@ -232,7 +279,7 @@ public class ControladorRotulador : MonoBehaviour
             {
                 director.PenalizarDibujo();
             }
-            CortarTrazo(); // Suelta el boli instantáneamente
+            CortarTrazo();
             return true;
         }
         return false;
@@ -278,6 +325,7 @@ public class ControladorRotulador : MonoBehaviour
 
         examenAmpliado = false;
         examenEnZoom = null;
+        estaArrastrando = false; 
     }
 
     void SoltarSello() { if (selloFisicoEnMesa != null) { selloFisicoEnMesa.transform.position = posicionOriginalSello; } usandoSello = false; selloFisicoEnMesa = null; indiceSelloActual = -1; }
