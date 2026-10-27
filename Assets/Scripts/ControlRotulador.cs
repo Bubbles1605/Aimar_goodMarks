@@ -32,32 +32,30 @@ public class ControladorRotulador : MonoBehaviour
     private int sortingOrderOriginal;
     private GameObject examenEnZoom;
 
-    // --- VARIABLES NUEVAS PARA ARRASTRAR EL ZOOM ---
     private Vector3 posicionRatonAnterior_Arrastre;
     private bool estaArrastrando = false;
 
-    //BOLI RELATED
+    // BOLI RELATED
     private bool usandoBoli = false;
     private GameObject boliFisicoEnMesa;
     private Vector3 posicionOriginalBoli;
     private Quaternion rotacionOriginalBoli;
 
-    //SELLO RELATED
+    // SELLO RELATED
     private bool usandoSello = false;
     private GameObject selloFisicoEnMesa;
     private Vector3 posicionOriginalSello;
     private int indiceSelloActual = -1;
 
-    //PEGATINA RELATED
+    // PEGATINA RELATED
     private bool usandoPegatina = false;
     private GameObject pegatinaEnMano;
 
-    //ACTO DE DIBUJAR
+    // ACTO DE DIBUJAR
     private LineRenderer lineaActual;
     private Vector2 puntoAnterior;
     private bool estaDibujando = false;
 
-    // --- NUEVO: APARTADO DE SONIDOS ---
     [Header("Sonidos")]
     public AudioClip sonidoCogerBoli;
     public AudioClip sonidoPonerSello;
@@ -66,7 +64,6 @@ public class ControladorRotulador : MonoBehaviour
 
     void Start()
     {
-        // Creamos un AudioSource automáticamente si el objeto no lo tiene
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
     }
@@ -75,27 +72,29 @@ public class ControladorRotulador : MonoBehaviour
     {
         Vector2 posRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+        ScriptDias director = FindFirstObjectByType<ScriptDias>();
+        bool bloqueadoPorDialogo = (director != null && (director.dialogoEnCurso || director.esperandoRespuesta));
+
         // --- SISTEMA DE ARRASTRE DEL ZOOM ---
         if (examenAmpliado && examenEnZoom != null)
         {
-            // 1. Zoom con la rueda (lo que ya tenías)
-            float scroll = Input.GetAxis("Mouse ScrollWheel");
-            if (scroll != 0f)
+            if (!bloqueadoPorDialogo)
             {
-                Vector3 nuevaEscala = examenEnZoom.transform.localScale + (Vector3.one * scroll * velocidadScrollZoom);
-                float limiteMinimo = escalaOriginalExamen.x * factorEscalaZoom;
-                float limiteMaximo = escalaOriginalExamen.x * maxFactorEscalaZoom;
-                nuevaEscala.x = Mathf.Clamp(nuevaEscala.x, limiteMinimo, limiteMaximo);
-                nuevaEscala.y = Mathf.Clamp(nuevaEscala.y, limiteMinimo, limiteMaximo);
-                nuevaEscala.z = Mathf.Clamp(nuevaEscala.z, limiteMinimo, limiteMaximo);
-                examenEnZoom.transform.localScale = nuevaEscala;
+                float scroll = Input.GetAxis("Mouse ScrollWheel");
+                if (scroll != 0f)
+                {
+                    Vector3 nuevaEscala = examenEnZoom.transform.localScale + (Vector3.one * scroll * velocidadScrollZoom);
+                    float limiteMinimo = escalaOriginalExamen.x * factorEscalaZoom;
+                    float limiteMaximo = escalaOriginalExamen.x * maxFactorEscalaZoom;
+                    nuevaEscala.x = Mathf.Clamp(nuevaEscala.x, limiteMinimo, limiteMaximo);
+                    nuevaEscala.y = Mathf.Clamp(nuevaEscala.y, limiteMinimo, limiteMaximo);
+                    nuevaEscala.z = Mathf.Clamp(nuevaEscala.z, limiteMinimo, limiteMaximo);
+                    examenEnZoom.transform.localScale = nuevaEscala;
+                }
             }
 
-            // 2. Arrastrar el examen con el botón DERECHO (botón 1 del ratón)
-            if (Input.GetMouseButtonDown(1))
+            if (!bloqueadoPorDialogo && Input.GetMouseButtonDown(1))
             {
-                // Si tienes cosas en la mano, daremos prioridad a soltarlas (el código de soltar se ejecuta más abajo)
-                // Solo arrastramos si las manos están vacías
                 if (!usandoSello && !usandoBoli && !usandoPegatina)
                 {
                     estaArrastrando = true;
@@ -116,6 +115,7 @@ public class ControladorRotulador : MonoBehaviour
             }
         }
 
+        // Actualizamos posiciones de las herramientas en mano SIEMPRE
         if (usandoSello && selloFisicoEnMesa != null)
         {
             selloFisicoEnMesa.transform.position = new Vector3(posRaton.x, posRaton.y, selloFisicoEnMesa.transform.position.z);
@@ -133,7 +133,8 @@ public class ControladorRotulador : MonoBehaviour
 
         GameObject examenTocado = ObtenerObjetoTocado(posRaton, "Examen");
 
-        if (Input.GetMouseButtonDown(0))
+        // CLICS IZQUIERDOS
+        if (!bloqueadoPorDialogo && Input.GetMouseButtonDown(0))
         {
             GameObject selloClicado = ObtenerObjetoTocado(posRaton, "Sello");
             GameObject boliClicado = ObtenerObjetoTocado(posRaton, "Boli");
@@ -148,13 +149,11 @@ public class ControladorRotulador : MonoBehaviour
             }
             else if (boliClicado != null && !usandoBoli && !usandoSello && !usandoPegatina && !examenAmpliado)
             {
-                
                 usandoBoli = true;
                 boliFisicoEnMesa = boliClicado;
                 posicionOriginalBoli = boliFisicoEnMesa.transform.position;
                 rotacionOriginalBoli = boliFisicoEnMesa.transform.rotation;
 
-                // --- NUEVO SONIDO: COGER BOLI ---
                 if (sonidoCogerBoli != null) audioSource.PlayOneShot(sonidoCogerBoli);
 
                 boliFisicoEnMesa.transform.rotation = Quaternion.identity;
@@ -172,14 +171,12 @@ public class ControladorRotulador : MonoBehaviour
             }
             else if (examenTocado != null)
             {
-                ScriptDias director = FindFirstObjectByType<ScriptDias>();
                 ScriptAlumno alumnoActual = (director != null) ? director.alumnoActual : null;
 
                 if (usandoSello)
                 {
                     if (alumnoActual != null && alumnoActual.examenCalificado)
                     {
-                        Debug.Log("¡Este examen ya tiene una nota puesta!");
                         SoltarSello();
                         return;
                     }
@@ -188,7 +185,6 @@ public class ControladorRotulador : MonoBehaviour
                     {
                         Vector3 posicionFinal = new Vector3(posicionNotaExamen.x, posicionNotaExamen.y, 0f);
                         GameObject nuevaNota = Instantiate(marcaSelloPrefab, posicionFinal, Quaternion.identity);
-
                         nuevaNota.transform.localScale = escalaNotaEstampada;
 
                         if (alumnoActual != null && alumnoActual.examenInstanciado != null)
@@ -210,7 +206,6 @@ public class ControladorRotulador : MonoBehaviour
                             alumnoActual.examenCalificado = true;
                         }
 
-                        // --- NUEVO SONIDO: PONER SELLO ---
                         if (sonidoPonerSello != null) audioSource.PlayOneShot(sonidoPonerSello);
                     }
                     SoltarSello();
@@ -231,7 +226,6 @@ public class ControladorRotulador : MonoBehaviour
                         SpriteRenderer sr = pegatinaEnMano.GetComponent<SpriteRenderer>();
                         if (sr != null) sr.sortingOrder = 15;
 
-                        // --- NUEVO SONIDO: PONER PEGATINA ---
                         if (sonidoPonerPegatina != null) audioSource.PlayOneShot(sonidoPonerPegatina);
 
                         usandoPegatina = false;
@@ -248,17 +242,14 @@ public class ControladorRotulador : MonoBehaviour
                 }
                 else if (!usandoSello && !usandoBoli && !usandoPegatina && !examenAmpliado)
                 {
-                    if (alumnoActual != null && alumnoActual.examenCalificado)
-                    {
-                    }
-                    else
+                    if (alumnoActual == null || !alumnoActual.examenCalificado)
                     {
                         AmpliarExamen(examenTocado);
                     }
                 }
             }
         }
-        else if (Input.GetMouseButton(0))
+        else if (!bloqueadoPorDialogo && Input.GetMouseButton(0))
         {
             if (examenTocado != null && usandoBoli)
             {
@@ -285,11 +276,10 @@ public class ControladorRotulador : MonoBehaviour
             CortarTrazo();
         }
 
+        // CLIC DERECHO
         if (Input.GetMouseButtonDown(1))
         {
-            if (usandoSello) SoltarSello();
-            if (usandoBoli) SoltarBoli();
-            if (usandoPegatina) SoltarPegatina();
+            SoltarTodo();
         }
     }
 
@@ -352,9 +342,16 @@ public class ControladorRotulador : MonoBehaviour
         estaArrastrando = false;
     }
 
+    public void SoltarTodo()
+    {
+        if (usandoSello) SoltarSello();
+        if (usandoBoli) SoltarBoli();
+        if (usandoPegatina) SoltarPegatina();
+    }
+
     void SoltarSello() { if (selloFisicoEnMesa != null) { selloFisicoEnMesa.transform.position = posicionOriginalSello; } usandoSello = false; selloFisicoEnMesa = null; indiceSelloActual = -1; }
     void SoltarPegatina() { if (pegatinaEnMano != null) { Destroy(pegatinaEnMano); } usandoPegatina = false; pegatinaEnMano = null; }
-    void SoltarBoli() { if (boliFisicoEnMesa != null) { boliFisicoEnMesa.transform.position = posicionOriginalBoli; boliFisicoEnMesa.transform.rotation = rotacionOriginalBoli; } Cursor.visible = true; usandoBoli = false; boliFisicoEnMesa = null; CortarTrazo(); }
+    public void SoltarBoli() { if (boliFisicoEnMesa != null) { boliFisicoEnMesa.transform.position = posicionOriginalBoli; boliFisicoEnMesa.transform.rotation = rotacionOriginalBoli; } Cursor.visible = true; usandoBoli = false; boliFisicoEnMesa = null; CortarTrazo(); }
 
     GameObject ObtenerObjetoTocado(Vector2 posicion, string tagBuscado) { Collider2D[] hits = Physics2D.OverlapPointAll(posicion); foreach (Collider2D hit in hits) { if (hit.CompareTag(tagBuscado)) return hit.gameObject; } return null; }
     int ObtenerIndiceSello(GameObject sello) { string nombre = sello.name; for (int i = 10; i >= 0; i--) { if (nombre.Contains(i.ToString())) return i; } return 0; }

@@ -36,6 +36,10 @@ public class ScriptAlumno : MonoBehaviour
     public float velocidadCaidaExamen = 7f;
     [HideInInspector] public GameObject examenInstanciado;
 
+    [Header("Sistema de Muerte")]
+    public GameObject panelMuerte; // Arrastra aquí el panel desde el Canvas
+    public float duracionAnimacionMuerte = 2.0f;
+
     // LA VARIABLE MÁGICA
     [HideInInspector] public bool examenCalificado = false;
 
@@ -80,6 +84,15 @@ public class ScriptAlumno : MonoBehaviour
         }
 
         transform.position = posicionObjetivo;
+    }
+
+    public void DesplegarPanelMuerte()
+    {
+        if (panelMuerte != null)
+        {
+            panelMuerte.SetActive(true);
+        }
+
     }
 
     public IEnumerator Desaparecer()
