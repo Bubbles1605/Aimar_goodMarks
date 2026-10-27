@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: 9c7d3cbffcc2df04ca2fdd239f801281
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2117753527488031387
+    second: boton_hablar_finalmente_al_fin_0
+  - first:
+      213: -1881490327978800745
+    second: boton_hablar_finalmente_al_fin_1
+  - first:
+      213: -4013648947151461543
+    second: boton_hablar_finalmente_al_fin_2
+  - first:
+      213: -1718748683270869791
+    second: boton_hablar_finalmente_al_fin_3
+  - first:
+      213: 1378881282184773632
+    second: boton_hablar_finalmente_al_fin_4
+  - first:
+      213: 8437923295604846729
+    second: boton_hablar_finalmente_al_fin_5
+  - first:
+      213: -4244626798121221283
+    second: boton_hablar_finalmente_al_fin_6
+  - first:
+      213: 1947554482868988254
+    second: boton_hablar_finalmente_al_fin_7
+  - first:
+      213: -2656761035099321044
+    second: boton_hablar_finalmente_al_fin_8
+  - first:
+      213: 1619643129190058187
+    second: boton_hablar_finalmente_al_fin_9
+  - first:
+      213: 4650462389438255028
+    second: boton_hablar_finalmente_al_fin_10
+  - first:
+      213: 2982946961739439223
+    second: boton_hablar_finalmente_al_fin_11
+  - first:
+      213: -7951996986805880145
+    second: boton_hablar_finalmente_al_fin_12
+  - first:
+      213: -4989913156608305035
+    second: boton_hablar_finalmente_al_fin_13
+  - first:
+      213: -8276306465561107250
+    second: boton_hablar_finalmente_al_fin_14
+  - first:
+      213: -7501573157151300059
+    second: boton_hablar_finalmente_al_fin_15
+  - first:
+      213: -7699883974188401729
+    second: boton_hablar_finalmente_al_fin_16
+  - first:
+      213: -1967323068581119140
+    second: boton_hablar_finalmente_al_fin_17
+  - first:
+      213: 3258987619924924426
+    second: boton_hablar_finalmente_al_fin_18
+  - first:
+      213: 7039185135245939991
+    second: boton_hablar_finalmente_al_fin_19
+  - first:
+      213: 2384618078847525521
+    second: boton_hablar_finalmente_al_fin_20
+  - first:
+      213: 3685549646628737323
+    second: boton_hablar_finalmente_al_fin_21
+  - first:
+      213: 6605787517842708383
+    second: boton_hablar_finalmente_al_fin_22
+  - first:
+      213: 2308619281428613406
+    second: boton_hablar_finalmente_al_fin_23
+  - first:
+      213: -7943837266335910489
+    second: boton_hablar_finalmente_al_fin_24
+  - first:
+      213: -885616006803162933
+    second: boton_hablar_finalmente_al_fin_25
+  - first:
+      213: -6141250921434999166
+    second: boton_hablar_finalmente_al_fin_26
+  - first:
+      213: -8302073966509320893
+    second: boton_hablar_finalmente_al_fin_27
+  - first:
+      213: -1303956363104855395
+    second: boton_hablar_finalmente_al_fin_28
+  - first:
+      213: -6840047931680728892
+    second: boton_hablar_finalmente_al_fin_29
+  - first:
+      213: -7663408012606055745
+    second: boton_hablar_finalmente_al_fin_30
+  - first:
+      213: 3021097422801390633
+    second: boton_hablar_finalmente_al_fin_31
+  - first:
+      213: -8537767650260124122
+    second: boton_hablar_finalmente_al_fin_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_0
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 2924
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565de38136a3c92e0800000000000000
+      internalID: -2117753527488031387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_1
+      rect:
+        serializedVersion: 2
+        x: 2747
+        y: 2923
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7998d78e38a93e5e0800000000000000
+      internalID: -1881490327978800745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_2
+      rect:
+        serializedVersion: 2
+        x: 4666
+        y: 2922
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953aaeb3c87ac48c0800000000000000
+      internalID: -4013648947151461543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_3
+      rect:
+        serializedVersion: 2
+        x: 6559
+        y: 2885
+        width: 120
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec287bcd27c528e0800000000000000
+      internalID: -1718748683270869791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_4
+      rect:
+        serializedVersion: 2
+        x: 8430
+        y: 2839
+        width: 203
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0000f047835c22310800000000000000
+      internalID: 1378881282184773632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1759
+        width: 203
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98035840886891570800000000000000
+      internalID: 8437923295604846729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_6
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 1759
+        width: 203
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5381e58a6e0815c0800000000000000
+      internalID: -4244626798121221283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_7
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 1759
+        width: 203
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59202ccb7a170b10800000000000000
+      internalID: 1947554482868988254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_8
+      rect:
+        serializedVersion: 2
+        x: 6510
+        y: 1759
+        width: 203
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d4ec92ae9412bd0800000000000000
+      internalID: -2656761035099321044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_9
+      rect:
+        serializedVersion: 2
+        x: 8430
+        y: 1759
+        width: 203
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8864248d02a7610800000000000000
+      internalID: 1619643129190058187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_12
+      rect:
+        serializedVersion: 2
+        x: 2676
+        y: 699
+        width: 214
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf08cb67e2c98040800000000000000
+      internalID: 4650462389438255028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_13
+      rect:
+        serializedVersion: 2
+        x: 4580
+        y: 609
+        width: 313
+        height: 334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c5f46157e856920800000000000000
+      internalID: 2982946961739439223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_23
+      rect:
+        serializedVersion: 2
+        x: 8417
+        y: 627
+        width: 281
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbbf6ca3254842590800000000000000
+      internalID: -7699883974188401729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_10
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 679
+        width: 203
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a08550539ff3a3d20800000000000000
+      internalID: 3258987619924924426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_hablar_finalmente_al_fin_22
+      rect:
+        serializedVersion: 2
+        x: 6465
+        y: 595
+        width: 328
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9759be9fb87cab50800000000000000
+      internalID: 6605787517842708383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: df24f47d7ab57c74b987b8b9efacbd09
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boton_hablar_finalmente_al_fin_0: -2117753527488031387
+      boton_hablar_finalmente_al_fin_1: -1881490327978800745
+      boton_hablar_finalmente_al_fin_10: 3258987619924924426
+      boton_hablar_finalmente_al_fin_12: 4650462389438255028
+      boton_hablar_finalmente_al_fin_13: 2982946961739439223
+      boton_hablar_finalmente_al_fin_14: -8276306465561107250
+      boton_hablar_finalmente_al_fin_15: -7501573157151300059
+      boton_hablar_finalmente_al_fin_17: -1967323068581119140
+      boton_hablar_finalmente_al_fin_19: 7039185135245939991
+      boton_hablar_finalmente_al_fin_2: -4013648947151461543
+      boton_hablar_finalmente_al_fin_20: 2384618078847525521
+      boton_hablar_finalmente_al_fin_21: 3685549646628737323
+      boton_hablar_finalmente_al_fin_22: 6605787517842708383
+      boton_hablar_finalmente_al_fin_23: -7699883974188401729
+      boton_hablar_finalmente_al_fin_24: -7943837266335910489
+      boton_hablar_finalmente_al_fin_25: -885616006803162933
+      boton_hablar_finalmente_al_fin_26: -6141250921434999166
+      boton_hablar_finalmente_al_fin_27: -8302073966509320893
+      boton_hablar_finalmente_al_fin_28: -1303956363104855395
+      boton_hablar_finalmente_al_fin_29: -6840047931680728892
+      boton_hablar_finalmente_al_fin_3: -1718748683270869791
+      boton_hablar_finalmente_al_fin_30: -7663408012606055745
+      boton_hablar_finalmente_al_fin_31: 3021097422801390633
+      boton_hablar_finalmente_al_fin_32: -8537767650260124122
+      boton_hablar_finalmente_al_fin_4: 1378881282184773632
+      boton_hablar_finalmente_al_fin_5: 8437923295604846729
+      boton_hablar_finalmente_al_fin_6: -4244626798121221283
+      boton_hablar_finalmente_al_fin_7: 1947554482868988254
+      boton_hablar_finalmente_al_fin_8: -2656761035099321044
+      boton_hablar_finalmente_al_fin_9: 1619643129190058187
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

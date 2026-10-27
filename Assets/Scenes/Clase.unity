@@ -355,7 +355,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: II
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5aca885518328d44eb15e60660c9752d, type: 2}
   m_sharedMaterial: {fileID: 6638799902827287391, guid: 5aca885518328d44eb15e60660c9752d, type: 2}
@@ -1344,8 +1346,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 600.86, y: -57.77002}
-  m_SizeDelta: {x: -1507.64, y: -292.58}
+  m_AnchoredPosition: {x: 600.86, y: -37.21997}
+  m_SizeDelta: {x: -1507.64, y: -621.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493147122
 MonoBehaviour:
@@ -2252,8 +2254,8 @@ MonoBehaviour:
   - Illo, acabo de hacerme quinientos metros a crol sin respirar.
   - "Qu\xE9 calor hace en esta clase, me tirar\xEDa de cabeza a la piscina."
   - "Vaya paliza de entrenar nataci\xF3n, miarma, estoy reventado."
-  botonHablarPrefab: {fileID: 701238677}
-  posicionBoton: {x: -1.96, y: 1.82, z: 0}
+  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
+  posicionBoton: {x: -0.68, y: 2.75, z: 0}
   textoUI: {fileID: 2044410985}
   tiempoPorLetra: 0.05
   prefabBotonRespuesta: {fileID: 0}
@@ -2451,14 +2453,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2754717, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1383303704959144527, guid: 2295b28cb7d470a469960b383d208e04, type: 3}
+  m_Sprite: {fileID: -4622913602048448559, guid: 5ea1e2c54446c4d4e889261cfcd90870, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3449,7 +3451,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: cddf9b88269d7254f918507eeeb56259, type: 3}
+  m_Resource: {fileID: 8300000, guid: a73b346f51223a04eb07a493dc38314e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.805
   m_Pitch: 1
@@ -3749,7 +3751,7 @@ MonoBehaviour:
   stalker: {fileID: 1940301167}
   negrete: {fileID: 867363014}
   gordete: {fileID: 405044013}
-  mewing: {fileID: 0}
+  mewing: {fileID: 2723422825153577981}
   alumnoActual: {fileID: 1048401725}
   dialogoPresentacionBasicote:
   - "\xBFEntonces t\xFA eres Mark, el nuevo profesor?"
@@ -5086,7 +5088,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 934f2c8b98234a944adf6b068ec0463e, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0

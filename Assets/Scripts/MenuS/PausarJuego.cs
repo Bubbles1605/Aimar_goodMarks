@@ -54,6 +54,7 @@ public class PausarJuego : MonoBehaviour
         }
 
         juegoPausado = true;
+        Time.timeScale = 0.0f;
         StartCoroutine(RutinaPausar());
     }
 
@@ -71,7 +72,7 @@ public class PausarJuego : MonoBehaviour
         }
 
         yield return new WaitForSecondsRealtime(duracionAnimacionEntrada);
-        Time.timeScale = 0.0f;
+
     }
 
     public void Reanudar()
