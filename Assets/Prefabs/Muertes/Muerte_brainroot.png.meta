@@ -1,0 +1,2283 @@
+fileFormatVersion: 2
+guid: 283cd154425e9ba468facddeee4d0f66
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8826672519027971637
+    second: Muerte_brainroot_0
+  - first:
+      213: -4195054289413732143
+    second: Muerte_brainroot_1
+  - first:
+      213: -3271052628200518302
+    second: Muerte_brainroot_2
+  - first:
+      213: 8636064983578261232
+    second: Muerte_brainroot_3
+  - first:
+      213: 8026735909922385032
+    second: Muerte_brainroot_4
+  - first:
+      213: 7777648169110880103
+    second: Muerte_brainroot_5
+  - first:
+      213: 7730781688373770029
+    second: Muerte_brainroot_6
+  - first:
+      213: 6316029708708657519
+    second: Muerte_brainroot_7
+  - first:
+      213: -7153263088656593235
+    second: Muerte_brainroot_8
+  - first:
+      213: -2167748410791365537
+    second: Muerte_brainroot_9
+  - first:
+      213: 3212239194194147681
+    second: Muerte_brainroot_10
+  - first:
+      213: -7773475598103852574
+    second: Muerte_brainroot_11
+  - first:
+      213: -595389637215786661
+    second: Muerte_brainroot_12
+  - first:
+      213: -6889212654127354972
+    second: Muerte_brainroot_13
+  - first:
+      213: -7718529275853703216
+    second: Muerte_brainroot_14
+  - first:
+      213: -8425356956687939421
+    second: Muerte_brainroot_15
+  - first:
+      213: -2546026627002490585
+    second: Muerte_brainroot_16
+  - first:
+      213: 8863711348745034269
+    second: Muerte_brainroot_17
+  - first:
+      213: -5169041262786743152
+    second: Muerte_brainroot_18
+  - first:
+      213: -6630867559280038210
+    second: Muerte_brainroot_19
+  - first:
+      213: 7940926587996291076
+    second: Muerte_brainroot_20
+  - first:
+      213: 3358369170098334993
+    second: Muerte_brainroot_21
+  - first:
+      213: -7345991105067628186
+    second: Muerte_brainroot_22
+  - first:
+      213: -7759856061875991422
+    second: Muerte_brainroot_23
+  - first:
+      213: -322302822331983574
+    second: Muerte_brainroot_24
+  - first:
+      213: -1791907392710740486
+    second: Muerte_brainroot_25
+  - first:
+      213: 413609841613405663
+    second: Muerte_brainroot_26
+  - first:
+      213: -5476319345237974050
+    second: Muerte_brainroot_27
+  - first:
+      213: -1061344863655453535
+    second: Muerte_brainroot_28
+  - first:
+      213: 6625369172076328359
+    second: Muerte_brainroot_29
+  - first:
+      213: 8978835026098169223
+    second: Muerte_brainroot_30
+  - first:
+      213: 7549629339110576912
+    second: Muerte_brainroot_31
+  - first:
+      213: -7232644550744575470
+    second: Muerte_brainroot_32
+  - first:
+      213: 6952892314468057868
+    second: Muerte_brainroot_33
+  - first:
+      213: -3976898991928817501
+    second: Muerte_brainroot_34
+  - first:
+      213: -4101911994383162397
+    second: Muerte_brainroot_35
+  - first:
+      213: -8096710074748393434
+    second: Muerte_brainroot_36
+  - first:
+      213: 2117560922932194426
+    second: Muerte_brainroot_37
+  - first:
+      213: 3942055194152985961
+    second: Muerte_brainroot_38
+  - first:
+      213: -2392118440127143390
+    second: Muerte_brainroot_39
+  - first:
+      213: -8031739231177441288
+    second: Muerte_brainroot_40
+  - first:
+      213: 7867715603157165269
+    second: Muerte_brainroot_41
+  - first:
+      213: 7935375912208991379
+    second: Muerte_brainroot_42
+  - first:
+      213: -8045167025856972026
+    second: Muerte_brainroot_43
+  - first:
+      213: 1917492498572348987
+    second: Muerte_brainroot_44
+  - first:
+      213: -174110488027392617
+    second: Muerte_brainroot_45
+  - first:
+      213: 3078121692026299054
+    second: Muerte_brainroot_46
+  - first:
+      213: -3387472463198675636
+    second: Muerte_brainroot_47
+  - first:
+      213: 463359930254067801
+    second: Muerte_brainroot_48
+  - first:
+      213: 4988738870072011708
+    second: Muerte_brainroot_49
+  - first:
+      213: -959387801000998862
+    second: Muerte_brainroot_50
+  - first:
+      213: -8673433967518904291
+    second: Muerte_brainroot_51
+  - first:
+      213: -2599905470246020301
+    second: Muerte_brainroot_52
+  - first:
+      213: 4747627033908788464
+    second: Muerte_brainroot_53
+  - first:
+      213: 2966854804311002449
+    second: Muerte_brainroot_54
+  - first:
+      213: -4921499626705669507
+    second: Muerte_brainroot_55
+  - first:
+      213: -2813943327094215698
+    second: Muerte_brainroot_56
+  - first:
+      213: -1593182261327561548
+    second: Muerte_brainroot_57
+  - first:
+      213: 6222306013546362684
+    second: Muerte_brainroot_58
+  - first:
+      213: -4678609356165605766
+    second: Muerte_brainroot_59
+  - first:
+      213: 8271617676960200533
+    second: Muerte_brainroot_60
+  - first:
+      213: -723160225010641611
+    second: Muerte_brainroot_61
+  - first:
+      213: 7769617546166099042
+    second: Muerte_brainroot_62
+  - first:
+      213: 8860897639592946167
+    second: Muerte_brainroot_63
+  - first:
+      213: -2411547671031514917
+    second: Muerte_brainroot_64
+  - first:
+      213: 1141456305273966743
+    second: Muerte_brainroot_65
+  - first:
+      213: -4797960303175841365
+    second: Muerte_brainroot_66
+  - first:
+      213: 3180166592319627798
+    second: Muerte_brainroot_67
+  - first:
+      213: 3799866817065161972
+    second: Muerte_brainroot_68
+  - first:
+      213: -4630461524089891519
+    second: Muerte_brainroot_69
+  - first:
+      213: 2853648364301402552
+    second: Muerte_brainroot_70
+  - first:
+      213: 1795380625692210567
+    second: Muerte_brainroot_71
+  - first:
+      213: 3907337330369831232
+    second: Muerte_brainroot_72
+  - first:
+      213: 8194666928500975792
+    second: Muerte_brainroot_73
+  - first:
+      213: -2536211143775479599
+    second: Muerte_brainroot_74
+  - first:
+      213: 7457952130228362194
+    second: Muerte_brainroot_75
+  - first:
+      213: 8465589571997134664
+    second: Muerte_brainroot_76
+  - first:
+      213: 8436809728835775003
+    second: Muerte_brainroot_77
+  - first:
+      213: 4087349024164346331
+    second: Muerte_brainroot_78
+  - first:
+      213: -3707115880166129113
+    second: Muerte_brainroot_79
+  - first:
+      213: 3768174701069435500
+    second: Muerte_brainroot_80
+  - first:
+      213: 9168543510701799806
+    second: Muerte_brainroot_81
+  - first:
+      213: 1341573107601829416
+    second: Muerte_brainroot_82
+  - first:
+      213: -2662521925846788014
+    second: Muerte_brainroot_83
+  - first:
+      213: 8958302922749379662
+    second: Muerte_brainroot_84
+  - first:
+      213: -985275581734093444
+    second: Muerte_brainroot_85
+  - first:
+      213: 8039743202810549511
+    second: Muerte_brainroot_86
+  - first:
+      213: 5500981090179215316
+    second: Muerte_brainroot_87
+  - first:
+      213: 834248694123220340
+    second: Muerte_brainroot_88
+  - first:
+      213: 1981572983986181698
+    second: Muerte_brainroot_89
+  - first:
+      213: -5850301851594728738
+    second: Muerte_brainroot_90
+  - first:
+      213: 873021723218223435
+    second: Muerte_brainroot_91
+  - first:
+      213: 9010045397784184881
+    second: Muerte_brainroot_92
+  - first:
+      213: -8798995899914163835
+    second: Muerte_brainroot_93
+  - first:
+      213: 5176640225691853980
+    second: Muerte_brainroot_94
+  - first:
+      213: 2580145185428379019
+    second: Muerte_brainroot_95
+  - first:
+      213: 2259202358841080439
+    second: Muerte_brainroot_96
+  - first:
+      213: 7661684489084667889
+    second: Muerte_brainroot_97
+  - first:
+      213: 2256248968054911934
+    second: Muerte_brainroot_98
+  - first:
+      213: -5270965763366694232
+    second: Muerte_brainroot_99
+  - first:
+      213: 7996367658608487485
+    second: Muerte_brainroot_100
+  - first:
+      213: 222024384263458559
+    second: Muerte_brainroot_101
+  - first:
+      213: 4433164146673481495
+    second: Muerte_brainroot_102
+  - first:
+      213: 3308432448836869481
+    second: Muerte_brainroot_103
+  - first:
+      213: 6677399450838566436
+    second: Muerte_brainroot_104
+  - first:
+      213: -5408455164059917747
+    second: Muerte_brainroot_105
+  - first:
+      213: -8017435967408558584
+    second: Muerte_brainroot_106
+  - first:
+      213: -52324217328396843
+    second: Muerte_brainroot_107
+  - first:
+      213: -5916802786995583375
+    second: Muerte_brainroot_108
+  - first:
+      213: -2183142623428658106
+    second: Muerte_brainroot_109
+  - first:
+      213: 249223526222357172
+    second: Muerte_brainroot_110
+  - first:
+      213: 6368042996776068009
+    second: Muerte_brainroot_111
+  - first:
+      213: -1264310401072855656
+    second: Muerte_brainroot_112
+  - first:
+      213: -263990419473620111
+    second: Muerte_brainroot_113
+  - first:
+      213: -2426599428986566303
+    second: Muerte_brainroot_114
+  - first:
+      213: 5343428842979234210
+    second: Muerte_brainroot_115
+  - first:
+      213: 5360637282802703192
+    second: Muerte_brainroot_116
+  - first:
+      213: -2494393252364985799
+    second: Muerte_brainroot_117
+  - first:
+      213: -836749748799844574
+    second: Muerte_brainroot_118
+  - first:
+      213: 2272948447666044539
+    second: Muerte_brainroot_119
+  - first:
+      213: -1145720750622056088
+    second: Muerte_brainroot_120
+  - first:
+      213: -3082401264100495949
+    second: Muerte_brainroot_121
+  - first:
+      213: -783368936574321386
+    second: Muerte_brainroot_122
+  - first:
+      213: -1257333669670994941
+    second: Muerte_brainroot_123
+  - first:
+      213: -8292673370530557934
+    second: Muerte_brainroot_124
+  - first:
+      213: -3791930389202857065
+    second: Muerte_brainroot_125
+  - first:
+      213: -2188274717291535477
+    second: Muerte_brainroot_126
+  - first:
+      213: 3695858103762321386
+    second: Muerte_brainroot_127
+  - first:
+      213: 8935159305163183776
+    second: Muerte_brainroot_128
+  - first:
+      213: -6416239331117012166
+    second: Muerte_brainroot_129
+  - first:
+      213: -4630039631027181534
+    second: Muerte_brainroot_130
+  - first:
+      213: -4648816829049932120
+    second: Muerte_brainroot_131
+  - first:
+      213: 5657480265764653092
+    second: Muerte_brainroot_132
+  - first:
+      213: 6758982938310918878
+    second: Muerte_brainroot_133
+  - first:
+      213: -754863048462079310
+    second: Muerte_brainroot_134
+  - first:
+      213: -5446506780447929559
+    second: Muerte_brainroot_135
+  - first:
+      213: 7486955960334896076
+    second: Muerte_brainroot_136
+  - first:
+      213: -6451693667555247559
+    second: Muerte_brainroot_137
+  - first:
+      213: 4730558363286672124
+    second: Muerte_brainroot_138
+  - first:
+      213: 1924215680822176864
+    second: Muerte_brainroot_139
+  - first:
+      213: -3211456586947431237
+    second: Muerte_brainroot_140
+  - first:
+      213: 2614302978880190939
+    second: Muerte_brainroot_141
+  - first:
+      213: 6882939876709189002
+    second: Muerte_brainroot_142
+  - first:
+      213: 7717548021079013624
+    second: Muerte_brainroot_143
+  - first:
+      213: 1363841628660853269
+    second: Muerte_brainroot_144
+  - first:
+      213: 3381176537027462719
+    second: Muerte_brainroot_145
+  - first:
+      213: -1992181520415096994
+    second: Muerte_brainroot_146
+  - first:
+      213: 3303237128896092365
+    second: Muerte_brainroot_147
+  - first:
+      213: 4986521034956463638
+    second: Muerte_brainroot_148
+  - first:
+      213: 8185894469959091200
+    second: Muerte_brainroot_149
+  - first:
+      213: 1665550331665943922
+    second: Muerte_brainroot_150
+  - first:
+      213: -8539527458545442375
+    second: Muerte_brainroot_151
+  - first:
+      213: 373830680052677485
+    second: Muerte_brainroot_152
+  - first:
+      213: -1034267989758570948
+    second: Muerte_brainroot_153
+  - first:
+      213: -2459374453743108932
+    second: Muerte_brainroot_154
+  - first:
+      213: 6741576198280802245
+    second: Muerte_brainroot_155
+  - first:
+      213: 664871366089603176
+    second: Muerte_brainroot_156
+  - first:
+      213: 8594080611239740918
+    second: Muerte_brainroot_157
+  - first:
+      213: 617166114247869739
+    second: Muerte_brainroot_158
+  - first:
+      213: 631679045290313196
+    second: Muerte_brainroot_159
+  - first:
+      213: -6472475858209235179
+    second: Muerte_brainroot_160
+  - first:
+      213: 4131604506457949239
+    second: Muerte_brainroot_161
+  - first:
+      213: -5525303702272901813
+    second: Muerte_brainroot_162
+  - first:
+      213: 1034327156159530798
+    second: Muerte_brainroot_163
+  - first:
+      213: -7079753162468383279
+    second: Muerte_brainroot_164
+  - first:
+      213: -9126148444505726193
+    second: Muerte_brainroot_165
+  - first:
+      213: 2161770054812147876
+    second: Muerte_brainroot_166
+  - first:
+      213: 4480269164339442248
+    second: Muerte_brainroot_167
+  - first:
+      213: 8010009046735986975
+    second: Muerte_brainroot_168
+  - first:
+      213: 6796212761410360848
+    second: Muerte_brainroot_169
+  - first:
+      213: 6782539731711417075
+    second: Muerte_brainroot_170
+  - first:
+      213: -3039565951199462040
+    second: Muerte_brainroot_171
+  - first:
+      213: 2266846575267741349
+    second: Muerte_brainroot_172
+  - first:
+      213: 4531775762245852032
+    second: Muerte_brainroot_173
+  - first:
+      213: 3861904494385250256
+    second: Muerte_brainroot_174
+  - first:
+      213: -6278992571111925974
+    second: Muerte_brainroot_175
+  - first:
+      213: -9053475052892980568
+    second: Muerte_brainroot_176
+  - first:
+      213: 325852224623399987
+    second: Muerte_brainroot_177
+  - first:
+      213: 3370410986919036625
+    second: Muerte_brainroot_178
+  - first:
+      213: -7414120926650449258
+    second: Muerte_brainroot_179
+  - first:
+      213: 1348225583257671557
+    second: Muerte_brainroot_180
+  - first:
+      213: -7547514125707404707
+    second: Muerte_brainroot_181
+  - first:
+      213: 5866827887222872897
+    second: Muerte_brainroot_182
+  - first:
+      213: 2872692282575017665
+    second: Muerte_brainroot_183
+  - first:
+      213: -6029891042756397585
+    second: Muerte_brainroot_184
+  - first:
+      213: -8012910161916884736
+    second: Muerte_brainroot_185
+  - first:
+      213: 6366546305246710920
+    second: Muerte_brainroot_186
+  - first:
+      213: -4876048434632592969
+    second: Muerte_brainroot_187
+  - first:
+      213: -8345176251860626719
+    second: Muerte_brainroot_188
+  - first:
+      213: 6084718609865899631
+    second: Muerte_brainroot_189
+  - first:
+      213: -9041677376469037734
+    second: Muerte_brainroot_190
+  - first:
+      213: 1045380864429920726
+    second: Muerte_brainroot_191
+  - first:
+      213: 9010727635715289588
+    second: Muerte_brainroot_192
+  - first:
+      213: 8377753278375688295
+    second: Muerte_brainroot_193
+  - first:
+      213: 5191872997250396945
+    second: Muerte_brainroot_194
+  - first:
+      213: 6712562298338702815
+    second: Muerte_brainroot_195
+  - first:
+      213: 8808380714548544352
+    second: Muerte_brainroot_196
+  - first:
+      213: 6316577055052373230
+    second: Muerte_brainroot_197
+  - first:
+      213: -7810166343659180137
+    second: Muerte_brainroot_198
+  - first:
+      213: -1770534148049459842
+    second: Muerte_brainroot_199
+  - first:
+      213: 6755917620456898581
+    second: Muerte_brainroot_200
+  - first:
+      213: -5000201183594131272
+    second: Muerte_brainroot_201
+  - first:
+      213: 5332823737571061276
+    second: Muerte_brainroot_202
+  - first:
+      213: 1007874643753293698
+    second: Muerte_brainroot_203
+  - first:
+      213: -7848681906402367648
+    second: Muerte_brainroot_204
+  - first:
+      213: 5559982696606411480
+    second: Muerte_brainroot_205
+  - first:
+      213: -3048860415888743729
+    second: Muerte_brainroot_206
+  - first:
+      213: 8680380320718145753
+    second: Muerte_brainroot_207
+  - first:
+      213: 8729810758636432535
+    second: Muerte_brainroot_208
+  - first:
+      213: -5983034527927744372
+    second: Muerte_brainroot_209
+  - first:
+      213: 4928973305456975933
+    second: Muerte_brainroot_210
+  - first:
+      213: -6120804571156117779
+    second: Muerte_brainroot_211
+  - first:
+      213: -1605135848046201584
+    second: Muerte_brainroot_212
+  - first:
+      213: -8880172013634277679
+    second: Muerte_brainroot_213
+  - first:
+      213: 3904318399508231234
+    second: Muerte_brainroot_214
+  - first:
+      213: 79622378168577608
+    second: Muerte_brainroot_215
+  - first:
+      213: 7995889301749671485
+    second: Muerte_brainroot_216
+  - first:
+      213: 1381019702879454844
+    second: Muerte_brainroot_217
+  - first:
+      213: -7868580054788177427
+    second: Muerte_brainroot_218
+  - first:
+      213: -8853808965666366591
+    second: Muerte_brainroot_219
+  - first:
+      213: 3919559067411780653
+    second: Muerte_brainroot_220
+  - first:
+      213: 6709298208294857818
+    second: Muerte_brainroot_221
+  - first:
+      213: -4218952163624039085
+    second: Muerte_brainroot_222
+  - first:
+      213: 3279491908483448990
+    second: Muerte_brainroot_223
+  - first:
+      213: -497045959723932594
+    second: Muerte_brainroot_224
+  - first:
+      213: 4507703917043795362
+    second: Muerte_brainroot_225
+  - first:
+      213: -6858518215357260423
+    second: Muerte_brainroot_226
+  - first:
+      213: 4957546004521197045
+    second: Muerte_brainroot_227
+  - first:
+      213: 8118889979651335649
+    second: Muerte_brainroot_228
+  - first:
+      213: 7521003406152359380
+    second: Muerte_brainroot_229
+  - first:
+      213: -3888652795159775013
+    second: Muerte_brainroot_230
+  - first:
+      213: -7760609906434591435
+    second: Muerte_brainroot_231
+  - first:
+      213: 5773015034283825013
+    second: Muerte_brainroot_232
+  - first:
+      213: 4830495627704466768
+    second: Muerte_brainroot_233
+  - first:
+      213: -2733145735625071050
+    second: Muerte_brainroot_234
+  - first:
+      213: 3609025038116793923
+    second: Muerte_brainroot_235
+  - first:
+      213: 7827401955344708493
+    second: Muerte_brainroot_236
+  - first:
+      213: 3582913169311354476
+    second: Muerte_brainroot_237
+  - first:
+      213: -1542722827606482454
+    second: Muerte_brainroot_238
+  - first:
+      213: -5073042537472893528
+    second: Muerte_brainroot_239
+  - first:
+      213: -6432394776880214946
+    second: Muerte_brainroot_240
+  - first:
+      213: 4298827377842020349
+    second: Muerte_brainroot_241
+  - first:
+      213: -8885086875043417574
+    second: Muerte_brainroot_242
+  - first:
+      213: -8356899013491355734
+    second: Muerte_brainroot_243
+  - first:
+      213: 2575093352751551341
+    second: Muerte_brainroot_244
+  - first:
+      213: -6341850087725206130
+    second: Muerte_brainroot_245
+  - first:
+      213: 5973004039222012979
+    second: Muerte_brainroot_246
+  - first:
+      213: -2931540516644352548
+    second: Muerte_brainroot_247
+  - first:
+      213: -4292762849309323169
+    second: Muerte_brainroot_248
+  - first:
+      213: 8564027391508137909
+    second: Muerte_brainroot_249
+  - first:
+      213: 7282041533973988601
+    second: Muerte_brainroot_250
+  - first:
+      213: -7601968157382163440
+    second: Muerte_brainroot_251
+  - first:
+      213: 7771197750406818761
+    second: Muerte_brainroot_252
+  - first:
+      213: 7993042512706174912
+    second: Muerte_brainroot_253
+  - first:
+      213: -5272296799412753341
+    second: Muerte_brainroot_254
+  - first:
+      213: -65276582173959641
+    second: Muerte_brainroot_255
+  - first:
+      213: 6058239679263061325
+    second: Muerte_brainroot_256
+  - first:
+      213: -2352225792340711029
+    second: Muerte_brainroot_257
+  - first:
+      213: 7082723009150334214
+    second: Muerte_brainroot_258
+  - first:
+      213: 6428050347414267644
+    second: Muerte_brainroot_259
+  - first:
+      213: -8219971396763825189
+    second: Muerte_brainroot_260
+  - first:
+      213: -2365886851752113028
+    second: Muerte_brainroot_261
+  - first:
+      213: -4384923628306221504
+    second: Muerte_brainroot_262
+  - first:
+      213: -2055651173397499438
+    second: Muerte_brainroot_263
+  - first:
+      213: -5117245483510938878
+    second: Muerte_brainroot_264
+  - first:
+      213: -4332599074995105778
+    second: Muerte_brainroot_265
+  - first:
+      213: 489486073829554166
+    second: Muerte_brainroot_266
+  - first:
+      213: -3747639684697961497
+    second: Muerte_brainroot_267
+  - first:
+      213: -6209971901491965374
+    second: Muerte_brainroot_268
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Muerte_brainroot_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11880
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9a2a21c1c518580800000000000000
+      internalID: -8826672519027971637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 11880
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d80402a95c28c5c0800000000000000
+      internalID: -4195054289413732143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 11880
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d008627f2ea92d0800000000000000
+      internalID: -3271052628200518302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 11880
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f63f53c85779d770800000000000000
+      internalID: 8636064983578261232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_4
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 11880
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88cabc858c1b46f60800000000000000
+      internalID: 8026735909922385032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10800
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f32d35dc1cfeb60800000000000000
+      internalID: 7777648169110880103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 10800
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27fc937cf0494b60800000000000000
+      internalID: 7730781688373770029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_7
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 10800
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69b46a6e8b07a750800000000000000
+      internalID: 6316029708708657519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_8
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 10800
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daec5b7de118abc90800000000000000
+      internalID: -7153263088656593235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_9
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 10800
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f54fc5c3e4c9ae1e0800000000000000
+      internalID: -2167748410791365537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9720
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1697787278a249c20800000000000000
+      internalID: 3212239194194147681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 9720
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e94ad011211f1490800000000000000
+      internalID: -7773475598103852574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_12
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 9720
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59edca8740ccb7f0800000000000000
+      internalID: -595389637215786661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_13
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 9720
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4abec9877999460a0800000000000000
+      internalID: -6889212654127354972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_14
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 9720
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d77944a48642e490800000000000000
+      internalID: -7718529275853703216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8640
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8cfb2cc7e131b80800000000000000
+      internalID: -8425356956687939421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_16
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 8640
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721a4dca542baacd0800000000000000
+      internalID: -2546026627002490585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_17
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 8640
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1adb8d728a320b70800000000000000
+      internalID: 8863711348745034269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_18
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 8640
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0947246bb50e348b0800000000000000
+      internalID: -5169041262786743152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_19
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 8640
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebea370361d6af3a0800000000000000
+      internalID: -6630867559280038210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7560
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40049f0b8a6d33e60800000000000000
+      internalID: 7940926587996291076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_21
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7560
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11da55087f25b9e20800000000000000
+      internalID: 3358369170098334993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_22
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 7560
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669c34bb20ccd0a90800000000000000
+      internalID: -7345991105067628186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_23
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 7560
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c48b376047f4490800000000000000
+      internalID: -7759856061875991422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_24
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 7560
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a29dbcc6a43f68bf0800000000000000
+      internalID: -322302822331983574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6480
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5741368bdd127e0800000000000000
+      internalID: -1791907392710740486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_26
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6480
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fddf8f4a5ff6db500800000000000000
+      internalID: 413609841613405663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_27
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 6480
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3ad7ef1943004b0800000000000000
+      internalID: -5476319345237974050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_28
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 6480
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac91a148785541f0800000000000000
+      internalID: -1061344863655453535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_29
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 6480
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5fe67c82a02fb50800000000000000
+      internalID: 6625369172076328359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785aa6362ea3b9c70800000000000000
+      internalID: 8978835026098169223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_31
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0139d8f52eba5c860800000000000000
+      internalID: 7549629339110576912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_32
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212743ee91c70ab90800000000000000
+      internalID: -7232644550744575470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_33
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c038965d8b2ad7060800000000000000
+      internalID: 6952892314468057868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_34
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a84976ff673fc8c0800000000000000
+      internalID: -3976898991928817501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3a0e226c41317c0800000000000000
+      internalID: -4101911994383162397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_36
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628ab41d515b2af80800000000000000
+      internalID: -8096710074748393434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_37
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c2f99a076136d10800000000000000
+      internalID: 2117560922932194426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_38
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965e87c205ef4b630800000000000000
+      internalID: 3942055194152985961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_39
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2226f83e3fc7dced0800000000000000
+      internalID: -2392118440127143390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff791529b7898090800000000000000
+      internalID: -8031739231177441288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_41
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d42bf7f7adbf2d60800000000000000
+      internalID: 7867715603157165269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_42
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3948866495e102e60800000000000000
+      internalID: 7935375912208991379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_43
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60bfb111733d95090800000000000000
+      internalID: -8045167025856972026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_44
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e81e4a44d4c9a10800000000000000
+      internalID: 1917492498572348987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79515710f6f659df0800000000000000
+      internalID: -174110488027392617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_46
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2e6acce5fa7ba20800000000000000
+      internalID: 3078121692026299054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_47
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d10a80eb74df0d0800000000000000
+      internalID: -3387472463198675636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_48
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95881fdc66f2e6600800000000000000
+      internalID: 463359930254067801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_49
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbb63d3229f8b3540800000000000000
+      internalID: 4988738870072011708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2380e77c0e19fa2f0800000000000000
+      internalID: -959387801000998862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_51
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d109a37a2c5c1a780800000000000000
+      internalID: -8673433967518904291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_52
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b146cefb74bebd0800000000000000
+      internalID: -2599905470246020301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_53
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fcbc2222a5f2e140800000000000000
+      internalID: 4747627033908788464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_54
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d4e17b9b26c2920800000000000000
+      internalID: 2966854804311002449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72bdfb2a2253bbb0800000000000000
+      internalID: -4921499626705669507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_56
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eebe772f37dd2f8d0800000000000000
+      internalID: -2813943327094215698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_57
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcfd13ac21e3e9e0800000000000000
+      internalID: -1593182261327561548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muerte_brainroot_58
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3735352a521a5650800000000000000
+      internalID: 6222306013546362684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f86e1df8a79413546995b525f70d7292
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":12.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Muerte_brainroot_0: -8826672519027971637
+      Muerte_brainroot_1: -4195054289413732143
+      Muerte_brainroot_10: 3212239194194147681
+      Muerte_brainroot_11: -7773475598103852574
+      Muerte_brainroot_12: -595389637215786661
+      Muerte_brainroot_13: -6889212654127354972
+      Muerte_brainroot_14: -7718529275853703216
+      Muerte_brainroot_15: -8425356956687939421
+      Muerte_brainroot_16: -2546026627002490585
+      Muerte_brainroot_17: 8863711348745034269
+      Muerte_brainroot_18: -5169041262786743152
+      Muerte_brainroot_19: -6630867559280038210
+      Muerte_brainroot_2: -3271052628200518302
+      Muerte_brainroot_20: 7940926587996291076
+      Muerte_brainroot_21: 3358369170098334993
+      Muerte_brainroot_22: -7345991105067628186
+      Muerte_brainroot_23: -7759856061875991422
+      Muerte_brainroot_24: -322302822331983574
+      Muerte_brainroot_25: -1791907392710740486
+      Muerte_brainroot_26: 413609841613405663
+      Muerte_brainroot_27: -5476319345237974050
+      Muerte_brainroot_28: -1061344863655453535
+      Muerte_brainroot_29: 6625369172076328359
+      Muerte_brainroot_3: 8636064983578261232
+      Muerte_brainroot_30: 8978835026098169223
+      Muerte_brainroot_31: 7549629339110576912
+      Muerte_brainroot_32: -7232644550744575470
+      Muerte_brainroot_33: 6952892314468057868
+      Muerte_brainroot_34: -3976898991928817501
+      Muerte_brainroot_35: -4101911994383162397
+      Muerte_brainroot_36: -8096710074748393434
+      Muerte_brainroot_37: 2117560922932194426
+      Muerte_brainroot_38: 3942055194152985961
+      Muerte_brainroot_39: -2392118440127143390
+      Muerte_brainroot_4: 8026735909922385032
+      Muerte_brainroot_40: -8031739231177441288
+      Muerte_brainroot_41: 7867715603157165269
+      Muerte_brainroot_42: 7935375912208991379
+      Muerte_brainroot_43: -8045167025856972026
+      Muerte_brainroot_44: 1917492498572348987
+      Muerte_brainroot_45: -174110488027392617
+      Muerte_brainroot_46: 3078121692026299054
+      Muerte_brainroot_47: -3387472463198675636
+      Muerte_brainroot_48: 463359930254067801
+      Muerte_brainroot_49: 4988738870072011708
+      Muerte_brainroot_5: 7777648169110880103
+      Muerte_brainroot_50: -959387801000998862
+      Muerte_brainroot_51: -8673433967518904291
+      Muerte_brainroot_52: -2599905470246020301
+      Muerte_brainroot_53: 4747627033908788464
+      Muerte_brainroot_54: 2966854804311002449
+      Muerte_brainroot_55: -4921499626705669507
+      Muerte_brainroot_56: -2813943327094215698
+      Muerte_brainroot_57: -1593182261327561548
+      Muerte_brainroot_58: 6222306013546362684
+      Muerte_brainroot_6: 7730781688373770029
+      Muerte_brainroot_7: 6316029708708657519
+      Muerte_brainroot_8: -7153263088656593235
+      Muerte_brainroot_9: -2167748410791365537
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

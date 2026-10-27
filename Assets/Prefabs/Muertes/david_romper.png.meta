@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ce9829a70bd51749b26fe588af21777
+guid: bd8fc1ee7925aae4386ffc398018f578
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -229,10 +229,10 @@ TextureImporter:
       name: david_romper_0
       rect:
         serializedVersion: 2
-        x: 362
-        y: 5695
-        width: 348
-        height: 549
+        x: 0
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,12 +251,12 @@ TextureImporter:
       name: david_romper_1
       rect:
         serializedVersion: 2
-        x: 2241
-        y: 5399
-        width: 389
-        height: 845
-      alignment: 9
-      pivot: {x: 0.30686155, y: 0.6896808}
+        x: 1920
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -270,15 +270,37 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: david_romper_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a59ca11a4935c170800000000000000
+      internalID: 8198021686984742313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: david_romper_3
       rect:
         serializedVersion: 2
-        x: 3887
-        y: 5419
-        width: 663
-        height: 825
-      alignment: 9
-      pivot: {x: 0.64353925, y: 0.66392285}
+        x: 5760
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -295,10 +317,10 @@ TextureImporter:
       name: david_romper_4
       rect:
         serializedVersion: 2
-        x: 5994
-        y: 5694
-        width: 476
-        height: 550
+        x: 7680
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,10 +339,10 @@ TextureImporter:
       name: david_romper_5
       rect:
         serializedVersion: 2
-        x: 7914
-        y: 5694
-        width: 476
-        height: 550
+        x: 0
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,10 +361,10 @@ TextureImporter:
       name: david_romper_6
       rect:
         serializedVersion: 2
-        x: 234
-        y: 4614
-        width: 476
-        height: 550
+        x: 1920
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +383,10 @@ TextureImporter:
       name: david_romper_7
       rect:
         serializedVersion: 2
-        x: 2154
-        y: 4614
-        width: 476
-        height: 550
+        x: 3840
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,10 +405,10 @@ TextureImporter:
       name: david_romper_8
       rect:
         serializedVersion: 2
-        x: 4075
-        y: 4614
-        width: 475
-        height: 550
+        x: 5760
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,10 +427,10 @@ TextureImporter:
       name: david_romper_9
       rect:
         serializedVersion: 2
-        x: 5994
-        y: 4614
-        width: 476
-        height: 550
+        x: 7680
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,10 +449,10 @@ TextureImporter:
       name: david_romper_10
       rect:
         serializedVersion: 2
-        x: 7915
-        y: 4614
-        width: 475
-        height: 550
+        x: 0
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,10 +471,10 @@ TextureImporter:
       name: david_romper_11
       rect:
         serializedVersion: 2
-        x: 234
-        y: 3534
-        width: 476
-        height: 550
+        x: 1920
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,12 +493,12 @@ TextureImporter:
       name: david_romper_12
       rect:
         serializedVersion: 2
-        x: 2038
-        y: 3534
-        width: 592
-        height: 550
-      alignment: 9
-      pivot: {x: 0.5559849, y: 0.5378547}
+        x: 3840
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -490,15 +512,59 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: david_romper_13
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63fe96b91ff05a3d0800000000000000
+      internalID: -3196130830180552906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_romper_14
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66434bf580b4729c0800000000000000
+      internalID: -3952107648656853914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: david_romper_15
       rect:
         serializedVersion: 2
-        x: 3908
-        y: 3534
-        width: 642
-        height: 550
-      alignment: 9
-      pivot: {x: 0.5565273, y: 0.49999955}
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -515,10 +581,10 @@ TextureImporter:
       name: david_romper_16
       rect:
         serializedVersion: 2
-        x: 6001
-        y: 3534
-        width: 469
-        height: 550
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,10 +603,10 @@ TextureImporter:
       name: david_romper_17
       rect:
         serializedVersion: 2
-        x: 7921
-        y: 3534
-        width: 469
-        height: 550
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -556,13 +622,233 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: david_romper_18
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8342aa9594ac71e40800000000000000
+      internalID: 5627188675808470072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_romper_19
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c73f5aadb1799b70800000000000000
+      internalID: 8906274797522991043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_romper_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3081b3bf18904f50800000000000000
+      internalID: 6863653094038798398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_romper_21
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ca46caf19df43d0800000000000000
+      internalID: -3220116478487122794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_romper_22
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73415dc3b719968d0800000000000000
+      internalID: -2852588930474896329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_romper_23
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a7cdf006e5f4660800000000000000
+      internalID: 7372214881704770205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_romper_24
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05fe49152bdfb4bd0800000000000000
+      internalID: -2644741413835313328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_romper_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dab1b33ab5c061d0800000000000000
+      internalID: -3359467918496515369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_romper_26
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ba58c83e4487b70800000000000000
+      internalID: 8896936807976250148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: david_romper_27
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b29f38713d334530800000000000000
+      internalID: 3837978590129918645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: david_romper_28
       rect:
         serializedVersion: 2
-        x: 241
-        y: 2454
-        width: 469
-        height: 550
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -581,10 +867,10 @@ TextureImporter:
       name: david_romper_29
       rect:
         serializedVersion: 2
-        x: 2282
-        y: 2455
-        width: 348
-        height: 549
+        x: 7680
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -599,297 +885,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: david_romper_30
-      rect:
-        serializedVersion: 2
-        x: 4202
-        y: 2455
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d7b2dd5c57889a030800000000000000
-      internalID: 3506483824296799101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_31
-      rect:
-        serializedVersion: 2
-        x: 6122
-        y: 2455
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74e1a2b88c3380590800000000000000
-      internalID: -7707853825823334841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_32
-      rect:
-        serializedVersion: 2
-        x: 8042
-        y: 2455
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d01318d10505929e0800000000000000
-      internalID: -1645695883804593907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_33
-      rect:
-        serializedVersion: 2
-        x: 362
-        y: 1375
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 94b4ccc9989dd5630800000000000000
-      internalID: 3917526435946580809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_34
-      rect:
-        serializedVersion: 2
-        x: 2282
-        y: 1375
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b976c9bf9c2122120800000000000000
-      internalID: 2387491411178842011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_35
-      rect:
-        serializedVersion: 2
-        x: 4202
-        y: 1375
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6773ed14388875110800000000000000
-      internalID: 1249617518945777526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_36
-      rect:
-        serializedVersion: 2
-        x: 6122
-        y: 1375
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1026ce2302ff07c60800000000000000
-      internalID: 7814025867246199297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_37
-      rect:
-        serializedVersion: 2
-        x: 8042
-        y: 1375
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 07f2a9e3fb844dfb0800000000000000
-      internalID: -4623990931176411280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_38
-      rect:
-        serializedVersion: 2
-        x: 362
-        y: 295
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f217f9fd1140aa620800000000000000
-      internalID: 2786043794294796591
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_39
-      rect:
-        serializedVersion: 2
-        x: 2282
-        y: 295
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 214be61585de80d20800000000000000
-      internalID: 3245104495099556882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_40
-      rect:
-        serializedVersion: 2
-        x: 4202
-        y: 295
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e50aaffb561004a20800000000000000
-      internalID: 3044434884626653278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_41
-      rect:
-        serializedVersion: 2
-        x: 6122
-        y: 295
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 467cf2abb1815a430800000000000000
-      internalID: 3793464768496387940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: david_romper_42
-      rect:
-        serializedVersion: 2
-        x: 8042
-        y: 295
-        width: 348
-        height: 549
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca02025215ebd9c70800000000000000
-      internalID: 8979542487771127980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ac97204b9216bc348be27d280e80daa2
+    spriteID: 6fdb4811c6e35864786978df9785cae1
     internalID: 0
     vertices: []
     indices: 
@@ -897,7 +897,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":6.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       david_romper_0: -4760073249522361340
       david_romper_1: -6573207029806079059
@@ -923,21 +925,7 @@ TextureImporter:
       david_romper_28: -7135477074386997102
       david_romper_29: -8690450394556545113
       david_romper_3: -2595421054184247904
-      david_romper_30: 3506483824296799101
-      david_romper_31: -7707853825823334841
-      david_romper_32: -1645695883804593907
-      david_romper_33: 3917526435946580809
-      david_romper_34: 2387491411178842011
-      david_romper_35: 1249617518945777526
-      david_romper_36: 7814025867246199297
-      david_romper_37: -4623990931176411280
-      david_romper_38: 2786043794294796591
-      david_romper_39: 3245104495099556882
       david_romper_4: 1077967030314309288
-      david_romper_40: 3044434884626653278
-      david_romper_41: 3793464768496387940
-      david_romper_42: 8979542487771127980
-      david_romper_43: 1705639915
       david_romper_5: 5459331388671647829
       david_romper_6: 1099051124887346277
       david_romper_7: -8638219109196474694

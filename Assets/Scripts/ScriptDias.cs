@@ -65,17 +65,48 @@ public class ScriptDias : MonoBehaviour
     public GameObject prefabManzana;
     public Vector2 posicionManzanaMesa;
 
-    [Header("Pantalla de Muerte")]
+    [Header("Paneles de Muerte por Alumno")]
+    public GameObject panelMuerteBasicote;
+    public GameObject panelMuerteBrainrot;
+    public GameObject panelMuerteRepelente;
+    public GameObject panelMuerteStalker;
+    public GameObject panelMuerteNegrete;
+    public GameObject panelMuerteGordete;
+    public GameObject panelMuerteMewing;
+
+    [Header("Animators de los Paneles de Muerte")]
+    public Animator animadorMuerteBasicote;
+    public Animator animadorMuerteBrainrot;
+    public Animator animadorMuerteRepelente;
+    public Animator animadorMuerteStalker;
+    public Animator animadorMuerteNegrete;
+    public Animator animadorMuerteGordete;
+    public Animator animadorMuerteMewing;
+
+    [Header("Duración de Animaciones de Muerte (Segundos)")]
+    public float duracionMuerteBasicote = 2.0f;
+    public float duracionMuerteBrainrot = 2.0f;
+    public float duracionMuerteRepelente = 2.0f;
+    public float duracionMuerteStalker = 2.0f;
+    public float duracionMuerteNegrete = 2.0f;
+    public float duracionMuerteGordete = 2.0f;
+    public float duracionMuerteMewing = 2.0f;
+
+    [Header("Pantalla de Derrota Final")]
     public GameObject panelPantallaMuerte;
 
     void Start()
     {
         PlayerPrefs.DeleteKey("FaltasTungTung");
 
-        if (panelPantallaMuerte != null)
-        {
-            panelPantallaMuerte.SetActive(false);
-        }
+        if (panelPantallaMuerte != null) panelPantallaMuerte.SetActive(false);
+        if (panelMuerteBasicote != null) panelMuerteBasicote.SetActive(false);
+        if (panelMuerteBrainrot != null) panelMuerteBrainrot.SetActive(false);
+        if (panelMuerteRepelente != null) panelMuerteRepelente.SetActive(false);
+        if (panelMuerteStalker != null) panelMuerteStalker.SetActive(false);
+        if (panelMuerteNegrete != null) panelMuerteNegrete.SetActive(false);
+        if (panelMuerteGordete != null) panelMuerteGordete.SetActive(false);
+        if (panelMuerteMewing != null) panelMuerteMewing.SetActive(false);
 
         StartCoroutine(SecuenciaDia1());
     }
@@ -244,7 +275,7 @@ public class ScriptDias : MonoBehaviour
             {
                 Vector3 posicionFinalManzana = new Vector3(posicionManzanaMesa.x, posicionManzanaMesa.y, 0f);
                 GameObject manzanaCreada = Instantiate(prefabManzana, posicionFinalManzana, Quaternion.identity);
-                manzanaCreada.tag = "ManzanaMesa"; // Asignamos una etiqueta para encontrarla luego fácilmente
+                manzanaCreada.tag = "ManzanaMesa";
             }
 
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(dialogoPostManzanaStalker, false)));
@@ -308,7 +339,7 @@ public class ScriptDias : MonoBehaviour
         }
 
         // ==========================================
-        // TURNO 6: GORDETE (Con pregunta de la manzana)
+        // TURNO 6: GORDETE (Con ejemplo de muerte por nota 0)
         // ==========================================
         if (gordete != null)
         {
@@ -320,18 +351,14 @@ public class ScriptDias : MonoBehaviour
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¿Me das la manzana que tienes en tu mesa?" }, false)));
             yield return StartCoroutine(gordete.Preguntar(opcionesSiNo));
 
-            if (gordete.respuestaElegida == 0) // Si (Sí) -> Destruimos la manzana de la mesa
+            if (gordete.respuestaElegida == 0)
             {
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¡Uuff, qué crack! ¡Me salvas la vida con este tentempié!" }, true)));
 
-                // Buscamos la manzana en la escena por su etiqueta y la destruimos
                 GameObject manzanaEnMesa = GameObject.FindWithTag("ManzanaMesa");
-                if (manzanaEnMesa != null)
-                {
-                    Destroy(manzanaEnMesa);
-                }
+                if (manzanaEnMesa != null) Destroy(manzanaEnMesa);
             }
-            else if (gordete.respuestaElegida == 1) // Si (No)
+            else if (gordete.respuestaElegida == 1)
             {
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Vaya tacaño... Me quedo con las tripas sonando." }, true)));
             }
@@ -339,6 +366,17 @@ public class ScriptDias : MonoBehaviour
             yield return StartCoroutine(gordete.EntregarExamen());
 
             nota = gordete.notaRecibida;
+
+            // --- EJEMPLO DE CONDICIÓN DE MUERTE ESPECÍFICA ---
+            if (nota == 0)
+            {
+                gordete.animator.SetTrigger("Enfadado");
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¿Un CERO? ¡¡Te voy a triturar con mis propias manos!!" }, false)));
+
+                StartCoroutine(MatarJugadorPorAlumno(panelMuerteGordete, animadorMuerteGordete, duracionMuerteGordete));
+                yield break;
+            }
+            // ------------------------------------------------
 
             if (nota >= 5)
             {
@@ -362,7 +400,7 @@ public class ScriptDias : MonoBehaviour
         }
 
         // ==========================================
-        // TURNO 7: MEWING (Con pregunta de sus rasgos perfectos)
+        // TURNO 7: MEWING
         // ==========================================
         if (mewing != null)
         {
@@ -374,11 +412,11 @@ public class ScriptDias : MonoBehaviour
             yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "(Señala su mandíbula firmemente)", "¿Estás totalmente embelesado por mis rasgos perfectos?" }, false)));
             yield return StartCoroutine(mewing.Preguntar(opcionesSiNo));
 
-            if (mewing.respuestaElegida == 0) // Si (Sí)
+            if (mewing.respuestaElegida == 0)
             {
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "(Asiente con una sonrisa de superioridad y máxima elegancia)" }, true)));
             }
-            else if (mewing.respuestaElegida == 1) // Si (No)
+            else if (mewing.respuestaElegida == 1)
             {
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "(MIRA FUSILANDO CON LA MIRADA. -1000 de aura para ti)" }, true)));
             }
@@ -415,6 +453,49 @@ public class ScriptDias : MonoBehaviour
         dialogoEnCurso = false;
     }
 
+    // --- SISTEMA DE MUERTES CORREGIDO ---
+    public IEnumerator MatarJugadorPorAlumno(GameObject panelMuerteAlumno, Animator animadorPanel, float duracionAnimacion)
+    {
+        // 1. Destruimos al alumno actual al instante para que no se solape
+        if (alumnoActual != null)
+        {
+            Destroy(alumnoActual.gameObject);
+        }
+
+        // 2. Activamos el panel de muerte correspondiente
+        if (panelMuerteAlumno != null)
+        {
+            panelMuerteAlumno.SetActive(true);
+        }
+
+        // 3. Activamos el trigger PRIMERO (antes de congelar el tiempo)
+        if (animadorPanel != null)
+        {
+            animadorPanel.SetTrigger("AnimarMuerte");
+        }
+
+        // 4. Esperamos 1 frame para que el Animator reciba la orden correctamente
+        yield return null;
+
+        // 5. AHORA SÍ, pausamos el tiempo del juego por completo
+        Time.timeScale = 0f;
+
+        // 6. Esperamos exactamente el tiempo configurado para la animación de este alumno (en Unscaled Time)
+        yield return new WaitForSecondsRealtime(duracionAnimacion);
+
+        // 7. Ocultamos el panel de muerte del alumno
+        if (panelMuerteAlumno != null)
+        {
+            panelMuerteAlumno.SetActive(false);
+        }
+
+        // 8. Mostramos la pantalla general de Game Over / Derrota Final
+        if (panelPantallaMuerte != null)
+        {
+            panelPantallaMuerte.SetActive(true);
+        }
+    }
+
     // --- SISTEMA DE INFRACCIONES DE MARK ---
     public void PenalizarDibujo()
     {
@@ -432,7 +513,7 @@ public class ScriptDias : MonoBehaviour
         if (faltas >= 3)
         {
             StartCoroutine(ManejarDialogo(alumnoActual.Decir(new string[] { "TÚ TE LO HAS BUSCADO.", "HAS INTENTADO DESTROZAR A TUNG-TUNG TRES VECES.", "AHORA SUFRIRÁS SU IRA." }, false)));
-            ActivarPantallaMuerte();
+            StartCoroutine(MatarJugadorPorAlumno(panelMuerteStalker, animadorMuerteStalker, duracionMuerteStalker));
         }
         else if (faltas == 2)
         {
@@ -444,16 +525,7 @@ public class ScriptDias : MonoBehaviour
         }
     }
 
-    // --- FUNCIONES DE MUERTE Y ESCENAS ---
-    public void ActivarPantallaMuerte()
-    {
-        if (panelPantallaMuerte != null)
-        {
-            panelPantallaMuerte.SetActive(true);
-            Time.timeScale = 0f;
-        }
-    }
-
+    // --- FUNCIONES DE ESCENAS ---
     public void ReiniciarJuego()
     {
         Time.timeScale = 1f;
@@ -463,6 +535,6 @@ public class ScriptDias : MonoBehaviour
     public void VolverAlMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("Menu");
     }
 }
