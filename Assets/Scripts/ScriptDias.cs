@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScriptDias : MonoBehaviour
 {
@@ -7,7 +8,10 @@ public class ScriptDias : MonoBehaviour
     public ScriptAlumno basicote;
     public ScriptAlumno brainrot;
     public ScriptAlumno repelente;
-    public ScriptAlumno stalker; // NUEVO: Te faltaba declarar a Luna aquí arriba
+    public ScriptAlumno stalker;
+    public ScriptAlumno negrete;
+    public ScriptAlumno gordete;
+    public ScriptAlumno mewing;
 
     [Header("Alumno en Pantalla")]
     public ScriptAlumno alumnoActual;
@@ -39,14 +43,40 @@ public class ScriptDias : MonoBehaviour
     public string[] stalker_sonrojada = { "Hala, muchas gracias profe." };
     public string[] stalkerSuspenso = { "Vaya" };
 
-    [Header("Evento Manzana (Stalker)")] // NUEVO: Ajustes para crear la manzana
+    [Header("Textos Día 1 - Negrete")]
+    public string[] dialogoPresentacionNegrete = { "Epa profe, ya estoy aquí.", "A ver qué nota me cae." };
+    public string[] negreteReaccionFeliz = { "¡Toma ya! ¡Ese diez sabe a gloria!" };
+    public string[] negreteReaccionEnfadado = { "¿Un aprobado raspado? Me esperaba más de ti." };
+    public string[] negreteReaccionTriste = { "Menuda estafa de corrección, tío." };
+
+    [Header("Textos Día 1 - Gordete")]
+    public string[] dialogoPresentacionGordete = { "Hola profe, ¿hay algún bocata por ahí?", "Tengo un hambre que me muero." };
+    public string[] gordeteReaccionFeliz = { "¡Qué pro! Me voy a celebrar esto comiendo pizza.", "¡GG!" };
+    public string[] gordeteReaccionEnfadado = { "¿Un suspenso? Me estás trolleando con la nota." };
+    public string[] gordeteReaccionTriste = { "Menudo hambre y menuda nota más mala me llevo..." };
+
+    [Header("Textos Día 1 - Mewing")]
+    public string[] dialogoPresentacionMewing = { "...", "(Hace el gesto de callar con el dedo en los labios y marca mandíbula)" };
+    public string[] mewingReaccionFeliz = { "(Asiente en completo silencio con una pose de gigachad)" };
+    public string[] mewingReaccionEnfadado = { "(Mira fijamente con desprecio supremo sin abrir la boca)" };
+    public string[] mewingReaccionTriste = { "(Sigue haciendo mewing intensamente a pesar del suspenso)" };
+
+    [Header("Evento Manzana (Stalker)")]
     public GameObject prefabManzana;
-    public Vector2 posicionManzanaMesa; // Pon aquí las coordenadas X e Y de tu mesa
+    public Vector2 posicionManzanaMesa;
+
+    [Header("Pantalla de Muerte")]
+    public GameObject panelPantallaMuerte;
 
     void Start()
     {
         PlayerPrefs.DeleteKey("FaltasTungTung");
-        // Empezamos el juego lanzando directamente el guion del Día 1
+
+        if (panelPantallaMuerte != null)
+        {
+            panelPantallaMuerte.SetActive(false);
+        }
+
         StartCoroutine(SecuenciaDia1());
     }
 
@@ -89,8 +119,8 @@ public class ScriptDias : MonoBehaviour
         yield return StartCoroutine(ManejarDialogo(basicote.Decir(dialogoPresentacionBasicote, false)));
         yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Te enteras, o qué?" }, false)));
 
-        string[] misOpciones = { "Sí", "No" };
-        yield return StartCoroutine(basicote.Preguntar(misOpciones));
+        string[] opcionesSiNo = { "Sí", "No" };
+        yield return StartCoroutine(basicote.Preguntar(opcionesSiNo));
 
         if (basicote.respuestaElegida == 0)
         {
@@ -122,6 +152,7 @@ public class ScriptDias : MonoBehaviour
         }
 
         yield return StartCoroutine(basicote.Desaparecer());
+        Destroy(basicote.gameObject);
         yield return new WaitForSeconds(1f);
 
         // ==========================================
@@ -155,11 +186,12 @@ public class ScriptDias : MonoBehaviour
             }
 
             yield return StartCoroutine(brainrot.Desaparecer());
+            Destroy(brainrot.gameObject);
             yield return new WaitForSeconds(1f);
         }
 
         // ==========================================
-        // TURNO 3: LISTILLA
+        // TURNO 3: LISTILLA (REPELENTE)
         // ==========================================
         if (repelente != null)
         {
@@ -180,14 +212,17 @@ public class ScriptDias : MonoBehaviour
             {
                 repelente.animator.SetTrigger("Enfadado");
                 yield return StartCoroutine(ManejarDialogo(repelente.Decir(repelenteReaccionAprobado, false)));
+                if (repelente.animator != null) repelente.animator.SetTrigger("enfado2");
             }
             else
             {
                 repelente.animator.SetTrigger("Enfadado");
                 yield return StartCoroutine(ManejarDialogo(repelente.Decir(repelenteReaccionSuspenso, false)));
+                if (repelente.animator != null) repelente.animator.SetTrigger("enfado2");
             }
 
             yield return StartCoroutine(repelente.Desaparecer());
+            Destroy(repelente.gameObject);
             yield return new WaitForSeconds(1f);
         }
 
@@ -198,26 +233,20 @@ public class ScriptDias : MonoBehaviour
         {
             alumnoActual = stalker;
 
-            // 1. Sube y suelta el primer monólogo
             yield return StartCoroutine(stalker.Aparecer());
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(dialogoPreManzanaStalker, false)));
 
-            // 2. Activamos su animación de dar la manzana
             if (stalker.animator != null) stalker.animator.SetTrigger("Manzana");
 
-            // 3. Pausamos el juego 1 segundo (ajusta este número) para que le dé tiempo 
-            // a hacer el movimiento de la mano antes de que la manzana aparezca mágicamente.
             yield return new WaitForSeconds(1f);
 
-            // 4. Instanciamos la manzana en la mesa
             if (prefabManzana != null)
             {
                 Vector3 posicionFinalManzana = new Vector3(posicionManzanaMesa.x, posicionManzanaMesa.y, 0f);
-                Instantiate(prefabManzana, posicionFinalManzana, Quaternion.identity);
+                GameObject manzanaCreada = Instantiate(prefabManzana, posicionFinalManzana, Quaternion.identity);
+                manzanaCreada.tag = "ManzanaMesa"; // Asignamos una etiqueta para encontrarla luego fácilmente
             }
 
-
-            // 6. Dice su frase final y saca el examen
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(dialogoPostManzanaStalker, false)));
             yield return StartCoroutine(stalker.EntregarExamen());
 
@@ -235,11 +264,147 @@ public class ScriptDias : MonoBehaviour
             }
             else
             {
-                stalker.animator.SetTrigger("Feliz"); // O crear uno nuevo de "Sonrojada"
+                stalker.animator.SetTrigger("Feliz");
                 yield return StartCoroutine(ManejarDialogo(stalker.Decir(stalker_sonrojada, false)));
             }
 
             yield return StartCoroutine(stalker.Desaparecer());
+            Destroy(stalker.gameObject);
+            yield return new WaitForSeconds(1f);
+        }
+
+        // ==========================================
+        // TURNO 5: NEGRETE
+        // ==========================================
+        if (negrete != null)
+        {
+            alumnoActual = negrete;
+
+            yield return StartCoroutine(negrete.Aparecer());
+            yield return StartCoroutine(ManejarDialogo(negrete.Decir(dialogoPresentacionNegrete, false)));
+            yield return StartCoroutine(negrete.EntregarExamen());
+
+            nota = negrete.notaRecibida;
+
+            if (nota >= 5)
+            {
+                negrete.animator.SetTrigger("Feliz");
+                yield return StartCoroutine(ManejarDialogo(negrete.Decir(negreteReaccionFeliz, false)));
+            }
+            else if (nota == 4)
+            {
+                negrete.animator.SetTrigger("Enfadado");
+                yield return StartCoroutine(ManejarDialogo(negrete.Decir(negreteReaccionEnfadado, false)));
+            }
+            else
+            {
+                negrete.animator.SetTrigger("Triste");
+                yield return StartCoroutine(ManejarDialogo(negrete.Decir(negreteReaccionTriste, false)));
+            }
+
+            yield return StartCoroutine(negrete.Desaparecer());
+            Destroy(negrete.gameObject);
+            yield return new WaitForSeconds(1f);
+        }
+
+        // ==========================================
+        // TURNO 6: GORDETE (Con pregunta de la manzana)
+        // ==========================================
+        if (gordete != null)
+        {
+            alumnoActual = gordete;
+
+            yield return StartCoroutine(gordete.Aparecer());
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(dialogoPresentacionGordete, false)));
+
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¿Me das la manzana que tienes en tu mesa?" }, false)));
+            yield return StartCoroutine(gordete.Preguntar(opcionesSiNo));
+
+            if (gordete.respuestaElegida == 0) // Si (Sí) -> Destruimos la manzana de la mesa
+            {
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¡Uuff, qué crack! ¡Me salvas la vida con este tentempié!" }, true)));
+
+                // Buscamos la manzana en la escena por su etiqueta y la destruimos
+                GameObject manzanaEnMesa = GameObject.FindWithTag("ManzanaMesa");
+                if (manzanaEnMesa != null)
+                {
+                    Destroy(manzanaEnMesa);
+                }
+            }
+            else if (gordete.respuestaElegida == 1) // Si (No)
+            {
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Vaya tacaño... Me quedo con las tripas sonando." }, true)));
+            }
+
+            yield return StartCoroutine(gordete.EntregarExamen());
+
+            nota = gordete.notaRecibida;
+
+            if (nota >= 5)
+            {
+                gordete.animator.SetTrigger("Feliz");
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(gordeteReaccionFeliz, false)));
+            }
+            else if (nota == 4)
+            {
+                gordete.animator.SetTrigger("Enfadado");
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(gordeteReaccionEnfadado, false)));
+            }
+            else
+            {
+                gordete.animator.SetTrigger("Triste");
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(gordeteReaccionTriste, false)));
+            }
+
+            yield return StartCoroutine(gordete.Desaparecer());
+            Destroy(gordete.gameObject);
+            yield return new WaitForSeconds(1f);
+        }
+
+        // ==========================================
+        // TURNO 7: MEWING (Con pregunta de sus rasgos perfectos)
+        // ==========================================
+        if (mewing != null)
+        {
+            alumnoActual = mewing;
+
+            yield return StartCoroutine(mewing.Aparecer());
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(dialogoPresentacionMewing, false)));
+
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "(Señala su mandíbula firmemente)", "¿Estás totalmente embelesado por mis rasgos perfectos?" }, false)));
+            yield return StartCoroutine(mewing.Preguntar(opcionesSiNo));
+
+            if (mewing.respuestaElegida == 0) // Si (Sí)
+            {
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "(Asiente con una sonrisa de superioridad y máxima elegancia)" }, true)));
+            }
+            else if (mewing.respuestaElegida == 1) // Si (No)
+            {
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "(MIRA FUSILANDO CON LA MIRADA. -1000 de aura para ti)" }, true)));
+            }
+
+            yield return StartCoroutine(mewing.EntregarExamen());
+
+            nota = mewing.notaRecibida;
+
+            if (nota >= 5)
+            {
+                mewing.animator.SetTrigger("Feliz");
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(mewingReaccionFeliz, false)));
+            }
+            else if (nota == 4)
+            {
+                mewing.animator.SetTrigger("Enfadado");
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(mewingReaccionEnfadado, false)));
+            }
+            else
+            {
+                mewing.animator.SetTrigger("Triste");
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(mewingReaccionTriste, false)));
+            }
+
+            yield return StartCoroutine(mewing.Desaparecer());
+            Destroy(mewing.gameObject);
         }
     }
 
@@ -250,7 +415,7 @@ public class ScriptDias : MonoBehaviour
         dialogoEnCurso = false;
     }
 
-    // --- SISTEMA DE INFRACCIONES DE MARK---
+    // --- SISTEMA DE INFRACCIONES DE MARK ---
     public void PenalizarDibujo()
     {
         if (dialogoEnCurso || alumnoActual == null) return;
@@ -267,6 +432,7 @@ public class ScriptDias : MonoBehaviour
         if (faltas >= 3)
         {
             StartCoroutine(ManejarDialogo(alumnoActual.Decir(new string[] { "TÚ TE LO HAS BUSCADO.", "HAS INTENTADO DESTROZAR A TUNG-TUNG TRES VECES.", "AHORA SUFRIRÁS SU IRA." }, false)));
+            ActivarPantallaMuerte();
         }
         else if (faltas == 2)
         {
@@ -276,5 +442,27 @@ public class ScriptDias : MonoBehaviour
         {
             StartCoroutine(ManejarDialogo(alumnoActual.Decir(new string[] { "¡¡¡OYE!!!", "¡¿QUÉ LE HACES A MI TUNG-TUNG?!" }, true)));
         }
+    }
+
+    // --- FUNCIONES DE MUERTE Y ESCENAS ---
+    public void ActivarPantallaMuerte()
+    {
+        if (panelPantallaMuerte != null)
+        {
+            panelPantallaMuerte.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
+
+    public void ReiniciarJuego()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void VolverAlMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MenuPrincipal");
     }
 }

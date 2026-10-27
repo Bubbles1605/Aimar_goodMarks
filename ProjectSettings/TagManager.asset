@@ -10,6 +10,7 @@ TagManager:
   - BotonHablar
   - Pegatina
   - DibujoTungTung
+  - ManzanaMesa
   layers:
   - Default
   - TransparentFX
