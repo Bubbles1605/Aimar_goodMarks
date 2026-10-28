@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic; // NUEVO: Necesario para usar Listas
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI; // NUEVO: Necesario para detectar clics en los botones
 
 public class ScriptAlumno : MonoBehaviour
@@ -43,11 +43,12 @@ public class ScriptAlumno : MonoBehaviour
     // LA VARIABLE MÁGICA
     [HideInInspector] public bool examenCalificado = false;
 
+    // --- NUEVA VARIABLE ---
+    [HideInInspector] public bool examenEnMesa = false; // Para saber si ya ha aterrizado
     // --- NUEVO: APARTADO DE SONIDOS ---
     [Header("Sonidos")]
     public AudioClip sonidoMoverPapel;
     private AudioSource audioSource;
-
     private SpriteRenderer spriteRenderer;
     public Animator animator;
     private GameObject botonHablarInstanciado;
@@ -111,6 +112,7 @@ public class ScriptAlumno : MonoBehaviour
     public IEnumerator EntregarExamen()
     {
         examenCalificado = false; // Lo reseteamos por seguridad al empezar
+        examenEnMesa = false; // Empezamos asumiendo que no está en la mesa
 
         if (prefabExamen != null)
         {
@@ -133,6 +135,7 @@ public class ScriptAlumno : MonoBehaviour
             }
 
             examenInstanciado.transform.position = posicionMesa;
+            examenEnMesa = true; // ¡El examen ya ha aterrizado!
 
             if (spriteExamen != null)
             {
@@ -164,20 +167,24 @@ public class ScriptAlumno : MonoBehaviour
         // --- RETIRAR EL EXAMEN ---
         if (examenInstanciado != null)
         {
+            examenEnMesa = false; // Ya no está en la mesa, se lo lleva
             // --- NUEVO SONIDO: RETIRAN EL EXAMEN ---
             if (sonidoMoverPapel != null) audioSource.PlayOneShot(sonidoMoverPapel);
 
             Vector3 posicionDestino = new Vector3(posicionXExamen, posicionYInicialExamen, 0f);
 
+            // Subimos la capa para que pase por encima del alumno al irse volando
             SpriteRenderer spriteExamen = examenInstanciado.GetComponentInChildren<SpriteRenderer>();
             if (spriteExamen != null) spriteExamen.sortingOrder = 11;
 
+            // Bucle hacia arriba
             while (Vector3.Distance(examenInstanciado.transform.position, posicionDestino) > 0.01f)
             {
                 examenInstanciado.transform.position = Vector3.MoveTowards(examenInstanciado.transform.position, posicionDestino, velocidadCaidaExamen * Time.deltaTime);
                 yield return null;
             }
 
+            // Lo destruimos para liberar memoria (destruirá también la nota pegada)
             Destroy(examenInstanciado);
             examenInstanciado = null;
         }
@@ -208,6 +215,7 @@ public class ScriptAlumno : MonoBehaviour
             {
                 textoUI.text += letra;
 
+                // Si mantienes pulsada la 'P', omite el tiempo de espera entre letras
                 if (!Input.GetKey(KeyCode.P))
                 {
                     yield return new WaitForSeconds(tiempoPorLetra);
@@ -220,6 +228,7 @@ public class ScriptAlumno : MonoBehaviour
             yield return new WaitUntil(() => !Input.GetKey(KeyCode.Space));
             yield return null;
 
+            // La tecla 'P' también permite avanzar al instante a la siguiente línea de diálogo
             yield return new WaitUntil(() => avanzarTexto || Input.GetKeyDown(KeyCode.Space) || Input.GetKey(KeyCode.P));
         }
         textoUI.text = "";

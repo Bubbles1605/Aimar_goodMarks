@@ -23,7 +23,7 @@ public class ScriptDias : MonoBehaviour
     public Texture2D cursorManita;
 
     [Header("Textos Día 1 - Basicote")]
-    public string[] dialogoPresentacionBasicote = { "Hola profe, soy Basicote.", "A ver qué me has puesto." };
+    public string[] dialogoPresentacionBasicote = { "..." };
     public string[] basicoteReaccionFeliz = { "¡Bua, un aprobadillo! ¡Qué grande eres!", "Me voy al parque." };
     public string[] basicoteReaccionEnfadado = { "¿Un suspenso? ¿En serio?", "Vaya asco de corrección." };
     public string[] basicoteReaccionTriste = { "Negrito feo" };
@@ -41,11 +41,11 @@ public class ScriptDias : MonoBehaviour
     public string[] repelenteReaccionSuspenso = { "¿TÚ SABES QUIÉN ES MI PADRE?", "Estás muerto." };
 
     [Header("Textos Día 1 - Stalker")]
-    public string[] dialogoPreManzanaStalker = { "Hola.", "Me llamo Luna.", "Tú eres Mark.", "Toma para ti, es una manzana, es para ti y SOLO para ti." };
+    public string[] dialogoPreManzanaStalker = { "Hola.", "Me llamo Luna.", "Tú eres Mark.", "Toma, para ti. Es una manzana, es para ti y SOLO para ti." };
     public string[] dialogoPostManzanaStalker = { "Ah, ya, mis ejercicios. Toma." };
     public string[] stalker_5 = { "Mejoraré por ti.", "Ya lo verás." };
-    public string[] stalker_sonrojada = { "Hala, muchas gracias profe." };
-    public string[] stalkerSuspenso = { "Vaya" };
+    public string[] stalker_sonrojada = { "Vaya, muchas gracias." };
+    public string[] stalkerSuspenso = { "Mejoraré por ti.", "Ya lo verás." };
 
     [Header("Textos Día 1 - Negrete")]
     public string[] dialogoPresentacionNegrete = { "Epa profe, ya estoy aquí.", "A ver qué nota me cae." };
@@ -54,10 +54,10 @@ public class ScriptDias : MonoBehaviour
     public string[] negreteReaccionTriste = { "Menuda estafa de corrección, tío." };
 
     [Header("Textos Día 1 - Gordete")]
-    public string[] dialogoPresentacionGordete = { "Hola profe, ¿hay algún bocata por ahí?", "Tengo un hambre que me muero." };
-    public string[] gordeteReaccionFeliz = { "¡Qué pro! Me voy a celebrar esto comiendo pizza.", "¡GG!" };
-    public string[] gordeteReaccionEnfadado = { "¿Un suspenso? Me estás trolleando con la nota." };
-    public string[] gordeteReaccionTriste = { "Menudo hambre y menuda nota más mala me llevo..." };
+    public string[] dialogoPresentacionGordete = { "Hola." };
+    public string[] gordeteReaccionFeliz = { "Me encanta esta nota.", "Me encanta el queso también." };
+    public string[] gordeteReaccionEnfadado = { "Esta nota me da ganas de morderte." };
+    public string[] gordeteReaccionTriste = { "Esta nota me da arcadas." };
 
     [Header("Textos Día 1 - Mewing")]
     public string[] dialogoPresentacionMewing = { "...", "(Hace el gesto de callar con el dedo en los labios y marca mandíbula)" };
@@ -322,13 +322,13 @@ public class ScriptDias : MonoBehaviour
             yield return StartCoroutine(gordete.Aparecer());
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(dialogoPresentacionGordete, false)));
 
-            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¿Me das la manzana que tienes en tu mesa?" }, false)));
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¿Me das la manzana que tienes en tu mesa? Tengo hambre." }, false)));
 
             yield return StartCoroutine(ManejarPregunta(gordete.Preguntar(opcionesSiNo)));
 
             if (gordete.respuestaElegida == 0) // Si (Sí)
             {
-                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¡Uuff, qué crack! ¡Me salvas la vida con este tentempié!" }, true)));
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUE DELICIA." , "Aunque el centro sabía un poco a lente con un ligero toque a batería de litio." , "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
 
                 GameObject manzanaEnMesa = GameObject.FindWithTag("ManzanaMesa");
                 if (manzanaEnMesa != null)
@@ -338,7 +338,7 @@ public class ScriptDias : MonoBehaviour
             }
             else if (gordete.respuestaElegida == 1) // Si (No)
             {
-                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Vaya tacaño... Me quedo con las tripas sonando." }, true)));
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Pues tu puta madre." }, true)));
             }
 
             yield return StartCoroutine(gordete.EntregarExamen());
@@ -350,7 +350,7 @@ public class ScriptDias : MonoBehaviour
             // ===========================================
             if (nota == 0)
             {
-                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¡¿UN CERO?!", "¡Me has dejado sin comer y encima me suspendes!", "¡PREPÁRATE PARA MORIR!" }, false)));
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¿¡Me has dejado sin comer y encima me pones un cero!?", "Te vas a arrepentir, cabrón." }, false)));
                 yield return StartCoroutine(EjecutarMuerte(gordete)); // ¡Llamada mágica!
                 yield break; // Paramos todo para que el día no siga
             }
@@ -480,6 +480,8 @@ public class ScriptDias : MonoBehaviour
         // 6. Sacamos el panel de Game Over y congelamos el tiempo
         ActivarPantallaMuerte();
     }
+
+
 
     // --- SISTEMA DE INFRACCIONES DE MARK ---
     public void PenalizarDibujo()

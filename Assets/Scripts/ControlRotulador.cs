@@ -242,9 +242,12 @@ public class ControladorRotulador : MonoBehaviour
                 }
                 else if (!usandoSello && !usandoBoli && !usandoPegatina && !examenAmpliado)
                 {
-                    if (alumnoActual == null || !alumnoActual.examenCalificado)
+                    if (alumnoActual != null)
                     {
-                        AmpliarExamen(examenTocado);
+                        if (!alumnoActual.examenCalificado && alumnoActual.examenEnMesa)
+                        {
+                            AmpliarExamen(examenTocado);
+                        }
                     }
                 }
             }
@@ -281,6 +284,8 @@ public class ControladorRotulador : MonoBehaviour
         {
             SoltarTodo();
         }
+
+
     }
 
     bool ComprobarDibujoProhibido(Vector2 pos)

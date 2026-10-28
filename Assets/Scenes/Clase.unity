@@ -361,6 +361,7 @@ MonoBehaviour:
   panelMuerte: {fileID: 0}
   duracionAnimacionMuerte: 2
   examenCalificado: 0
+  examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
@@ -398,6 +399,7 @@ MonoBehaviour:
   panelMuerte: {fileID: 0}
   duracionAnimacionMuerte: 2
   examenCalificado: 0
+  examenEnMesa: 0
   sonidoMoverPapel: {fileID: 0}
   animator: {fileID: 0}
   avanzarTexto: 0
@@ -946,12 +948,12 @@ MonoBehaviour:
   - "Todas las cachalotas para m\xED"
   frasesGenericas:
   - Tengo diabetes.
-  - PERSOUNA
-  - Mi equipo favorito es el Como
+  - "\xBFC\xF3mo va ese examen?"
+  - "\xBFEstoy mono?"
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -1.3, y: 2.4, z: 0}
   textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.05
+  tiempoPorLetra: 0.02
   prefabBotonRespuesta: {fileID: 3838385740775788710, guid: 7d5e2a23cdea7e44aa5bb1c89df1b1cf, type: 3}
   contenedorRespuestas: {fileID: 493147121}
   respuestaElegida: -1
@@ -964,6 +966,7 @@ MonoBehaviour:
   panelMuerte: {fileID: 221195483}
   duracionAnimacionMuerte: 1.5
   examenCalificado: 0
+  examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
@@ -2178,13 +2181,13 @@ MonoBehaviour:
   posicionYFinal: 0
   dialogoPrincipal: []
   frasesGenericas:
-  - Illo, acabo de hacerme quinientos metros a crol sin respirar.
-  - "Qu\xE9 calor hace en esta clase, me tirar\xEDa de cabeza a la piscina."
-  - "Vaya paliza de entrenar nataci\xF3n, miarma, estoy reventado."
+  - "Tengo una u\xF1a encarnada en el pie que me est\xE1 jodiendo la vida."
+  - Aitor me ha mordido la barbilla, dile que no lo haga.
+  - He cagado antes y no me he limpiado.
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -0.68, y: 2.75, z: 0}
   textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.05
+  tiempoPorLetra: 0.02
   prefabBotonRespuesta: {fileID: 0}
   contenedorRespuestas: {fileID: 0}
   respuestaElegida: -1
@@ -2197,6 +2200,7 @@ MonoBehaviour:
   panelMuerte: {fileID: 0}
   duracionAnimacionMuerte: 2
   examenCalificado: 0
+  examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
@@ -2594,6 +2598,7 @@ MonoBehaviour:
   panelMuerte: {fileID: 0}
   duracionAnimacionMuerte: 2
   examenCalificado: 0
+  examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
@@ -2623,14 +2628,11 @@ MonoBehaviour:
   velocidadAparicion: 5
   posicionYInicial: -8
   posicionYFinal: -0.05
-  dialogoPrincipal:
-  - Hola, soy Basicote
-  - A tu mujer le maamo el totote
-  - jejeje vaya guarrilla
+  dialogoPrincipal: []
   frasesGenericas:
-  - HIJOPUTA
-  - NIGGER
-  - Mis padres se divorciaron
+  - Me quiero ir.
+  - "Ojal\xE1 hubiera sillas en este cole."
+  - Mis padres se divorciaron.
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -1, y: 3, z: 0}
   textoUI: {fileID: 2044410985}
@@ -2647,6 +2649,7 @@ MonoBehaviour:
   panelMuerte: {fileID: 0}
   duracionAnimacionMuerte: 2
   examenCalificado: 0
+  examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
@@ -3486,11 +3489,12 @@ MonoBehaviour:
     mel\xF3n."
   - Usa el boli rojo para corregir el examen.
   - "Puedes hacer anotaciones, dibujos, comentarios\u2026 Lo que necesites."
-  - Usa los sellos para darle nota al examen.
   - "Puedes poner pegatinas a los ex\xE1menes si te apetece."
-  - Haz click sobre el bocadillo saliente de los alumnos si quieres interactuar con
-    ellos.
-  - Cuando hayas terminado, arrastra la ficha hasta el alumno.
+  - "Haz click sobre el examen para ver una vista ampliada y mu\xE9velo con la rueda
+    y el click derecho."
+  - Y haz click sobre el bocadillo saliente de los alumnos si quieres interactuar
+    con nosotros.
+  - "Cuando hayas terminado, ponle una nota al examen con los sellos para entreg\xE1rnoslo."
   basicoteReaccionFeliz:
   - "\xA1Bua, un aprobadillo! \xA1Qu\xE9 grande eres!"
   - Me voy al parque.
@@ -3524,16 +3528,17 @@ MonoBehaviour:
   - Hola.
   - Me llamo Luna.
   - "T\xFA eres Mark."
-  - Toma para ti, es una manzana, es para ti y SOLO para ti.
+  - Toma para ti, es una simple manzana. Es para ti y SOLO para ti.
   dialogoPostManzanaStalker:
   - Ah, ya, mis ejercicios. Toma.
   stalker_5:
   - "Mejorar\xE9 por ti."
   - "Ya lo ver\xE1s."
   stalker_sonrojada:
-  - Hala, muchas gracias profe.
+  - Vaya, muchas gracias.
   stalkerSuspenso:
-  - Vaya
+  - "Mejorar\xE9 por ti."
+  - "Ya lo ver\xE1s."
   dialogoPresentacionNegrete:
   - "Epa profe, ya estoy aqu\xED."
   - "A ver qu\xE9 nota me cae."
@@ -5047,7 +5052,7 @@ MonoBehaviour:
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -1.96, y: 1.82, z: 0}
   textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.05
+  tiempoPorLetra: 0.02
   prefabBotonRespuesta: {fileID: 0}
   contenedorRespuestas: {fileID: 0}
   respuestaElegida: -1
@@ -5060,6 +5065,7 @@ MonoBehaviour:
   panelMuerte: {fileID: 0}
   duracionAnimacionMuerte: 2
   examenCalificado: 0
+  examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
@@ -5803,13 +5809,13 @@ MonoBehaviour:
   posicionYFinal: 0
   dialogoPrincipal: []
   frasesGenericas:
-  - "(Silencio absoluto mientras marca mand\xEDbula con maestr\xEDa)"
+  - "\xBFT\xFA est\xE1s soltero, verdad? Porque eres feo de cojones."
   - Lengua pegada al paladar para maximizar el aura, profe.
-  - "(Hace un gesto de shhh y se afila la l\xEDnea de la mand\xEDbula)"
+  - "CORRIGE M\xC1S R\xC1PIDO."
   botonHablarPrefab: {fileID: 701238677}
   posicionBoton: {x: -1.96, y: 1.82, z: 0}
   textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.05
+  tiempoPorLetra: 0.02
   prefabBotonRespuesta: {fileID: 3838385740775788710, guid: 7d5e2a23cdea7e44aa5bb1c89df1b1cf, type: 3}
   contenedorRespuestas: {fileID: 493147121}
   respuestaElegida: -1
@@ -5822,6 +5828,7 @@ MonoBehaviour:
   panelMuerte: {fileID: 0}
   duracionAnimacionMuerte: 2
   examenCalificado: 0
+  examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
