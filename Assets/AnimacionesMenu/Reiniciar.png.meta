@@ -104,7 +104,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3240
+        y: 4320
         width: 1920
         height: 1080
       alignment: 0
@@ -126,7 +126,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1920
-        y: 3240
+        y: 4320
         width: 1920
         height: 1080
       alignment: 0
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c525df3a7d2f986438151f14af0e0e83
-      internalID: -791569674
+      spriteID: c106971dbcc1b7e439b4f817306d1a28
+      internalID: 678074699
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3840
-        y: 3240
+        y: 4320
         width: 1920
         height: 1080
       alignment: 0
@@ -159,8 +159,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edc8481f1bf4a7744acefebb6ca2d152
-      internalID: 1709364133
+      spriteID: e9a2428f5d00b974692af839d1e97aab
+      internalID: -1099917392
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5760
-        y: 3240
+        y: 4320
         width: 1920
         height: 1080
       alignment: 0
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e182c80df0729147ba6a7145a1094dc
-      internalID: -671734684
+      spriteID: 2160f58d5b0ad3347924c3a347496098
+      internalID: -1487723136
       vertices: []
       indices: 
       edges: []
@@ -192,6 +192,28 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 7680
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df122e1190551c74bb82a5804d5ed17c
+      internalID: -1319991045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reiniciar_5
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 3240
         width: 1920
         height: 1080
@@ -203,30 +225,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97567a256be107b48ba8e8e7478395ec
-      internalID: 267428471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reiniciar_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2160
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8115660f7bf4b14bbc2bba7f393276f
-      internalID: 1261179550
+      spriteID: cf19ea48ec2778b4db7e10e926570ced
+      internalID: 1005463705
       vertices: []
       indices: 
       edges: []
@@ -236,7 +236,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1920
-        y: 2160
+        y: 3240
         width: 1920
         height: 1080
       alignment: 0
@@ -247,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57f979b0ae87bfc4c8c80a226496f56f
-      internalID: -1656739215
+      spriteID: 02bdb882975b91f438e2d2648e9f8d38
+      internalID: -825350746
       vertices: []
       indices: 
       edges: []
@@ -258,7 +258,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3840
-        y: 2160
+        y: 3240
         width: 1920
         height: 1080
       alignment: 0
@@ -269,8 +269,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bbc7050a7514ca49afd7d4c10bfc3af
-      internalID: 1848034232
+      spriteID: f8f228a97d21c9c418cde50c9bbee9c3
+      internalID: 1741796600
       vertices: []
       indices: 
       edges: []
@@ -280,7 +280,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5760
-        y: 2160
+        y: 3240
         width: 1920
         height: 1080
       alignment: 0
@@ -291,8 +291,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c4680e83947ea44a80bdbd87058afc7
-      internalID: -1043574509
+      spriteID: fe688559ca654064f9f4ee06314bfb96
+      internalID: 1843409727
       vertices: []
       indices: 
       edges: []
@@ -302,6 +302,28 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 7680
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2747d4cb12b01594caefd3f0a7117c00
+      internalID: 31435293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reiniciar_10
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 2160
         width: 1920
         height: 1080
@@ -313,30 +335,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59d4da0d761d5864c8f650805a302472
-      internalID: 439512943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reiniciar_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1080
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44cde1bbf5066d34e9c06bd5c64adffb
-      internalID: -1155179887
+      spriteID: 2e38b3e538142ba4ea4e68a3b791763c
+      internalID: -1022076684
       vertices: []
       indices: 
       edges: []
@@ -346,6 +346,94 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03157ec24a9362a488767912dfbeff86
+      internalID: -1569840863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reiniciar_12
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a7b9e51ced18d4ba1d342bbaf54a98
+      internalID: -1096023109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reiniciar_13
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfb34b4663910e48b2544d13b99c8ee
+      internalID: 354191019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reiniciar_14
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d078ac4c56e7bf74da283788306dba39
+      internalID: -1762498242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reiniciar_15
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 1080
         width: 1920
         height: 1080
@@ -357,14 +445,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f962103b38b240478c23c581bf86822
-      internalID: 1347269503
+      spriteID: 89ae23e611ece2f4a81e1d6a5e3acac3
+      internalID: -1253346954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Reiniciar_12
+      name: Reiniciar_16
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4abd5ef1ac565754788c3079b503b463
+      internalID: 5175638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reiniciar_17
       rect:
         serializedVersion: 2
         x: 3840
@@ -379,14 +489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccf60a3543d718d43855e8beef231cad
-      internalID: 258523697
+      spriteID: 8bfcb9aeea4125b4ea87a7b3b3685aa3
+      internalID: 971489707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Reiniciar_13
+      name: Reiniciar_18
       rect:
         serializedVersion: 2
         x: 5760
@@ -401,14 +511,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86a771efb40a9a54ca4b91589ee70336
-      internalID: 1980812006
+      spriteID: 8e42e1ecbd9a0dd46abf6f3000b0429b
+      internalID: -1078158563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Reiniciar_14
+      name: Reiniciar_19
       rect:
         serializedVersion: 2
         x: 7680
@@ -423,14 +533,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bafd3b72b8145c747a657a2ff255ea38
-      internalID: -1723207432
+      spriteID: 7d1e2b0b068f6e449b6b9cb253ef1d6b
+      internalID: -1609454325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Reiniciar_15
+      name: Reiniciar_20
       rect:
         serializedVersion: 2
         x: 0
@@ -445,96 +555,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 094d490b571e2294d89109cfd0cda69a
-      internalID: 158774257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reiniciar_16
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4692fbd33de54814c9edb1416ba14749
-      internalID: -283372435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reiniciar_17
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 0
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f2f487dc7bd88944a663ada10ce4069
-      internalID: 1924116081
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reiniciar_18
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 0
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ceb492327c4b104f8475a9710d15b57
-      internalID: 613604613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reiniciar_19
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 0
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bc583b342edf9e439cb1100731416fd
-      internalID: 989234660
+      spriteID: 31d7c86c875a484438d0e49db74c351c
+      internalID: -491957061
       vertices: []
       indices: 
       edges: []
@@ -543,7 +565,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 908e1a53ac5608d4e93a4d7bc48e864c
+    spriteID: 61beff9ce254a9a44a5c60728cb0ed75
     internalID: 0
     vertices: []
     indices: 
@@ -553,28 +575,29 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":4.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Reiniciar_0: -7487689439361828044
-      Reiniciar_1: -791569674
-      Reiniciar_10: -1155179887
-      Reiniciar_11: 1347269503
-      Reiniciar_12: 258523697
-      Reiniciar_13: 1980812006
-      Reiniciar_14: -1723207432
-      Reiniciar_15: 158774257
-      Reiniciar_16: -283372435
-      Reiniciar_17: 1924116081
-      Reiniciar_18: 613604613
-      Reiniciar_19: 989234660
-      Reiniciar_2: 1709364133
-      Reiniciar_3: -671734684
-      Reiniciar_4: 267428471
-      Reiniciar_5: 1261179550
-      Reiniciar_6: -1656739215
-      Reiniciar_7: 1848034232
-      Reiniciar_8: -1043574509
-      Reiniciar_9: 439512943
+      Reiniciar_1: 678074699
+      Reiniciar_10: -1022076684
+      Reiniciar_11: -1569840863
+      Reiniciar_12: -1096023109
+      Reiniciar_13: 354191019
+      Reiniciar_14: -1762498242
+      Reiniciar_15: -1253346954
+      Reiniciar_16: 5175638
+      Reiniciar_17: 971489707
+      Reiniciar_18: -1078158563
+      Reiniciar_19: -1609454325
+      Reiniciar_2: -1099917392
+      Reiniciar_20: -491957061
+      Reiniciar_3: -1487723136
+      Reiniciar_4: -1319991045
+      Reiniciar_5: 1005463705
+      Reiniciar_6: -825350746
+      Reiniciar_7: 1741796600
+      Reiniciar_8: 1843409727
+      Reiniciar_9: 31435293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

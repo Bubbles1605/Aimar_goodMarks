@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb4a9a3cfd52a41a9fe51be843c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScriptAlumno
-  velocidadAparicion: 5
+  velocidadAparicion: 15
   posicionYInicial: -8
   posicionYFinal: 0
   dialogoPrincipal: []
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb4a9a3cfd52a41a9fe51be843c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScriptAlumno
-  velocidadAparicion: 5
+  velocidadAparicion: 15
   posicionYInicial: -8
   posicionYFinal: -0.1
   dialogoPrincipal:
@@ -1210,13 +1210,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479220461}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2176,7 +2176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb4a9a3cfd52a41a9fe51be843c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScriptAlumno
-  velocidadAparicion: 5
+  velocidadAparicion: 15
   posicionYInicial: -8
   posicionYFinal: 0
   dialogoPrincipal: []
@@ -2570,7 +2570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb4a9a3cfd52a41a9fe51be843c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScriptAlumno
-  velocidadAparicion: 5
+  velocidadAparicion: 15
   posicionYInicial: -8
   posicionYFinal: 0.35
   dialogoPrincipal:
@@ -2625,7 +2625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb4a9a3cfd52a41a9fe51be843c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScriptAlumno
-  velocidadAparicion: 5
+  velocidadAparicion: 15
   posicionYInicial: -8
   posicionYFinal: -0.05
   dialogoPrincipal: []
@@ -3181,7 +3181,7 @@ AudioSource:
   m_Volume: 0.805
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -3478,6 +3478,12 @@ MonoBehaviour:
   negrete: {fileID: 867363014}
   gordete: {fileID: 405044013}
   mewing: {fileID: 2723422825153577981}
+  "entrar_ni\xF1o": {fileID: 8300000, guid: 54c43cfaa4a8e54489daee1216bc4a29, type: 3}
+  "entrar_ni\xF1a": {fileID: 8300000, guid: 1aa2f8d4c7aab2644bd530032b4266f5, type: 3}
+  Triste_basicote: {fileID: 8300000, guid: 772d032edc1abb441ad28b5385930aae, type: 3}
+  Risa_basicote: {fileID: 8300000, guid: 80643cd3166e60e468b36f18a2f6f4bd, type: 3}
+  Enfado_basicote: {fileID: 8300000, guid: a76b34538b0ddbd4ba264f8580c0f018, type: 3}
+  audioSource: {fileID: 1450378550}
   alumnoActual: {fileID: 1048401725}
   dialogoEnCurso: 0
   esperandoRespuesta: 0
@@ -3814,13 +3820,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365473811}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4161,6 +4167,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436018998}
   m_CullTransparentMesh: 1
+--- !u!1 &1450378549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450378551}
+  - component: {fileID: 1450378550}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1450378550
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450378549}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1450378551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450378549}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1398.9596, y: 396.58542, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1487857866
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,8 +4976,13 @@ MonoBehaviour:
   duracionAnimacionEntrada: 0.5
   duracionAnimacionSalida: 0.7
   duracionAnimacionSalidaMenu: 1
-  duracionAnimacionOpcionC: 0.5
+  duracionAnimacionOpcionC: 1.5
   juegoPausado: 0
+  reanudar: {fileID: 8300000, guid: eb1c8e589a14f8f459b729e440d608a7, type: 3}
+  pausa: {fileID: 8300000, guid: d952ac2c335811a4b9e228468f8f14c6, type: 3}
+  reiniciar: {fileID: 8300000, guid: 525a636e7f457154bba4fc04bd9b0182, type: 3}
+  menu: {fileID: 8300000, guid: 967d3824dc0396f4286cd4b2a3e4a977, type: 3}
+  audioSource: {fileID: 1450378550}
 --- !u!114 &1826778544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5041,7 +5181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb4a9a3cfd52a41a9fe51be843c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScriptAlumno
-  velocidadAparicion: 5
+  velocidadAparicion: 15
   posicionYInicial: -8
   posicionYFinal: 0.4
   dialogoPrincipal: []
@@ -5804,7 +5944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb4a9a3cfd52a41a9fe51be843c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScriptAlumno
-  velocidadAparicion: 5
+  velocidadAparicion: 15
   posicionYInicial: -8
   posicionYFinal: 0
   dialogoPrincipal: []
@@ -7153,4 +7293,5 @@ SceneRoots:
   - {fileID: 1373354379}
   - {fileID: 7246583401075370663}
   - {fileID: 1107887231}
+  - {fileID: 1450378551}
   - {fileID: 1261878300}

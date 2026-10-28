@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class ScriptDias : MonoBehaviour
@@ -12,6 +13,16 @@ public class ScriptDias : MonoBehaviour
     public ScriptAlumno negrete;
     public ScriptAlumno gordete;
     public ScriptAlumno mewing;
+
+    [Header("Sonidos")]
+    public AudioClip entrar_niño;
+    public AudioClip entrar_niña;
+
+    [Header("Sonidos_Basicote")]
+    public AudioClip Triste_basicote;
+    public AudioClip Risa_basicote;
+    public AudioClip Enfado_basicote;
+    public AudioSource audioSource;
 
     [Header("Alumno en Pantalla")]
     public ScriptAlumno alumnoActual;
@@ -118,8 +129,10 @@ public class ScriptDias : MonoBehaviour
         // TURNO 1: BASICOTE
         // ==========================================
         alumnoActual = basicote;
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
         yield return StartCoroutine(basicote.Aparecer());
+
         yield return StartCoroutine(ManejarDialogo(basicote.Decir(dialogoPresentacionBasicote, false)));
         yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Te enteras, o qué?" }, false)));
 
@@ -143,16 +156,22 @@ public class ScriptDias : MonoBehaviour
         if (nota >= 5)
         {
             basicote.animator.SetTrigger("Feliz");
+            if (Risa_basicote != null) audioSource.PlayOneShot(Risa_basicote, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(basicoteReaccionFeliz, false)));
         }
         else if (nota == 4)
         {
             basicote.animator.SetTrigger("Enfadado");
+            if (Enfado_basicote != null) audioSource.PlayOneShot(Enfado_basicote, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(basicoteReaccionEnfadado, false)));
         }
         else
         {
             basicote.animator.SetTrigger("Triste");
+            if (Triste_basicote != null) audioSource.PlayOneShot(Triste_basicote, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(basicoteReaccionTriste, false)));
         }
 
@@ -167,6 +186,7 @@ public class ScriptDias : MonoBehaviour
         {
             alumnoActual = brainrot;
             yaPenalizadoHoy = false;
+            if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
             yield return StartCoroutine(brainrot.Aparecer());
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(dialogoPresentacionBrainrot, false)));
@@ -201,6 +221,7 @@ public class ScriptDias : MonoBehaviour
         if (repelente != null)
         {
             alumnoActual = repelente;
+            if (entrar_niña != null) audioSource.PlayOneShot(entrar_niña, 5f);
 
             yield return StartCoroutine(repelente.Aparecer());
             yield return StartCoroutine(ManejarDialogo(repelente.Decir(dialogoPresentacionListilla, false)));
@@ -237,6 +258,7 @@ public class ScriptDias : MonoBehaviour
         if (stalker != null)
         {
             alumnoActual = stalker;
+            if (entrar_niña != null) audioSource.PlayOneShot(entrar_niña, 5f);
 
             yield return StartCoroutine(stalker.Aparecer());
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(dialogoPreManzanaStalker, false)));
@@ -284,6 +306,7 @@ public class ScriptDias : MonoBehaviour
         if (negrete != null)
         {
             alumnoActual = negrete;
+            if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
             yield return StartCoroutine(negrete.Aparecer());
             yield return StartCoroutine(ManejarDialogo(negrete.Decir(dialogoPresentacionNegrete, false)));
@@ -318,6 +341,7 @@ public class ScriptDias : MonoBehaviour
         if (gordete != null)
         {
             alumnoActual = gordete;
+            if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
             yield return StartCoroutine(gordete.Aparecer());
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(dialogoPresentacionGordete, false)));
@@ -382,6 +406,7 @@ public class ScriptDias : MonoBehaviour
         if (mewing != null)
         {
             alumnoActual = mewing;
+            if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
             yield return StartCoroutine(mewing.Aparecer());
             yield return StartCoroutine(ManejarDialogo(mewing.Decir(dialogoPresentacionMewing, false)));
@@ -525,19 +550,19 @@ public class ScriptDias : MonoBehaviour
         {
             // 1. Encendemos el panel
             panelPantallaMuerte.SetActive(true);
-            Time.timeScale = 0f;
+            
         }
     }
 
     public void ReiniciarJuego()
     {
-        Time.timeScale = 1f;
+     
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void VolverAlMenu()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MenuPrincipal");
+   
+        SceneManager.LoadScene("Menu");
     }
 }

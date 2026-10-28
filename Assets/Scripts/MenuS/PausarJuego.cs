@@ -14,6 +14,14 @@ public class PausarJuego : MonoBehaviour
 
     [HideInInspector]
     public bool juegoPausado = false;
+    [Header("Sonidos")]
+  
+    public AudioClip reanudar;
+    public AudioClip pausa;
+    public AudioClip reiniciar;
+    public AudioClip menu;
+    public AudioSource audioSource;
+
 
     private void Update()
     {
@@ -30,7 +38,7 @@ public class PausarJuego : MonoBehaviour
             }
         }
     }
-
+  
     // --- FUNCIÓN PÚBLICA PARA TU BOTÓN DE PAUSA ---
     public void PulsarBotonPausa()
     {
@@ -62,6 +70,7 @@ public class PausarJuego : MonoBehaviour
     {
         yield return null;
         yield return null;
+        if (pausa != null) audioSource.PlayOneShot(pausa, 1.3f);
 
         if (animadorMenu != null)
         {
@@ -83,6 +92,7 @@ public class PausarJuego : MonoBehaviour
     IEnumerator RutinaReanudar()
     {
         Time.timeScale = 1.0f;
+        if (reanudar != null) audioSource.PlayOneShot(reanudar, 1.3f);
 
         if (animadorMenu != null)
         {
@@ -110,7 +120,7 @@ public class PausarJuego : MonoBehaviour
     IEnumerator RutinaJugar()
     {
         Time.timeScale = 1.0f;
-
+        if (menu != null) audioSource.PlayOneShot(menu, 1.3f);
         if (animadorMenu != null)
         {
             animadorMenu.ResetTrigger("TriggerEntrada");
@@ -124,7 +134,6 @@ public class PausarJuego : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    // --- NUEVA FUNCIÓN PLACEHOLDER PARA LA OPCIÓN C ---
     public void OpcionC()
     {
         StartCoroutine(RutinaOpcionC());
@@ -133,20 +142,18 @@ public class PausarJuego : MonoBehaviour
     IEnumerator RutinaOpcionC()
     {
         Time.timeScale = 1.0f; // Restauramos el tiempo por si estaba pausado
+        if (reiniciar != null) audioSource.PlayOneShot(reiniciar, 1.3f);
 
         if (animadorMenu != null)
         {
-            // Limpiamos los demás triggers y activamos el de la opción C
             animadorMenu.ResetTrigger("TriggerEntrada");
             animadorMenu.ResetTrigger("AnimacionOpcionA");
             animadorMenu.ResetTrigger("AnimacionOpcionB");
             animadorMenu.SetTrigger("AnimacionOpcionC");
         }
 
-        // Esperamos a que termine la animación de esta opción
         yield return new WaitForSecondsRealtime(duracionAnimacionOpcionC);
 
-        // TODO: Aquí podrás escribir lo que quieras que haga después (cambiar de escena, abrir ajustes, etc.)
-        Debug.Log("¡Animación de la Opción C terminada! Aquí puedes añadir tu código futuro.");
+        SceneManager.LoadScene("Clase");
     }
 }

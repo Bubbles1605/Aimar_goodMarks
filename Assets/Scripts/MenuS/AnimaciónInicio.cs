@@ -1,5 +1,7 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.Audio;
+using static UnityEditor.ShaderData;
 
 public class AnimaciónInicio : MonoBehaviour
 {
@@ -8,6 +10,11 @@ public class AnimaciónInicio : MonoBehaviour
     public GameObject panelMenuPausa;
     public GameObject panelInicio;
     public float duracionAnimacionInicio = 2.0f;
+    [Header("Sonidos")]
+    public AudioClip inicio1;
+    public AudioClip inicio2;
+    public AudioSource audioSource;
+    public AudioSource audioSource2;
 
     private void Start()
     {
@@ -24,6 +31,8 @@ public class AnimaciónInicio : MonoBehaviour
     public void ClickBotonInicio()
     {
         StartCoroutine(RutinaAnimacionInicio());
+        if (inicio1 != null)
+            audioSource.PlayOneShot(inicio1, 1.3f);
     }
 
     IEnumerator RutinaAnimacionInicio()
@@ -44,12 +53,14 @@ public class AnimaciónInicio : MonoBehaviour
         // 4. Activamos el panel del menú de pausa
         if (panelMenuPausa != null)
         {
+
             panelMenuPausa.SetActive(true);
         }
 
         // 5. Desactivamos el panel de inicio actual
         if (panelInicio != null)
         {
+
             panelInicio.SetActive(false);
         }
         else

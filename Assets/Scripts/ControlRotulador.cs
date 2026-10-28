@@ -206,7 +206,7 @@ public class ControladorRotulador : MonoBehaviour
                             alumnoActual.examenCalificado = true;
                         }
 
-                        if (sonidoPonerSello != null) audioSource.PlayOneShot(sonidoPonerSello);
+                        if (sonidoPonerSello != null) audioSource.PlayOneShot(sonidoPonerSello,16f);
                     }
                     SoltarSello();
                 }
