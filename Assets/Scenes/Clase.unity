@@ -956,7 +956,7 @@ MonoBehaviour:
   - Tengo diabetes.
   - Si te miro muy fijamente pareces una rosquilla.
   - "\xBFEstoy mono?"
-  - "Que hammbre, hoy solo me ha dado tiempo a desayunar dos paquetes de galletas,
+  - "Que hambre, hoy solo me ha dado tiempo a desayunar dos paquetes de galletas,
     un litro de leche, dos magdalenas, un pl\xE1tano, dos tostadas con mermelada
     y nocilla, dos sobaos y tres salchichas con huevos."
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
@@ -2845,9 +2845,9 @@ MonoBehaviour:
   - "\xBFQuieres ver mi Tung Tung?"
   - Perdona, me llama Netanyahu, he de marchar.
   frasesGenericas:
-  - Casi no me da tirmpo a ver reels con tanto estudio. Ayer estuve solo diez horas
+  - Casi no me da tiempo a ver reels con tanto estudio. Ayer estuve solo diez horas
     y media.
-  - 'Tung Tung es mi mejor amigo. No le gusta que le toquen. '
+  - 'Tung-Tung es mi mejor amigo. No le gusta que le toquen. '
   - "Ojal\xE1 me pongas un six con seven."
   - "A Hugo le pegar\xEDa mazo tener un edit. Luego le pregunto si tiene cuenta de
     tin ton."
@@ -3954,12 +3954,12 @@ MonoBehaviour:
   - "\xBFUn suspenso? \xBFEn serio?"
   - "Vaya asco de correcci\xF3n."
   basicoteReaccionTriste:
-  - tu puta madre
+  - Tu puta madre.
   dialogoPresentacionBrainrot:
   - Skibidi toilet profe.
   - "\xBFEse examen es W o L?"
   brainrotReaccionFeliz:
-  - "La procastinaci\xF3n ha dado sus frutos"
+  - "La procastinaci\xF3n ha dado sus frutos."
   brainrotReaccionEnfadado:
   - He perdido todo mi aura.
   brainrotReaccionTriste:

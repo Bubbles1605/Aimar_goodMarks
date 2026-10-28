@@ -417,11 +417,11 @@ public class ScriptDias : MonoBehaviour
 
             if (mewing.respuestaElegida == 0) // Si (Sí)
             {
-                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Todo el esfuerzo ha dado sus frutos" }, true)));
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Todo mi esfuerzo ha dado sus frutos." }, true)));
             }
             else if (mewing.respuestaElegida == 1) // Si (No)
             {
-                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Endureceré mis rutinas de looks maxing al doble de tiempo" }, true)));
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Endureceré mis rutinas de looksmaxing al doble de tiempo." }, true)));
             }
 
             yield return StartCoroutine(mewing.EntregarExamen());
