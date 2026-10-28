@@ -363,6 +363,8 @@ MonoBehaviour:
   examenCalificado: 0
   examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
+  romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
+  audioSource: {fileID: 1450378550}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -401,6 +403,8 @@ MonoBehaviour:
   examenCalificado: 0
   examenEnMesa: 0
   sonidoMoverPapel: {fileID: 0}
+  romper_Pompa: {fileID: 0}
+  audioSource: {fileID: 0}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -968,6 +972,8 @@ MonoBehaviour:
   examenCalificado: 0
   examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
+  romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
+  audioSource: {fileID: 1450378550}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -2202,6 +2208,8 @@ MonoBehaviour:
   examenCalificado: 0
   examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
+  romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
+  audioSource: {fileID: 1450378550}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -2600,6 +2608,8 @@ MonoBehaviour:
   examenCalificado: 0
   examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
+  romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
+  audioSource: {fileID: 1450378550}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -2651,6 +2661,8 @@ MonoBehaviour:
   examenCalificado: 0
   examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
+  romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
+  audioSource: {fileID: 1450378550}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -5207,6 +5219,8 @@ MonoBehaviour:
   examenCalificado: 0
   examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
+  romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
+  audioSource: {fileID: 1450378550}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -5970,6 +5984,8 @@ MonoBehaviour:
   examenCalificado: 0
   examenEnMesa: 0
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
+  romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
+  audioSource: {fileID: 1450378550}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1

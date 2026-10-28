@@ -22,6 +22,8 @@ public class ScriptAlumno : MonoBehaviour
     public TextMeshProUGUI textoUI;
     public float tiempoPorLetra = 0.05f;
 
+   
+
     [Header("Sistema de Preguntas (NUEVO)")]
     public GameObject prefabBotonRespuesta; // El prefab del botón que hará de opción
     public Transform contenedorRespuestas;  // Un panel en tu Canvas donde se apilarán los botones
@@ -48,7 +50,8 @@ public class ScriptAlumno : MonoBehaviour
     // --- NUEVO: APARTADO DE SONIDOS ---
     [Header("Sonidos")]
     public AudioClip sonidoMoverPapel;
-    private AudioSource audioSource;
+    public AudioClip romper_Pompa;
+    public AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
     public Animator animator;
     private GameObject botonHablarInstanciado;
@@ -150,6 +153,7 @@ public class ScriptAlumno : MonoBehaviour
         // 1. Destruimos el botón viejo si ya había uno en la mesa
         if (botonHablarInstanciado != null)
         {
+
             Destroy(botonHablarInstanciado);
             botonHablarInstanciado = null;
         }
@@ -195,6 +199,8 @@ public class ScriptAlumno : MonoBehaviour
         if (botonHablarInstanciado != null)
         {
             Animator animBoton = botonHablarInstanciado.GetComponentInChildren<Animator>();
+            if (romper_Pompa != null) audioSource.PlayOneShot(romper_Pompa, 3f);
+
             if (animBoton != null) animBoton.SetTrigger("Desaparecer");
 
             yield return new WaitForSeconds(0.333f);
