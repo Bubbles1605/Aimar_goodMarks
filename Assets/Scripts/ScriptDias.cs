@@ -411,17 +411,17 @@ public class ScriptDias : MonoBehaviour
             yield return StartCoroutine(mewing.Aparecer());
             yield return StartCoroutine(ManejarDialogo(mewing.Decir(dialogoPresentacionMewing, false)));
 
-            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "(Señala su mandíbula firmemente)", "¿Estás totalmente embelesado por mis rasgos perfectos?" }, false)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¿Estás totalmente embelesado por mis rasgos perfectos?" }, false)));
 
             yield return StartCoroutine(ManejarPregunta(mewing.Preguntar(opcionesSiNo)));
 
             if (mewing.respuestaElegida == 0) // Si (Sí)
             {
-                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "(Asiente con una sonrisa de superioridad y máxima elegancia)" }, true)));
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Todo el esfuerzo ha dado sus frutos" }, true)));
             }
             else if (mewing.respuestaElegida == 1) // Si (No)
             {
-                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "(MIRA FUSILANDO CON LA MIRADA. -1000 de aura para ti)" }, true)));
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Endureceré mis rutinas de looks maxing al doble de tiempo" }, true)));
             }
 
             yield return StartCoroutine(mewing.EntregarExamen());

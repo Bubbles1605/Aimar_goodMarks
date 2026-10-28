@@ -342,9 +342,11 @@ MonoBehaviour:
   posicionYFinal: 0
   dialogoPrincipal: []
   frasesGenericas:
-  - Seguro que saco un diez lalalalala
-  - "Soy s\xFAper lista, \xBFsab\xEDas que \"Juan\" es con j?"
-  - "Papi seguro que se pone s\xFAper contento cuando vea que saco otro diez."
+  - "No te va a costar mucho corregir MI examen. est\xE1 perfecto."
+  - "Antes Paco me ha pedido los apuntes. Me los ha devuelto y... ol\xEDan un poco
+    extra\xF1o."
+  - "Llevo prepar\xE1ndome el examen desde las navidades pasadas."
+  - "\xA1El m\xE9todo pomodoro es lo mejor! Si tan solo no tuviese descansos..."
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -1.15, y: 2.1, z: 0}
   textoUI: {fileID: 2044410985}
@@ -952,8 +954,11 @@ MonoBehaviour:
   - "Todas las cachalotas para m\xED"
   frasesGenericas:
   - Tengo diabetes.
-  - "\xBFC\xF3mo va ese examen?"
+  - Si te miro muy fijamente pareces una rosquilla.
   - "\xBFEstoy mono?"
+  - "Que hammbre, hoy solo me ha dado tiempo a desayunar dos paquetes de galletas,
+    un litro de leche, dos magdalenas, un pl\xE1tano, dos tostadas con mermelada
+    y nocilla, dos sobaos y tres salchichas con huevos."
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -1.3, y: 2.4, z: 0}
   textoUI: {fileID: 2044410985}
@@ -2190,6 +2195,7 @@ MonoBehaviour:
   - "Tengo una u\xF1a encarnada en el pie que me est\xE1 jodiendo la vida."
   - Aitor me ha mordido la barbilla, dile que no lo haga.
   - He cagado antes y no me he limpiado.
+  - Tengo un arma en la mochila.
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -0.68, y: 2.75, z: 0}
   textoUI: {fileID: 2044410985}
@@ -2586,10 +2592,12 @@ MonoBehaviour:
   - "\xBFQuieres ver mi Tung Tung?"
   - Perdona, me llama Netanyahu, he de marchar.
   frasesGenericas:
-  - ITADAKI MAAAS
-  - WOW, W O W
-  - "\xBFHay t\xFAneles secretos por aqu\xED?"
-  - MAKE IT MEEEEME
+  - Casi no me da tirmpo a ver reels con tanto estudio. Ayer estuve solo diez horas
+    y media.
+  - 'Tung Tung es mi mejor amigo. No le gusta que le toquen. '
+  - "Ojal\xE1 me pongas un six con seven."
+  - "A Hugo le pegar\xEDa mazo tener un edit. Luego le pregunto si tiene cuenta de
+    tin ton."
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -0.65, y: 3, z: 0}
   textoUI: {fileID: 2044410985}
@@ -2643,6 +2651,7 @@ MonoBehaviour:
   - Me quiero ir.
   - "Ojal\xE1 hubiera sillas en este cole."
   - Mis padres se divorciaron.
+  - Quiero jubilarme.
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -1, y: 3, z: 0}
   textoUI: {fileID: 2044410985}
@@ -3193,7 +3202,7 @@ AudioSource:
   m_Volume: 0.805
   m_Pitch: 1
   Loop: 1
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -3514,20 +3523,20 @@ MonoBehaviour:
     con nosotros.
   - "Cuando hayas terminado, ponle una nota al examen con los sellos para entreg\xE1rnoslo."
   basicoteReaccionFeliz:
-  - "\xA1Bua, un aprobadillo! \xA1Qu\xE9 grande eres!"
-  - Me voy al parque.
+  - "\xA1Vamonooooooos!"
+  - "Me voy al parque a ense\xF1arle mis canicas a Luna."
   basicoteReaccionEnfadado:
   - "\xBFUn suspenso? \xBFEn serio?"
   - "Vaya asco de correcci\xF3n."
   basicoteReaccionTriste:
-  - Negrito feo
+  - tu puta madre
   dialogoPresentacionBrainrot:
   - Skibidi toilet profe.
   - "\xBFEse examen es W o L?"
   brainrotReaccionFeliz:
-  - "\xA1W rizz! Eres el GOAT."
+  - "La procastinaci\xF3n ha dado sus frutos"
   brainrotReaccionEnfadado:
-  - L bozo. Cringe.
+  - He perdido todo mi aura.
   brainrotReaccionTriste:
   - Bro really said suspenso.
   dialogoPresentacionListilla:
@@ -3537,7 +3546,7 @@ MonoBehaviour:
   - Como debe ser.
   - "Mi padre estar\xE1 orgulloso."
   repelenteReaccionAprobado:
-  - "\xBFUn triste aprobado?"
+  - "\xBFUn m\xEDsero a-aprobado?"
   - Esto es inaceptable.
   repelenteReaccionSuspenso:
   - "\xBFT\xDA SABES QUI\xC9N ES MI PADRE?"
@@ -3561,30 +3570,31 @@ MonoBehaviour:
   - "Epa profe, ya estoy aqu\xED."
   - "A ver qu\xE9 nota me cae."
   negreteReaccionFeliz:
-  - "\xA1Toma ya! \xA1Ese diez sabe a gloria!"
+  - "\xA1Toma ya! No estudi\xE9 nada."
   negreteReaccionEnfadado:
-  - "\xBFUn aprobado raspado? Me esperaba m\xE1s de ti."
+  - Jo macho, me van a castigar sin entrenos.
   negreteReaccionTriste:
-  - "Menuda estafa de correcci\xF3n, t\xEDo."
+  - Mis padres me matan.
   dialogoPresentacionGordete:
   - "Hola profe, \xBFhay alg\xFAn bocata por ah\xED?"
   - Tengo un hambre que me muero.
   gordeteReaccionFeliz:
-  - "\xA1Qu\xE9 pro! Me voy a celebrar esto comiendo pizza."
-  - "\xA1GG!"
+  - "\xA1Me encanta esta nota! "
+  - "... Me encanta el queso tambi\xE9n."
   gordeteReaccionEnfadado:
-  - "\xBFUn suspenso? Me est\xE1s trolleando con la nota."
+  - Con esta nota me dan ganas de morderte.
   gordeteReaccionTriste:
-  - "Menudo hambre y menuda nota m\xE1s mala me llevo..."
+  - Esta nota me da arcadas.
   dialogoPresentacionMewing:
-  - ...
-  - "(Hace el gesto de callar con el dedo en los labios y marca mand\xEDbula)"
+  - "Hola profe. (Te mira marcando mand\xEDbula)"
   mewingReaccionFeliz:
-  - (Asiente en completo silencio con una pose de gigachad)
+  - "Gracias profe. Seguir\xE9 con mi rutina de looks maxing."
   mewingReaccionEnfadado:
-  - (Mira fijamente con desprecio supremo sin abrir la boca)
+  - "Gracias profe. Me voy a hacer mi rutina de mewing (No parece que le importe
+    nada a parte de su f\xEDsico)"
   mewingReaccionTriste:
-  - (Sigue haciendo mewing intensamente a pesar del suspenso)
+  - "Se ha hecho tarde, tendr\xE9 que trasnochar para cumplir las 6 horas de mewing
+    (No parece que le importe la nota)."
   prefabManzana: {fileID: 8959275113004482167, guid: ece185789f08a7e4aa50441372578837, type: 3}
   posicionManzanaMesa: {x: 5, y: 4.18}
   panelPantallaMuerte: {fileID: 21028750}
@@ -5201,6 +5211,8 @@ MonoBehaviour:
   - "\xBFTe puedo tocar?"
   - Hueles a pomada antihemorroidal.
   - "\xBFCada cu\xE1nto te cortas las u\xF1as?"
+  - "Tengo un lagarto de mascota. Lleva haci\xE9ndose el dormido desde la semana
+    pasada \xA1Que gracioso es!"
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -1.96, y: 1.82, z: 0}
   textoUI: {fileID: 2044410985}
@@ -5964,8 +5976,11 @@ MonoBehaviour:
   dialogoPrincipal: []
   frasesGenericas:
   - "\xBFT\xFA est\xE1s soltero, verdad? Porque eres feo de cojones."
-  - Lengua pegada al paladar para maximizar el aura, profe.
-  - "CORRIGE M\xC1S R\xC1PIDO."
+  - "Una persona lo suficientemente atractiva podr\xEDa hacerse con el control de
+    la clase."
+  - "La belleza est\xE1 en el interior. Lo importante es intentar ser mejor persona
+    cada d\xEDa...   O eso es lo que diria un feo."
+  - "Si te centras en cuidar tu jard\xEDn, las mariposas vendr\xE1n solas."
   botonHablarPrefab: {fileID: 701238677}
   posicionBoton: {x: -1.96, y: 1.82, z: 0}
   textoUI: {fileID: 2044410985}
