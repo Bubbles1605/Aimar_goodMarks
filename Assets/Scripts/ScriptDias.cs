@@ -352,13 +352,12 @@ public class ScriptDias : MonoBehaviour
 
             if (gordete.respuestaElegida == 0) // Si (Sí)
             {
-                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUE DELICIA." , "Aunque el centro sabía un poco a lente con un ligero toque a batería de litio." , "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
-
                 GameObject manzanaEnMesa = GameObject.FindWithTag("ManzanaMesa");
                 if (manzanaEnMesa != null)
                 {
                     Destroy(manzanaEnMesa);
                 }
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUE DELICIA." , "Aunque el centro sabía un poco a lente con un ligero toque a batería de litio." , "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
             }
             else if (gordete.respuestaElegida == 1) // Si (No)
             {
@@ -406,6 +405,7 @@ public class ScriptDias : MonoBehaviour
         if (mewing != null)
         {
             alumnoActual = mewing;
+            mewing.animator.SetInteger("Dia", 1);
             if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
             yield return StartCoroutine(mewing.Aparecer());
@@ -448,6 +448,8 @@ public class ScriptDias : MonoBehaviour
             Destroy(mewing.gameObject);
         }
     }
+
+    // DÍA 2 ---------------------------
 
     private void ForzarSoltarHerramientas()
     {
