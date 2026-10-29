@@ -55,6 +55,7 @@ public class ControladorRotulador : MonoBehaviour
     private LineRenderer lineaActual;
     private Vector2 puntoAnterior;
     private bool estaDibujando = false;
+    private bool tocandoFirma = false; //PARA LA MUERTE CON LA STALKER
 
     [Header("Sonidos")]
     public AudioClip sonidoCogerBoli;
@@ -208,7 +209,7 @@ public class ControladorRotulador : MonoBehaviour
                             alumnoActual.examenCalificado = true;
                         }
 
-                        if (sonidoPonerSello != null) audioSource.PlayOneShot(sonidoPonerSello,16f);
+                        if (sonidoPonerSello != null) audioSource.PlayOneShot(sonidoPonerSello, 16f);
                     }
                     SoltarSello();
                 }
@@ -268,6 +269,12 @@ public class ControladorRotulador : MonoBehaviour
                     else
                     {
                         ContinuarTrazo(posRaton, examenTocado.transform);
+
+                        // NUEVO: Comprobamos si el boli está pasando por encima de la firma
+                        if (ObtenerObjetoTocado(posRaton, "FirmaStalker") != null)
+                        {
+                            tocandoFirma = true;
+                        }
                     }
                 }
             }
@@ -278,6 +285,22 @@ public class ControladorRotulador : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            // NUEVO: Al soltar el clic, revisamos si hemos firmado con la Stalker
+            if (estaDibujando && tocandoFirma)
+            {
+                if (director != null)
+                {
+                    SoltarBoli(); // Quitamos el boli de la mano
+                    director.haFirmadoStalker = true;
+
+                    if (director.alumnoActual != null)
+                    {
+                        director.alumnoActual.examenCalificado = true;
+                    }
+                }
+            }
+
+            tocandoFirma = false; // Reseteamos la trampa de la firma
             CortarTrazo();
         }
 
@@ -286,8 +309,6 @@ public class ControladorRotulador : MonoBehaviour
         {
             SoltarTodo();
         }
-
-
     }
 
     bool ComprobarDibujoProhibido(Vector2 pos)

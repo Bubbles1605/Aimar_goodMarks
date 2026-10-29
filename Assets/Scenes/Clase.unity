@@ -341,19 +341,28 @@ MonoBehaviour:
   posicionYInicial: -8
   posicionYFinal: 0
   dialogoPrincipal: []
-  frasesGenericas:
+  frasesGenericas: []
+  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
+  posicionBoton: {x: -1.15, y: 2.1, z: 0}
+  textoUI: {fileID: 2044410985}
+  tiempoPorLetra: 0.02
+  frasesGenericasDia1:
   - "No te va a costar mucho corregir MI examen. est\xE1 perfecto."
   - "Antes Paco me ha pedido los apuntes. Me los ha devuelto y... ol\xEDan un poco
     extra\xF1o."
   - "Llevo prepar\xE1ndome el examen desde las navidades pasadas."
   - "\xA1El m\xE9todo pomodoro es lo mejor! Si tan solo no tuviese descansos..."
-  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
-  posicionBoton: {x: -1.15, y: 2.1, z: 0}
-  textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.02
-  frasesGenericasDia1: []
-  frasesGenericasDia2: []
-  frasesGenericasDia3: []
+  frasesGenericasDia2:
+  - "\xA1El m\xE9todo pomodoro es lo mejor! Si tan solo no tuviese descansos..."
+  - "El muchacho del cartel no tiene ni idea de lengua, d\xEDa va con tilde."
+  - "\xA1Hoy es mi d\xEDa favorito de la semana! Hacemos ejercicios de f\xEDsica
+    antes de dormir."
+  - "Mi padre es un cient\xEDfico reconocido a nivel internacional."
+  frasesGenericasDia3:
+  - "Mi padre me ha dicho que ten\xEDa mucho de lo que hablar con usted."
+  - "Hugo est\xE1 cada d\xEDa m\xE1s feo."
+  - "Mi padre invent\xF3 la airfryer."
+  - "\xA1El m\xE9todo pomodoro es lo mejor! Si tan solo no tuviese descansos\u2026"
   frasesGenericasDia4: []
   prefabBotonRespuesta: {fileID: 0}
   contenedorRespuestas: {fileID: 0}
@@ -1256,28 +1265,30 @@ MonoBehaviour:
   velocidadAparicion: 15
   posicionYInicial: -8
   posicionYFinal: -0.1
-  dialogoPrincipal:
-  - VAMO CHAMPION BURGUEEE
-  - Peso 35 toneladas
-  - "Todas las cachalotas para m\xED"
-  frasesGenericas:
+  dialogoPrincipal: []
+  frasesGenericas: []
+  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
+  posicionBoton: {x: -1.3, y: 2.4, z: 0}
+  textoUI: {fileID: 2044410985}
+  tiempoPorLetra: 0.02
+  frasesGenericasDia1:
   - Tengo diabetes.
   - Si te miro muy fijamente pareces una rosquilla.
   - "\xBFEstoy mono?"
   - "Que hambre, hoy solo me ha dado tiempo a desayunar dos paquetes de galletas,
     un litro de leche, dos magdalenas, un pl\xE1tano, dos tostadas con mermelada
     y nocilla, dos sobaos y tres salchichas con huevos."
-  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
-  posicionBoton: {x: -1.3, y: 2.4, z: 0}
-  textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.02
-  frasesGenericasDia1: []
   frasesGenericasDia2:
   - "No estudi\xE9 mucho porque me com\xED los apuntes."
   - "Me han dicho que no van a reponer las sillas. No deb\xED comerme todas."
   - "Tardo media hora en maquillarme. \xBFSoy kawaii?"
   - Tengo diabetes.
-  frasesGenericasDia3: []
+  frasesGenericasDia3:
+  - Si te miro muy fijamente pareces una rosquilla.
+  - "Me ha dicho el m\xE9dico que tengo que rebajar mi dieta por lo menos doce mil
+    calor\xEDas."
+  - El que come callao repite.
+  - "La se\xF1ora del comedor no me dej\xF3 repetir la sexta vez."
   frasesGenericasDia4: []
   prefabBotonRespuesta: {fileID: 3838385740775788710, guid: 7d5e2a23cdea7e44aa5bb1c89df1b1cf, type: 3}
   contenedorRespuestas: {fileID: 493147121}
@@ -2002,6 +2013,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7341193273653580012, guid: 3360b9540f0328d40a90ebdf662ee576, type: 3}
+    - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8786247112085566095, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
       propertyPath: m_Name
       value: examen_lengua_repelente
@@ -2622,18 +2637,18 @@ MonoBehaviour:
   posicionYInicial: -8
   posicionYFinal: 0
   dialogoPrincipal: []
-  frasesGenericas:
-  - "Tengo una u\xF1a encarnada en el pie que me est\xE1 jodiendo la vida."
-  - Aitor me ha mordido la barbilla, dile que no lo haga.
-  - He cagado antes y no me he limpiado.
-  - Tengo un arma en la mochila.
+  frasesGenericas: []
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -0.68, y: 2.75, z: 0}
   textoUI: {fileID: 2044410985}
   tiempoPorLetra: 0.02
-  frasesGenericasDia1: []
+  frasesGenericasDia1:
+  - "Tengo una u\xF1a encarnada en el pie que me est\xE1 jodiendo la vida."
+  - Aitor me ha mordido la barbilla, dile que no lo haga.
+  - He cagado antes y no me he limpiado.
+  - Tengo un arma en la mochila.
   frasesGenericasDia2:
-  - "Qui\xE9n dejar\xE1 entrar al hombre ese raro de los carteles..."
+  - "\xBFQui\xE9n dejar\xE1 entrar al hombre ese raro de los carteles...?"
   - "Tengo una u\xF1a encarnada en el pie que me est\xE1 jodiendo la vida."
   - "Luna me habla mucho, creo que quiere que le deje mi h\xE1mster."
   - "Mis dientes no est\xE1n picados, son as\xED."
@@ -2660,62 +2675,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
---- !u!1 &878796797 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8786247112085566095, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-  m_PrefabInstance: {fileID: 992830489}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &878796798 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-  m_PrefabInstance: {fileID: 992830489}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &878796799
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878796797}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20.48, y: 27.32}
-    newSize: {x: 20.48, y: 27.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 20.48, y: 27.32}
-  m_EdgeRadius: 0
 --- !u!1001 &879208975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2850,9 +2809,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
+      propertyPath: m_Size.y
+      value: 27.324455
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6744705191034961746, guid: c1f7b3433db189d4582fd662fa84b52e, type: 3}
+    - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8786247112085566095, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
       propertyPath: m_Name
       value: examen_lengua_negrete
@@ -3164,29 +3131,25 @@ MonoBehaviour:
   velocidadAparicion: 15
   posicionYInicial: -8
   posicionYFinal: 0.35
-  dialogoPrincipal:
-  - "Hola, soy Sergio Gonz\xE1lez del Pozo"
-  - "\xBFQuieres ver mi Tung Tung?"
-  - Perdona, me llama Netanyahu, he de marchar.
-  frasesGenericas:
+  dialogoPrincipal: []
+  frasesGenericas: []
+  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
+  posicionBoton: {x: -0.65, y: 3, z: 0}
+  textoUI: {fileID: 2044410985}
+  tiempoPorLetra: 0.02
+  frasesGenericasDia1:
   - Casi no me da tiempo a ver reels con tanto estudio. Ayer estuve solo diez horas
     y media.
   - 'Tung-Tung es mi mejor amigo. No le gusta que le toquen. '
   - "Ojal\xE1 me pongas un six con seven."
   - "A Hugo le pegar\xEDa mazo tener un edit. Luego le pregunto si tiene cuenta de
     tin ton."
-  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
-  posicionBoton: {x: -0.65, y: 3, z: 0}
-  textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.02
-  frasesGenericasDia1:
-  - 
   frasesGenericasDia2:
   - "Le pregunt\xE9 a Hugo por su cuenta de tis tos. Me dijo que no ten\xEDa tiempo
-    por sus ejercicios, \xA1\xBFESTAMOS LOCOS?!"
+    para esas cosas, por sus ejercicios. \xA1\xBFESTAMOS LOCOS?!"
   - "Ojal\xE1 me pongas un six con seven."
-  - La clase huele a Brr Brr patapim
-  - "Sara dice que es biol\xF3gicamente imposible que exista un skibidi toilet \xA1Ser\xE1
+  - La clase huele a Brr Brr patapim.
+  - "Sara dice que es biol\xF3gicamente imposible que exista un skibidi toilet. \xA1Ser\xE1
     puta!"
   frasesGenericasDia3: []
   frasesGenericasDia4: []
@@ -3211,86 +3174,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
---- !u!1001 &992830489
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1004389428}
-    m_Modifications:
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2848527
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2848527
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2848527
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -64.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966518077399008337, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7073811638916625257, guid: eae1006a3c247844d839783b1f3d8906, type: 3}
-    - target: {fileID: 8786247112085566095, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_Name
-      value: examen_lengua_stalker
-      objectReference: {fileID: 0}
-    - target: {fileID: 8786247112085566095, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      propertyPath: m_TagString
-      value: Examen
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8786247112085566095, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 878796799}
-  m_SourcePrefab: {fileID: 100100000, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
 --- !u!1 &1004389427
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,9 +3207,9 @@ Transform:
   - {fileID: 1640534190}
   - {fileID: 1650568245}
   - {fileID: 1182381316}
-  - {fileID: 878796798}
   - {fileID: 1879914034}
   - {fileID: 157042303}
+  - {fileID: 1809363483}
   m_Father: {fileID: 1980496487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1048401721 stripped
@@ -3355,18 +3238,27 @@ MonoBehaviour:
   posicionYInicial: -8
   posicionYFinal: -0.05
   dialogoPrincipal: []
-  frasesGenericas:
-  - Me quiero ir.
-  - "Ojal\xE1 hubiera sillas en este cole."
-  - Mis padres se divorciaron.
-  - Quiero jubilarme.
+  frasesGenericas: []
   botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
   posicionBoton: {x: -1, y: 3, z: 0}
   textoUI: {fileID: 2044410985}
   tiempoPorLetra: 0.02
-  frasesGenericasDia1: []
-  frasesGenericasDia2: []
-  frasesGenericasDia3: []
+  frasesGenericasDia1:
+  - Me quiero ir.
+  - "Ojal\xE1 hubiera sillas en este cole."
+  - Mis padres se divorciaron.
+  - Quiero jubilarme.
+  frasesGenericasDia2:
+  - A Luna le encantaron mis canicas.
+  - Aitor me ha mordido el pie derecho. Dile algo.
+  - Mi padre dice que fui un error.
+  - Me aburro.
+  frasesGenericasDia3:
+  - Mi madre se ha quedado con mi custodia.
+  - Ya no tengo fimosis.
+  - Sergio no me deja acercarme a su gorra.
+  - "unca me lleg\xF3 el juego de los dinosaurios."
+  - "Ayer me sali\xF3 Hugo en el tis tos. Tiene a todo el mundo babeando."
   frasesGenericasDia4: []
   prefabBotonRespuesta: {fileID: 3838385740775788710, guid: 7d5e2a23cdea7e44aa5bb1c89df1b1cf, type: 3}
   contenedorRespuestas: {fileID: 493147121}
@@ -4284,8 +4176,7 @@ MonoBehaviour:
   dialogoPresentacionBasicote:
   - "\xBFEntonces t\xFA eres Mark, el nuevo profesor?"
   - "\xA1Qu\xE9 bien!"
-  - "\xBFQue YO te tengo que ense\xF1ar a corregir? Hoy en d\xEDa contratan a cualquier
-    mel\xF3n."
+  - "\xBFQue YO te tengo que ense\xF1ar a corregir? Hoy en d\xEDa contratan a cualquiera."
   - Usa el boli rojo para corregir el examen.
   - "Puedes hacer anotaciones, dibujos, comentarios\u2026 Lo que necesites."
   - "Puedes poner pegatinas a los ex\xE1menes si te apetece."
@@ -4382,6 +4273,7 @@ MonoBehaviour:
   - "S\xED"
   - No
   estoyEmbelesado: 0
+  haFirmadoStalker: 0
 --- !u!1 &1356928937
 GameObject:
   m_ObjectHideFlags: 0
@@ -4969,7 +4861,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 20.48, y: 27.324455}
-    newSize: {x: 20.48, y: 27.32}
+    newSize: {x: 20.48, y: 27.324455}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -5651,7 +5543,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 20.48, y: 27.324455}
-    newSize: {x: 20.48, y: 27.32}
+    newSize: {x: 20.48, y: 27.324455}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -5759,6 +5651,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6727427306565588419, guid: b332c410ca906614b901954923f1f021, type: 3}
+    - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8786247112085566095, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
       propertyPath: m_Name
       value: examen_lengua_gordete
@@ -6125,6 +6021,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1809363482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9168353778785925922, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+  m_PrefabInstance: {fileID: 2028717890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1809363483 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+  m_PrefabInstance: {fileID: 2028717890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1809363485
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809363482}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.48, y: 27.32}
+    newSize: {x: 20.48, y: 27.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 20.48, y: 27.32}
+  m_EdgeRadius: 0
 --- !u!1001 &1814836696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6541,26 +6493,36 @@ MonoBehaviour:
   posicionYInicial: -8
   posicionYFinal: 0.4
   dialogoPrincipal: []
-  frasesGenericas:
+  frasesGenericas: []
+  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
+  posicionBoton: {x: -0.9, y: 2.3, z: 0}
+  textoUI: {fileID: 2044410985}
+  tiempoPorLetra: 0.02
+  frasesGenericasDia1:
   - "\xBFTe puedo tocar?"
   - Hueles a pomada antihemorroidal.
   - "\xBFCada cu\xE1nto te cortas las u\xF1as?"
   - "Tengo un lagarto de mascota. Lleva haci\xE9ndose el dormido desde la semana
     pasada \xA1Que gracioso es!"
-  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
-  posicionBoton: {x: -0.9, y: 2.3, z: 0}
-  textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.02
-  frasesGenericasDia1: []
-  frasesGenericasDia2: []
-  frasesGenericasDia3: []
-  frasesGenericasDia4: []
+  frasesGenericasDia2:
+  - "Quiero el hamster de Paco para ver c\xF3mo es su cerebro."
+  - Las canicas de Juan son feas de cojones.
+  - "\xBFHas o\xEDdo hablar de Luc\xEDa Fernanda? Los amigos la llamamos Lucifer."
+  - "Est\xE1s muy mono cuando duermes."
+  frasesGenericasDia3:
+  - "Paco no me dej\xF3 su h\xE1mster\u2026  Pero lo tengo igual. Tiene el cerebro
+    precioso\u2026 Aunque, despu\xE9s de haberlo visto, solo quiere jugar a hacerse
+    el dormido."
+  - "Hueles como la tumba de mi t\xEDo\u2026 Me encanta."
+  - "\xBFCada cu\xE1nto te cortas las u\xF1as? "
+  frasesGenericasDia4:
+  - 
   prefabBotonRespuesta: {fileID: 0}
   contenedorRespuestas: {fileID: 0}
   respuestaElegida: -1
   prefabsExamenes:
   - {fileID: 174558764}
-  - {fileID: 878796797}
+  - {fileID: 9168353778785925922, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
   posicionXExamen: 4.3
   posicionYInicialExamen: 8
   posicionYFinalExamen: -0.25
@@ -6924,6 +6886,66 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &2028717890
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1004389428}
+    m_Modifications:
+    - target: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -62.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254567852762546680, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168353778785925922, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      propertyPath: m_Name
+      value: examen_lengua_stalker_0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9168353778785925922, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1809363485}
+  m_SourcePrefab: {fileID: 100100000, guid: 41646717b7e5c844a8d7ebc30aaa6ed7, type: 3}
 --- !u!1 &2044410983
 GameObject:
   m_ObjectHideFlags: 0
@@ -7310,20 +7332,32 @@ MonoBehaviour:
   posicionYInicial: -8
   posicionYFinal: -0.25
   dialogoPrincipal: []
-  frasesGenericas:
+  frasesGenericas: []
+  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
+  posicionBoton: {x: -0.8, y: 2.7, z: 0}
+  textoUI: {fileID: 2044410985}
+  tiempoPorLetra: 0.02
+  frasesGenericasDia1:
   - "\xBFT\xFA est\xE1s soltero, verdad? Porque eres feo de cojones."
   - "Una persona lo suficientemente atractiva podr\xEDa hacerse con el control de
     la clase."
   - "La belleza est\xE1 en el interior. Lo importante es intentar ser mejor persona
     cada d\xEDa...   O eso es lo que diria un feo."
   - "Si te centras en cuidar tu jard\xEDn, las mariposas vendr\xE1n solas."
-  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
-  posicionBoton: {x: -0.8, y: 2.7, z: 0}
-  textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.02
-  frasesGenericasDia1: []
-  frasesGenericasDia2: []
-  frasesGenericasDia3: []
+  frasesGenericasDia2:
+  - "\xBFExamen de lengua? la lengua al paladar y a hacer mewing."
+  - "Una persona lo suficientemente atractiva podr\xEDa hacerse con el control de
+    la clase. "
+  - "Sergio me ha dicho que me haga tis tos. Si lo hago, mucha m\xE1s gente tendr\xE1
+    la oportunidad de ver mi belleza."
+  - "La belleza est\xE1 en el interior. Lo importante es intentar ser mejor persona
+    cada d\xEDa... O eso es lo que dir\xEDa un feo."
+  frasesGenericasDia3:
+  - "Gracias a Sergio estoy teniendo mucho apoyo en tis tos. Eso me hace querer trabajar
+    m\xE1s mi cuerpo."
+  - Hay muchos incels en tis tos.
+  - "Si te centras en cuidar tu jard\xEDn, las mariposas vendr\xE1n solas."
+  - "Sara me mira mucho \xFAltimamente."
   frasesGenericasDia4: []
   prefabBotonRespuesta: {fileID: 3838385740775788710, guid: 7d5e2a23cdea7e44aa5bb1c89df1b1cf, type: 3}
   contenedorRespuestas: {fileID: 493147121}
@@ -8405,9 +8439,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
+      propertyPath: m_Size.y
+      value: 27.324455
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4127539969356056779, guid: 2ffee395ec05ff64692b580dd6dcd9f5, type: 3}
+    - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8786247112085566095, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
       propertyPath: m_Name
       value: examen_lengua_brainroot_0
