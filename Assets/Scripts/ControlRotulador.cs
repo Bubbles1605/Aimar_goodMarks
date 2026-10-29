@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class ControladorRotulador : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class ControladorRotulador : MonoBehaviour
     public Sprite[] spritesNotas;
     public Vector3 escalaNotaEstampada = new Vector3(1.5f, 1.5f, 1.5f);
 
-    [Tooltip("Posición exacta en la pantalla/mundo donde aparecerá la nota automáticamente")]
+    [Tooltip("Posiciï¿½n exacta en la pantalla/mundo donde aparecerï¿½ la nota automï¿½ticamente")]
     public Vector2 posicionNotaExamen;
 
     [Header("Pegatinas")]
@@ -55,7 +55,7 @@ public class ControladorRotulador : MonoBehaviour
     private LineRenderer lineaActual;
     private Vector2 puntoAnterior;
     private bool estaDibujando = false;
-    private bool tocandoFirma = false; //PARA LA MUERTE CON LA STALKER
+
 
     [Header("Sonidos")]
     public AudioClip sonidoCogerBoli;
@@ -237,6 +237,10 @@ public class ControladorRotulador : MonoBehaviour
                 }
                 else if (usandoBoli)
                 {
+                    // CAMBIO: comprobar primero si el rotulador toca la zona de Stalker.
+                    if (ComprobarZonaStalker(posRaton))
+                        return;
+
                     if (!ComprobarDibujoProhibido(posRaton))
                     {
                         EmpezarPunto(posRaton, examenTocado.transform);
@@ -259,6 +263,10 @@ public class ControladorRotulador : MonoBehaviour
         {
             if (examenTocado != null && usandoBoli)
             {
+                // CAMBIO: comprobar la zona de Stalker mientras se mantiene pulsado el ratï¿½n.
+                if (ComprobarZonaStalker(posRaton))
+                    return;
+
                 if (!ComprobarDibujoProhibido(posRaton))
                 {
                     if (!estaDibujando)
@@ -270,11 +278,7 @@ public class ControladorRotulador : MonoBehaviour
                     {
                         ContinuarTrazo(posRaton, examenTocado.transform);
 
-                        // NUEVO: Comprobamos si el boli está pasando por encima de la firma
-                        if (ObtenerObjetoTocado(posRaton, "FirmaStalker") != null)
-                        {
-                            tocandoFirma = true;
-                        }
+
                     }
                 }
             }
@@ -283,32 +287,34 @@ public class ControladorRotulador : MonoBehaviour
                 CortarTrazo();
             }
         }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            // NUEVO: Al soltar el clic, revisamos si hemos firmado con la Stalker
-            if (estaDibujando && tocandoFirma)
-            {
-                if (director != null)
-                {
-                    SoltarBoli(); // Quitamos el boli de la mano
-                    director.haFirmadoStalker = true;
 
-                    if (director.alumnoActual != null)
-                    {
-                        director.alumnoActual.examenCalificado = true;
-                    }
-                }
-            }
-
-            tocandoFirma = false; // Reseteamos la trampa de la firma
-            CortarTrazo();
-        }
 
         // CLIC DERECHO
         if (Input.GetMouseButtonDown(1))
         {
             SoltarTodo();
         }
+    }
+
+    // CAMBIO: detecta la zona especial del examen de Stalker.
+    bool ComprobarZonaStalker(Vector2 pos)
+    {
+        GameObject zonaTocada = ObtenerObjetoTocado(pos, "ZonaStalker");
+
+        if (zonaTocada != null)
+        {
+            ScriptDias director = FindFirstObjectByType<ScriptDias>();
+
+            if (director != null)
+            {
+                director.ActivarReaccionZonaStalker();
+            }
+
+            CortarTrazo();
+            return true;
+        }
+
+        return false;
     }
 
     bool ComprobarDibujoProhibido(Vector2 pos)

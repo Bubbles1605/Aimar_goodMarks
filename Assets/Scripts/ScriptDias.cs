@@ -13,6 +13,10 @@ public class ScriptDias : MonoBehaviour
     public ScriptAlumno negrete;
     public ScriptAlumno gordete;
     public ScriptAlumno mewing;
+    public ScriptAlumno padreLista;
+
+    [Header("Padre de la Listilla")]
+    public int diecesRepelente = 0;
 
     [Header("Sonidos")]
     public AudioClip entrar_niño;
@@ -31,11 +35,13 @@ public class ScriptDias : MonoBehaviour
     private bool yaPenalizadoHoy = false;
 
     [Header("Control del Tiempo")]
-    public int diaActual = 1; // El director guardará aquí en qué día estamos
+    public int diaActual = 1;
 
     [Header("Transición de Días")]
     public GameObject objetoCartelDias;
-    public float duracionCartel = 3f;   // Los segundos que dura la animación en pantalla
+    public float duracionCartel = 3f;
+
+
 
     [Header("Textos Día 1 - Basicote")]
     public string[] dialogoPresentacionBasicote = { "..." };
@@ -50,6 +56,10 @@ public class ScriptDias : MonoBehaviour
     public string[] brainrotReaccionFeliz = { "¡GYAAAAAT! Eres el GOAT." };
     public string[] brainrotReaccionEnfadado = { "Ya sabía yo que das mucho cringe." };
     public string[] brainrotReaccionTriste = { "Bro really said suspenso. -1000 de aura." };
+    public string[] dialogoDia3Brainrot_molesto = { "Hola profe, tung tung está enfadadillo", "Pero no te preocupes porque yo pienso que eres un skibidi con aura." };
+    public string[] dialogoDia3Brainrot = { "Skibidi profe, estudié este examen chateando con mis amigos ingleses por ronblon. " };
+    public string[] dialogoDia3Brainrot_enfadado = { "Ayer volviste a tocar a tung tung. Último aviso. No lo hagas." };
+    
 
     [Header("Textos - Listilla")]
     public string[] dialogoPresentacionListilla = { "Buenos días, profesor Mark.", "Espero mi merecido diez." };
@@ -87,7 +97,7 @@ public class ScriptDias : MonoBehaviour
     public Vector2 posicionManzanaMesa;
 
     [Header("Pantalla de Muerte / Game Over")]
-    public GameObject panelPantallaMuerte; // El panel general con Reintentar / Menú
+    public GameObject panelPantallaMuerte;
 
     [Header("Variables varias")]
     public int nota = 0;
@@ -95,8 +105,17 @@ public class ScriptDias : MonoBehaviour
     public string[] opcionesSiNo = { "Sí", "No" };
     public bool estoyEmbelesado = false;
 
-    // NUEVO: Variable para saber si el jugador ha firmado con el rotulador
-    public bool haFirmadoStalker = false;
+    [Header("Pregunta de Basicote - Día 2")]
+    public int decisionBasicoteDia2 = -1;
+    public string[] opcionesBasicoteDia2 =
+    {
+    "Opción A",
+    "Opción B"
+    };
+
+    // Variable para saber si el jugador ha firmado en la zona de la Stalker
+
+    private bool reaccionZonaStalkerActivada = false;
 
     void Start()
     {
@@ -131,19 +150,15 @@ public class ScriptDias : MonoBehaviour
                 {
                     if (alumnoActual != null && !dialogoEnCurso && !esperandoRespuesta)
                     {
-                        // 1. Creamos una caja vacía para guardar la lista correcta
                         string[] frasesQueToca = null;
 
-                        // 2. El Director mira qué día es y coge la lista correspondiente del alumno
                         if (diaActual == 1) frasesQueToca = alumnoActual.frasesGenericasDia1;
                         else if (diaActual == 2) frasesQueToca = alumnoActual.frasesGenericasDia2;
                         else if (diaActual == 3) frasesQueToca = alumnoActual.frasesGenericasDia3;
                         else if (diaActual == 4) frasesQueToca = alumnoActual.frasesGenericasDia4;
 
-                        // 3. SEGURIDAD: Comprobamos que hayas escrito algo en esa lista en el Inspector
                         if (frasesQueToca != null && frasesQueToca.Length > 0)
                         {
-                            // 4. Se la mandamos a la función
                             StartCoroutine(ManejarDialogo(alumnoActual.DecirAleatorio(frasesQueToca)));
                         }
                     }
@@ -157,9 +172,6 @@ public class ScriptDias : MonoBehaviour
     public IEnumerator SecuenciaDia1()
     {
         diaActual = 1;
-        // ==========================================
-        // TURNO 1: BASICOTE
-        // ==========================================
         alumnoActual = basicote;
         basicote.gameObject.SetActive(true);
         if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
@@ -210,9 +222,7 @@ public class ScriptDias : MonoBehaviour
         basicote.gameObject.SetActive(false);
         yield return new WaitForSeconds(1f);
 
-        // ==========================================
-        // TURNO 2: BRAINROT
-        // ==========================================
+        // BRAINROT
         if (brainrot != null)
         {
             alumnoActual = brainrot;
@@ -247,9 +257,7 @@ public class ScriptDias : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        // ==========================================
-        // TURNO 3: LISTILLA (REPELENTE)
-        // ==========================================
+        // REPELENTE
         if (repelente != null)
         {
             alumnoActual = repelente;
@@ -261,7 +269,10 @@ public class ScriptDias : MonoBehaviour
             yield return StartCoroutine(repelente.EntregarExamen(1));
 
             nota = repelente.notaRecibida;
-
+            if (nota == 10)
+            {
+                diecesRepelente++;
+            }
             if (nota == 10)
             {
                 repelente.animator.SetTrigger("Feliz");
@@ -285,9 +296,7 @@ public class ScriptDias : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        // ==========================================
-        // TURNO 4: STALKER (LUNA)
-        // ==========================================
+        // STALKER DÍA 1
         if (stalker != null)
         {
             alumnoActual = stalker;
@@ -334,9 +343,7 @@ public class ScriptDias : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        // ==========================================
-        // TURNO 5: NEGRETE
-        // ==========================================
+        // NEGRETE
         if (negrete != null)
         {
             alumnoActual = negrete;
@@ -370,9 +377,7 @@ public class ScriptDias : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        // ==========================================
-        // TURNO 6: GORDETE (CON EJEMPLO DE MUERTE)
-        // ==========================================
+        // GORDETE (CON MUERTE)
         if (gordete != null)
         {
             alumnoActual = gordete;
@@ -386,7 +391,7 @@ public class ScriptDias : MonoBehaviour
 
             yield return StartCoroutine(ManejarPregunta(gordete.Preguntar(opcionesSiNo)));
 
-            if (gordete.respuestaElegida == 0) // Si (Sí)
+            if (gordete.respuestaElegida == 0)
             {
                 GameObject manzanaEnMesa = GameObject.FindWithTag("ManzanaMesa");
                 if (manzanaEnMesa != null)
@@ -396,7 +401,7 @@ public class ScriptDias : MonoBehaviour
                 }
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUE DELICIA.", "Aunque el centro sabía un poco a lente con un ligero toque a batería de litio.", "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
             }
-            else if (gordete.respuestaElegida == 1) // Si (No)
+            else if (gordete.respuestaElegida == 1)
             {
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Pues tu puta madre." }, true)));
                 manzana_comida = false;
@@ -406,14 +411,11 @@ public class ScriptDias : MonoBehaviour
 
             nota = gordete.notaRecibida;
 
-            // ===========================================
-            // AQUÍ LLAMAMOS AL SISTEMA DE MUERTE
-            // ===========================================
             if (nota == 0 && manzana_comida == false)
             {
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¿¡Me has dejado sin comer y encima me pones un cero!?", "Te vas a arrepentir, cabrón." }, false)));
-                yield return StartCoroutine(EjecutarMuerte(gordete)); // ¡Llamada mágica!
-                yield break; // Paramos todo para que el día no siga
+                yield return StartCoroutine(EjecutarMuerte(gordete)); 
+                yield break;
             }
 
             if (nota >= 5)
@@ -437,9 +439,7 @@ public class ScriptDias : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        // ==========================================
-        // TURNO 7: MEWING
-        // ==========================================
+        // MEWING
         if (mewing != null)
         {
             alumnoActual = mewing;
@@ -454,12 +454,12 @@ public class ScriptDias : MonoBehaviour
 
             yield return StartCoroutine(ManejarPregunta(mewing.Preguntar(opcionesSiNo)));
 
-            if (mewing.respuestaElegida == 0) // Si (Sí)
+            if (mewing.respuestaElegida == 0)
             {
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Todo mi esfuerzo ha dado sus frutos." }, true)));
                 estoyEmbelesado = true;
             }
-            else if (mewing.respuestaElegida == 1) // Si (No)
+            else if (mewing.respuestaElegida == 1)
             {
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Endureceré mis rutinas de looksmaxing al doble de tiempo." }, true)));
                 estoyEmbelesado = false;
@@ -488,14 +488,15 @@ public class ScriptDias : MonoBehaviour
         yield return StartCoroutine(SecuenciaDia2());
     }
 
-    // DÍA 2 ---------------------------
+    // --- DÍA 2 ---
     public IEnumerator SecuenciaDia2()
     {
         diaActual = 2;
+        reaccionZonaStalkerActivada = false;
+        yaPenalizadoHoy = false;
         yield return StartCoroutine(MostrarCartelDia(2));
 
-        // ------- BRAINROT ----------
-
+        // BRAINROT
         alumnoActual = brainrot;
         brainrot.gameObject.SetActive(true);
         if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
@@ -534,8 +535,7 @@ public class ScriptDias : MonoBehaviour
         yield return StartCoroutine(brainrot.Desaparecer());
         brainrot.gameObject.SetActive(false);
 
-        // ------- GORDETE ---------
-
+        // GORDETE
         alumnoActual = gordete;
         gordete.gameObject.SetActive(true);
         if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
@@ -545,7 +545,7 @@ public class ScriptDias : MonoBehaviour
         {
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Hola profe, sigo con un poco de hambre, ¿me darías la manzana?" }, false)));
             yield return StartCoroutine(ManejarPregunta(gordete.Preguntar(opcionesSiNo)));
-            if (gordete.respuestaElegida == 0) // Si (Sí)
+            if (gordete.respuestaElegida == 0)
             {
                 GameObject manzanaEnMesa = GameObject.FindWithTag("ManzanaMesa");
                 if (manzanaEnMesa != null)
@@ -554,9 +554,8 @@ public class ScriptDias : MonoBehaviour
                     manzana_comida = true;
                 }
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUE DELICIA.", "Aunque el centro sabía un poco a lente con un ligero toque a batería de litio.", "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
-
             }
-            else if (gordete.respuestaElegida == 1) // Si (No)
+            else if (gordete.respuestaElegida == 1)
             {
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Tú verás, cara de rosquilla." }, true)));
             }
@@ -588,8 +587,7 @@ public class ScriptDias : MonoBehaviour
         yield return StartCoroutine(gordete.Desaparecer());
         gordete.gameObject.SetActive(false);
 
-        // ------ NEGRETE -------
-
+        // NEGRETE
         alumnoActual = negrete;
         negrete.gameObject.SetActive(true);
         if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
@@ -603,19 +601,18 @@ public class ScriptDias : MonoBehaviour
         if (nota < 5)
         {
             negrete.animator.SetTrigger("Triste");
-            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Jolines, es que no quería." }, true)));
+            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Jolines, es que no quería." }, true)));
         }
         else
         {
-            gordete.animator.SetTrigger("Feliz");
-            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "No tienes ni idea de corregir, ¡qué bien!" }, true)));
+            negrete.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "No tienes ni idea de corregir, ¡qué bien!" }, true)));
         }
 
         yield return StartCoroutine(negrete.Desaparecer());
         negrete.gameObject.SetActive(false);
 
-        // ------- MEWING --------
-
+        // MEWING
         alumnoActual = mewing;
         mewing.gameObject.SetActive(true);
         mewing.animator.SetInteger("Dia", 2);
@@ -624,16 +621,16 @@ public class ScriptDias : MonoBehaviour
 
         if (estoyEmbelesado == true)
         {
-            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Hola profe, gracias al nuevo entrenamiento he conseguido estos rasgos perfectos." }, true)));
-            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "¿Dirías que ahora estás aún más hipnotizado por mi belleza?" }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola profe, gracias al nuevo entrenamiento he conseguido estos rasgos perfectos." }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¿Dirías que ahora estás aún más hipnotizado por mi belleza?" }, true)));
             yield return StartCoroutine(ManejarPregunta(mewing.Preguntar(opcionesSiNo)));
 
-            if (mewing.respuestaElegida == 0) // Si (Sí)
+            if (mewing.respuestaElegida == 0)
             {
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¡BIEN, BIEN! He de seguir así." }, true)));
                 estoyEmbelesado = true;
             }
-            else if (mewing.respuestaElegida == 1) // Si (No)
+            else if (mewing.respuestaElegida == 1)
             {
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Endureceré mis rutinas de looksmaxing al doble de tiempo." }, true)));
                 estoyEmbelesado = false;
@@ -641,16 +638,16 @@ public class ScriptDias : MonoBehaviour
         }
         else
         {
-            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Hola de nuevo, profe." }, true)));
-            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "¿Dirías que ahora te hipnotiza mi belleza?" }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola de nuevo, profe." }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¿Dirías que ahora te hipnotiza mi belleza?" }, true)));
             yield return StartCoroutine(ManejarPregunta(mewing.Preguntar(opcionesSiNo)));
 
-            if (mewing.respuestaElegida == 0) // Si (Sí)
+            if (mewing.respuestaElegida == 0)
             {
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Todo mi esfuerzo está dando sus frutos." }, true)));
                 estoyEmbelesado = true;
             }
-            else if (mewing.respuestaElegida == 1) // Si (No)
+            else if (mewing.respuestaElegida == 1)
             {
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Endureceré mis rutinas de looksmaxing al triple de tiempo." }, true)));
                 estoyEmbelesado = false;
@@ -658,7 +655,6 @@ public class ScriptDias : MonoBehaviour
         }
 
         yield return StartCoroutine(mewing.EntregarExamen(2));
-
         nota = mewing.notaRecibida;
 
         if (nota >= 5)
@@ -673,42 +669,469 @@ public class ScriptDias : MonoBehaviour
         yield return StartCoroutine(mewing.Desaparecer());
         mewing.gameObject.SetActive(false);
 
-
-        // ------- STALKER --------
-
+        // ------- STALKER
         alumnoActual = stalker;
         stalker.gameObject.SetActive(true);
-        stalker.animator.SetInteger("Dia", 2);
-        if (entrar_niña != null) audioSource.PlayOneShot(entrar_niña, 5f);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
         yield return StartCoroutine(stalker.Aparecer());
 
-        yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Hola Mark, Luía Fernanda me ha pedido que recoja firmas.", "No te preocupes, no es para nada malo, sólo falta la tuya." }, true)));
+        yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Hola profe, Lucia Fernanda me ha pedido que recoja firmas." }, true)));
 
         yield return StartCoroutine(stalker.EntregarExamen(2));
-
-        // NUEVO: Verificamos si la Stalker te mata porque has firmado
-        if (haFirmadoStalker)
-        {
-            yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Me acabas de vender tu alma." }, false)));
-            yield return StartCoroutine(EjecutarMuerte(stalker)); // ¡Llamada mágica!
-            yield break; // Paramos todo para que el día no siga
-        }
-
         nota = stalker.notaRecibida;
-
+      
         if (nota < 5)
         {
-            negrete.animator.SetTrigger("Triste");
-            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Jolines, es que no quería." }, true)));
+            stalker.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "mejoraré por ti." }, true)));
+        }
+        else
+        {
+            stalker.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Me gusta que me pongas buena nota." }, true)));
+        }
+
+        yield return StartCoroutine(stalker.Desaparecer());
+        stalker.gameObject.SetActive(false);
+        // ------- BASICOTE DÍA 2 -------
+        alumnoActual = basicote;
+        basicote.gameObject.SetActive(true);
+
+        if (entrar_niño != null)
+        {
+            audioSource.PlayOneShot(entrar_niño, 5f);
+        }
+
+        yield return StartCoroutine(basicote.Aparecer());
+
+        // Diálogo inicial de Basicote.
+        yield return StartCoroutine(
+            ManejarDialogo(basicote.Decir(new string[] { "Hola profe, que prefieres…" }, true)));
+
+        // Pregunta de Basicote.
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[PREGUNTA QUE HACE BASICOTE]" }, true)));
+
+        // Mostramos las opciones y esperamos la respuesta.
+        yield return StartCoroutine(
+            ManejarPregunta(
+                basicote.Preguntar(opcionesBasicoteDia2)
+            )
+        );
+
+        // Guardamos la elección en nuestra propia variable.
+        decisionBasicoteDia2 = basicote.respuestaElegida;
+
+        // Reaccionamos según la opción elegida.
+        if (decisionBasicoteDia2 == 0)
+        { yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[RESPUESTA DE BASICOTE A LA OPCIÓN A]" }, true))); }
+        else if (decisionBasicoteDia2 == 1)
+        {
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[RESPUESTA DE BASICOTE A LA OPCIÓN B]" }, true)));
+        }
+
+        yield return StartCoroutine(basicote.EntregarExamen(2));
+        nota = basicote.notaRecibida;
+
+        if (nota < 4)
+        {
+            basicote.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Le voy a decir Aitor que te muerda los cojones." }, true)));
+        }
+        else if (nota == 4)
+        {
+            basicote.animator.SetTrigger("Enfadado");
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Gilipollas." }, true)));
+        }
+        else
+        {
+            basicote.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Suuuuuuu." }, true)));
+        }
+
+
+        // Basicote termina su turno.
+        yield return StartCoroutine(basicote.Desaparecer());
+        basicote.gameObject.SetActive(false);
+
+        // ------- Lista 
+        alumnoActual = repelente;
+        repelente.gameObject.SetActive(true);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(repelente.Aparecer());
+
+        yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "Buenos días señor Mark. este examen debe de puntuarse con un diez." }, true)));
+
+        yield return StartCoroutine(repelente.EntregarExamen(2));
+        nota = repelente.notaRecibida;
+        if (nota == 10)
+        {
+            diecesRepelente++;
+        }
+        if (nota == 10)
+        {
+            repelente.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "Ya me lo esperaba.\r\n" }, true)));
+        }
+        else if (nota < 10||  nota > 4)
+        {
+            
+                repelente.animator.SetTrigger("Enfadado");
+                yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "¿PERDONA? El examen está perfecto." }, true)));
+            
+        }
+        else
+        {
+            repelente.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "¿COMO? Atente a las consecuencias." }, true)));
+        }
+
+            yield return StartCoroutine(repelente.Desaparecer());
+        repelente.gameObject.SetActive(false);
+    }
+    public IEnumerator SecuenciaDia3()
+    {
+        diaActual = 3;
+        reaccionZonaStalkerActivada = false;
+        yaPenalizadoHoy = false;
+        yield return StartCoroutine(MostrarCartelDia(3));
+
+
+        // ------- STALKER
+        alumnoActual = stalker;
+        stalker.gameObject.SetActive(true);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(stalker.Aparecer());
+
+        yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Lucía Fernanda me ha dicho que ayer no firmaste. Está un poco triste." }, true)));
+        yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Espero que te guste la sorpresa del examen de hoy." }, true)));
+
+        yield return StartCoroutine(stalker.EntregarExamen(3));
+        nota = stalker.notaRecibida;
+
+        if (nota < 4)
+        {
+            stalker.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Ya veo que no te ha gustado la sorpresa" }, true)));
+        }
+        else if (nota == 4 || nota == 5)
+        {
+            stalker.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Cuidado con lo que haces, no es una amenaza es un aviso." }, true)));
+        }
+        else
+        {
+            stalker.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Mañana te haré otra sorpresa si te ha gustado tanto." }, true)));
+        }
+
+        yield return StartCoroutine(stalker.Desaparecer());
+        stalker.gameObject.SetActive(false);
+
+        // GORDETE
+        alumnoActual = gordete;
+        gordete.gameObject.SetActive(true);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(gordete.Aparecer());
+
+        if (manzana_comida == false)
+        {
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Hola profe, sigo con un poco de hambre, ¿me darías la manzana?" }, false)));
+            yield return StartCoroutine(ManejarPregunta(gordete.Preguntar(opcionesSiNo)));
+            if (gordete.respuestaElegida == 0)
+            {
+                GameObject manzanaEnMesa = GameObject.FindWithTag("ManzanaMesa");
+                if (manzanaEnMesa != null)
+                {
+                    Destroy(manzanaEnMesa);
+                    manzana_comida = true;
+                }
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUE DELICIA.", "Aunque el centro sabía un poco a lente con un ligero toque a batería de litio.", "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
+            }
+            else if (gordete.respuestaElegida == 1)
+            {
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Tú verás, cara de rosquilla." }, true)));
+            }
+        }
+        else
+        {
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Hola profe, la manzana de ayer me sentó un poco mal.", "Cagué un objetivo Canon EF de cincuenta milímetros de longitud y uno coma ocho milímetros de apertura.", "No salió fácilmente." }, true)));
+        }
+
+        yield return StartCoroutine(gordete.EntregarExamen(3));
+        nota = gordete.notaRecibida;
+
+        if (nota == 4 || nota == 3)
+        {
+            gordete.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Si mi mamá se entera me deja sin la cuarta merienda." }, true)));
+        }
+        else if (nota < 4)
+        {
+            gordete.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(gordeteReaccionEnfadado, true)));
         }
         else
         {
             gordete.animator.SetTrigger("Feliz");
-            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "No tienes ni idea de corregir, ¡qué bien!" }, true)));
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¡¡QUÉ BIEN!! Hoy me daré un caprichito." }, true)));
+        }
+
+        yield return StartCoroutine(gordete.Desaparecer());
+        gordete.gameObject.SetActive(false);
+        // ------- BASICOTE
+        alumnoActual = basicote;
+        basicote.gameObject.SetActive(true);
+
+        if (entrar_niño != null) { audioSource.PlayOneShot(entrar_niño, 5f); }
+
+        yield return StartCoroutine(basicote.Aparecer());
+
+        // Diálogo inicial de Basicote.
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[DIÁLOGO INICIAL DE BASICOTE]" }, true)));
+
+        // Pregunta de Basicote.
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[PREGUNTA QUE HACE BASICOTE]" }, true)));
+
+        // Opciones de respuesta.
+        yield return StartCoroutine(ManejarPregunta(basicote.Preguntar(new string[] { "[OPCIÓN A]", "[OPCIÓN B]" })));
+
+        // Reacción según la respuesta elegida.
+        if (basicote.respuestaElegida == 0)
+        {
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[RESPUESTA DE BASICOTE A LA OPCIÓN A]" }, true)));
+        }
+        else if (basicote.respuestaElegida == 1)
+        {
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[RESPUESTA DE BASICOTE A LA OPCIÓN B]" }, true)));
+        }
+        yield return StartCoroutine(basicote.EntregarExamen(3));
+        nota = stalker.notaRecibida;
+        if (nota < 4)
+        {
+            basicote.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Vete a toMark por culo." }, true)));
+        }
+        else if (nota == 4)
+        {
+            basicote.animator.SetTrigger("Enfadado");
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Sabes puto inglés?" }, true)));
+        }
+        else
+        {
+            basicote.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "VAMOS JODEEER" }, true)));
+        }
+
+
+        // Basicote termina su turno.
+        yield return StartCoroutine(basicote.Desaparecer());
+        basicote.gameObject.SetActive(false);
+
+        // MEWING
+        alumnoActual = mewing;
+        mewing.gameObject.SetActive(true);
+        mewing.animator.SetInteger("Dia", 2);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(mewing.Aparecer());
+
+        if (estoyEmbelesado == true)
+        {
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola profe, gracias al nuevo entrenamiento he conseguido estos rasgos perfectos." }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¿Dirías que ahora estás aún más hipnotizado por mi belleza?" }, true)));
+            yield return StartCoroutine(ManejarPregunta(mewing.Preguntar(opcionesSiNo)));
+
+            if (mewing.respuestaElegida == 0)
+            {
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¡BIEN, BIEN! He de seguir así." }, true)));
+                estoyEmbelesado = true;
+            }
+            else if (mewing.respuestaElegida == 1)
+            {
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Endureceré mis rutinas de looksmaxing al doble de tiempo." }, true)));
+                estoyEmbelesado = false;
+            }
+        }
+        else
+        {
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola de nuevo, profe." }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¿Dirías que ahora te hipnotiza mi belleza?" }, true)));
+            yield return StartCoroutine(ManejarPregunta(mewing.Preguntar(opcionesSiNo)));
+
+            if (mewing.respuestaElegida == 0)
+            {
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Todo mi esfuerzo está dando sus frutos." }, true)));
+                estoyEmbelesado = true;
+            }
+            else if (mewing.respuestaElegida == 1)
+            {
+                yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Endureceré mis rutinas de looksmaxing al triple de tiempo." }, true)));
+                estoyEmbelesado = false;
+            }
+        }
+
+        yield return StartCoroutine(mewing.EntregarExamen(3));
+        nota = mewing.notaRecibida;
+
+        if (nota >= 5)
+        {
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Gracias, Mark. Si quieres te paso mi rutina." }, true)));
+        }
+        else
+        {
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Gracias profe. Me voy a hacer mi rutina de mewing (Sigue sin importarle nada a parte de su físico)" }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Se ha hecho tarde,no me dará tiempo a grabar tis tos y cumplir las 6 horas de mewing (No parece que le importe la nota)." }, true)));
+        }
+
+        yield return StartCoroutine(mewing.Desaparecer());
+        mewing.gameObject.SetActive(false);
+
+        // ------- Lista 
+        alumnoActual = repelente;
+        repelente.gameObject.SetActive(true);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(repelente.Aparecer());
+
+        yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "Buenos días señor Mark. Recuerde que hoy viene mi padre a una reunión. " }, true)));
+
+        yield return StartCoroutine(repelente.EntregarExamen(3));
+        nota = repelente.notaRecibida;
+        if (nota == 10)
+        {
+            diecesRepelente++;
+        }
+        if (nota == 10)
+        {
+            repelente.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "Mi año viviendo en Gran Bretaña ha dado sus frutos." }, true)));
+        }
+        else if (nota < 10 || nota > 4)
+        {
+
+            repelente.animator.SetTrigger("Enfadado");
+            yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "¿QUÉ? Esta tarde tendrás más que palabras con mi padre." }, true)));
+
+        }
+        else
+        {
+            repelente.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "¿CÓMO? Mi padre va a desintegrarte." }, true)));
+        }
+
+        yield return StartCoroutine(repelente.Desaparecer());
+        repelente.gameObject.SetActive(false);
+
+        // BRAINROT
+        alumnoActual = brainrot;
+        brainrot.gameObject.SetActive(true);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(brainrot.Aparecer());
+
+        int faltas = PlayerPrefs.GetInt("FaltasTungTung", 0);
+
+        if (faltas ==1)
+        {
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(dialogoDia3Brainrot_molesto, false)));
+        }
+        else if(faltas ==2 )
+        {
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(dialogoDia3Brainrot_enfadado, false)));
+        }
+        else
+        {
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(dialogoDia3Brainrot, false)));
+        }
+
+        yield return StartCoroutine(brainrot.EntregarExamen(3));
+        nota = brainrot.notaRecibida;
+
+        if (nota < 4)
+        {
+            brainrot.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Ojalá te baneen en todas las redes sociales." }, false)));
+        }
+        else if (nota == 4 || nota == 3)
+        {
+            brainrot.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Debería haber estudiado viendo tis tos en inglés." }, false)));
+        }
+        else
+        {
+            brainrot.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Holi moly profe, vaya aura de corrección." }, false)));
+        }
+
+        yield return StartCoroutine(brainrot.Desaparecer());
+        brainrot.gameObject.SetActive(false);
+
+        
+
+        // NEGRETE
+        alumnoActual = negrete;
+        negrete.gameObject.SetActive(true);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(negrete.Aparecer());
+
+        yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Hola profe, ¿has visto a mi hámster? Creo que se ha escapado." }, true)));
+
+        yield return StartCoroutine(negrete.EntregarExamen(3));
+        nota = negrete.notaRecibida;
+
+        if (nota < 4)
+        {
+            negrete.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Bua, con lo que me gusta a mí jugar y acariciar a mi car aunque suelte tanto pelo." }, true)));
+        }
+        else if (nota ==3 || nota ==4)
+        {
+            negrete.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Oh no, con lo que me gustan a mí los hauses para merendar." }, true)));
+        }
+        else
+        {
+            negrete.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Sabía que gato y plátano se escribían así, soy la monda." }, true)));
         }
 
         yield return StartCoroutine(negrete.Desaparecer());
         negrete.gameObject.SetActive(false);
+
+        // ------- PADRE DE LA LISTILLA -------
+        
+            alumnoActual = padreLista;
+            padreLista.gameObject.SetActive(true);
+
+            if (entrar_niño != null)
+            {
+                audioSource.PlayOneShot(entrar_niño, 5f);
+            }
+
+            yield return StartCoroutine(padreLista.Aparecer());
+            yield return StartCoroutine(ManejarDialogo(padreLista.Decir(new string[] { "Hola buenos días, soy el padre de Sara. Como ya le comenté vengo a revisar las notas de los últimos exámenes. Sara lleva estudiando desde el año pasado para asegurarse de que saca dieces en todo. ¿Me los podría enseñar?\r\n" }, true)));
+            // El padre reacciona según los dieces conseguidos.
+            switch (diecesRepelente) { case 0:yield return StartCoroutine(ManejarDialogo(padreLista.Decir( new string[]{"Ni un solo dies es usted un incompetente, ya me he cansado."},true)));break;
+
+                case 1:yield return StartCoroutine(ManejarDialogo(padreLista.Decir(new string[]{ "¿Y estos exámenes sin dieces? Sus correcciones son un insulto para mi familia. " },true))); break;
+
+                case 2: yield return StartCoroutine(ManejarDialogo(padreLista.Decir( new string[] { "¿Y esta nota? Todo lo que esté por debajo del 10 es una decepción." },true) ));break;
+
+                case 3:yield return StartCoroutine( ManejarDialogo(padreLista.Decir(new string[]{ "Veo que no es necesario nada más que una enhorabuena por sus clases y los resultados de Sara. Que tenga buen día.\r\n" },true)));break;
+            }
+
+            // Si no tiene los tres dieces, el padre provoca el Game Over.
+            if (diecesRepelente < 3)
+            {
+                yield return StartCoroutine(EjecutarMuerte(padreLista));
+                yield break;
+            }
+
+            // Si tiene los tres dieces, el padre termina su turno sin matarte.
+            yield return StartCoroutine(padreLista.Desaparecer());
+            padreLista.gameObject.SetActive(false);
+        
+
+
+
+
     }
 
     private void ForzarSoltarHerramientas()
@@ -748,39 +1171,36 @@ public class ScriptDias : MonoBehaviour
         }
     }
 
+  
+
     // =========================================================
     // SISTEMA MAESTRO DE MUERTES
     // =========================================================
     public IEnumerator EjecutarMuerte(ScriptAlumno asesino)
     {
-        GameObject panelAsesino = null; // Variable para guardar el panel
+        GameObject panelAsesino = null;
 
         if (asesino != null)
         {
-            panelAsesino = asesino.panelMuerte; // Lo guardamos antes de destruir al niño
+            panelAsesino = asesino.panelMuerte;
 
-            asesino.DesplegarPanelMuerte();
-            float tiempoEspera = asesino.duracionAnimacionMuerte;
+            asesino.DesplegarPanelMuerte(); 
+            float tiempoEspera = asesino.duracionAnimacionMuerte; 
 
-            Destroy(asesino.gameObject);
+            Destroy(asesino.gameObject); 
             alumnoActual = null;
 
-            yield return new WaitForSeconds(tiempoEspera);
+            yield return new WaitForSeconds(tiempoEspera); 
         }
 
-        // 5. Apagamos el panel del niño para que no bloquee los clics
         if (panelAsesino != null)
         {
             panelAsesino.SetActive(false);
         }
 
-        // 6. Sacamos el panel de Game Over y congelamos el tiempo
-        ActivarPantallaMuerte();
+        ActivarPantallaMuerte(); 
     }
 
-
-
-    // --- SISTEMA DE INFRACCIONES DE MARK ---
     public void PenalizarDibujo()
     {
         if (dialogoEnCurso || alumnoActual == null) return;
@@ -799,10 +1219,7 @@ public class ScriptDias : MonoBehaviour
         if (faltas >= 3)
         {
             StartCoroutine(ManejarDialogo(alumnoActual.Decir(new string[] { "TÚ TE LO HAS BUSCADO.", "HAS INTENTADO DESTROZAR A TUNG-TUNG TRES VECES.", "AHORA SUFRIRÁS SU IRA." }, false)));
-
-            // Si el Tung-Tung te mata, puedes llamar a la muerte de Stalker, por ejemplo:
-            // StartCoroutine(EjecutarMuerte(stalker));
-            ActivarPantallaMuerte();
+            StartCoroutine(EjecutarMuerte(brainrot));
         }
         else if (faltas == 2)
         {
@@ -814,12 +1231,34 @@ public class ScriptDias : MonoBehaviour
         }
     }
 
-    // --- FUNCIONES DE MUERTE Y ESCENAS ---
+    // Muerte de Stalker al tocar su zona especial.
+    public void ActivarReaccionZonaStalker()
+    {
+        // Solo funciona durante el día 2.
+        if (diaActual != 2) return;
+
+        // Stalker debe ser el alumno actual.
+        if (alumnoActual != stalker) return;
+
+        if (stalker == null || !stalker.gameObject.activeInHierarchy)
+            return;
+
+        // Evita activar la muerte varias veces.
+        if (reaccionZonaStalkerActivada) return;
+
+        // No interrumpimos otros diálogos o preguntas.
+        if (dialogoEnCurso || esperandoRespuesta) return;
+
+        // Marcamos la muerte como activada.
+        reaccionZonaStalkerActivada = true;
+
+        // Ejecutamos el sistema de muerte existente.
+        StartCoroutine(EjecutarMuerte(stalker));
+    }
     public void ActivarPantallaMuerte()
     {
         if (panelPantallaMuerte != null)
         {
-            // 1. Encendemos el panel
             panelPantallaMuerte.SetActive(true);
         }
     }
