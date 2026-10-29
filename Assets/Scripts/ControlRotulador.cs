@@ -70,6 +70,8 @@ public class ControladorRotulador : MonoBehaviour
 
     void Update()
     {
+
+        if (Time.timeScale == 0f) return;
         Vector2 posRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         ScriptDias director = FindFirstObjectByType<ScriptDias>();

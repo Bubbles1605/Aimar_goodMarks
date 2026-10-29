@@ -209,11 +209,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4304
-        width: 9
-        height: 16
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -230,12 +230,12 @@ TextureImporter:
       name: dia_2_1
       rect:
         serializedVersion: 2
-        x: 1919
-        y: 4304
-        width: 10
-        height: 16
+        x: 1920
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: dia_2_2
       rect:
         serializedVersion: 2
-        x: 3839
-        y: 4304
-        width: 10
-        height: 16
+        x: 3840
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -274,12 +274,12 @@ TextureImporter:
       name: dia_2_3
       rect:
         serializedVersion: 2
-        x: 5759
-        y: 4304
-        width: 10
-        height: 16
+        x: 5760
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -296,12 +296,12 @@ TextureImporter:
       name: dia_2_4
       rect:
         serializedVersion: 2
-        x: 7679
-        y: 4304
-        width: 10
-        height: 16
+        x: 7680
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -319,11 +319,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3532
-        width: 1023
-        height: 12
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -340,12 +340,12 @@ TextureImporter:
       name: dia_2_6
       rect:
         serializedVersion: 2
-        x: 1919
-        y: 3532
-        width: 1024
-        height: 53
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -362,12 +362,12 @@ TextureImporter:
       name: dia_2_7
       rect:
         serializedVersion: 2
-        x: 3839
-        y: 3532
-        width: 1024
-        height: 152
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -384,12 +384,12 @@ TextureImporter:
       name: dia_2_8
       rect:
         serializedVersion: 2
-        x: 5759
-        y: 3532
-        width: 1024
-        height: 337
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -406,12 +406,12 @@ TextureImporter:
       name: dia_2_9
       rect:
         serializedVersion: 2
-        x: 7679
-        y: 3532
-        width: 1024
-        height: 462
+        x: 7680
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -429,11 +429,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3224
-        width: 9
-        height: 17
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -450,12 +450,12 @@ TextureImporter:
       name: dia_2_11
       rect:
         serializedVersion: 2
-        x: 1919
-        y: 3224
-        width: 10
-        height: 17
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -472,12 +472,12 @@ TextureImporter:
       name: dia_2_12
       rect:
         serializedVersion: 2
-        x: 3839
-        y: 3224
-        width: 10
-        height: 17
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -494,12 +494,12 @@ TextureImporter:
       name: dia_2_13
       rect:
         serializedVersion: 2
-        x: 5759
-        y: 3224
-        width: 10
-        height: 17
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -516,12 +516,12 @@ TextureImporter:
       name: dia_2_14
       rect:
         serializedVersion: 2
-        x: 7679
-        y: 3224
-        width: 10
-        height: 17
+        x: 7680
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -539,11 +539,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2452
-        width: 1023
-        height: 491
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -560,12 +560,12 @@ TextureImporter:
       name: dia_2_16
       rect:
         serializedVersion: 2
-        x: 1919
-        y: 2452
-        width: 1024
-        height: 574
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -582,12 +582,12 @@ TextureImporter:
       name: dia_2_17
       rect:
         serializedVersion: 2
-        x: 3839
-        y: 2452
-        width: 1024
-        height: 622
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -600,407 +600,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: dia_2_18
-      rect:
-        serializedVersion: 2
-        x: 5759
-        y: 2452
-        width: 1024
-        height: 622
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 49ca1dbfd9a477020800000000000000
-      internalID: 2339420573837405332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_19
-      rect:
-        serializedVersion: 2
-        x: 7679
-        y: 2452
-        width: 1024
-        height: 622
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79671fe2aba1d1950800000000000000
-      internalID: 6421318030654011031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_20
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2144
-        width: 9
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6750462952b08fec0800000000000000
-      internalID: -3533061651674430090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_21
-      rect:
-        serializedVersion: 2
-        x: 1919
-        y: 2144
-        width: 10
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b8adc5e374548dc10800000000000000
-      internalID: 2078487400322751115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_22
-      rect:
-        serializedVersion: 2
-        x: 3839
-        y: 2144
-        width: 10
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4da2b310ed65722d0800000000000000
-      internalID: -3303576290149586220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_23
-      rect:
-        serializedVersion: 2
-        x: 5759
-        y: 2144
-        width: 10
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1061916ac41c7060800000000000000
-      internalID: 6952454784206069787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_24
-      rect:
-        serializedVersion: 2
-        x: 7679
-        y: 2144
-        width: 10
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7bc8c89d4d0db10a0800000000000000
-      internalID: -6909699590668383049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_25
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1372
-        width: 1023
-        height: 622
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 106410d584b223d00800000000000000
-      internalID: 950870061126600193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_26
-      rect:
-        serializedVersion: 2
-        x: 1919
-        y: 1372
-        width: 1024
-        height: 574
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 770f6569c115141d0800000000000000
-      internalID: -3368321863073206153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_27
-      rect:
-        serializedVersion: 2
-        x: 3839
-        y: 1372
-        width: 1024
-        height: 491
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7d20054a8ac21830800000000000000
-      internalID: 4040514510916693370
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_28
-      rect:
-        serializedVersion: 2
-        x: 5759
-        y: 1372
-        width: 1024
-        height: 462
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 918ae30b0f98fbd30800000000000000
-      internalID: 4449426623707392025
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_29
-      rect:
-        serializedVersion: 2
-        x: 7679
-        y: 1372
-        width: 1024
-        height: 337
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 39405d262905d46d0800000000000000
-      internalID: -3004656786732677997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_30
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1064
-        width: 9
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1bba0262fede88e70800000000000000
-      internalID: 9117799057004211121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_31
-      rect:
-        serializedVersion: 2
-        x: 1919
-        y: 1064
-        width: 10
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1618807c0be66fa0800000000000000
-      internalID: -5807696230787574242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_32
-      rect:
-        serializedVersion: 2
-        x: 3839
-        y: 1064
-        width: 10
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d19f09a6a8bfc580800000000000000
-      internalID: -8804615720545578544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_33
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 292
-        width: 1023
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 060f675058b71d690800000000000000
-      internalID: -7579140886635286432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_34
-      rect:
-        serializedVersion: 2
-        x: 1919
-        y: 292
-        width: 1024
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acc8c052b8da47f70800000000000000
-      internalID: 9184156353248922826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dia_2_35
-      rect:
-        serializedVersion: 2
-        x: 3839
-        y: 292
-        width: 1024
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a9ef904d099caaaf0800000000000000
-      internalID: -384273194316857702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4a6be8b944e8725438cf0bcb08fb0a65
     internalID: 0
     vertices: []
     indices: 
@@ -1008,7 +612,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":4.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       dia_2_0: -5909978095860750158
       dia_2_1: -5614950563090135620
@@ -1020,26 +626,8 @@ TextureImporter:
       dia_2_15: 3956970501144541702
       dia_2_16: -6423443951623763966
       dia_2_17: 1167074949308055306
-      dia_2_18: 2339420573837405332
-      dia_2_19: 6421318030654011031
       dia_2_2: 356778536564243660
-      dia_2_20: -3533061651674430090
-      dia_2_21: 2078487400322751115
-      dia_2_22: -3303576290149586220
-      dia_2_23: 6952454784206069787
-      dia_2_24: -6909699590668383049
-      dia_2_25: 950870061126600193
-      dia_2_26: -3368321863073206153
-      dia_2_27: 4040514510916693370
-      dia_2_28: 4449426623707392025
-      dia_2_29: -3004656786732677997
       dia_2_3: -3605234752252309804
-      dia_2_30: 9117799057004211121
-      dia_2_31: -5807696230787574242
-      dia_2_32: -8804615720545578544
-      dia_2_33: -7579140886635286432
-      dia_2_34: 9184156353248922826
-      dia_2_35: -384273194316857702
       dia_2_4: -1074141120788645203
       dia_2_5: -2826921005161403930
       dia_2_6: -1389606510760606197

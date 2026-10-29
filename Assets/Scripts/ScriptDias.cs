@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScriptDias : MonoBehaviour
 {
-    [Header("Alumnos del Día 1")]
+    [Header("Alumnos")]
     public ScriptAlumno basicote;
     public ScriptAlumno brainrot;
     public ScriptAlumno repelente;
@@ -30,8 +30,12 @@ public class ScriptDias : MonoBehaviour
     public bool esperandoRespuesta = false;
     private bool yaPenalizadoHoy = false;
 
-    [Header("Configuración de Cursores")]
-    public Texture2D cursorManita;
+    [Header("Control del Tiempo")]
+    public int diaActual = 1; // El director guardará aquí en qué día estamos
+
+    [Header("Transición de Días")]
+    public GameObject objetoCartelDias;
+    public float duracionCartel = 3f;   // Los segundos que dura la animación en pantalla
 
     [Header("Textos Día 1 - Basicote")]
     public string[] dialogoPresentacionBasicote = { "..." };
@@ -39,38 +43,40 @@ public class ScriptDias : MonoBehaviour
     public string[] basicoteReaccionEnfadado = { "¿Un suspenso? ¿En serio?", "Vaya asco de corrección." };
     public string[] basicoteReaccionTriste = { "Negrito feo" };
 
-    [Header("Textos Día 1 - Brainrot")]
+    [Header("Textos - Brainrot")]
     public string[] dialogoPresentacionBrainrot = { "Skibidi toilet profe.", "¿Ese examen es W o L?" };
+    public string[] dialogoDia2Brainrot_molesto = { "Hola profe, tung tung está enfadadillo", "Pero no te preocupes porque yo pienso que eres un skibidi con aura." };
+    public string[] dialogoDia2Brainrot = { "Skibidi profe, estuve practicando para el examen escribiendo un montón de comentarios en tis tos." };
     public string[] brainrotReaccionFeliz = { "¡GYAAAAAT! Eres el GOAT." };
     public string[] brainrotReaccionEnfadado = { "Ya sabía yo que das mucho cringe." };
     public string[] brainrotReaccionTriste = { "Bro really said suspenso. -1000 de aura." };
 
-    [Header("Textos Día 1 - Listilla")]
+    [Header("Textos - Listilla")]
     public string[] dialogoPresentacionListilla = { "Buenos días, profesor Mark.", "Espero mi merecido diez." };
     public string[] repelenteReaccion10 = { "Como debe ser.", "Mi padre estará orgulloso." };
     public string[] repelenteReaccionAprobado = { "¿Un triste aprobado?", "Esto es inaceptable." };
     public string[] repelenteReaccionSuspenso = { "¿TÚ SABES QUIÉN ES MI PADRE?", "Estás muerto." };
 
-    [Header("Textos Día 1 - Stalker")]
+    [Header("Textos - Stalker")]
     public string[] dialogoPreManzanaStalker = { "Hola.", "Me llamo Luna.", "Tú eres Mark.", "Toma, para ti. Es una manzana, es para ti y SOLO para ti." };
     public string[] dialogoPostManzanaStalker = { "Ah, ya, mis ejercicios. Toma." };
     public string[] stalker_5 = { "Mejoraré por ti.", "Ya lo verás." };
     public string[] stalker_sonrojada = { "Vaya, muchas gracias." };
     public string[] stalkerSuspenso = { "Mejoraré por ti.", "Ya lo verás." };
 
-    [Header("Textos Día 1 - Negrete")]
+    [Header("Textos - Negrete")]
     public string[] dialogoPresentacionNegrete = { "Epa profe, ya estoy aquí.", "A ver qué nota me cae." };
     public string[] negreteReaccionFeliz = { "¡Toma ya! ¡Ese diez sabe a gloria!" };
     public string[] negreteReaccionEnfadado = { "¿Un aprobado raspado? Me esperaba más de ti." };
     public string[] negreteReaccionTriste = { "Menuda estafa de corrección, tío." };
 
-    [Header("Textos Día 1 - Gordete")]
+    [Header("Textos - Gordete")]
     public string[] dialogoPresentacionGordete = { "Hola." };
     public string[] gordeteReaccionFeliz = { "Me encanta esta nota.", "Me encanta el queso también." };
     public string[] gordeteReaccionEnfadado = { "Esta nota me da ganas de morderte." };
     public string[] gordeteReaccionTriste = { "Esta nota me da arcadas." };
 
-    [Header("Textos Día 1 - Mewing")]
+    [Header("Textos - Mewing")]
     public string[] dialogoPresentacionMewing = { "...", "(Hace el gesto de callar con el dedo en los labios y marca mandíbula)" };
     public string[] mewingReaccionFeliz = { "(Asiente en completo silencio con una pose de gigachad)" };
     public string[] mewingReaccionEnfadado = { "(Mira fijamente con desprecio supremo sin abrir la boca)" };
@@ -82,6 +88,12 @@ public class ScriptDias : MonoBehaviour
 
     [Header("Pantalla de Muerte / Game Over")]
     public GameObject panelPantallaMuerte; // El panel general con Reintentar / Menú
+
+    [Header("Variables varias")]
+    public int nota = 0;
+    public bool manzana_comida = false;
+    public string[] opcionesSiNo = { "Sí", "No" };
+    public bool estoyEmbelesado = false;
 
     void Start()
     {
@@ -97,6 +109,8 @@ public class ScriptDias : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;
+
         if (Input.GetMouseButtonDown(0))
         {
             if (dialogoEnCurso && alumnoActual != null)
@@ -114,7 +128,21 @@ public class ScriptDias : MonoBehaviour
                 {
                     if (alumnoActual != null && !dialogoEnCurso && !esperandoRespuesta)
                     {
-                        StartCoroutine(ManejarDialogo(alumnoActual.DecirAleatorio(alumnoActual.frasesGenericas)));
+                        // 1. Creamos una caja vacía para guardar la lista correcta
+                        string[] frasesQueToca = null;
+
+                        // 2. El Director mira qué día es y coge la lista correspondiente del alumno
+                        if (diaActual == 1) frasesQueToca = alumnoActual.frasesGenericasDia1;
+                        else if (diaActual == 2) frasesQueToca = alumnoActual.frasesGenericasDia2;
+                        else if (diaActual == 3) frasesQueToca = alumnoActual.frasesGenericasDia3;
+                        else if (diaActual == 4) frasesQueToca = alumnoActual.frasesGenericasDia4;
+
+                        // 3. SEGURIDAD: Comprobamos que hayas escrito algo en esa lista en el Inspector
+                        if (frasesQueToca != null && frasesQueToca.Length > 0)
+                        {
+                            // 4. Se la mandamos a la función
+                            StartCoroutine(ManejarDialogo(alumnoActual.DecirAleatorio(frasesQueToca)));
+                        }
                     }
                     break;
                 }
@@ -125,18 +153,18 @@ public class ScriptDias : MonoBehaviour
     // --- EL GUION DEL DÍA 1 ---
     public IEnumerator SecuenciaDia1()
     {
+        diaActual = 1;
         // ==========================================
         // TURNO 1: BASICOTE
         // ==========================================
         alumnoActual = basicote;
+        basicote.gameObject.SetActive(true);
         if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
         yield return StartCoroutine(basicote.Aparecer());
 
         yield return StartCoroutine(ManejarDialogo(basicote.Decir(dialogoPresentacionBasicote, false)));
         yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Te enteras, o qué?" }, false)));
-
-        string[] opcionesSiNo = { "Sí", "No" };
 
         yield return StartCoroutine(ManejarPregunta(basicote.Preguntar(opcionesSiNo)));
 
@@ -149,9 +177,9 @@ public class ScriptDias : MonoBehaviour
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "ME LA SUDA." }, true)));
         }
 
-        yield return StartCoroutine(basicote.EntregarExamen());
+        yield return StartCoroutine(basicote.EntregarExamen(1));
 
-        int nota = basicote.notaRecibida;
+        nota = basicote.notaRecibida;
 
         if (nota >= 5)
         {
@@ -176,7 +204,7 @@ public class ScriptDias : MonoBehaviour
         }
 
         yield return StartCoroutine(basicote.Desaparecer());
-        Destroy(basicote.gameObject);
+        basicote.gameObject.SetActive(false);
         yield return new WaitForSeconds(1f);
 
         // ==========================================
@@ -185,12 +213,13 @@ public class ScriptDias : MonoBehaviour
         if (brainrot != null)
         {
             alumnoActual = brainrot;
+            brainrot.gameObject.SetActive(true);
             yaPenalizadoHoy = false;
             if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
             yield return StartCoroutine(brainrot.Aparecer());
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(dialogoPresentacionBrainrot, false)));
-            yield return StartCoroutine(brainrot.EntregarExamen());
+            yield return StartCoroutine(brainrot.EntregarExamen(1));
 
             nota = brainrot.notaRecibida;
 
@@ -211,7 +240,7 @@ public class ScriptDias : MonoBehaviour
             }
 
             yield return StartCoroutine(brainrot.Desaparecer());
-            Destroy(brainrot.gameObject);
+            brainrot.gameObject.SetActive(false);
             yield return new WaitForSeconds(1f);
         }
 
@@ -221,11 +250,12 @@ public class ScriptDias : MonoBehaviour
         if (repelente != null)
         {
             alumnoActual = repelente;
+            repelente.gameObject.SetActive(true);
             if (entrar_niña != null) audioSource.PlayOneShot(entrar_niña, 5f);
 
             yield return StartCoroutine(repelente.Aparecer());
             yield return StartCoroutine(ManejarDialogo(repelente.Decir(dialogoPresentacionListilla, false)));
-            yield return StartCoroutine(repelente.EntregarExamen());
+            yield return StartCoroutine(repelente.EntregarExamen(1));
 
             nota = repelente.notaRecibida;
 
@@ -248,7 +278,7 @@ public class ScriptDias : MonoBehaviour
             }
 
             yield return StartCoroutine(repelente.Desaparecer());
-            Destroy(repelente.gameObject);
+            repelente.gameObject.SetActive(false);
             yield return new WaitForSeconds(1f);
         }
 
@@ -258,6 +288,7 @@ public class ScriptDias : MonoBehaviour
         if (stalker != null)
         {
             alumnoActual = stalker;
+            stalker.gameObject.SetActive(true);
             if (entrar_niña != null) audioSource.PlayOneShot(entrar_niña, 5f);
 
             yield return StartCoroutine(stalker.Aparecer());
@@ -275,7 +306,7 @@ public class ScriptDias : MonoBehaviour
             }
 
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(dialogoPostManzanaStalker, false)));
-            yield return StartCoroutine(stalker.EntregarExamen());
+            yield return StartCoroutine(stalker.EntregarExamen(1));
 
             nota = stalker.notaRecibida;
 
@@ -296,7 +327,7 @@ public class ScriptDias : MonoBehaviour
             }
 
             yield return StartCoroutine(stalker.Desaparecer());
-            Destroy(stalker.gameObject);
+            stalker.gameObject.SetActive(false);
             yield return new WaitForSeconds(1f);
         }
 
@@ -306,11 +337,12 @@ public class ScriptDias : MonoBehaviour
         if (negrete != null)
         {
             alumnoActual = negrete;
+            negrete.gameObject.SetActive(true);
             if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
             yield return StartCoroutine(negrete.Aparecer());
             yield return StartCoroutine(ManejarDialogo(negrete.Decir(dialogoPresentacionNegrete, false)));
-            yield return StartCoroutine(negrete.EntregarExamen());
+            yield return StartCoroutine(negrete.EntregarExamen(1));
 
             nota = negrete.notaRecibida;
 
@@ -331,7 +363,7 @@ public class ScriptDias : MonoBehaviour
             }
 
             yield return StartCoroutine(negrete.Desaparecer());
-            Destroy(negrete.gameObject);
+            negrete.gameObject.SetActive(false);
             yield return new WaitForSeconds(1f);
         }
 
@@ -341,6 +373,7 @@ public class ScriptDias : MonoBehaviour
         if (gordete != null)
         {
             alumnoActual = gordete;
+            gordete.gameObject.SetActive(true);
             if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
             yield return StartCoroutine(gordete.Aparecer());
@@ -356,22 +389,24 @@ public class ScriptDias : MonoBehaviour
                 if (manzanaEnMesa != null)
                 {
                     Destroy(manzanaEnMesa);
+                    manzana_comida = true;
                 }
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUE DELICIA." , "Aunque el centro sabía un poco a lente con un ligero toque a batería de litio." , "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
             }
             else if (gordete.respuestaElegida == 1) // Si (No)
             {
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Pues tu puta madre." }, true)));
+                manzana_comida = false;
             }
 
-            yield return StartCoroutine(gordete.EntregarExamen());
+            yield return StartCoroutine(gordete.EntregarExamen(1));
 
             nota = gordete.notaRecibida;
 
             // ===========================================
             // AQUÍ LLAMAMOS AL SISTEMA DE MUERTE
             // ===========================================
-            if (nota == 0)
+            if (nota == 0 && manzana_comida == false)
             {
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¿¡Me has dejado sin comer y encima me pones un cero!?", "Te vas a arrepentir, cabrón." }, false)));
                 yield return StartCoroutine(EjecutarMuerte(gordete)); // ¡Llamada mágica!
@@ -385,7 +420,7 @@ public class ScriptDias : MonoBehaviour
             }
             else if (nota == 4)
             {
-                gordete.animator.SetTrigger("Enfadado");
+                gordete.animator.SetTrigger("Triste");
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(gordeteReaccionEnfadado, false)));
             }
             else
@@ -395,7 +430,7 @@ public class ScriptDias : MonoBehaviour
             }
 
             yield return StartCoroutine(gordete.Desaparecer());
-            Destroy(gordete.gameObject);
+            gordete.gameObject.SetActive(false);
             yield return new WaitForSeconds(1f);
         }
 
@@ -405,6 +440,7 @@ public class ScriptDias : MonoBehaviour
         if (mewing != null)
         {
             alumnoActual = mewing;
+            mewing.gameObject.SetActive(true);
             mewing.animator.SetInteger("Dia", 1);
             if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
 
@@ -418,43 +454,173 @@ public class ScriptDias : MonoBehaviour
             if (mewing.respuestaElegida == 0) // Si (Sí)
             {
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Todo mi esfuerzo ha dado sus frutos." }, true)));
+                estoyEmbelesado = true;
             }
             else if (mewing.respuestaElegida == 1) // Si (No)
             {
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Endureceré mis rutinas de looksmaxing al doble de tiempo." }, true)));
+                estoyEmbelesado = false;
             }
 
-            yield return StartCoroutine(mewing.EntregarExamen());
+            yield return StartCoroutine(mewing.EntregarExamen(1));
 
             nota = mewing.notaRecibida;
 
             if (nota >= 5)
             {
-                mewing.animator.SetTrigger("Feliz");
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(mewingReaccionFeliz, false)));
             }
             else if (nota == 4)
             {
-                mewing.animator.SetTrigger("Enfadado");
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(mewingReaccionEnfadado, false)));
             }
             else
             {
-                mewing.animator.SetTrigger("Triste");
                 yield return StartCoroutine(ManejarDialogo(mewing.Decir(mewingReaccionTriste, false)));
             }
 
             yield return StartCoroutine(mewing.Desaparecer());
-            Destroy(mewing.gameObject);
+            mewing.gameObject.SetActive(false);
         }
+        yield return StartCoroutine(SecuenciaDia2());
     }
 
     // DÍA 2 ---------------------------
+    public IEnumerator SecuenciaDia2()
+    {
+        diaActual = 2;
+        yield return StartCoroutine(MostrarCartelDia(2));
+
+        // ------- BRAINROT ----------
+
+        alumnoActual = brainrot;
+        brainrot.gameObject.SetActive(true);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(brainrot.Aparecer());
+
+        int faltas = PlayerPrefs.GetInt("FaltasTungTung", 0);
+
+        if (faltas > 0)
+        {
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(dialogoDia2Brainrot_molesto, false)));
+        } else
+        {
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(dialogoDia2Brainrot, false)));
+        }
+
+        yield return StartCoroutine(brainrot.EntregarExamen(2));
+        nota = brainrot.notaRecibida;
+
+        if (nota < 4)
+        {
+            brainrot.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Muy poco skibidi de tu parte" }, false)));
+        } else if (nota == 4)
+        {
+            brainrot.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Ojalá te baneen en tis tos" }, false)));
+        } else
+        {
+            brainrot.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Toma jeroma pastillas de goma" }, false)));
+        }
+
+        yield return StartCoroutine(brainrot.Desaparecer());
+        brainrot.gameObject.SetActive(false);
+
+        // ------- GORDETE ---------
+
+        alumnoActual = gordete;
+        gordete.gameObject.SetActive(true);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(gordete.Aparecer());
+
+        if (manzana_comida == false)
+        {
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Hola profe sigo con un poco de hambre, ¿me darías la manzana?" }, false)));
+            yield return StartCoroutine(ManejarPregunta(gordete.Preguntar(opcionesSiNo)));
+            if (gordete.respuestaElegida == 0) // Si (Sí)
+            {
+                GameObject manzanaEnMesa = GameObject.FindWithTag("ManzanaMesa");
+                if (manzanaEnMesa != null)
+                {
+                    Destroy(manzanaEnMesa);
+                    manzana_comida = true;
+                }
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUE DELICIA.", "Aunque el centro sabía un poco a lente con un ligero toque a batería de litio.", "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
+
+            }
+            else if (gordete.respuestaElegida == 1) // Si (No)
+            {
+                yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Tú verás, cara de rosquilla." }, true)));
+            }
+        } else
+        {
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Hola profe, la manzana de ayer me sentó un poco mal.", "Cagué un objetivo Canon EF de cincuenta milímetros de longitud y uno coma ocho milímetros de apertura.", "No salió fácilmente." }, true)));
+        }
+
+        yield return StartCoroutine(gordete.EntregarExamen(2));
+        nota = gordete.notaRecibida;
+
+        if (nota < 4)
+        {
+            gordete.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Si mi mamá se entera me deja sin la cuarta merienda." }, true)));
+        } else if (nota == 4)
+        {
+            gordete.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(basicoteReaccionEnfadado, true)));
+        } else
+        {
+            gordete.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Hoy como en casa el dobleee." }, true)));
+        }
+
+        yield return StartCoroutine(gordete.Desaparecer());
+        gordete.gameObject.SetActive(false);
+
+        // ------ NEGRETE -------
+
+        alumnoActual = negrete;
+        negrete.gameObject.SetActive(true);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(negrete.Aparecer());
+
+        yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Hola profe, te has pasado un poco con el examen de hoy." }, true)));
+
+        yield return StartCoroutine(negrete.EntregarExamen(2));
+        nota = negrete.notaRecibida;
+
+        if (nota < 5)
+        {
+            negrete.animator.SetTrigger("Triste");
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Jopelines, es que no quería." }, true)));
+        }
+        else
+        {
+            gordete.animator.SetTrigger("Feliz");
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "No tienes ni idea de corregir, ¡qué bien!" }, true)));
+        }
+
+        yield return StartCoroutine(negrete.Desaparecer());
+        negrete.gameObject.SetActive(false);
+
+        // ------- MEWING --------
+
+        alumnoActual = mewing;
+        mewing.gameObject.SetActive(true);
+        mewing.animator.SetInteger("Dia", 2);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(mewing.Aparecer());
+
+        if (estoyEmbelesado == true)
+        {
+
+        }
+    }
 
     private void ForzarSoltarHerramientas()
     {
-        Cursor.SetCursor(cursorManita, Vector2.zero, CursorMode.Auto);
-
         ControladorRotulador rotulador = FindFirstObjectByType<ControladorRotulador>();
         if (rotulador != null)
         {
@@ -476,6 +642,18 @@ public class ScriptDias : MonoBehaviour
         esperandoRespuesta = true;
         yield return StartCoroutine(corrutinaPreguntar);
         esperandoRespuesta = false;
+    }
+
+    public IEnumerator MostrarCartelDia(int numeroDia)
+    {
+        if (objetoCartelDias != null)
+        {
+            objetoCartelDias.SetActive(true);
+            yield return null;
+            objetoCartelDias.GetComponent<Animator>().SetInteger("Dia", numeroDia);
+            yield return new WaitForSeconds(duracionCartel);
+            objetoCartelDias.SetActive(false);
+        }
     }
 
     // =========================================================

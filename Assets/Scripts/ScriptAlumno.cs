@@ -22,7 +22,11 @@ public class ScriptAlumno : MonoBehaviour
     public TextMeshProUGUI textoUI;
     public float tiempoPorLetra = 0.05f;
 
-   
+    [Header("Frases al hacerles click")]
+    public string[] frasesGenericasDia1;
+    public string[] frasesGenericasDia2;
+    public string[] frasesGenericasDia3;
+    public string[] frasesGenericasDia4;
 
     [Header("Sistema de Preguntas (NUEVO)")]
     public GameObject prefabBotonRespuesta; // El prefab del botón que hará de opción
@@ -30,8 +34,9 @@ public class ScriptAlumno : MonoBehaviour
     [HideInInspector] public int respuestaElegida = -1; // Guardará qué botón se ha pulsado
     private List<GameObject> botonesInstanciados = new List<GameObject>(); // Lista para borrarlos luego
 
-    [Header("Examen")]
-    public GameObject prefabExamen;
+    [Header("Exámenes por Día")]
+    [Tooltip("Posición 0 = Día 1, Posición 1 = Día 2, etc.")]
+    public GameObject[] prefabsExamenes;
     public float posicionXExamen = 16.15f;
     public float posicionYInicialExamen = 8f;
     public float posicionYFinalExamen = 1.25f;
@@ -101,6 +106,12 @@ public class ScriptAlumno : MonoBehaviour
 
     public IEnumerator Desaparecer()
     {
+        if (botonHablarInstanciado != null)
+        {
+            Destroy(botonHablarInstanciado);
+            botonHablarInstanciado = null;
+        }
+
         Vector3 posicionObjetivo = new Vector3(-4f, posicionYInicial, 0f);
 
         while (Vector3.Distance(transform.position, posicionObjetivo) > 0.01f)
@@ -112,17 +123,29 @@ public class ScriptAlumno : MonoBehaviour
         transform.position = posicionObjetivo;
     }
 
-    public IEnumerator EntregarExamen()
+    public IEnumerator EntregarExamen(int numeroDia)
     {
-        examenCalificado = false; // Lo reseteamos por seguridad al empezar
-        examenEnMesa = false; // Empezamos asumiendo que no está en la mesa
+        examenCalificado = false;
+        examenEnMesa = false;
 
-        if (prefabExamen != null)
+        GameObject prefabElegido = null;
+
+        // Como los Arrays empiezan a contar en 0, el Día 1 es la posición 0.
+        int indiceArray = numeroDia - 1;
+
+        // Comprobamos que existan exámenes y que hayas puesto el de este día
+        if (prefabsExamenes != null && indiceArray >= 0 && indiceArray < prefabsExamenes.Length)
+        {
+            prefabElegido = prefabsExamenes[indiceArray];
+        }
+
+        if (prefabElegido != null)
         {
             Vector3 posicionSalida = new Vector3(posicionXExamen, posicionYInicialExamen, 0f);
             Vector3 posicionMesa = new Vector3(posicionXExamen, posicionYFinalExamen, 0f);
 
-            examenInstanciado = Instantiate(prefabExamen, posicionSalida, Quaternion.identity);
+            // Instanciamos el examen específico de ese día
+            examenInstanciado = Instantiate(prefabElegido, posicionSalida, Quaternion.identity);
             examenInstanciado.SetActive(true);
 
             SpriteRenderer spriteExamen = examenInstanciado.GetComponentInChildren<SpriteRenderer>();
@@ -138,7 +161,7 @@ public class ScriptAlumno : MonoBehaviour
             }
 
             examenInstanciado.transform.position = posicionMesa;
-            examenEnMesa = true; // ¡El examen ya ha aterrizado!
+            examenEnMesa = true;
 
             if (spriteExamen != null)
             {
@@ -147,7 +170,7 @@ public class ScriptAlumno : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Ojo: No has asignado el Prefab del Examen en el Inspector del alumno.");
+            Debug.LogError("¡OJO! Al alumno " + gameObject.name + " le falta el prefab del examen para el Día " + numeroDia);
         }
 
         // 1. Destruimos el botón viejo si ya había uno en la mesa

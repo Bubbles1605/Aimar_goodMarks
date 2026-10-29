@@ -91,7 +91,6 @@ public class PausarJuego : MonoBehaviour
 
     IEnumerator RutinaReanudar()
     {
-        Time.timeScale = 1.0f;
         if (reanudar != null) audioSource.PlayOneShot(reanudar, 1.3f);
 
         if (animadorMenu != null)
@@ -108,7 +107,7 @@ public class PausarJuego : MonoBehaviour
         {
             menuPausa.SetActive(false);
         }
-
+        Time.timeScale = 1.0f;
         juegoPausado = false;
     }
 
