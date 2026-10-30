@@ -292,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -103.862366, y: 0}
+  m_AnchoredPosition: {x: -117, y: 101}
   m_SizeDelta: {x: -642.1123, y: -284.3187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &76287993
@@ -1518,8 +1518,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -136.57, y: -0.00035095}
-  m_SizeDelta: {x: 1004.7, y: 795.68}
+  m_AnchoredPosition: {x: 144, y: -80.298}
+  m_SizeDelta: {x: 1051.5408, y: 956.2767}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1317176514
 MonoBehaviour:
@@ -1541,9 +1541,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Programaci\xF3n:\nJoaquim Ducet Barrera\nAram Maderuelo Afonso\n\nArte
-    y m\xFAsica:\nDavid P\xE9rez Barrionuevo\nCristina Cerrato Rodr\xEDguez\n\nGui\xF3n
-    y sonido:\n\xD3scar Ortiz Manso"
+  m_text: "Programaci\xF3n:\nJoaquim Ducet Barrera\nAram Maderuelo Afonso\n\nArte:\nDavid
+    P\xE9rez Barrionuevo\nCristina Cerrato Rodr\xEDguez\n\nM\xFAsica:\nCristina Cerrato
+    Rodr\xEDguez\nDavid P\xE9rez Barrionuevo\n\nGui\xF3n:\n\xD3scar Ortiz Manso\nCristina
+    Cerrato Rodr\xEDguez\nDavid P\xE9rez Barrionuevo\n\nSonido:\n\xD3scar Ortiz Manso"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5aca885518328d44eb15e60660c9752d, type: 2}
   m_sharedMaterial: {fileID: 6638799902827287391, guid: 5aca885518328d44eb15e60660c9752d, type: 2}
@@ -1570,8 +1571,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 36
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
@@ -1659,7 +1660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 175, y: 324}
+  m_AnchoredPosition: {x: -766, y: 361}
   m_SizeDelta: {x: 86.5977, y: 117.1654}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344149035
@@ -1775,7 +1776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1729283225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1895,7 +1896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1827655146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1932,7 +1933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MenuSystem
   animadorMenuPrincipal: {fileID: 1827655150}
   duracionAnimacionJugar: 1.2
-  duracionAnimacionCreditos: 2.2
+  duracionAnimacionCreditos: 2.5
   duracionAnimacionSalir: 1
   panelCreditos: {fileID: 76287991}
   Jugar: {fileID: 8300000, guid: 4f4fa094587c0f143abce3bc82a38c7b, type: 3}

@@ -45,6 +45,7 @@ public class ScriptAlumno : MonoBehaviour
 
     [Header("Sistema de Muerte")]
     public GameObject panelMuerte; // Arrastra aquí el panel desde el Canvas
+    public GameObject panelMuerteAlternativo;
     public float duracionAnimacionMuerte = 2.0f;
 
     // LA VARIABLE MÁGICA

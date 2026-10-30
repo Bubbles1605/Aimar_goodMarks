@@ -10,6 +10,7 @@ public class MenuSystem : MonoBehaviour
     public float duracionAnimacionJugar = 0.5f;
     public float duracionAnimacionCreditos = 0.5f;
     public float duracionAnimacionSalir = 0.5f;
+   
 
     [Header("Configuración de Créditos")]
     [Tooltip("Arrastra aquí el panel que tiene el texto de créditos y el botón X")]
