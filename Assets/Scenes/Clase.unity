@@ -403,14 +403,14 @@ MonoBehaviour:
   textoUI: {fileID: 2044410985}
   tiempoPorLetra: 0.02
   frasesGenericasDia1:
-  - "No te va a costar mucho corregir MI examen. est\xE1 perfecto."
+  - "No te va a costar mucho corregir mi examen. Est\xE1 perfecto."
   - "Antes Paco me ha pedido los apuntes. Me los ha devuelto y... ol\xEDan un poco
     extra\xF1o."
   - "Llevo prepar\xE1ndome el examen desde las navidades pasadas."
   - "\xA1El m\xE9todo pomodoro es lo mejor! Si tan solo no tuviese descansos..."
   frasesGenericasDia2:
   - "\xA1El m\xE9todo pomodoro es lo mejor! Si tan solo no tuviese descansos..."
-  - "El muchacho del cartel no tiene ni idea de lengua, d\xEDa va con tilde."
+  - "El muchacho del cartel no tiene ni idea de lengua, \"d\xEDa\" va con tilde."
   - "\xA1Hoy es mi d\xEDa favorito de la semana! Hacemos ejercicios de f\xEDsica
     antes de dormir."
   - "Mi padre es un cient\xEDfico reconocido a nivel internacional."
@@ -420,11 +420,11 @@ MonoBehaviour:
   - "Mi padre invent\xF3 la airfryer."
   - "\xA1El m\xE9todo pomodoro es lo mejor! Si tan solo no tuviese descansos\u2026"
   frasesGenericasDia4:
-  - "Mi padre me hace estudiar mucho m\xE1s despu\xE9s de la charla de ayer\u2026
-    QUE BIEN. "
+  - "Mi padre me hace estudiar mucho m\xE1s despu\xE9s de la charla de ayer..."
   - 'La biblioteca es mi segundo hogar. '
   - "Dentro de poco tendr\xE9 que empezar a estudiar para los ex\xE1menes del curso
     que viene. "
+  - Estoy un poco cansada.
   prefabBotonRespuesta: {fileID: 0}
   contenedorRespuestas: {fileID: 0}
   respuestaElegida: -1
@@ -1588,9 +1588,10 @@ MonoBehaviour:
   - Tengo diabetes.
   - Si te miro muy fijamente pareces una rosquilla.
   - "\xBFEstoy mono?"
-  - "Que hambre, hoy solo me ha dado tiempo a desayunar dos paquetes de galletas,
+  - "Qu\xE9 hambre, hoy solo me ha dado tiempo a desayunar dos paquetes de galletas,
     un litro de leche, dos magdalenas, un pl\xE1tano, dos tostadas con mermelada
-    y nocilla, dos sobaos y tres salchichas con huevos."
+    y nocilla, dos sobaos, un revuelto, dos palmeras, cuatro donuts, seis fresas,
+    tres yogures  y tres salchichas con bacon."
   frasesGenericasDia2:
   - "No estudi\xE9 mucho porque me com\xED los apuntes."
   - "Me han dicho que no van a reponer las sillas. No deb\xED comerme todas."
@@ -1604,9 +1605,9 @@ MonoBehaviour:
   - "La se\xF1ora del comedor no me dej\xF3 repetir la sexta vez."
   frasesGenericasDia4:
   - "Ten\xEDa mucha hambre esta ma\xF1ana y me he comido algo que estaba en la mochila
-    de Luna\u2026 no s\xE9 lo que era pero estaba fr\xEDo\u2026. Y muy rico. "
+    de Luna. No s\xE9 lo que era, pero estaba fr\xEDo\u2026. Y muy rico. "
   - "Estaba viendo v\xEDdeos de chicos kawaiis comiendo y me ha salido un v\xEDdeo
-    de Hugo. No es nada mono pero tiene millones de seguidores ya."
+    de Hugo. No es nada mono, pero tiene millones de seguidores ya."
   - 'Sigues pareciendo una rosquilla. '
   prefabBotonRespuesta: {fileID: 3838385740775788710, guid: 7d5e2a23cdea7e44aa5bb1c89df1b1cf, type: 3}
   contenedorRespuestas: {fileID: 493147121}
@@ -3782,22 +3783,22 @@ MonoBehaviour:
   - He cagado antes y no me he limpiado.
   - Tengo un arma en la mochila.
   frasesGenericasDia2:
-  - "\xBFQui\xE9n dejar\xE1 entrar al hombre ese raro de los carteles...?"
+  - "\xBFQui\xE9n dejar\xE1 entrar al hombre ese raro de los carteles?"
   - "Tengo una u\xF1a encarnada en el pie que me est\xE1 jodiendo la vida."
   - "Luna me habla mucho, creo que quiere que le deje mi h\xE1mster."
   - "Mis dientes no est\xE1n picados, son as\xED."
   - "Creo que Juan se piensa que me gusta Sara, pero solo vino a decirme que no me
     dejar\xEDa m\xE1s sus apuntes."
   frasesGenericasDia3:
-  - "\xBFD\xF3nde estar\xE1 mi h\xE1mster? a ver, ayer se lo ense\xF1\xE9 a Sara\u2026
-    luego a Luna\u2026 \xBFy despu\xE9s que hice?"
-  - "Sara no me quiere volver a dejar sus apuntes\u2026 no s\xE9 por qu\xE9."
-  - "C\xF3mo lo ves profe, est\xE1 perfecting, \xBFverdad?"
+  - "\xBFD\xF3nde estar\xE1 mi h\xE1mster? A ver, ayer se lo ense\xF1\xE9 a Sara\u2026
+    Luego a Luna\u2026 \xBFY despu\xE9s qu\xE9 hice?"
+  - "Sara no me quiere volver a dejar sus apuntes. No s\xE9 por qu\xE9."
+  - "\xBFC\xF3mo lo ves, profe? Est\xE1 perfecting, \xBFverdad?"
   - "\xDAltimamente Hugo y Sergio hablan y se graban mucho. \xBFSubir\xE1n cosas
     a redes?"
   frasesGenericasDia4:
-  - "Ayer hicimos la despedida de mejillas, mi h\xE1mster. Seguro que est\xE1 en
-    el bosque feliz. Una pena que decidiera escaparse en vez de estar conmigo. "
+  - "Ayer hicimos la despedida de Mejillas, mi h\xE1mster. Seguro que est\xE1 en
+    el bosque, feliz. Una pena que decidiera escaparse en vez de quedarse conmigo. "
   - "Este examen es muy importante para m\xED. "
   - 'Tengo un arma en el bolsillo. '
   prefabBotonRespuesta: {fileID: 0}
@@ -4521,8 +4522,8 @@ MonoBehaviour:
   textoUI: {fileID: 2044410985}
   tiempoPorLetra: 0.02
   frasesGenericasDia1:
-  - Casi no me da tiempo a ver reels con tanto estudio. Ayer estuve solo diez horas
-    y media.
+  - 'Casi no me da tiempo a ver reels con tanto estudio. Ayer estuve solo diez horas
+    y media. '
   - 'Tung-Tung es mi mejor amigo. No le gusta que le toquen. '
   - "Ojal\xE1 me pongas un six con seven."
   - "A Hugo le pegar\xEDa mazo tener un edit. Luego le pregunto si tiene cuenta de
@@ -4535,7 +4536,7 @@ MonoBehaviour:
   - "Sara dice que es biol\xF3gicamente imposible que exista un skibidi toilet. \xA1Ser\xE1
     puta!"
   frasesGenericasDia3:
-  - "Hugo lo est\xE1 petando en tis tos, \xA1Ya le han hecho varios edits!"
+  - "Hugo lo est\xE1 petando en tis tos, \xA1ya le han hecho varios edits!"
   - Ayer vi a Luna cerca de tu casa.
   - "Dice mi madre que por culpa del tis tos y las redes sociales, las generaciones
     m\xE1s j\xF3venes tenemos una capacidad cada vez menor de atenci\xF3n. Que el
@@ -4548,7 +4549,7 @@ MonoBehaviour:
   frasesGenericasDia4:
   - 'Hugo va a alcanzar la fama mundial a este ritmo. '
   - 'Que raro que Aitor no haya mordido a nadie hoy. '
-  - "Sara sin gafas parece que se ha com\xEDo un lim\xF3n jeje. "
+  - "Sara sin gafas parece que se haya com\xEDo un lim\xF3n, jeje. "
   prefabBotonRespuesta: {fileID: 0}
   contenedorRespuestas: {fileID: 0}
   respuestaElegida: -1
@@ -4774,19 +4775,20 @@ MonoBehaviour:
   - Aitor me ha mordido el pie derecho. Dile algo.
   - Mi padre dice que fui un error.
   - Me aburro.
-  - "Vi a Paco y a Sara hablando. Lo mejor ser\xE1 cortar mi amor de raiz y olvidar
-    a sara."
+  - "Vi a Paco y a Sara hablando. Lo mejor ser\xE1 cortar mi amor de ra\xEDz y olvidar
+    a Sara."
   frasesGenericasDia3:
   - Mi madre se ha quedado con mi custodia.
   - Ya no tengo fimosis.
   - Sergio no me deja acercarme a su gorra.
-  - "Soy un artista, no se por qu\xE9 te mandarian dibujar algo tan dif\xEDcil en
-    un examen de ingl\xE9s. "
+  - "Menos mal que soy un artista, no se por qu\xE9 te mandar\xEDan dibujar algo
+    tan dif\xEDcil en un examen de ingl\xE9s. "
   - "Ayer me sali\xF3 Hugo en el tis tos. Tiene a todo el mundo babeando."
-  - "Me he olvidado de Sara ya por fin... Me ha costado much\xEDsimo... Veinticuatro
-    horas."
+  - "Me he olvidado de Sara ya por fin. Me ha costado much\xEDsimo... Veinticuatro
+    horazas."
   frasesGenericasDia4:
-  - "Mi madre ha entrado en la c\xE1rcel. Me voy a vivir con la abuela, toma yaaaa. "
+  - "Mi madre ha entrado en la c\xE1rcel. \xA1Me voy a vivir con la abuela, toma
+    ya!. "
   - "La mochila de Luna ol\xEDa un poco raro esta ma\xF1ana. "
   - "Despu\xE9s de este examen me voy a ir a jugar al parque toda la tarde. "
   prefabBotonRespuesta: {fileID: 3838385740775788710, guid: 7d5e2a23cdea7e44aa5bb1c89df1b1cf, type: 3}
@@ -5941,13 +5943,13 @@ MonoBehaviour:
   basicoteReaccionTriste:
   - Tu puta madre.
   dialogoPresentacionBrainrot:
-  - Skibidi toilet profe.
+  - Skibidi toilet, profe.
   - "\xBFEse examen es W o L?"
   dialogoDia2Brainrot_molesto:
-  - "Hola profe, tung tung est\xE1 enfadadillo"
-  - Pero no te preocupes porque yo pienso que eres un skibidi con aura.
+  - "Hola, profe. Tung-Tung est\xE1 enfadadillo."
+  - Pero no te preocupes, porque yo pienso que eres un skibidi con aura.
   dialogoDia2Brainrot:
-  - "Skibidi profe, estuve practicando para el examen escribiendo un mont\xF3n de
+  - "Skibidi, profe. Estuve practicando para el examen escribiendo un mont\xF3n de
     comentarios en tis tos."
   brainrotReaccionFeliz:
   - "La procastinaci\xF3n ha dado sus frutos."
@@ -5956,13 +5958,13 @@ MonoBehaviour:
   brainrotReaccionTriste:
   - Bro really said suspenso.
   dialogoDia3Brainrot_molesto:
-  - "Hola profe, tung tung est\xE1 enfadadillo"
+  - "Hola, profe. Tung-Tung est\xE1 enfadadillo."
   - Pero no te preocupes porque yo pienso que eres un skibidi con aura.
   dialogoDia3Brainrot:
-  - "Skibidi profe, estudi\xE9 este examen chateando con mis amigos ingleses por
-    ronblon. "
+  - "Skibidi, profe. Estudi\xE9 este examen chateando con mis amigos ingleses por
+    Ronblon. "
   dialogoDia3Brainrot_enfadado:
-  - "Ayer volviste a tocar a tung tung. \xDAltimo aviso. No lo hagas."
+  - "Ayer volviste a tocar a Tung-Tung. \xDAltimo aviso. No lo hagas."
   dialogoPresentacionListilla:
   - "Buenos d\xEDas, profesor Mark."
   - Espero mi merecido diez.
@@ -5970,7 +5972,7 @@ MonoBehaviour:
   - Como debe ser.
   - "Mi padre estar\xE1 orgulloso."
   repelenteReaccionAprobado:
-  - "\xBFUn m\xEDsero a-aprobado?"
+  - "\xBFUn m\xEDsero a-a-aprobado?"
   - Esto es inaceptable.
   repelenteReaccionSuspenso:
   - "\xBFT\xDA SABES QUI\xC9N ES MI PADRE?"
@@ -5979,7 +5981,7 @@ MonoBehaviour:
   - Hola.
   - Me llamo Luna.
   - "T\xFA eres Mark."
-  - Toma para ti, es una simple manzana. Es para ti y SOLO para ti.
+  - Toma, para ti, es una simple manzana. Es para ti y SOLO para ti.
   dialogoPostManzanaStalker:
   - Ah, ya, mis ejercicios. Toma.
   stalker_5:
@@ -5991,16 +5993,16 @@ MonoBehaviour:
   - "Mejorar\xE9 por ti."
   - "Ya lo ver\xE1s."
   dialogoPresentacionNegrete:
-  - "Epa profe, ya estoy aqu\xED."
+  - "Epa, profe, ya estoy aqu\xED."
   - "A ver qu\xE9 nota me cae."
   negreteReaccionFeliz:
   - "\xA1Toma ya! No estudi\xE9 nada."
   negreteReaccionEnfadado:
-  - Jo macho, me van a castigar sin entrenos.
+  - Jo, macho, me van a castigar sin entrenos.
   negreteReaccionTriste:
   - Mis padres me matan.
   dialogoPresentacionGordete:
-  - "Hola profe, \xBFhay alg\xFAn bocata por ah\xED?"
+  - "Hola, profe. \xBFHay alg\xFAn bocata por ah\xED?"
   - Tengo un hambre que me muero.
   gordeteReaccionFeliz:
   - "\xA1Me encanta esta nota! "
@@ -6010,15 +6012,15 @@ MonoBehaviour:
   gordeteReaccionTriste:
   - Esta nota me da arcadas.
   dialogoPresentacionMewing:
-  - "Hola profe. (Te mira marcando mand\xEDbula)"
+  - "Hola, profe. (Te mira marcando mand\xEDbula)"
   mewingReaccionFeliz:
-  - "Gracias profe. Seguir\xE9 con mi rutina de looks maxing."
+  - "Gracias, profe. Seguir\xE9 con mi rutina de looksmaxing."
   mewingReaccionEnfadado:
-  - "Gracias profe. Me voy a hacer mi rutina de mewing (No parece que le importe
+  - "Gracias, profe. Me voy a hacer mi rutina de mewing. (No parece que le importe
     nada a parte de su f\xEDsico)"
   mewingReaccionTriste:
-  - "Se ha hecho tarde, tendr\xE9 que trasnochar para cumplir las 6 horas de mewing
-    (No parece que le importe la nota)."
+  - "Se ha hecho tarde, tendr\xE9 que trasnochar para cumplir las 6 horas de mewing.
+    (No parece que le importe la nota)"
   prefabManzana: {fileID: 8959275113004482167, guid: ece185789f08a7e4aa50441372578837, type: 3}
   posicionManzanaMesa: {x: 5, y: 4.18}
   panelPantallaMuerte: {fileID: 21028750}
@@ -9086,22 +9088,22 @@ MonoBehaviour:
   - Hueles a pomada antihemorroidal.
   - "\xBFCada cu\xE1nto te cortas las u\xF1as?"
   - "Tengo un lagarto de mascota. Lleva haci\xE9ndose el dormido desde la semana
-    pasada \xA1Que gracioso es!"
+    pasada. \xA1Que gracioso es!"
   frasesGenericasDia2:
   - "Quiero el hamster de Paco para ver c\xF3mo es su cerebro."
   - Las canicas de Juan son feas de cojones.
   - "\xBFHas o\xEDdo hablar de Luc\xEDa Fernanda? Los amigos la llamamos Lucifer."
   - "Est\xE1s muy mono cuando duermes."
   frasesGenericasDia3:
-  - "Paco no me dej\xF3 su h\xE1mster\u2026  Pero lo tengo igual. Tiene el cerebro
+  - "Paco no me dej\xF3 su h\xE1mster, pero lo he cogido igual. Tiene el cerebro
     precioso\u2026 Aunque, despu\xE9s de haberlo visto, solo quiere jugar a hacerse
     el dormido."
   - "Hueles como la tumba de mi t\xEDo\u2026 Me encanta."
   - "\xBFCada cu\xE1nto te cortas las u\xF1as? "
   frasesGenericasDia4:
   - "He perdido el h\xE1mster de Paco. Espero que no sospeche que lo cog\xED yo. "
-  - "Juan estaba mirando mucho mi mochila. \xBFSospechar\xE1? "
-  - 'Lucia Fernanda no me habla desde antes de ayer. La van a dar por culo. '
+  - "Juan estaba mirando mucho mi mochila. \xBFSospechar\xE1 de m\xED? "
+  - "Luc\xEDa Fernanda no me habla desde antes de ayer. Le van a dar por culo. "
   - 'Definitivamente Hugo ha cambiado.  '
   prefabBotonRespuesta: {fileID: 0}
   contenedorRespuestas: {fileID: 0}
@@ -10176,10 +10178,10 @@ MonoBehaviour:
   - "Una persona lo suficientemente atractiva podr\xEDa hacerse con el control de
     la clase."
   - "La belleza est\xE1 en el interior. Lo importante es intentar ser mejor persona
-    cada d\xEDa...   O eso es lo que diria un feo."
+    cada d\xEDa...   O eso es lo que dir\xEDa un feo."
   - "Si te centras en cuidar tu jard\xEDn, las mariposas vendr\xE1n solas."
   frasesGenericasDia2:
-  - "\xBFExamen de lengua? la lengua al paladar y a hacer mewing."
+  - "\xBFExamen de lengua? La lengua al paladar y a hacer mewing."
   - "Una persona lo suficientemente atractiva podr\xEDa hacerse con el control de
     la clase. "
   - "Sergio me ha dicho que me haga tis tos. Si lo hago, mucha m\xE1s gente tendr\xE1
@@ -10192,16 +10194,16 @@ MonoBehaviour:
   - Hay muchos incels en tis tos.
   - "Si te centras en cuidar tu jard\xEDn, las mariposas vendr\xE1n solas."
   - "Sara me mira mucho \xFAltimamente."
-  - Deberia de pasarle mi rutina a Sergio.
+  - "Deber\xEDa pasarle mi rutina a Sergio."
   frasesGenericasDia4:
   - "Ojos de cazador, brazo de cuarenta y cinco y mewing al fallo\u2026 est\xE1 muy
-    bien tenerlos, pero no es lo m\xE1s importante  "
+    bien tenerlos, pero no es lo m\xE1s importante."
   - "La belleza est\xE1 en el interior. Es muy importante tener en tu vida a personas
-    que te sumen y te hagan mejor persona\u2026 y eso lo he descubierto hace poco. "
+    que te sumen y te hagan mejor persona\u2026 Y eso lo he descubierto hace poco. "
   - "Ahora que he dado el salto a la fama, \xBFlo que de verdad me gustaba del tis
-    tos era ganar seguidores que me admiren?, o pasar tiempo con Sergio grabando
-    y divirti\xE9ndonos "
-  - 'Sigues siendo feo de cojones hijo. '
+    tos era ganar seguidores que me admiren... o pasar tiempo con Sergio, grabando
+    y divirti\xE9ndonos? "
+  - 'Sigues siendo feo de cojones, hijo. '
   prefabBotonRespuesta: {fileID: 3838385740775788710, guid: 7d5e2a23cdea7e44aa5bb1c89df1b1cf, type: 3}
   contenedorRespuestas: {fileID: 493147121}
   respuestaElegida: -1
