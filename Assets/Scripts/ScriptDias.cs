@@ -76,6 +76,8 @@ public class ScriptDias : MonoBehaviour
     public AudioClip Final_gordete;
     public AudioClip Final_Pantalla;
     public AudioClip Victoria;
+    public AudioClip juego_negrete;
+    public AudioClip Fuego;
     public AudioClip entregarCarta;
 
 
@@ -94,10 +96,25 @@ public class ScriptDias : MonoBehaviour
     [Header("Transición de Días")]
     public GameObject objetoCartelDias;
     public float duracionCartel = 3f;
+    public GameObject panelEntreDias;
 
     public GameObject panelCartaAmpliada;
     [HideInInspector] public bool cartaLeida = false;
 
+    [Header("Paneles Extra")]
+    public GameObject miPanelEspecifico;
+
+    [Header("Paneles Evento Negrete")]
+    public GameObject panelJuegoNegrete;
+    public GameObject panelFuegoNegrete;
+    private bool panelJuegoNegreteCerrado = false;
+    private bool botonFuegoPulsado = false;
+
+    [Header("Paneles Tutorial Día 1")]
+    public GameObject panelTutorialBoli;
+    public GameObject panelTutorialSellos;
+    private bool panelBoliCerrado = false;
+    private bool panelSellosCerrado = false;
 
 
     [Header("Textos Día 1 - Basicote")]
@@ -231,6 +248,7 @@ public class ScriptDias : MonoBehaviour
     }
 
     // --- EL GUION DEL DÍA 1 ---
+    // --- EL GUION DEL DÍA 1 ---
     public IEnumerator SecuenciaDia1()
     {
         yield return new WaitForSeconds(1.5f);
@@ -242,7 +260,30 @@ public class ScriptDias : MonoBehaviour
 
         yield return StartCoroutine(basicote.Aparecer());
 
-        yield return StartCoroutine(ManejarDialogo(basicote.Decir(dialogoPresentacionBasicote, false)));
+        // 1. TEXTOS ANTES DEL PANEL DEL BOLI
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] {
+            "¿Entonces tú eres Mark, el nuevo profesor?",
+            "¡Qué bien!",
+            "¿Que YO te tengo que enseñar a corregir? Hoy en día contratan a cualquiera.",
+            "Usa el boli rojo para corregir el examen.",
+            "Puedes hacer anotaciones, dibujos, comentarios... Lo que necesites."
+        }, false)));
+
+        panelBoliCerrado = false;
+        if (panelTutorialBoli != null) panelTutorialBoli.SetActive(true);
+        yield return new WaitUntil(() => panelBoliCerrado);
+
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] {
+            "Puedes poner pegatinas a los exámenes si te apetece.",
+            "Haz click sobre el examen para ver una vista ampliada y muévelo con la rueda y el click derecho.",
+            "Y haz click sobre el bocadillo saliente de los alumnos si quieres interactuar con nosotros.",
+            "Cuando hayas terminado, ponle una nota al examen con los sellos para entregárnoslo."
+        }, false)));
+
+        panelSellosCerrado = false;
+        if (panelTutorialSellos != null) panelTutorialSellos.SetActive(true);
+        yield return new WaitUntil(() => panelSellosCerrado);
+
         yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Te enteras, o qué?" }, false)));
 
         yield return StartCoroutine(ManejarPregunta(basicote.Preguntar(opcionesSiNo)));
@@ -819,7 +860,7 @@ public class ScriptDias : MonoBehaviour
         }
         else if (decisionBasicoteDia2 == 1)
         {
-            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[RESPUESTA DE BASICOTE A LA OPCIÓN B]" }, true)));
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Hmm... Ya veo." }, true)));
         }
 
         yield return StartCoroutine(basicote.EntregarExamen(2));
@@ -995,19 +1036,19 @@ public class ScriptDias : MonoBehaviour
         if (entrar_niño != null) { audioSource.PlayOneShot(entrar_niño, 5f); }
 
         yield return StartCoroutine(basicote.Aparecer());
-        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Hola profe, tengo una súper pregunta.", "¿Qué prefieres?" }, true)));
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Hola profe, tengo una súper pregunta.", "Qué prefieres, apostar tu familia y amigox en una tirada de la ruleta al rojo o al negro" }, true)));
 
         // Opciones de respuesta.
-        yield return StartCoroutine(ManejarPregunta(basicote.Preguntar(new string[] { "[OPCIÓN A]", "[OPCIÓN B]" })));
+        yield return StartCoroutine(ManejarPregunta(basicote.Preguntar(new string[] { "Rojo", "Negro" })));
 
         // Reacción según la respuesta elegida.
         if (basicote.respuestaElegida == 0)
         {
-            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[RESPUESTA DE BASICOTE A LA OPCIÓN A]" }, true)));
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Racista." }, true)));
         }
         else if (basicote.respuestaElegida == 1)
         {
-            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[RESPUESTA DE BASICOTE A LA OPCIÓN B]" }, true)));
+            yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "A ti te gusta el chocolate ehh." }, true)));
         }
         yield return StartCoroutine(basicote.EntregarExamen(3));
         nota = basicote.notaRecibida;
@@ -1477,14 +1518,14 @@ public class ScriptDias : MonoBehaviour
             brainrot.animator.SetTrigger("Triste");
             if (Triste_brainrot != null) audioSource.PlayOneShot(Triste_brainrot, 1.3f);
 
-            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Ojalá te baneen en todas las redes sociales." }, false)));
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Joder, voy a tener que hacer lock in con esta asignatura." }, false)));
         }
         else if (nota == 4 || nota == 3)
         {
             brainrot.animator.SetTrigger("Triste");
             if (Triste_brainrot != null) audioSource.PlayOneShot(Triste_brainrot, 1.3f);
 
-            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Debería haber estudiado viendo tis tos en inglés." }, false)));
+            yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Das mucho cringe, tío." }, false)));
         }
         else
         {
@@ -1513,7 +1554,44 @@ public class ScriptDias : MonoBehaviour
             negrete.animator.SetTrigger("Triste");
             if (Triste_negrete != null) audioSource.PlayOneShot(Triste_negrete, 1.3f);
 
-            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Bua, con lo que me gusta a mí jugar y acariciar a mi car aunque suelte tanto pelo." }, true)));
+            yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Joder, profe, con esta nota repito curso."," ¿Jugamos a un minijuego rápido? Si tú ganas, suspendo y repito, pero si yo gano, me apruebas, ¿Te parece?","No te preocupes, que es muy fácil."," Yo voy a decir muchas palabras, y cuando oigas la palabra “fuego” aprieta el botón rápido."," ¿Lo has pillado? Empezamos." }, true)));
+
+            panelJuegoNegreteCerrado = false; 
+            if (panelJuegoNegrete != null) panelJuegoNegrete.SetActive(true);
+
+            yield return new WaitUntil(() => panelJuegoNegreteCerrado);
+            audioSource2.mute = true;
+            if (juego_negrete != null) audioSource.PlayOneShot(juego_negrete, 1.3f);
+
+            
+            yield return new WaitForSeconds(29f);
+
+            
+            if (Fuego != null) audioSource.PlayOneShot(Fuego, 1.3f);
+            yield return new WaitForSeconds(0.8f);
+            botonFuegoPulsado = false;
+            if (panelFuegoNegrete != null) panelFuegoNegrete.SetActive(true);
+            float contadorFuego = 0f;
+            while (contadorFuego < 2f && !botonFuegoPulsado)
+            {
+                contadorFuego += Time.deltaTime; 
+                yield return null; 
+            }
+
+            if (panelFuegoNegrete != null) panelFuegoNegrete.SetActive(false);
+
+            if (botonFuegoPulsado)
+            {
+                audioSource2.mute=false;
+                negrete.animator.SetTrigger("Feliz");
+                yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Has ganado." }, true)));
+            }
+            else
+            {
+                if (Final_negrete != null) audioSource.PlayOneShot(Final_negrete, 1.3f);
+                yield return StartCoroutine(EjecutarMuerte(negrete));
+                yield break; 
+            }
         }
         else
         {
@@ -1535,10 +1613,8 @@ public class ScriptDias : MonoBehaviour
         yield return StartCoroutine(ManejarDialogo(cartero.Decir(new string[] { "Tronco, esta carta es para ti." }, true)));
         if (cartero.botonHablarPrefab != null) cartero.botonHablarPrefab.SetActive(false);
 
-        // --- LA MAGIA: El juego se congela aquí hasta que pulses la cruz de la carta ---
         yield return new WaitUntil(() => cartaLeida);
 
-        // Cuando la cierras, el cartero se despide
         yield return StartCoroutine(ManejarDialogo(cartero.Decir(new string[] { "¡Enhorabuena, tío!", "Nos vemos por aquí." }, false)));
 
         yield return StartCoroutine(cartero.Desaparecer());
@@ -1581,6 +1657,12 @@ public class ScriptDias : MonoBehaviour
 
     public IEnumerator MostrarCartelDia(int numeroDia)
     {
+        if (numeroDia > 1 && panelEntreDias != null)
+        {
+            panelEntreDias.SetActive(true);
+            yield return new WaitForSeconds(1f); 
+            panelEntreDias.SetActive(false);
+        }
         if (objetoCartelDias != null)
         {
             objetoCartelDias.SetActive(true);
@@ -1590,12 +1672,8 @@ public class ScriptDias : MonoBehaviour
             objetoCartelDias.SetActive(false);
         }
     }
-
-  
-
-    // =========================================================
     // SISTEMA MAESTRO DE MUERTES
-    // =========================================================
+
     public IEnumerator EjecutarMuerte(ScriptAlumno asesino)
     {
         ForzarSoltarHerramientas();
@@ -1685,9 +1763,7 @@ public class ScriptDias : MonoBehaviour
         }
     }
 
-    // ==========================================
     // BOTONES DE LA PANTALLA DE MUERTE
-    // ==========================================
     public void ReiniciarJuego()
     {
         audioSource2.mute = false;
@@ -1697,17 +1773,15 @@ public class ScriptDias : MonoBehaviour
 
     private IEnumerator RutinaReiniciar()
     {
-        // 1. Buscamos el Animator dentro del propio panel y lanzamos el trigger
+
         if (panelPantallaMuerte != null)
         {
             Animator anim = panelPantallaMuerte.GetComponent<Animator>();
             if (anim != null) anim.SetTrigger("transicion");
         }
 
-        // 2. Esperamos medio segundo en la vida real para que la animación termine (puedes ajustar el 0.5f si tu animación dura más)
         yield return new WaitForSecondsRealtime(0.5f);
 
-        // 3. Reiniciamos el nivel
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -1720,17 +1794,14 @@ public class ScriptDias : MonoBehaviour
 
     private IEnumerator RutinaVolverAlMenu()
     {
-        // 1. Buscamos el Animator dentro del propio panel y lanzamos el trigger
         if (panelPantallaMuerte != null)
         {
             Animator anim = panelPantallaMuerte.GetComponent<Animator>();
             if (anim != null) anim.SetTrigger("transicion");
         }
 
-        // 2. Esperamos medio segundo en la vida real
         yield return new WaitForSecondsRealtime(0.5f);
 
-        // 3. Volvemos al menú
         SceneManager.LoadScene("Menu");
     }
 
@@ -1741,7 +1812,84 @@ public class ScriptDias : MonoBehaviour
             panelCartaAmpliada.SetActive(false);
         }
 
-        // Damos luz verde para que la secuencia del cartero continúe
         cartaLeida = true;
+    }
+  
+    public void AbrirPanelEspecifico()
+    {
+        if (miPanelEspecifico != null)
+        {
+            miPanelEspecifico.SetActive(true);
+        }
+    }
+
+    public void BotonMenuPanelEspecifico()
+    {
+        StartCoroutine(RutinaMenuPanelEspecifico());
+    }
+
+    private IEnumerator RutinaMenuPanelEspecifico()
+    {
+
+        if (miPanelEspecifico != null)
+        {
+            Animator anim = miPanelEspecifico.GetComponent<Animator>();
+            if (anim != null) anim.SetTrigger("salir");
+        }
+
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void BotonCerrarJuegoPanelEspecifico()
+    {
+        StartCoroutine(RutinaCerrarJuegoPanelEspecifico());
+    }
+
+    private IEnumerator RutinaCerrarJuegoPanelEspecifico()
+    {
+
+        if (miPanelEspecifico != null)
+        {
+            Animator anim = miPanelEspecifico.GetComponent<Animator>();
+            if (anim != null) anim.SetTrigger("salir");
+        }
+
+        yield return new WaitForSecondsRealtime(0.5f);
+        Application.Quit();
+
+    }
+    // BOTONES DEL EVENTO NEGRETE (DÍA 4)
+    public void CerrarPanelJuegoNegrete()
+    {
+        if (panelJuegoNegrete != null)
+        {
+            panelJuegoNegrete.SetActive(false);
+        }
+        panelJuegoNegreteCerrado = true;
+    }
+
+    public void PulsarBotonFuego()
+    {
+        botonFuegoPulsado = true;
+    }
+    // BOTONES DE TUTORIAL (DÍA 1)
+    public void CerrarPanelTutorialBoli()
+    {
+        if (panelTutorialBoli != null)
+        {
+            panelTutorialBoli.SetActive(false);
+        }
+        panelBoliCerrado = true;
+    }
+
+    public void CerrarPanelTutorialSellos()
+    {
+        if (panelTutorialSellos != null)
+        {
+            panelTutorialSellos.SetActive(false);
+        }
+        panelSellosCerrado = true;
     }
 }

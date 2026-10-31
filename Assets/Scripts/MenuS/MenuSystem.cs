@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.ShaderData;
 
 public class MenuSystem : MonoBehaviour
 {
@@ -95,13 +94,12 @@ public class MenuSystem : MonoBehaviour
 
     IEnumerator RutinaSalir()
     {
-        accionEnProgreso = true; // Bloqueamos el menú
+        accionEnProgreso = true; 
         yield return null;
 
         if (Salir != null) audioSource.PlayOneShot(Salir, 1.3f);
 
-        // --- REINICIAMOS LA ANIMACIÓN DE INICIO ---
-        // Ponemos el valor a 0 para que la próxima vez vuelva a mostrarse la intro
+ 
         PlayerPrefs.SetInt("AnimacionInicioVista", 0);
         PlayerPrefs.Save();
 
@@ -134,7 +132,6 @@ public class MenuSystem : MonoBehaviour
             animadorMenuPrincipal.SetTrigger("TriggerVolver");
         }
 
-        // --- MAGIA: Al cerrar los créditos volvemos a permitir los clics ---
         accionEnProgreso = false;
     }
 }
