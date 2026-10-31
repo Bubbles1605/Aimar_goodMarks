@@ -12,6 +12,7 @@ TagManager:
   - DibujoTungTung
   - ManzanaMesa
   - ZonaStalker
+  - Carta
   layers:
   - Default
   - TransparentFX

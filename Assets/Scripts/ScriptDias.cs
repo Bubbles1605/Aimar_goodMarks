@@ -14,6 +14,7 @@ public class ScriptDias : MonoBehaviour
     public ScriptAlumno gordete;
     public ScriptAlumno mewing;
     public ScriptAlumno padreLista;
+    public ScriptAlumno cartero;
 
     [Header("Padre de la Listilla")]
     public int diecesRepelente = 0;
@@ -44,12 +45,14 @@ public class ScriptDias : MonoBehaviour
     public AudioClip Enfado_gordete;
     public AudioClip Hablar_gordete;
     public AudioClip Faliz_gordete;
+    public AudioClip comer_manzana;
 
     [Header("Sonidos_stalker")]
     public AudioClip Triste_stalker;
     public AudioClip Risa_stalker;
     public AudioClip Enfado_stalker;
     public AudioClip Hablar_stalker;
+    public AudioClip dar_manzana;
 
     [Header("Sonidos_mewing")]
     public AudioClip mewingDia1;
@@ -73,6 +76,7 @@ public class ScriptDias : MonoBehaviour
     public AudioClip Final_gordete;
     public AudioClip Final_Pantalla;
     public AudioClip Victoria;
+    public AudioClip entregarCarta;
 
 
     public AudioSource audioSource;
@@ -212,6 +216,12 @@ public class ScriptDias : MonoBehaviour
                         }
                     }
                     break;
+                }
+
+                if (hit.CompareTag("Carta"))
+                {
+                    panelPantallaVictoria.SetActive(true);
+                    if (entregarCarta != null) audioSource.PlayOneShot(entregarCarta, 5f);
                 }
             }
         }
@@ -371,6 +381,7 @@ public class ScriptDias : MonoBehaviour
             {
                 Vector3 posicionFinalManzana = new Vector3(posicionManzanaMesa.x, posicionManzanaMesa.y, 0f);
                 GameObject manzanaCreada = Instantiate(prefabManzana, posicionFinalManzana, Quaternion.identity);
+                if (dar_manzana != null) audioSource.PlayOneShot(dar_manzana, 1.3f);
                 manzanaCreada.tag = "ManzanaMesa";
             }
 
@@ -460,6 +471,7 @@ public class ScriptDias : MonoBehaviour
                 if (manzanaEnMesa != null)
                 {
                     Destroy(manzanaEnMesa);
+                    if (comer_manzana != null) audioSource.PlayOneShot(comer_manzana, 1.3f);
                     manzana_comida = true;
                 }
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUE DELICIA.", "Aunque el centro sabía un poco a lente, con un ligero toque a batería de litio.", "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
@@ -625,6 +637,7 @@ public class ScriptDias : MonoBehaviour
                 if (manzanaEnMesa != null)
                 {
                     Destroy(manzanaEnMesa);
+                    if (comer_manzana != null) audioSource.PlayOneShot(comer_manzana, 1.3f);
                     manzana_comida = true;
                 }
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUE DELICIA.", "Aunque el centro sabía un poco a lente, con un ligero toque a batería de litio.", "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
@@ -928,6 +941,7 @@ public class ScriptDias : MonoBehaviour
                 if (manzanaEnMesa != null)
                 {
                     Destroy(manzanaEnMesa);
+                    if (comer_manzana != null) audioSource.PlayOneShot(comer_manzana, 1.3f);
                     manzana_comida = true;
                 }
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "QUÉ DELICIA.", "Aunque el centro sabía un poco a lente, con un ligero toque a batería de litio.", "En fin, lo que no mata engorda.", "Y si me mata, te vas a cagar, jeje." }, true)));
@@ -969,6 +983,7 @@ public class ScriptDias : MonoBehaviour
 
         yield return StartCoroutine(gordete.Desaparecer());
         gordete.gameObject.SetActive(false);
+
         // BASICOTE
         alumnoActual = basicote;
         basicote.gameObject.SetActive(true);
@@ -995,20 +1010,20 @@ public class ScriptDias : MonoBehaviour
         if (nota < 4)
         {
             basicote.animator.SetTrigger("Triste");
-            if (Triste_stalker != null) audioSource.PlayOneShot(Triste_stalker, 1.3f);
+            if (Triste_basicote != null) audioSource.PlayOneShot(Triste_basicote, 1.3f);
 
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Vete a toMark por culo." }, true)));
         }
         else if (nota == 4)
         {
-            basicote.animator.SetTrigger("Triste");
-            if (Triste_stalker != null) audioSource.PlayOneShot(Triste_stalker, 1.3f);
+            basicote.animator.SetTrigger("Enfadado");
+            if (Enfado_basicote != null) audioSource.PlayOneShot(Enfado_basicote, 1.3f);
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Acaso no sabes puto inglés?" }, true)));
         }
         else
         {
             basicote.animator.SetTrigger("Feliz");
-            if (Risa_stalker != null) audioSource.PlayOneShot(Risa_stalker, 1.3f);
+            if (Risa_basicote != null) audioSource.PlayOneShot(Risa_basicote, 1.3f);
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "VAMOS, JODER." }, true)));
         }
 
@@ -1346,7 +1361,7 @@ public class ScriptDias : MonoBehaviour
 
         yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "Buenos días, señor Mark." }, true)));
 
-        yield return StartCoroutine(repelente.EntregarExamen(3));
+        yield return StartCoroutine(repelente.EntregarExamen(4));
         nota = repelente.notaRecibida;
   
         if (nota == 10)
@@ -1409,17 +1424,19 @@ public class ScriptDias : MonoBehaviour
         if (nota < 3)
         {
             basicote.animator.SetTrigger("Triste");
-
+            if (Triste_basicote != null) audioSource.PlayOneShot(Triste_basicote, 1.3f);
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Vaya, ¿esta mierda me merezco? Sí que soy estúpido." }, true)));
         }
         else if (nota == 4 || nota == 3)
         {
             basicote.animator.SetTrigger("Enfadado");
+            if (Enfado_basicote != null) audioSource.PlayOneShot(Enfado_basicote, 1.3f);
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Esta nota es una calentada tuya o de verdad merezco semejante mierda?" }, true)));
         }
         else
         {
             basicote.animator.SetTrigger("Feliz");
+            if (Risa_basicote != null) audioSource.PlayOneShot(Risa_basicote, 1.3f);
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Ya sabía yo que soy un culto." }, true)));
         }
 
@@ -1468,7 +1485,7 @@ public class ScriptDias : MonoBehaviour
         else
         {
             brainrot.animator.SetTrigger("Feliz");
-            if (Risa_basicote != null) audioSource.PlayOneShot(Risa_basicote, 1.3f);
+            if (Risa_brainrot != null) audioSource.PlayOneShot(Risa_brainrot, 1.3f);
 
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Soy el goat. Es lo que hay." }, false)));
         }
@@ -1504,7 +1521,15 @@ public class ScriptDias : MonoBehaviour
 
         yield return StartCoroutine(negrete.Desaparecer());
         negrete.gameObject.SetActive(false);
-        
+
+        // CARTERO
+        alumnoActual = cartero;
+        cartero.gameObject.SetActive(true);
+        if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
+        yield return StartCoroutine(cartero.Aparecer());
+
+        yield return StartCoroutine(ManejarDialogo(cartero.Decir(new string[] { "Tronco, esta carta es para ti." }, true)));
+        if (cartero.botonHablarPrefab != null) cartero.botonHablarPrefab.SetActive(false);
 
     }
 
@@ -1582,10 +1607,7 @@ public class ScriptDias : MonoBehaviour
 
     private IEnumerator SecuenciaMuerteTungTung()
     {
-        // 1. Primero dice su frase amenazante y esperamos a que termine
         yield return StartCoroutine(ManejarDialogo(alumnoActual.Decir(new string[] { "TÚ TE LO HAS BUSCADO.", "HAS INTENTADO DESTROZAR A TUNG-TUNG TRES VECES.", "AHORA SUFRIRÁS SU IRA." }, false)));
-
-        // 2. Una vez que ha terminado de hablar y la boca se para, ENTONCES lo matamos
         yield return StartCoroutine(EjecutarMuerte(brainrot));
     }
 
@@ -1623,25 +1645,15 @@ public class ScriptDias : MonoBehaviour
     // Muerte de Stalker al tocar su zona especial.
     public void ActivarReaccionZonaStalker()
     {
-        // Solo funciona durante el día 2.
         if (diaActual != 2) return;
-
-        // Stalker debe ser el alumno actual.
         if (alumnoActual != stalker) return;
 
         if (stalker == null || !stalker.gameObject.activeInHierarchy)
             return;
 
-        // Evita activar la muerte varias veces.
         if (reaccionZonaStalkerActivada) return;
-
-        // No interrumpimos otros diálogos o preguntas.
         if (dialogoEnCurso || esperandoRespuesta) return;
-
-        // Marcamos la muerte como activada.
         reaccionZonaStalkerActivada = true;
-
-        // Ejecutamos el sistema de muerte existente.
         if (Final_stalker != null) audioSource.PlayOneShot(Final_stalker, 1.3f);
         StartCoroutine(EjecutarMuerte(stalker));
     }

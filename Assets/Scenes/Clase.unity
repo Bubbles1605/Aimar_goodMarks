@@ -832,7 +832,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20.48, y: 27.32}
+    oldSize: {x: 20.48, y: 27.324455}
     newSize: {x: 20.48, y: 27.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1274,7 +1274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &295012060
 Animator:
   serializedVersion: 7
@@ -4251,6 +4251,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899508089}
   m_CullTransparentMesh: 1
+--- !u!1 &923966537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4099723474887331450, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+  m_PrefabInstance: {fileID: 4074712236352802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &923966538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923966537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbb4a9a3cfd52a41a9fe51be843c439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptAlumno
+  velocidadAparicion: 5
+  posicionYInicial: -8
+  posicionYFinal: -1
+  dialogoPrincipal: []
+  frasesGenericas: []
+  botonHablarPrefab: {fileID: 2858568771042129495, guid: d7de5e6381330194bb67fbb515c3b05b, type: 3}
+  posicionBoton: {x: -1.96, y: 1.82, z: 0}
+  textoUI: {fileID: 2044410985}
+  tiempoPorLetra: 0.02
+  frasesGenericasDia1: []
+  frasesGenericasDia2: []
+  frasesGenericasDia3: []
+  frasesGenericasDia4: []
+  prefabBotonRespuesta: {fileID: 0}
+  contenedorRespuestas: {fileID: 0}
+  respuestaElegida: -1
+  prefabsExamenes: []
+  posicionXExamen: 16.15
+  posicionYInicialExamen: 8
+  posicionYFinalExamen: 1.25
+  velocidadCaidaExamen: 7
+  examenInstanciado: {fileID: 0}
+  panelMuerte: {fileID: 0}
+  panelMuerteAlternativo: {fileID: 0}
+  duracionAnimacionMuerte: 2
+  examenCalificado: 0
+  examenEnMesa: 0
+  sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
+  romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
+  audioSource: {fileID: 0}
+  animator: {fileID: 0}
+  avanzarTexto: 0
+  notaRecibida: -1
+--- !u!4 &923966541 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+  m_PrefabInstance: {fileID: 4074712236352802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &923966542
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923966537}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.87774205, y: 0.35626024}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.42}
+    newSize: {x: 3.8, y: 2.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.044516, y: 1.7074796}
+  m_EdgeRadius: 0
 --- !u!1001 &930534992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5910,6 +6011,7 @@ MonoBehaviour:
   gordete: {fileID: 405044013}
   mewing: {fileID: 2723422825153577981}
   padreLista: {fileID: 4373873227890356915}
+  cartero: {fileID: 923966538}
   diecesRepelente: 0
   "entrar_ni\xF1o": {fileID: 8300000, guid: 54c43cfaa4a8e54489daee1216bc4a29, type: 3}
   "entrar_ni\xF1a": {fileID: 8300000, guid: 1aa2f8d4c7aab2644bd530032b4266f5, type: 3}
@@ -5927,10 +6029,12 @@ MonoBehaviour:
   Enfado_gordete: {fileID: 8300000, guid: 970390b53e23dc340a11c8c56116b03c, type: 3}
   Hablar_gordete: {fileID: 8300000, guid: 6679f22dcd1b3fc47bbe018da7639f70, type: 3}
   Faliz_gordete: {fileID: 8300000, guid: 7acf334704c5cf144b2ef4bdda9581a9, type: 3}
+  comer_manzana: {fileID: 8300000, guid: 4ba64e9671b1f1c4d936e87e725a4167, type: 3}
   Triste_stalker: {fileID: 8300000, guid: d0b5ded9605fd61429dba6e1e87b556b, type: 3}
-  Risa_stalker: {fileID: 8300000, guid: d234a8746c85ed342a893a05e6d20849, type: 3}
+  Risa_stalker: {fileID: 8300000, guid: 56146c343c003324eb4302492ec76eb8, type: 3}
   Enfado_stalker: {fileID: 8300000, guid: 1b3c15869e2554e448fb483b81614557, type: 3}
   Hablar_stalker: {fileID: 8300000, guid: d91ba014f53fb7f4e9a230c794e9d512, type: 3}
+  dar_manzana: {fileID: 8300000, guid: 92bba6d688e76f344bd608e09e34a072, type: 3}
   mewingDia1: {fileID: 8300000, guid: 9061a2798091a9244a9849914b3b16de, type: 3}
   mewingDia2: {fileID: 8300000, guid: 4b6e95ba9ab87794b927e634145ca679, type: 3}
   mewingDia3: {fileID: 8300000, guid: cdd02f60ef9de0d41a4fcc6f16b62645, type: 3}
@@ -5948,6 +6052,7 @@ MonoBehaviour:
   Final_gordete: {fileID: 8300000, guid: 0cd8b188c8aeb434c8e107780629f49f, type: 3}
   Final_Pantalla: {fileID: 8300000, guid: d1c69028310f9e849be09b461d138f80, type: 3}
   Victoria: {fileID: 8300000, guid: bdf3adb838cc7494aa2c5a2b0b670bfa, type: 3}
+  entregarCarta: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   audioSource: {fileID: 1450378550}
   audioSource2: {fileID: 1261878299}
   alumnoActual: {fileID: 1048401725}
@@ -6805,7 +6910,7 @@ PrefabInstance:
     - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8633925888635947150, guid: ae726f0e86ce1fc4bb9af1d5e1c632b4, type: 3}
+      objectReference: {fileID: -2014216778785473083, guid: 6a3f9763e2279ec469935ced55abe054, type: 3}
     - target: {fileID: 3893292671260287051, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -9201,6 +9306,7 @@ Transform:
   - {fileID: 1940301164}
   - {fileID: 2723422825153577977}
   - {fileID: 4373873227890356911}
+  - {fileID: 923966541}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973044440 stripped
@@ -10167,6 +10273,77 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 259065681}
   m_SourcePrefab: {fileID: 100100000, guid: 4789f51d6bbdccf47928680088ed24a5, type: 3}
+--- !u!1001 &4074712236352802
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1967877404}
+    m_Modifications:
+    - target: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454740664535884839, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100259493525448994, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099723474887331450, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_Name
+      value: chambal_cartita_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099723474887331450, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      propertyPath: m_TagString
+      value: Carta
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4099723474887331450, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 923966538}
+    - targetCorrespondingSourceObject: {fileID: 4099723474887331450, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 923966542}
+  m_SourcePrefab: {fileID: 100100000, guid: 98b270c3d70eb1241834c43b90d1e703, type: 3}
 --- !u!1001 &2723422825153577976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10696,7 +10873,7 @@ MonoBehaviour:
   botonHablarPrefab: {fileID: 0}
   posicionBoton: {x: -1.96, y: 1.82, z: 0}
   textoUI: {fileID: 2044410985}
-  tiempoPorLetra: 0.05
+  tiempoPorLetra: 0.02
   frasesGenericasDia1: []
   frasesGenericasDia2: []
   frasesGenericasDia3: []
