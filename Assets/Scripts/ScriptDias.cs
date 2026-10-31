@@ -26,7 +26,57 @@ public class ScriptDias : MonoBehaviour
     public AudioClip Triste_basicote;
     public AudioClip Risa_basicote;
     public AudioClip Enfado_basicote;
+
+    [Header("Sonidos_brainrot")]
+    public AudioClip Triste_brainrot;
+    public AudioClip Risa_brainrot;
+    public AudioClip Hablar_brainrot;
+
+    [Header("Sonidos_Lista")]
+    public AudioClip hablar_Lista;
+    public AudioClip Enfado_Lista;
+    public AudioClip Risa_Lista;
+
+
+    [Header("Sonidos_gordete")]
+    public AudioClip Triste_gordete;
+    public AudioClip Risa_gordete;
+    public AudioClip Enfado_gordete;
+    public AudioClip Hablar_gordete;
+    public AudioClip Faliz_gordete;
+
+    [Header("Sonidos_stalker")]
+    public AudioClip Triste_stalker;
+    public AudioClip Risa_stalker;
+    public AudioClip Enfado_stalker;
+    public AudioClip Hablar_stalker;
+
+    [Header("Sonidos_mewing")]
+    public AudioClip mewingDia1;
+    public AudioClip mewingDia2;
+    public AudioClip mewingDia3;
+    public AudioClip mewingDia4;
+
+    [Header("Sonidos_negrete")]
+    public AudioClip Triste_negrete;
+    public AudioClip Risa_negrete;
+    public AudioClip Hablar_negrete;
+
+    [Header("Sonidos_finales")]
+    public AudioClip Final_basicote_camion;
+    public AudioClip Final_basicote_bomba;
+    public AudioClip Final_brainrot;
+    public AudioClip Final_lista;
+    public AudioClip Final_stalker;
+    public AudioClip Final_mewing;
+    public AudioClip Final_negrete;
+    public AudioClip Final_gordete;
+    public AudioClip Final_Pantalla;
+    public AudioClip Victoria;
+
+
     public AudioSource audioSource;
+    public AudioSource audioSource2;
 
     [Header("Alumno en Pantalla")]
     public ScriptAlumno alumnoActual;
@@ -98,6 +148,8 @@ public class ScriptDias : MonoBehaviour
 
     [Header("Pantalla de Muerte / Game Over")]
     public GameObject panelPantallaMuerte;
+    public GameObject panelPantallaVictoria;
+
 
     [Header("Variables varias")]
     public int nota = 0;
@@ -237,16 +289,20 @@ public class ScriptDias : MonoBehaviour
             if (nota >= 5)
             {
                 brainrot.animator.SetTrigger("Feliz");
+                if (Risa_brainrot != null) audioSource.PlayOneShot(Risa_brainrot, 1.3f);
+
                 yield return StartCoroutine(ManejarDialogo(brainrot.Decir(brainrotReaccionFeliz, false)));
             }
             else if (nota == 4 || nota == 3)
             {
-                brainrot.animator.SetTrigger("Enfadado");
+                brainrot.animator.SetTrigger("Triste");
+                if (Triste_brainrot != null) audioSource.PlayOneShot(Triste_brainrot, 1.3f);
                 yield return StartCoroutine(ManejarDialogo(brainrot.Decir(brainrotReaccionEnfadado, false)));
             }
             else
             {
                 brainrot.animator.SetTrigger("Triste");
+                if (Triste_brainrot != null) audioSource.PlayOneShot(Triste_brainrot, 1.3f);
                 yield return StartCoroutine(ManejarDialogo(brainrot.Decir(brainrotReaccionTriste, false)));
             }
 
@@ -271,18 +327,23 @@ public class ScriptDias : MonoBehaviour
             if (nota == 10)
             {
                 repelente.animator.SetTrigger("Feliz");
+                if (Risa_Lista != null) audioSource.PlayOneShot(Risa_Lista, 1.3f);
+
                 yield return StartCoroutine(ManejarDialogo(repelente.Decir(repelenteReaccion10, false)));
                 diecesRepelente++;
             }
             else if (nota >= 5)
             {
                 repelente.animator.SetTrigger("Enfadado");
+                if (Enfado_Lista != null) audioSource.PlayOneShot(Enfado_Lista, 10);
+
                 yield return StartCoroutine(ManejarDialogo(repelente.Decir(repelenteReaccionAprobado, false)));
                 if (repelente.animator != null) repelente.animator.SetTrigger("enfado2");
             }
             else
             {
                 repelente.animator.SetTrigger("Enfadado");
+                if (Enfado_Lista != null) audioSource.PlayOneShot(Enfado_Lista, 10);
                 yield return StartCoroutine(ManejarDialogo(repelente.Decir(repelenteReaccionSuspenso, false)));
                 if (repelente.animator != null) repelente.animator.SetTrigger("enfado2");
             }
@@ -321,16 +382,19 @@ public class ScriptDias : MonoBehaviour
             if (nota < 5)
             {
                 stalker.animator.SetTrigger("Triste");
+                if (Triste_stalker != null) audioSource.PlayOneShot(Triste_stalker, 10f);
                 yield return StartCoroutine(ManejarDialogo(stalker.Decir(stalkerSuspenso, false)));
             }
             else if (nota == 5)
             {
                 stalker.animator.SetTrigger("Feliz");
+                if (Risa_stalker != null) audioSource.PlayOneShot(Risa_stalker, 10f);
                 yield return StartCoroutine(ManejarDialogo(stalker.Decir(stalker_5, false)));
             }
             else
             {
                 stalker.animator.SetTrigger("Feliz");
+                if (Risa_stalker != null) audioSource.PlayOneShot(Risa_stalker, 10f);
                 yield return StartCoroutine(ManejarDialogo(stalker.Decir(stalker_sonrojada, false)));
             }
 
@@ -355,16 +419,19 @@ public class ScriptDias : MonoBehaviour
             if (nota >= 5)
             {
                 negrete.animator.SetTrigger("Feliz");
+                if (Risa_negrete != null) audioSource.PlayOneShot(Risa_negrete, 1.3f);
                 yield return StartCoroutine(ManejarDialogo(negrete.Decir(negreteReaccionFeliz, false)));
             }
             else if (nota == 4 || nota == 3)
             {
-                negrete.animator.SetTrigger("Enfadado");
+                negrete.animator.SetTrigger("Triste");
+                if (Triste_negrete != null) audioSource.PlayOneShot(Triste_negrete, 1.3f);
                 yield return StartCoroutine(ManejarDialogo(negrete.Decir(negreteReaccionEnfadado, false)));
             }
             else
             {
                 negrete.animator.SetTrigger("Triste");
+                if (Triste_negrete != null) audioSource.PlayOneShot(Triste_negrete, 1.3f);
                 yield return StartCoroutine(ManejarDialogo(negrete.Decir(negreteReaccionTriste, false)));
             }
 
@@ -409,7 +476,9 @@ public class ScriptDias : MonoBehaviour
 
             if (nota == 0 && manzana_comida == false)
             {
+                if (Enfado_gordete != null) audioSource.PlayOneShot(Enfado_gordete, 1.3f);
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¿¡Me has dejado sin comer y encima me pones un cero!?", "Te vas a arrepentir, cabrón." }, false)));
+                if (Final_gordete != null) audioSource.PlayOneShot(Final_gordete, 1.3f);
                 yield return StartCoroutine(EjecutarMuerte(gordete)); 
                 yield break;
             }
@@ -417,16 +486,19 @@ public class ScriptDias : MonoBehaviour
             if (nota >= 5)
             {
                 gordete.animator.SetTrigger("Feliz");
+                if (Faliz_gordete != null) audioSource.PlayOneShot(Faliz_gordete, 1.3f);
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(gordeteReaccionFeliz, false)));
             }
             else if (nota == 4 || nota == 3)
             {
                 gordete.animator.SetTrigger("Triste");
+                if (Triste_gordete != null) audioSource.PlayOneShot(Triste_gordete, 1.3f);
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(gordeteReaccionEnfadado, false)));
             }
             else
             {
                 gordete.animator.SetTrigger("Triste");
+                if (Triste_gordete != null) audioSource.PlayOneShot(Triste_gordete, 1.3f);
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(gordeteReaccionTriste, false)));
             }
 
@@ -518,16 +590,19 @@ public class ScriptDias : MonoBehaviour
         if (nota < 4)
         {
             brainrot.animator.SetTrigger("Triste");
+            if (Triste_brainrot != null) audioSource.PlayOneShot(Triste_brainrot, 1.3f);
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Ojalá te baneen en tis tos." }, false)));
         }
         else if (nota == 4 || nota == 3)
         {
             brainrot.animator.SetTrigger("Triste");
+            if (Triste_brainrot != null) audioSource.PlayOneShot(Triste_brainrot, 1.3f);
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Muy poco skibidi de tu parte." }, false)));
         }
         else
         {
             brainrot.animator.SetTrigger("Feliz");
+            if (Risa_brainrot != null) audioSource.PlayOneShot(Risa_brainrot, 1.3f);
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Toma jeroma pastilla de goma." }, false)));
         }
 
@@ -570,16 +645,19 @@ public class ScriptDias : MonoBehaviour
         if (nota == 4 || nota == 3)
         {
             gordete.animator.SetTrigger("Triste");
+            if (Triste_gordete != null) audioSource.PlayOneShot(Triste_gordete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Si mi mamá se entera me deja sin la cuarta merienda." }, true)));
         }
         else if (nota < 4)
         {
             gordete.animator.SetTrigger("Triste");
+            if (Triste_gordete != null) audioSource.PlayOneShot(Triste_gordete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(gordeteReaccionEnfadado, true)));
         }
         else
         {
             gordete.animator.SetTrigger("Feliz");
+            if (Risa_gordete != null) audioSource.PlayOneShot(Risa_gordete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¡¡QUÉ BIEN!! Hoy me daré un caprichito." }, true)));
         }
 
@@ -600,11 +678,14 @@ public class ScriptDias : MonoBehaviour
         if (nota < 5)
         {
             negrete.animator.SetTrigger("Triste");
+            if (Triste_negrete != null) audioSource.PlayOneShot(Triste_negrete, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Jolines, es que no quería." }, true)));
         }
         else
         {
             negrete.animator.SetTrigger("Feliz");
+            if (Risa_negrete != null) audioSource.PlayOneShot(Risa_negrete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "No tienes ni idea de corregir, ¡qué bien!" }, true)));
         }
 
@@ -686,11 +767,13 @@ public class ScriptDias : MonoBehaviour
         if (nota < 5)
         {
             stalker.animator.SetTrigger("Triste");
+            if (Triste_stalker != null) audioSource.PlayOneShot(Triste_stalker, 1.3f);
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Mejoraré por ti." }, true)));
         }
         else
         {
             stalker.animator.SetTrigger("Feliz");
+            if (Risa_stalker != null) audioSource.PlayOneShot(Risa_stalker, 1.3f);
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Me gusta que me pongas buena nota." }, true)));
         }
 
@@ -728,16 +811,19 @@ public class ScriptDias : MonoBehaviour
         if (nota < 4)
         {
             basicote.animator.SetTrigger("Triste");
+            if (Triste_basicote != null) audioSource.PlayOneShot(Triste_basicote, 1.3f);
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Le voy a decir Aitor que te muerda los cojones." }, true)));
         }
         else if (nota == 4)
         {
             basicote.animator.SetTrigger("Enfadado");
+            if (Enfado_basicote != null) audioSource.PlayOneShot(Enfado_basicote, 1.3f);
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Gilipollas." }, true)));
         }
         else
         {
             basicote.animator.SetTrigger("Feliz");
+            if (Risa_basicote != null) audioSource.PlayOneShot(Risa_basicote, 1.3f);
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "SUUUUUUUUUUU." }, true)));
         }
 
@@ -758,6 +844,8 @@ public class ScriptDias : MonoBehaviour
         if (nota == 10)
         {
             repelente.animator.SetTrigger("Feliz");
+            if (Risa_Lista != null) audioSource.PlayOneShot(Risa_Lista, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "Ya me lo esperaba." }, true)));
             diecesRepelente++;
         }
@@ -765,12 +853,14 @@ public class ScriptDias : MonoBehaviour
         {
             
              repelente.animator.SetTrigger("Enfadado");
-             yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "¡¿PERDONA?! ¡El examen está perfecto!" }, true)));
+            if (Enfado_Lista != null) audioSource.PlayOneShot(Enfado_Lista, 1.3f);
+            yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "¡¿PERDONA?! ¡El examen está perfecto!" }, true)));
             
         }
         else
         {
             repelente.animator.SetTrigger("Enfadado");
+            if (Enfado_Lista != null) audioSource.PlayOneShot(Enfado_Lista, 1.3f);
             yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "¡¿CÓMO?! Atente a las consecuencias." }, true)));
         }
 
@@ -801,16 +891,21 @@ public class ScriptDias : MonoBehaviour
         if (nota < 4)
         {
             stalker.animator.SetTrigger("Triste");
+            if (Triste_stalker != null) audioSource.PlayOneShot(Triste_stalker, 1.3f);
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Ya veo que no te ha gustado la sorpresa." }, true)));
         }
         else if (nota == 4 || nota == 5)
         {
             stalker.animator.SetTrigger("Triste");
+            if (Triste_stalker != null) audioSource.PlayOneShot(Triste_stalker, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Cuidado con lo que haces. No es una amenaza, es un aviso." }, true)));
         }
         else
         {
             stalker.animator.SetTrigger("Feliz");
+            if (Risa_stalker != null) audioSource.PlayOneShot(Risa_stalker, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Mañana te haré otra sorpresa, ya que te ha gustado tanto esta." }, true)));
         }
 
@@ -839,7 +934,9 @@ public class ScriptDias : MonoBehaviour
             }
             else if (gordete.respuestaElegida == 1)
             {
+                if (Enfado_gordete != null) audioSource.PlayOneShot(Enfado_gordete, 1.3f);
                 yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Tú lo has querido, cara de acelga." }, false)));
+                if (Final_gordete != null) audioSource.PlayOneShot(Final_gordete, 1.3f);
                 yield return StartCoroutine(EjecutarMuerte(gordete));
             }
         }
@@ -854,16 +951,19 @@ public class ScriptDias : MonoBehaviour
         if (nota == 4 || nota == 3)
         {
             gordete.animator.SetTrigger("Triste");
+            if (Triste_gordete != null) audioSource.PlayOneShot(Triste_gordete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Si mi mamá se entera me deja sin la cuarta merienda." }, true)));
         }
         else if (nota < 3)
         {
             gordete.animator.SetTrigger("Triste");
+            if (Triste_gordete != null) audioSource.PlayOneShot(Triste_gordete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(gordeteReaccionEnfadado, true)));
         }
         else
         {
             gordete.animator.SetTrigger("Feliz");
+            if (Risa_gordete != null) audioSource.PlayOneShot(Risa_gordete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¡¡QUÉ BIEN!! Hoy me daré un caprichito." }, true)));
         }
 
@@ -895,16 +995,20 @@ public class ScriptDias : MonoBehaviour
         if (nota < 4)
         {
             basicote.animator.SetTrigger("Triste");
+            if (Triste_stalker != null) audioSource.PlayOneShot(Triste_stalker, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Vete a toMark por culo." }, true)));
         }
         else if (nota == 4)
         {
-            basicote.animator.SetTrigger("Enfadado");
+            basicote.animator.SetTrigger("Triste");
+            if (Triste_stalker != null) audioSource.PlayOneShot(Triste_stalker, 1.3f);
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¿Acaso no sabes puto inglés?" }, true)));
         }
         else
         {
             basicote.animator.SetTrigger("Feliz");
+            if (Risa_stalker != null) audioSource.PlayOneShot(Risa_stalker, 1.3f);
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "VAMOS, JODER." }, true)));
         }
 
@@ -984,6 +1088,8 @@ public class ScriptDias : MonoBehaviour
         if (nota == 10)
         {
             repelente.animator.SetTrigger("Feliz");
+            if (Risa_Lista != null) audioSource.PlayOneShot(Risa_Lista, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "Mi año viviendo en Gran Bretaña ha dado sus frutos." }, true)));
             diecesRepelente++;
         }
@@ -991,12 +1097,14 @@ public class ScriptDias : MonoBehaviour
         {
 
             repelente.animator.SetTrigger("Enfadado");
+            if (Enfado_Lista != null) audioSource.PlayOneShot(Enfado_Lista, 1.3f);
             yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "¡¿QUÉ?! Esta tarde tendrás más que palabras con mi padre." }, true)));
 
         }
         else
         {
             repelente.animator.SetTrigger("Enfadado");
+            if (Enfado_Lista != null) audioSource.PlayOneShot(Enfado_Lista, 1.3f);
             yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "¡¿CÓMO?! Mi padre va a desintegrarte." }, true)));
         }
 
@@ -1030,16 +1138,19 @@ public class ScriptDias : MonoBehaviour
         if (nota < 4)
         {
             brainrot.animator.SetTrigger("Triste");
+            if (Triste_brainrot != null) audioSource.PlayOneShot(Triste_brainrot, 1.3f);
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Ojalá te baneen en todas las redes sociales." }, false)));
         }
         else if (nota == 4 || nota == 3)
         {
             brainrot.animator.SetTrigger("Triste");
+            if (Triste_brainrot != null) audioSource.PlayOneShot(Triste_brainrot, 1.3f);
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Debería haber estudiado viendo tis tos en inglés." }, false)));
         }
         else
         {
             brainrot.animator.SetTrigger("Feliz");
+            if (Risa_brainrot != null) audioSource.PlayOneShot(Risa_brainrot, 1.3f);
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Holy moly profe, vaya aura de corrección." }, false)));
         }
 
@@ -1060,16 +1171,19 @@ public class ScriptDias : MonoBehaviour
         if (nota < 4)
         {
             negrete.animator.SetTrigger("Triste");
+            if (Triste_negrete != null) audioSource.PlayOneShot(Triste_negrete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Bua, con lo que me gusta a mí jugar y acariciar a mi car aunque suelte tanto pelo." }, true)));
         }
         else if (nota ==3 || nota ==4)
         {
             negrete.animator.SetTrigger("Triste");
+            if (Triste_negrete != null) audioSource.PlayOneShot(Triste_negrete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Oh, no, con lo que me gustan a mí los hauses para merendar." }, true)));
         }
         else
         {
             negrete.animator.SetTrigger("Feliz");
+            if (Risa_negrete != null) audioSource.PlayOneShot(Risa_negrete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Sabía que gato y plátano se escribían así, soy la monda." }, true)));
         }
 
@@ -1103,6 +1217,7 @@ public class ScriptDias : MonoBehaviour
             // Si no tiene los tres dieces, el padre provoca el Game Over.
         if (diecesRepelente < 3)
         {
+            if (Final_lista != null) audioSource.PlayOneShot(Final_lista, 1.3f);
             yield return StartCoroutine(EjecutarMuerte(padreLista));
             yield break;
         }
@@ -1133,16 +1248,20 @@ public class ScriptDias : MonoBehaviour
         if (nota == 4 || nota == 3)
         {
             gordete.animator.SetTrigger("Triste");
+            if (Triste_gordete != null) audioSource.PlayOneShot(Triste_gordete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Jo, profe, me acabo de acordar, era Cristian Culón." }, true)));
         }
         else if (nota < 3)
         {
             gordete.animator.SetTrigger("Triste");
+            if (Triste_gordete != null) audioSource.PlayOneShot(Triste_gordete, 1.3f);
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Esta nota no es nada kawaii." }, true)));
         }
         else
         {
             gordete.animator.SetTrigger("Feliz");
+            if (Faliz_gordete != null) audioSource.PlayOneShot(Faliz_gordete, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "¡Sugooooi, profe!" }, true)));
         }
 
@@ -1163,16 +1282,22 @@ public class ScriptDias : MonoBehaviour
         if (nota < 3)
         {
             stalker.animator.SetTrigger("Triste");
+            if (Triste_stalker != null) audioSource.PlayOneShot(Triste_stalker, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Quería saber de qué color era tu hígado." }, true)));
         }
         else if (nota == 4 || nota == 3)
         {
             stalker.animator.SetTrigger("Triste");
+            if (Triste_stalker != null) audioSource.PlayOneShot(Triste_stalker, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Adiós, primer amor." }, true)));
         }
         else
         {
             stalker.animator.SetTrigger("Feliz");
+            if (Risa_stalker != null) audioSource.PlayOneShot(Risa_stalker, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "¡¿SIGNIFICA ESTO QUE ES RECÍPROCO?!" }, true)));
         }
 
@@ -1188,6 +1313,8 @@ public class ScriptDias : MonoBehaviour
 
         if (diaMewing == 4)
         {
+            if (Final_mewing != null) audioSource.PlayOneShot(Final_mewing, 1.3f);
+
             yield return EjecutarMuerte(mewing);
         }
         else
@@ -1225,18 +1352,23 @@ public class ScriptDias : MonoBehaviour
         if (nota == 10)
         {
             repelente.animator.SetTrigger("Feliz");
+            if (Risa_Lista != null) audioSource.PlayOneShot(Risa_Lista, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "Qué alegría me das. ¡Viva la meritocracia!" }, true)));
         }
         else if (nota < 10 || nota > 4)
         {
 
             repelente.animator.SetTrigger("Enfadado");
+            if (Enfado_Lista != null) audioSource.PlayOneShot(Enfado_Lista, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "¿Y ESTA PUTA MIERDA DE NOTA?", "NO ME MEREZCO ESTA FALTA DE RESPETO." }, true)));
 
         }
         else
         {
             repelente.animator.SetTrigger("Enfadado");
+            if (Enfado_Lista != null) audioSource.PlayOneShot(Enfado_Lista, 1.3f);
             yield return StartCoroutine(ManejarDialogo(repelente.Decir(new string[] { "HIJO DE PUTA, TE VOY A MATAR." }, true)));
         }
 
@@ -1261,13 +1393,23 @@ public class ScriptDias : MonoBehaviour
         else if (basicote.respuestaElegida == 1)
         {
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "¡ME CAGO EN TODO!", "¿Recuerdas lo que me respondiste anteayer?", "Disfruta :)." }, true)));
-            yield return StartCoroutine(EjecutarMuerte(basicote));
+            if (decisionBasicoteDia2 == 0)
+            {
+                if (Final_basicote_camion != null) audioSource.PlayOneShot(Final_basicote_camion, 5f);
+            }
+            else
+            {
+                if (Final_basicote_bomba != null) audioSource.PlayOneShot(Final_basicote_bomba, 5f);
+            }
+
+                yield return StartCoroutine(EjecutarMuerte(basicote));
         }
         yield return StartCoroutine(basicote.EntregarExamen(4));
         nota = stalker.notaRecibida;
         if (nota < 3)
         {
             basicote.animator.SetTrigger("Triste");
+
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Vaya, ¿esta mierda me merezco? Sí que soy estúpido." }, true)));
         }
         else if (nota == 4 || nota == 3)
@@ -1312,16 +1454,22 @@ public class ScriptDias : MonoBehaviour
         if (nota < 4)
         {
             brainrot.animator.SetTrigger("Triste");
+            if (Triste_brainrot != null) audioSource.PlayOneShot(Triste_brainrot, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Ojalá te baneen en todas las redes sociales." }, false)));
         }
         else if (nota == 4 || nota == 3)
         {
             brainrot.animator.SetTrigger("Triste");
+            if (Triste_brainrot != null) audioSource.PlayOneShot(Triste_brainrot, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Debería haber estudiado viendo tis tos en inglés." }, false)));
         }
         else
         {
             brainrot.animator.SetTrigger("Feliz");
+            if (Risa_basicote != null) audioSource.PlayOneShot(Risa_basicote, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(brainrot.Decir(new string[] { "Soy el goat. Es lo que hay." }, false)));
         }
 
@@ -1342,19 +1490,25 @@ public class ScriptDias : MonoBehaviour
         if (nota < 5)
         {
             negrete.animator.SetTrigger("Triste");
+            if (Triste_negrete != null) audioSource.PlayOneShot(Triste_negrete, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Bua, con lo que me gusta a mí jugar y acariciar a mi car aunque suelte tanto pelo." }, true)));
         }
         else
         {
             negrete.animator.SetTrigger("Feliz");
+            if (Risa_negrete != null) audioSource.PlayOneShot(Risa_negrete, 1.3f);
+
             yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "TOMA YAAA PASO DE CURSO" }, true)));
         }
 
         yield return StartCoroutine(negrete.Desaparecer());
         negrete.gameObject.SetActive(false);
+        
 
-       
     }
+
+
     private void ForzarSoltarHerramientas()
     {
         ControladorRotulador rotulador = FindFirstObjectByType<ControladorRotulador>();
@@ -1417,6 +1571,9 @@ public class ScriptDias : MonoBehaviour
 
         if (panelAsesino != null)
         {
+            audioSource2.mute = true;
+            if (Final_Pantalla != null) audioSource.PlayOneShot(Final_Pantalla, 0.8f);
+
             panelAsesino.SetActive(false);
         }
 
@@ -1449,6 +1606,8 @@ public class ScriptDias : MonoBehaviour
 
         if (faltas >= 3)
         {
+            if (Final_brainrot != null) audioSource.PlayOneShot(Final_Pantalla, 1.3f);
+
             StartCoroutine(SecuenciaMuerteTungTung());
         }
         else if (faltas == 2)
@@ -1483,6 +1642,7 @@ public class ScriptDias : MonoBehaviour
         reaccionZonaStalkerActivada = true;
 
         // Ejecutamos el sistema de muerte existente.
+        if (Final_stalker != null) audioSource.PlayOneShot(Final_stalker, 1.3f);
         StartCoroutine(EjecutarMuerte(stalker));
     }
     public void ActivarPantallaMuerte()
@@ -1498,6 +1658,8 @@ public class ScriptDias : MonoBehaviour
     // ==========================================
     public void ReiniciarJuego()
     {
+        audioSource2.mute = false;
+
         StartCoroutine(RutinaReiniciar());
     }
 
@@ -1519,6 +1681,8 @@ public class ScriptDias : MonoBehaviour
 
     public void VolverAlMenu()
     {
+        audioSource2.mute = false;
+
         StartCoroutine(RutinaVolverAlMenu());
     }
 
