@@ -95,6 +95,9 @@ public class ScriptDias : MonoBehaviour
     public GameObject objetoCartelDias;
     public float duracionCartel = 3f;
 
+    public GameObject panelCartaAmpliada;
+    [HideInInspector] public bool cartaLeida = false;
+
 
 
     [Header("Textos Día 1 - Basicote")]
@@ -230,6 +233,7 @@ public class ScriptDias : MonoBehaviour
     // --- EL GUION DEL DÍA 1 ---
     public IEnumerator SecuenciaDia1()
     {
+        yield return new WaitForSeconds(1.5f);
         diaMewing = 1;
         diaActual = 1;
         alumnoActual = basicote;
@@ -399,7 +403,7 @@ public class ScriptDias : MonoBehaviour
             else if (nota == 5)
             {
                 stalker.animator.SetTrigger("Feliz");
-                if (Risa_stalker != null) audioSource.PlayOneShot(Risa_stalker, 10f);
+                if (Risa_stalker != null) audioSource.PlayOneShot(Risa_stalker, 12f);
                 yield return StartCoroutine(ManejarDialogo(stalker.Decir(stalker_5, false)));
             }
             else
@@ -1006,7 +1010,7 @@ public class ScriptDias : MonoBehaviour
             yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "[RESPUESTA DE BASICOTE A LA OPCIÓN B]" }, true)));
         }
         yield return StartCoroutine(basicote.EntregarExamen(3));
-        nota = stalker.notaRecibida;
+        nota = basicote.notaRecibida;
         if (nota < 4)
         {
             basicote.animator.SetTrigger("Triste");
@@ -1420,7 +1424,7 @@ public class ScriptDias : MonoBehaviour
                 yield return StartCoroutine(EjecutarMuerte(basicote));
         }
         yield return StartCoroutine(basicote.EntregarExamen(4));
-        nota = stalker.notaRecibida;
+        nota = basicote.notaRecibida;
         if (nota < 3)
         {
             basicote.animator.SetTrigger("Triste");
@@ -1530,6 +1534,22 @@ public class ScriptDias : MonoBehaviour
 
         yield return StartCoroutine(ManejarDialogo(cartero.Decir(new string[] { "Tronco, esta carta es para ti." }, true)));
         if (cartero.botonHablarPrefab != null) cartero.botonHablarPrefab.SetActive(false);
+
+        // --- LA MAGIA: El juego se congela aquí hasta que pulses la cruz de la carta ---
+        yield return new WaitUntil(() => cartaLeida);
+
+        // Cuando la cierras, el cartero se despide
+        yield return StartCoroutine(ManejarDialogo(cartero.Decir(new string[] { "¡Enhorabuena, tío!", "Nos vemos por aquí." }, false)));
+
+        yield return StartCoroutine(cartero.Desaparecer());
+        cartero.gameObject.SetActive(false);
+
+        // --- PANTALLA DE VICTORIA ---
+        if (panelPantallaVictoria != null)
+        {
+            if (Victoria != null) audioSource.PlayOneShot(Victoria, 1.3f);
+            panelPantallaVictoria.SetActive(true);
+        }
 
     }
 
@@ -1712,5 +1732,16 @@ public class ScriptDias : MonoBehaviour
 
         // 3. Volvemos al menú
         SceneManager.LoadScene("Menu");
+    }
+
+    public void CerrarCartaYGanar()
+    {
+        if (panelCartaAmpliada != null)
+        {
+            panelCartaAmpliada.SetActive(false);
+        }
+
+        // Damos luz verde para que la secuencia del cartero continúe
+        cartaLeida = true;
     }
 }

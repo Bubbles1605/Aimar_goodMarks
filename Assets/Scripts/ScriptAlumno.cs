@@ -53,11 +53,18 @@ public class ScriptAlumno : MonoBehaviour
 
     // --- NUEVA VARIABLE ---
     [HideInInspector] public bool examenEnMesa = false; // Para saber si ya ha aterrizado
+
     // --- NUEVO: APARTADO DE SONIDOS ---
     [Header("Sonidos")]
     public AudioClip sonidoMoverPapel;
     public AudioClip romper_Pompa;
     public AudioSource audioSource;
+
+    // --- NUEVO: VOZ EN BUCLE ---
+    [Header("Voz del Alumno")]
+    public AudioClip sonidoVozSinte;
+    private AudioSource audioSourceVoz;
+
     private SpriteRenderer spriteRenderer;
     public Animator animator;
     private GameObject botonHablarInstanciado;
@@ -70,9 +77,13 @@ public class ScriptAlumno : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
-        // Creamos un AudioSource automáticamente si el alumno no lo tiene
+        // Creamos un AudioSource automáticamente si el alumno no lo tiene para efectos
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
+
+        // Creamos un segundo AudioSource exclusivamente para la voz en bucle
+        audioSourceVoz = gameObject.AddComponent<AudioSource>();
+        audioSourceVoz.loop = true;
     }
 
     public IEnumerator Aparecer()
@@ -102,7 +113,6 @@ public class ScriptAlumno : MonoBehaviour
         {
             panelMuerte.SetActive(true);
         }
-
     }
 
     public IEnumerator Desaparecer()
@@ -177,7 +187,6 @@ public class ScriptAlumno : MonoBehaviour
         // 1. Destruimos el botón viejo si ya había uno en la mesa
         if (botonHablarInstanciado != null)
         {
-
             Destroy(botonHablarInstanciado);
             botonHablarInstanciado = null;
         }
@@ -241,6 +250,13 @@ public class ScriptAlumno : MonoBehaviour
 
             avanzarTexto = false;
 
+            // --- INICIAR BUCLE DE VOZ ---
+            if (sonidoVozSinte != null && audioSourceVoz != null)
+            {
+                audioSourceVoz.clip = sonidoVozSinte;
+                audioSourceVoz.Play();
+            }
+
             foreach (char letra in linea.ToCharArray())
             {
                 textoUI.text += letra;
@@ -251,6 +267,9 @@ public class ScriptAlumno : MonoBehaviour
                     yield return new WaitForSeconds(tiempoPorLetra);
                 }
             }
+
+            // --- PARAR BUCLE DE VOZ ---
+            if (audioSourceVoz != null) audioSourceVoz.Stop();
 
             animator.SetBool("Hablando", false);
 

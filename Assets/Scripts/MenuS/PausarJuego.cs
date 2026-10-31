@@ -14,20 +14,23 @@ public class PausarJuego : MonoBehaviour
 
     [HideInInspector]
     public bool juegoPausado = false;
+
     [Header("Sonidos")]
-  
     public AudioClip reanudar;
     public AudioClip pausa;
     public AudioClip reiniciar;
     public AudioClip menu;
     public AudioSource audioSource;
 
+    private bool accionEnProgreso = false;
 
     private void Update()
     {
         // Tecla Escape para pausar o reanudar mediante código
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (accionEnProgreso) return;
+
             if (juegoPausado)
             {
                 Reanudar();
@@ -38,10 +41,12 @@ public class PausarJuego : MonoBehaviour
             }
         }
     }
-  
+
     // --- FUNCIÓN PÚBLICA PARA TU BOTÓN DE PAUSA ---
     public void PulsarBotonPausa()
     {
+        if (accionEnProgreso) return;
+
         if (juegoPausado)
         {
             Reanudar();
@@ -54,7 +59,7 @@ public class PausarJuego : MonoBehaviour
 
     public void Pausar()
     {
-        if (juegoPausado) return;
+        if (juegoPausado || accionEnProgreso) return;
 
         if (menuPausa != null)
         {
@@ -63,34 +68,52 @@ public class PausarJuego : MonoBehaviour
 
         juegoPausado = true;
         Time.timeScale = 0.0f;
+
+        // --- NUEVO: CORTAR VOCES DEL ALUMNO ---
+        // Buscamos al Director para saber qué alumno está en pantalla y le cortamos todos los sonidos
+        ScriptDias director = FindFirstObjectByType<ScriptDias>();
+        if (director != null && director.alumnoActual != null)
+        {
+            AudioSource[] reproductoresAlumno = director.alumnoActual.GetComponents<AudioSource>();
+            foreach (AudioSource reproductor in reproductoresAlumno)
+            {
+                reproductor.Stop();
+            }
+        }
+
         StartCoroutine(RutinaPausar());
     }
 
     IEnumerator RutinaPausar()
     {
+        accionEnProgreso = true;
         yield return null;
         yield return null;
+
         if (pausa != null) audioSource.PlayOneShot(pausa, 1.3f);
 
         if (animadorMenu != null)
         {
             animadorMenu.ResetTrigger("AnimacionOpcionA");
             animadorMenu.ResetTrigger("AnimacionOpcionB");
-            animadorMenu.ResetTrigger("AnimacionOpcionC"); // Limpiamos la C por seguridad
+            animadorMenu.ResetTrigger("AnimacionOpcionC");
             animadorMenu.SetTrigger("TriggerEntrada");
         }
 
         yield return new WaitForSecondsRealtime(duracionAnimacionEntrada);
 
+        accionEnProgreso = false;
     }
 
     public void Reanudar()
     {
+        if (accionEnProgreso) return;
         StartCoroutine(RutinaReanudar());
     }
 
     IEnumerator RutinaReanudar()
     {
+        accionEnProgreso = true;
         if (reanudar != null) audioSource.PlayOneShot(reanudar, 1.3f);
 
         if (animadorMenu != null)
@@ -109,16 +132,21 @@ public class PausarJuego : MonoBehaviour
         }
         Time.timeScale = 1.0f;
         juegoPausado = false;
+
+        accionEnProgreso = false;
     }
 
     public void jugar()
     {
+        if (accionEnProgreso) return;
         StartCoroutine(RutinaJugar());
     }
 
     IEnumerator RutinaJugar()
     {
+        accionEnProgreso = true;
         Time.timeScale = 1.0f;
+
         if (menu != null) audioSource.PlayOneShot(menu, 1.3f);
         if (animadorMenu != null)
         {
@@ -135,12 +163,15 @@ public class PausarJuego : MonoBehaviour
 
     public void OpcionC()
     {
+        if (accionEnProgreso) return;
         StartCoroutine(RutinaOpcionC());
     }
 
     IEnumerator RutinaOpcionC()
     {
-        Time.timeScale = 1.0f; // Restauramos el tiempo por si estaba pausado
+        accionEnProgreso = true;
+        Time.timeScale = 1.0f;
+
         if (reiniciar != null) audioSource.PlayOneShot(reiniciar, 1.3f);
 
         if (animadorMenu != null)

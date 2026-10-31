@@ -446,6 +446,7 @@ MonoBehaviour:
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
   audioSource: {fileID: 1450378550}
+  sonidoVozSinte: {fileID: 8300000, guid: 06a77c6323c33fe4bb3700d2232e1901, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -491,6 +492,7 @@ MonoBehaviour:
   sonidoMoverPapel: {fileID: 0}
   romper_Pompa: {fileID: 0}
   audioSource: {fileID: 0}
+  sonidoVozSinte: {fileID: 0}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -1630,6 +1632,7 @@ MonoBehaviour:
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
   audioSource: {fileID: 1450378550}
+  sonidoVozSinte: {fileID: 8300000, guid: af704079710185d4fab6c19aa4d1c45a, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -3822,6 +3825,7 @@ MonoBehaviour:
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
   audioSource: {fileID: 1450378550}
+  sonidoVozSinte: {fileID: 8300000, guid: af704079710185d4fab6c19aa4d1c45a, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -4298,6 +4302,7 @@ MonoBehaviour:
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
   audioSource: {fileID: 0}
+  sonidoVozSinte: {fileID: 8300000, guid: 523b618609c35554e95d06e4eebaaaaf, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -4672,6 +4677,7 @@ MonoBehaviour:
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
   audioSource: {fileID: 1450378550}
+  sonidoVozSinte: {fileID: 8300000, guid: af704079710185d4fab6c19aa4d1c45a, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -4913,6 +4919,7 @@ MonoBehaviour:
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
   audioSource: {fileID: 1450378550}
+  sonidoVozSinte: {fileID: 8300000, guid: af704079710185d4fab6c19aa4d1c45a, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -5692,7 +5699,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a73b346f51223a04eb07a493dc38314e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.805
+  m_Volume: 0.785
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6029,10 +6036,10 @@ MonoBehaviour:
   Enfado_gordete: {fileID: 8300000, guid: 970390b53e23dc340a11c8c56116b03c, type: 3}
   Hablar_gordete: {fileID: 8300000, guid: 6679f22dcd1b3fc47bbe018da7639f70, type: 3}
   Faliz_gordete: {fileID: 8300000, guid: 7acf334704c5cf144b2ef4bdda9581a9, type: 3}
-  comer_manzana: {fileID: 8300000, guid: 4ba64e9671b1f1c4d936e87e725a4167, type: 3}
-  Triste_stalker: {fileID: 8300000, guid: d0b5ded9605fd61429dba6e1e87b556b, type: 3}
-  Risa_stalker: {fileID: 8300000, guid: 56146c343c003324eb4302492ec76eb8, type: 3}
-  Enfado_stalker: {fileID: 8300000, guid: 1b3c15869e2554e448fb483b81614557, type: 3}
+  comer_manzana: {fileID: 8300000, guid: befcc480b1d939a41a7300fb3e143128, type: 3}
+  Triste_stalker: {fileID: 8300000, guid: aceb8b0f5a2be004486856c488a4c86e, type: 3}
+  Risa_stalker: {fileID: 8300000, guid: 0ebec3feabe242646b13419eb29d6e17, type: 3}
+  Enfado_stalker: {fileID: 8300000, guid: aceb8b0f5a2be004486856c488a4c86e, type: 3}
   Hablar_stalker: {fileID: 8300000, guid: d91ba014f53fb7f4e9a230c794e9d512, type: 3}
   dar_manzana: {fileID: 8300000, guid: 92bba6d688e76f344bd608e09e34a072, type: 3}
   mewingDia1: {fileID: 8300000, guid: 9061a2798091a9244a9849914b3b16de, type: 3}
@@ -6061,6 +6068,8 @@ MonoBehaviour:
   diaActual: 1
   objetoCartelDias: {fileID: 295012059}
   duracionCartel: 2.5
+  panelCartaAmpliada: {fileID: 0}
+  cartaLeida: 0
   dialogoPresentacionBasicote:
   - "\xBFEntonces t\xFA eres Mark, el nuevo profesor?"
   - "\xA1Qu\xE9 bien!"
@@ -9266,6 +9275,7 @@ MonoBehaviour:
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
   audioSource: {fileID: 1450378550}
+  sonidoVozSinte: {fileID: 8300000, guid: 06a77c6323c33fe4bb3700d2232e1901, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -10512,6 +10522,7 @@ MonoBehaviour:
   sonidoMoverPapel: {fileID: 8300000, guid: 1e443eb4e95a75443ab4edae2f4d6436, type: 3}
   romper_Pompa: {fileID: 8300000, guid: 9bd4e9fd161c0cf468fba54ad30cb4b4, type: 3}
   audioSource: {fileID: 1450378550}
+  sonidoVozSinte: {fileID: 8300000, guid: 523b618609c35554e95d06e4eebaaaaf, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -10895,6 +10906,7 @@ MonoBehaviour:
   sonidoMoverPapel: {fileID: 0}
   romper_Pompa: {fileID: 0}
   audioSource: {fileID: 0}
+  sonidoVozSinte: {fileID: 8300000, guid: 523b618609c35554e95d06e4eebaaaaf, type: 3}
   animator: {fileID: 0}
   avanzarTexto: 0
   notaRecibida: -1
@@ -11555,6 +11567,10 @@ PrefabInstance:
     - target: {fileID: 5948231536916829117, guid: 043bf2de582297a488b10714a6bbb921, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 116.285
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765033005246027619, guid: 043bf2de582297a488b10714a6bbb921, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
