@@ -23,6 +23,9 @@ public class ScriptAlumno : MonoBehaviour
     public float tiempoPorLetra = 0.05f;
 
     [Header("Frases al hacerles click")]
+    // Variables para el sistema de frases sin repetir
+    private List<string> frasesDisponibles = new List<string>();
+    private string[] ultimoArrayUsado;
     public string[] frasesGenericasDia1;
     public string[] frasesGenericasDia2;
     public string[] frasesGenericasDia3;
@@ -288,12 +291,18 @@ public class ScriptAlumno : MonoBehaviour
         }
     }
 
-    public IEnumerator DecirAleatorio(string[] opcionesAleatorias)
+    public IEnumerator DecirAleatorio(string[] arrayFrases)
     {
-        int indiceAleatorio = Random.Range(0, opcionesAleatorias.Length);
-        string lineaElegida = opcionesAleatorias[indiceAleatorio];
+        if (ultimoArrayUsado != arrayFrases || frasesDisponibles.Count == 0)
+        {
+            ultimoArrayUsado = arrayFrases;
+            frasesDisponibles = new List<string>(arrayFrases);
+        }
 
-        yield return StartCoroutine(Decir(new string[] { lineaElegida }, true));
+        int indiceRandom = Random.Range(0, frasesDisponibles.Count);
+        string fraseElegida = frasesDisponibles[indiceRandom];
+        frasesDisponibles.RemoveAt(indiceRandom);
+        return Decir(new string[] { fraseElegida }, true);
     }
 
     // --- NUEVO: FUNCIÓN PARA ELEGIR RESPUESTAS ---

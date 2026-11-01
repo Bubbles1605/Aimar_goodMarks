@@ -1464,7 +1464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -17.419983, y: 25}
+  m_AnchoredPosition: {x: -17.419922, y: 25}
   m_SizeDelta: {x: 34.84, y: 75.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &221195485
@@ -1954,7 +1954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.7299194, y: 0.5749512}
+  m_AnchoredPosition: {x: 2.7299805, y: 0.5749512}
   m_SizeDelta: {x: 38.27, y: 26.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &328408499
@@ -3991,7 +3991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.7299194, y: 0.5749512}
+  m_AnchoredPosition: {x: 2.7299805, y: 0.5749512}
   m_SizeDelta: {x: 38.27, y: 26.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &585871351
@@ -6612,7 +6612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.7299194, y: 0.5749512}
+  m_AnchoredPosition: {x: 2.7299805, y: 0.5749512}
   m_SizeDelta: {x: 38.27, y: 26.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957337735
@@ -7157,7 +7157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0014648438, y: -3.2681274}
+  m_AnchoredPosition: {x: 0.0014648438, y: -3.2680664}
   m_SizeDelta: {x: -1583.2, y: -751.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157926739
@@ -8286,7 +8286,7 @@ MonoBehaviour:
   objetoCartelDias: {fileID: 295012059}
   duracionCartel: 2.5
   panelEntreDias: {fileID: 1661953083}
-  panelCartaAmpliada: {fileID: 0}
+  panelCartaAmpliada: {fileID: 2076443203}
   cartaLeida: 0
   miPanelEspecifico: {fileID: 541226209}
   panelJuegoNegrete: {fileID: 957337733}
@@ -8384,7 +8384,7 @@ MonoBehaviour:
   prefabManzana: {fileID: 8959275113004482167, guid: ece185789f08a7e4aa50441372578837, type: 3}
   posicionManzanaMesa: {x: 5, y: 4.18}
   panelPantallaMuerte: {fileID: 21028750}
-  panelPantallaVictoria: {fileID: 2076443203}
+  panelPantallaVictoria: {fileID: 541226209}
   textoGameOver: {fileID: 1782459222}
   velocidadEscritura: 0.05
   nota: 0
@@ -8398,7 +8398,6 @@ MonoBehaviour:
   opcionesBasicoteDia2:
   - "Cami\xF3n"
   - Bomba
-  haFirmadoCuaderno: 0
 --- !u!1 &1345110254
 GameObject:
   m_ObjectHideFlags: 0
@@ -9390,7 +9389,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1335067040}
         m_TargetAssemblyTypeName: ScriptDias, Assembly-CSharp
-        m_MethodName: AbrirPanelEspecifico
+        m_MethodName: CerrarCartaYGanar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10408,7 +10407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.7299194, y: 0.5749512}
+  m_AnchoredPosition: {x: 2.7299805, y: 0.5749512}
   m_SizeDelta: {x: 38.27, y: 26.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1640534189 stripped
@@ -13312,7 +13311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 33.37097, y: 23.160828}
+  m_AnchoredPosition: {x: 33.371094, y: 23.160889}
   m_SizeDelta: {x: 936.3975, y: 272.7229}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2044410985

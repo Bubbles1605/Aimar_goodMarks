@@ -194,7 +194,6 @@ public class ScriptDias : MonoBehaviour
     // Variable para saber si el jugador ha firmado en la zona de la Stalker
 
     private bool reaccionZonaStalkerActivada = false;
-    public bool haFirmadoCuaderno = false;
 
     void Start()
     {
@@ -244,10 +243,17 @@ public class ScriptDias : MonoBehaviour
                     break;
                 }
 
+                // ==========================================
+                // CLIC EN LA CARTA O EN EL CARTERO
+                // ==========================================
                 if (hit.CompareTag("Carta"))
                 {
-                    panelPantallaVictoria.SetActive(true);
-                    if (entregarCarta != null) audioSource.PlayOneShot(entregarCarta, 5f);
+                    if (cartaLeida) return; // Evita doble clics
+
+                    if (panelCartaAmpliada != null) panelCartaAmpliada.SetActive(true);
+                    hit.gameObject.SetActive(false); // Escondemos el sobre de la mesa
+
+                    if (entregarCarta != null) audioSource.PlayOneShot(entregarCarta, 1.3f);
                 }
             }
         }
@@ -830,17 +836,6 @@ public class ScriptDias : MonoBehaviour
         yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Hola, profe. Lucía Fernanda me ha pedido que recoja firmas." }, true)));
 
         yield return StartCoroutine(stalker.EntregarExamen(2));
-
-        if (haFirmadoCuaderno)
-        {
-            reaccionZonaStalkerActivada = true;
-            yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Acabas de venderme tu alma.", "Por fin eres mío." }, true)));
-
-            if (Final_stalker != null) audioSource.PlayOneShot(Final_stalker, 1.3f);
-            yield return StartCoroutine(EjecutarMuerte(stalker));
-            yield break;
-        }
-  
         nota = stalker.notaRecibida;
 
         if (nota < 5)
@@ -1763,7 +1758,7 @@ public class ScriptDias : MonoBehaviour
         string fraseMuerte = "..."; // Frase por defecto
 
         if (asesino == gordete) fraseMuerte = "Compartir es vivir.";
-        else if (asesino == stalker) fraseMuerte = "Mira donde firmas";
+        else if (asesino == stalker) fraseMuerte = "Mira dónde firmas";
         else if (asesino == basicote) fraseMuerte = "No le quites la ilusión a un niño.";
         else if (asesino == brainrot) fraseMuerte = "El que avisa no es traidor.";
         else if (asesino == padreLista) fraseMuerte = "¿Corregiste justamente?.";
@@ -1810,7 +1805,7 @@ public class ScriptDias : MonoBehaviour
         }
     }
 
-    // Muerte de Stalker al tocar su zona especial.
+    // Muerte INSTANTÁNEA de Stalker al tocar su zona especial con el boli
     public void ActivarReaccionZonaStalker()
     {
         if (diaActual != 2) return;
@@ -1818,15 +1813,18 @@ public class ScriptDias : MonoBehaviour
 
         if (stalker == null || !stalker.gameObject.activeInHierarchy)
             return;
-         new WaitForSeconds(2f);
 
+        // Protecciones para no ejecutar la muerte 40 veces por frame
         if (reaccionZonaStalkerActivada) return;
         if (dialogoEnCurso || esperandoRespuesta) return;
-        reaccionZonaStalkerActivada = true;
 
-        StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Acabas de venderme tu alma."," Por fin eres mío." }, true)));
+        reaccionZonaStalkerActivada = true; // Bloqueamos para que no se repita
+
+        StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Acabas de venderme tu alma.", "Por fin eres mío." }, true)));
 
         if (Final_stalker != null) audioSource.PlayOneShot(Final_stalker, 1.3f);
+
+        // MATAMOS AL JUGADOR AL INSTANTE
         StartCoroutine(EjecutarMuerte(stalker));
     }
     public void ActivarPantallaMuerte()
