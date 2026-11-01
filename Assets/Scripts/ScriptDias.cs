@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ScriptDias : MonoBehaviour
 {
@@ -79,6 +80,8 @@ public class ScriptDias : MonoBehaviour
     public AudioClip juego_negrete;
     public AudioClip Fuego;
     public AudioClip entregarCarta;
+    public AudioClip dias;
+
 
 
     public AudioSource audioSource;
@@ -173,6 +176,8 @@ public class ScriptDias : MonoBehaviour
     [Header("Pantalla de Muerte / Game Over")]
     public GameObject panelPantallaMuerte;
     public GameObject panelPantallaVictoria;
+    public TextMeshProUGUI textoGameOver; 
+    public float velocidadEscritura = 0.05f;
 
 
     [Header("Variables varias")]
@@ -189,6 +194,7 @@ public class ScriptDias : MonoBehaviour
     // Variable para saber si el jugador ha firmado en la zona de la Stalker
 
     private bool reaccionZonaStalkerActivada = false;
+    public bool haFirmadoCuaderno = false;
 
     void Start()
     {
@@ -248,9 +254,9 @@ public class ScriptDias : MonoBehaviour
     }
 
     // --- EL GUION DEL DÍA 1 ---
-    // --- EL GUION DEL DÍA 1 ---
     public IEnumerator SecuenciaDia1()
     {
+        audioSource2.Play();
         yield return new WaitForSeconds(1.5f);
         diaMewing = 1;
         diaActual = 1;
@@ -613,16 +619,20 @@ public class ScriptDias : MonoBehaviour
             yield return StartCoroutine(mewing.Desaparecer());
             mewing.gameObject.SetActive(false);
         }
+        
+
         yield return StartCoroutine(SecuenciaDia2());
     }
 
     // --- DÍA 2 ---
     public IEnumerator SecuenciaDia2()
     {
+
         diaActual = 2;
         reaccionZonaStalkerActivada = false;
         yaPenalizadoHoy = false;
         yield return StartCoroutine(MostrarCartelDia(2));
+        audioSource2.Play();
 
         // BRAINROT
         alumnoActual = brainrot;
@@ -820,8 +830,19 @@ public class ScriptDias : MonoBehaviour
         yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Hola, profe. Lucía Fernanda me ha pedido que recoja firmas." }, true)));
 
         yield return StartCoroutine(stalker.EntregarExamen(2));
+
+        if (haFirmadoCuaderno)
+        {
+            reaccionZonaStalkerActivada = true;
+            yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Acabas de venderme tu alma.", "Por fin eres mío." }, true)));
+
+            if (Final_stalker != null) audioSource.PlayOneShot(Final_stalker, 1.3f);
+            yield return StartCoroutine(EjecutarMuerte(stalker));
+            yield break;
+        }
+  
         nota = stalker.notaRecibida;
-      
+
         if (nota < 5)
         {
             stalker.animator.SetTrigger("Triste");
@@ -924,15 +945,19 @@ public class ScriptDias : MonoBehaviour
 
         yield return StartCoroutine(repelente.Desaparecer());
         repelente.gameObject.SetActive(false);
+      
         yield return StartCoroutine(SecuenciaDia3());
+
 
     }
     public IEnumerator SecuenciaDia3()
     {
+
         diaActual = 3;
         reaccionZonaStalkerActivada = false;
         yaPenalizadoHoy = false;
         yield return StartCoroutine(MostrarCartelDia(3));
+        audioSource2.Play();
 
         // STALKER
         alumnoActual = stalker;
@@ -1036,7 +1061,7 @@ public class ScriptDias : MonoBehaviour
         if (entrar_niño != null) { audioSource.PlayOneShot(entrar_niño, 5f); }
 
         yield return StartCoroutine(basicote.Aparecer());
-        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Hola profe, tengo una súper pregunta.", "Qué prefieres, apostar tu familia y amigox en una tirada de la ruleta al rojo o al negro" }, true)));
+        yield return StartCoroutine(ManejarDialogo(basicote.Decir(new string[] { "Hola profe, tengo una súper pregunta.", "Qué prefieres, apostar tu familia y amigos en una tirada de la ruleta al rojo o al negro" }, true)));
 
         // Opciones de respuesta.
         yield return StartCoroutine(ManejarPregunta(basicote.Preguntar(new string[] { "Rojo", "Negro" })));
@@ -1128,7 +1153,7 @@ public class ScriptDias : MonoBehaviour
         }
         else
         {
-            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Gracias, profe. Me voy a hacer mi rutina de mewing. (Sigue sin importarle nada a parte de su físico)", "Se ha hecho tarde,no me dará tiempo a grabar tis tos y cumplir las 6 horas de mewing (No parece que le importe la nota)" }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Gracias, profe. Me voy a hacer mi rutina de mewing. (Sigue sin importarle nada a parte de su físico)", "Se ha hecho tarde,no me dará tiempo a grabar tis tos y cumplir las seis horas de mewing (No parece que le importe la nota)" }, true)));
         }
 
         yield return StartCoroutine(mewing.Desaparecer());
@@ -1261,7 +1286,7 @@ public class ScriptDias : MonoBehaviour
         }
 
         yield return StartCoroutine(padreLista.Aparecer());
-        yield return StartCoroutine(ManejarDialogo(padreLista.Decir(new string[] { "Hola, buenos días, soy el padre de Sara.", "Como ya le comenté, vengo a revisar las notas de los últimos exámenes de mi hija.", "Sara lleva estudiando desde el año pasado para asegurarse de sacar dieces en todo.", "¿Me los podría enseñar?" }, true)));
+        yield return StartCoroutine(ManejarDialogo(padreLista.Decir(new string[] { "Hola, buenos días, soy el padre de Sara.", "Como ya le comenté, vengo a revisar las notas de los últimos exámenes de mi hija.", "Sara lleva estudiando desde el año pasado para asegurarse de sacar dieces en todo.", "¿Me los podría enseñar?","..."}, true)));
             // El padre reacciona según los dieces conseguidos.
         switch (diecesRepelente) 
         { 
@@ -1285,6 +1310,8 @@ public class ScriptDias : MonoBehaviour
             // Si tiene los tres dieces, el padre termina su turno sin matarte.
         yield return StartCoroutine(padreLista.Desaparecer());
         padreLista.gameObject.SetActive(false);
+   
+
         yield return StartCoroutine(SecuenciaDia4());
     }
     public IEnumerator SecuenciaDia4()
@@ -1293,6 +1320,7 @@ public class ScriptDias : MonoBehaviour
         reaccionZonaStalkerActivada = false;
         yaPenalizadoHoy = false;
         yield return StartCoroutine(MostrarCartelDia(4));
+        audioSource2.Play();
 
         // GORDETE
         alumnoActual = gordete;
@@ -1555,6 +1583,7 @@ public class ScriptDias : MonoBehaviour
             if (Triste_negrete != null) audioSource.PlayOneShot(Triste_negrete, 1.3f);
 
             yield return StartCoroutine(ManejarDialogo(negrete.Decir(new string[] { "Joder, profe, con esta nota repito curso."," ¿Jugamos a un minijuego rápido? Si tú ganas, suspendo y repito, pero si yo gano, me apruebas, ¿Te parece?","No te preocupes, que es muy fácil."," Yo voy a decir muchas palabras, y cuando oigas la palabra “fuego” aprieta el botón rápido."," ¿Lo has pillado? Empezamos." }, true)));
+            negrete.animator.SetTrigger("no triste");
 
             panelJuegoNegreteCerrado = false; 
             if (panelJuegoNegrete != null) panelJuegoNegrete.SetActive(true);
@@ -1611,8 +1640,6 @@ public class ScriptDias : MonoBehaviour
         yield return StartCoroutine(cartero.Aparecer());
 
         yield return StartCoroutine(ManejarDialogo(cartero.Decir(new string[] { "Tronco, esta carta es para ti." }, true)));
-        if (cartero.botonHablarPrefab != null) cartero.botonHablarPrefab.SetActive(false);
-
         yield return new WaitUntil(() => cartaLeida);
 
         yield return StartCoroutine(ManejarDialogo(cartero.Decir(new string[] { "¡Enhorabuena, tío!", "Nos vemos por aquí." }, false)));
@@ -1623,7 +1650,7 @@ public class ScriptDias : MonoBehaviour
         // --- PANTALLA DE VICTORIA ---
         if (panelPantallaVictoria != null)
         {
-            if (Victoria != null) audioSource.PlayOneShot(Victoria, 1.3f);
+            if (Victoria != null) audioSource.PlayOneShot(Victoria, 10f);
             panelPantallaVictoria.SetActive(true);
         }
 
@@ -1659,10 +1686,40 @@ public class ScriptDias : MonoBehaviour
     {
         if (numeroDia > 1 && panelEntreDias != null)
         {
+            yield return new WaitForSeconds(2.5f);
+            audioSource2.Stop();
             panelEntreDias.SetActive(true);
-            yield return new WaitForSeconds(1f); 
+            if (dias != null) audioSource.PlayOneShot(dias, 10f);
+
+            CanvasGroup canvasGroup = panelEntreDias.GetComponent<CanvasGroup>();
+            if (canvasGroup == null) canvasGroup = panelEntreDias.AddComponent<CanvasGroup>();
+
+            float duracionFade = 0.5f;
+            float tiempo = 0f;
+
+            canvasGroup.alpha = 0f;
+            while (tiempo < duracionFade)
+            {
+                tiempo += Time.deltaTime;
+                canvasGroup.alpha = Mathf.Lerp(0f, 1f, tiempo / duracionFade);
+                yield return null; 
+            }
+            canvasGroup.alpha = 1f;
+
+            yield return new WaitForSeconds(4.5f);
+
+            tiempo = 0f;
+            while (tiempo < duracionFade)
+            {
+                tiempo += Time.deltaTime;
+                canvasGroup.alpha = Mathf.Lerp(1f, 0f, tiempo / duracionFade);
+                yield return null;
+            }
+            canvasGroup.alpha = 0f; 
+
             panelEntreDias.SetActive(false);
         }
+
         if (objetoCartelDias != null)
         {
             objetoCartelDias.SetActive(true);
@@ -1679,33 +1736,47 @@ public class ScriptDias : MonoBehaviour
         ForzarSoltarHerramientas();
         GameObject panelAsesino = null;
 
+        // 1. Limpiamos el texto por si venimos de otra muerte anterior
+        if (textoGameOver != null) textoGameOver.text = "";
+
         if (asesino != null)
         {
             panelAsesino = asesino.panelMuerte;
+            asesino.DesplegarPanelMuerte();
+            float tiempoEspera = asesino.duracionAnimacionMuerte;
 
-            asesino.DesplegarPanelMuerte(); 
-            float tiempoEspera = asesino.duracionAnimacionMuerte; 
-
-            Destroy(asesino.gameObject); 
+            Destroy(asesino.gameObject);
             alumnoActual = null;
 
-            yield return new WaitForSeconds(tiempoEspera); 
+            yield return new WaitForSeconds(tiempoEspera);
         }
 
         if (panelAsesino != null)
         {
             audioSource2.mute = true;
             if (Final_Pantalla != null) audioSource.PlayOneShot(Final_Pantalla, 0.8f);
-
             panelAsesino.SetActive(false);
         }
 
-        ActivarPantallaMuerte(); 
+        ActivarPantallaMuerte();
+
+        string fraseMuerte = "..."; // Frase por defecto
+
+        if (asesino == gordete) fraseMuerte = "Compartir es vivir.";
+        else if (asesino == stalker) fraseMuerte = "Mira donde firmas";
+        else if (asesino == basicote) fraseMuerte = "No le quites la ilusión a un niño.";
+        else if (asesino == brainrot) fraseMuerte = "El que avisa no es traidor.";
+        else if (asesino == padreLista) fraseMuerte = "¿Corregiste justamente?.";
+        else if (asesino == negrete) fraseMuerte = "Tus reflejos no fueron los más rápidos.";
+        else if (asesino == mewing) fraseMuerte = "Igual deberías haber sido más amable.";
+
+        StartCoroutine(EscribirTextoGameOver(fraseMuerte));
     }
 
     private IEnumerator SecuenciaMuerteTungTung()
     {
         yield return StartCoroutine(ManejarDialogo(alumnoActual.Decir(new string[] { "TÚ TE LO HAS BUSCADO.", "HAS INTENTADO DESTROZAR A TUNG-TUNG TRES VECES.", "AHORA SUFRIRÁS SU IRA." }, false)));
+        if (Final_brainrot != null) audioSource.PlayOneShot(Final_brainrot, 1.3f);
         yield return StartCoroutine(EjecutarMuerte(brainrot));
     }
 
@@ -1726,7 +1797,6 @@ public class ScriptDias : MonoBehaviour
 
         if (faltas >= 3)
         {
-            if (Final_brainrot != null) audioSource.PlayOneShot(Final_Pantalla, 1.3f);
 
             StartCoroutine(SecuenciaMuerteTungTung());
         }
@@ -1748,10 +1818,14 @@ public class ScriptDias : MonoBehaviour
 
         if (stalker == null || !stalker.gameObject.activeInHierarchy)
             return;
+         new WaitForSeconds(2f);
 
         if (reaccionZonaStalkerActivada) return;
         if (dialogoEnCurso || esperandoRespuesta) return;
         reaccionZonaStalkerActivada = true;
+
+        StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Acabas de venderme tu alma."," Por fin eres mío." }, true)));
+
         if (Final_stalker != null) audioSource.PlayOneShot(Final_stalker, 1.3f);
         StartCoroutine(EjecutarMuerte(stalker));
     }
@@ -1891,5 +1965,18 @@ public class ScriptDias : MonoBehaviour
             panelTutorialSellos.SetActive(false);
         }
         panelSellosCerrado = true;
+    }
+
+    private IEnumerator EscribirTextoGameOver(string frase)
+    {
+        if (textoGameOver == null) yield break; 
+
+        textoGameOver.text = ""; 
+
+        foreach (char letra in frase.ToCharArray())
+        {
+            textoGameOver.text += letra;
+            yield return new WaitForSecondsRealtime(velocidadEscritura);
+        }
     }
 }
