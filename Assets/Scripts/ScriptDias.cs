@@ -710,7 +710,7 @@ public class ScriptDias : MonoBehaviour
         }
         else
         {
-            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Hola, profe. La manzana de ayer me sentó un poco mal.", "Cagué un objetivo Canon EF de cincuenta milímetros de longitud y uno coma ocho milímetros de apertura.", "No salió fácilmente." }, true)));
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Hola, profe. Desde que me comí la manzana no me siento muy bien.", "Cagué un objetivo Canon EF de cincuenta milímetros de longitud y uno coma ocho milímetros de apertura.", "No salió fácilmente." }, true)));
         }
 
         yield return StartCoroutine(gordete.EntregarExamen(2));
@@ -777,8 +777,8 @@ public class ScriptDias : MonoBehaviour
 
         if (estoyEmbelesado == false)
         {
-            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola, profe. Gracias al nuevo entrenamiento he conseguido estos rasgos perfectos." }, true)));
-            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¿Dirías que ahora estás aún más hipnotizado por mi belleza?" }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola, profe. Gracias al nuevo entrenamiento he conseguido estos rasgos perfectos.", "¿Dirías que ahora estás aún más hipnotizado por mi belleza?" }, true)));
+           
             yield return StartCoroutine(ManejarPregunta(mewing.Preguntar(opcionesSiNo)));
 
             if (mewing.respuestaElegida == 0)
@@ -795,8 +795,7 @@ public class ScriptDias : MonoBehaviour
         }
         else
         {
-            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola de nuevo, profe." }, true)));
-            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¿Dirías que ahora te hipnotiza mi belleza?" }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola de nuevo, profe.", "¿Dirías que ahora te hipnotiza mi belleza?" }, true)));
             yield return StartCoroutine(ManejarPregunta(mewing.Preguntar(opcionesSiNo)));
 
             if (mewing.respuestaElegida == 0)
@@ -960,8 +959,7 @@ public class ScriptDias : MonoBehaviour
         if (entrar_niño != null) audioSource.PlayOneShot(entrar_niño, 5f);
         yield return StartCoroutine(stalker.Aparecer());
 
-        yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Lucía Fernanda me ha dicho que ayer no firmaste. Está un poco triste." }, true)));
-        yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Espero que te guste la sorpresa del examen de hoy." }, true)));
+        yield return StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Lucía Fernanda me ha dicho que ayer no firmaste. Está un poco triste.", "Espero que te guste la sorpresa del examen de hoy." }, true)));
 
         yield return StartCoroutine(stalker.EntregarExamen(3));
         nota = stalker.notaRecibida;
@@ -1021,7 +1019,7 @@ public class ScriptDias : MonoBehaviour
         }
         else
         {
-            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Hola, profe. La manzana de ayer me sentó un poco mal.", "Cagué un objetivo Canon EF de cincuenta milímetros de longitud y uno coma ocho milímetros de apertura.", "No salió fácilmente." }, true)));
+            yield return StartCoroutine(ManejarDialogo(gordete.Decir(new string[] { "Hola, profe. Desde que me comí la manzana no me siento muy bien.", "Cagué un objetivo Canon EF de cincuenta milímetros de longitud y uno coma ocho milímetros de apertura.", "No salió fácilmente." }, true)));
         }
 
         yield return StartCoroutine(gordete.EntregarExamen(3));
@@ -1104,8 +1102,7 @@ public class ScriptDias : MonoBehaviour
 
         if (estoyEmbelesado == true)
         {
-            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola, profe. Mis rasgos siguen igual de perfectos que ayer." }, true)));
-            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¿Dirías que sigues hipnotizado por mi belleza?" }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola, profe. Mis rasgos siguen igual de perfectos que ayer.", "¿Dirías que sigues hipnotizado por mi belleza?" }, true)));
             yield return StartCoroutine(ManejarPregunta(mewing.Preguntar(opcionesSiNo)));
 
             if (mewing.respuestaElegida == 0)
@@ -1122,8 +1119,7 @@ public class ScriptDias : MonoBehaviour
         }
         else
         {
-            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola de nuevo, profe." }, true)));
-            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "¿Dirías que ahora te hipnotiza mi belleza?" }, true)));
+            yield return StartCoroutine(ManejarDialogo(mewing.Decir(new string[] { "Hola de nuevo, profe.", "¿Dirías que ahora te hipnotiza mi belleza?" }, true)));
             yield return StartCoroutine(ManejarPregunta(mewing.Preguntar(opcionesSiNo)));
 
             if (mewing.respuestaElegida == 0)
@@ -1645,7 +1641,7 @@ public class ScriptDias : MonoBehaviour
         // --- PANTALLA DE VICTORIA ---
         if (panelPantallaVictoria != null)
         {
-            if (Victoria != null) audioSource.PlayOneShot(Victoria, 10f);
+            if (Victoria != null) audioSource.PlayOneShot(Victoria, 1f);
             panelPantallaVictoria.SetActive(true);
         }
 
@@ -1805,7 +1801,6 @@ public class ScriptDias : MonoBehaviour
         }
     }
 
-    // Muerte INSTANTÁNEA de Stalker al tocar su zona especial con el boli
     public void ActivarReaccionZonaStalker()
     {
         if (diaActual != 2) return;
@@ -1814,17 +1809,15 @@ public class ScriptDias : MonoBehaviour
         if (stalker == null || !stalker.gameObject.activeInHierarchy)
             return;
 
-        // Protecciones para no ejecutar la muerte 40 veces por frame
         if (reaccionZonaStalkerActivada) return;
         if (dialogoEnCurso || esperandoRespuesta) return;
 
-        reaccionZonaStalkerActivada = true; // Bloqueamos para que no se repita
+        reaccionZonaStalkerActivada = true; 
 
         StartCoroutine(ManejarDialogo(stalker.Decir(new string[] { "Acabas de venderme tu alma.", "Por fin eres mío." }, true)));
 
         if (Final_stalker != null) audioSource.PlayOneShot(Final_stalker, 1.3f);
 
-        // MATAMOS AL JUGADOR AL INSTANTE
         StartCoroutine(EjecutarMuerte(stalker));
     }
     public void ActivarPantallaMuerte()
